@@ -1,9 +1,10 @@
 import java.rmi.server.UnicastRemoteObject ;
 import java.rmi.RemoteException ;
+import java.lang.*;
 
 public class Client
 extends UnicastRemoteObject // Hérite de UnicastRemoteObject
-implements ClientInterface  // implémente l’interface
+implements ClientInterface, Runnable // implémente l’interface
 {
 	protected String name;
 	
@@ -16,5 +17,15 @@ implements ClientInterface  // implémente l’interface
 	public String getName() throws RemoteException
 	{
 		return this.name;
+	}
+	
+	public void run() {
+		System.out.println("Run de "+this.name);
+		int i=0;
+		while(i< 20){
+			System.out.println("ping");
+			i++;
+			Thread.sleep(1);
+		}
 	}
 }
