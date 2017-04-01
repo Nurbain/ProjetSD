@@ -7,7 +7,7 @@ extends UnicastRemoteObject // Hérite de UnicastRemoteObject
 implements ClientInterface, Runnable // implémente l’interface
 {
 	protected String name;
-	
+
 	public Client (String name) throws RemoteException
 	// Rmq : Le client n’a pas accès au constructeur
 	{
@@ -18,14 +18,16 @@ implements ClientInterface, Runnable // implémente l’interface
 	{
 		return this.name;
 	}
-	
+
 	public void run() {
 		System.out.println("Run de "+this.name);
 		int i=0;
 		while(i< 20){
 			System.out.println("ping");
 			i++;
-			Thread.sleep(1);
+			try{
+				Thread.sleep(1);
+			}catch(InterruptedException e){System.out.println("pb Thread");}
 		}
 	}
 }
