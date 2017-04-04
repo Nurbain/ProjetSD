@@ -8,7 +8,7 @@ public class ClientServ
 	{
 		if (args.length != 2)
 		{
-			System.out.println("Usage : java Serveur <port du serveur de noms> <Nom Client>") ;
+			System.out.println("Usage : java ClientServ <port du serveur de noms> <Nom Client>") ;
 			System.exit(0) ;
 		}
 		try
@@ -16,7 +16,6 @@ public class ClientServ
 			Client objLocal = new Client (args[1]) ; 
 			Thread t=new Thread(objLocal);
 			t.start();
-			System.out.println("rmi://localhost:" + args[0] + "/" + args[1]);
 			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);
 			System.out.println("Serveur pret") ;
 		}

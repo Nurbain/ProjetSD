@@ -10,6 +10,7 @@ extends UnicastRemoteObject // Hérite de UnicastRemoteObject
 implements ClientInterface, Runnable // implémente l’interface
 {
 	protected String name;
+	//Tout les autres clients avec les quels je suis connecté
 	protected ArrayList<ClientInterface> Peers= new ArrayList<ClientInterface>();
 
 	public Client (String name) throws RemoteException
@@ -35,12 +36,16 @@ implements ClientInterface, Runnable // implémente l’interface
 		}*/
 	}
 	
-	
+	/*Ajoute un client au client avec les quels je suis connecté
+		namePeer Nom du client
+		Cherche sur rmi://<ServerName>:<NumPort>/<namePeer>*/
 	public void ConnexionPeer(String ServerName,String PortNum,String namePeer) throws RemoteException {
 		try
 		{
 		  System.out.println("Connexion a : "+namePeer);
+		  //Me connecte au client passé en paramettre
 		  ClientInterface b = (ClientInterface) Naming.lookup( "rmi://"+ServerName+":"+PortNum+"/"+namePeer ) ;
+		  //Puis l'ajoute à la liste
 		  Peers.add(b); 
 		}
 		catch (NotBoundException re) { System.out.println(re) ; }
