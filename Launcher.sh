@@ -1,15 +1,15 @@
 #!/bin/sh
 
-if [ $# -lt 1 ]
+if [ $# -ne 1 ]
 then
-	echo "use : $0 <port num> <list pts>"
+	echo "use : $0 <port num>"
 	exit 1
 fi
 
-port=$1
-shift;
 
-for i in $*
+for i in `who | grep pts | cut -d' ' -f2 | cut -d/ -f2`
 do 
-	java ClientServ $port C$i >> /dev/pts/$i &
+	java ClientServ $1 C$i >> /dev/pts/$i &
 done
+
+exit 0
