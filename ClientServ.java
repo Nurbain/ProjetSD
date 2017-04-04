@@ -16,6 +16,7 @@ public class ClientServ
 			Client objLocal = new Client (args[1]) ; 
 			Thread t=new Thread(objLocal);
 			t.start();
+			System.out.println("rmi://localhost:" + args[0] + "/" + args[1]);
 			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);
 			System.out.println("Serveur pret") ;
 		}
