@@ -1,8 +1,18 @@
 public class Ressources {
   
-	//public final name;
+  private String name;
   private int exemplaires;
-
+  
+  public Ressources(String name, int initnbr)
+  {
+	  this.name = name;
+	  this.exemplaires = initnbr;
+  }
+  
+  public String getName(){
+	  return name;
+  }
+  
   public int getExemplaires(){
     return this.exemplaires;
   }
