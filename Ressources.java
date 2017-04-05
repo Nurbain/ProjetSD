@@ -1,12 +1,13 @@
 public class Ressources {
-  public final name;
+  
+	//public final name;
   private int exemplaires;
 
   public int getExemplaires(){
     return this.exemplaires;
   }
 
-  public bool takeRessources(int nb){
+  public Boolean takeRessources(int nb){
     if(nb > exemplaires){
       return false;
     }
