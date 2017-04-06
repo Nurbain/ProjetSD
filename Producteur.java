@@ -3,16 +3,13 @@ import java.rmi.RemoteException;
 public class Producteur extends Client{
 
 	//Stock de ressource du producteur
-	private int NombreMax;
 	private Ressources Stock;
-	private boolean isEpusable;
 	
-	public Producteur(String name,String nameRessource, boolean epusable, int nbrMax) throws RemoteException {
+	public Producteur(String name,String nameRessource, int nbrinit) throws RemoteException {
 		super(name);
-		this.isEpusable = epusable;
 		this.NombreMax = nbrMax;
 		
-		this.Stock = new Ressources(nameRessource, nbrMax);
+		this.Stock = new Ressources(nameRessource, nbrinit);
 	}
 
 	public Ressources GetStock()
@@ -20,29 +17,26 @@ public class Producteur extends Client{
 		return this.Stock;
 	}
 	
-	public Boolean GetIsEpusable()
-	{
-		return this.isEpusable;
-	}
 	
 	
 	//Donne les ressources a un joueur
-	public boolean DonneRessource(Joueur j, int nbr)
+	public boolean DonneRessource(int nbr)
 	{
-		j.AjoutStock(nbr, this.Stock);
+		/*Si faux refuser 
 		return Stock.takeRessources(nbr);
+		*/
 	}
 	
 	//Produit des ressources
 	public void Production()
 	{
 		int nombre = Stock.getExemplaires();
-		int pourcentactuel = (this.NombreMax*100)/nombre;
-		int pourcenttoadd = (100-pourcentactuel)/10;
+		int pourcentActuel = (this.NombreMax*100)/nombre;
+		int pourcentToAdd = (100-pourcentActuel)/10;
 		
-		int toadd = (pourcenttoadd*this.NombreMax)/100;
+		int toAdd = (pourcentToAdd*this.NombreMax)/100;
 		
-		Stock.addRessources(toadd);
+		Stock.addRessources(toAdd);
 	}
 
 	

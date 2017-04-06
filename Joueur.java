@@ -4,21 +4,17 @@ import java.util.List;
 
 public class Joueur extends Client {
 
-	private Client myClient;
 	private Personnalite perso;
 	private List<Ressources> StockRessources = new ArrayList<>();;
 	private boolean isJoueurIRL;
-	private boolean VolAllow;
 	private Mode mode = Mode.Demande;
 	
 	
-	public Joueur(String name, Client myclient, Personnalite perso, boolean isIRL, boolean allow ) throws RemoteException{
+	public Joueur(String name, Personnalite perso, boolean isIRL ) throws RemoteException{
 		super(name);
 		
-		this.myClient = myclient;
 		this.perso = perso;
 		this.isJoueurIRL = isIRL;
-		this.VolAllow = allow;
 	}
 	
 	
@@ -41,30 +37,15 @@ public class Joueur extends Client {
 	public boolean GetisJoueurIRL()
 	{
 		return this.isJoueurIRL;
-	}
-	
-	public void SetPersonnalite(Personnalite perso)
-	{
-		this.perso = perso;
-	}
-	
-	public void SetIsJoueur(boolean b)
-	{
-		this.isJoueurIRL = b;
-	}
+	}	
 	
 	public void SetMode(Mode m)
 	{
 		this.mode = m;
 	}
 	
-	public Client GetClient()
-	{
-		return this.myClient;
-	}
-	
-	
-	public boolean DemandeRessource(Producteur p , int nbr)
+		
+	public boolean DemandeRessource(int nbr)
 	{
 		
 		return true;
@@ -80,7 +61,7 @@ public class Joueur extends Client {
 		return true;
 	}
 	
-	public boolean VolRessource(Joueur j, Ressources r)
+	public boolean VolRessource(Ressources r)
 	{
 		
 		return true;
@@ -91,7 +72,7 @@ public class Joueur extends Client {
 		
 	}
 	
-	public void Observation(Joueur j)
+	public void Observation()
 	{
 		
 	}

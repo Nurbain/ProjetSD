@@ -1,6 +1,6 @@
 public class Ressources {
   
-  private String name;
+  private final String name;
   private int exemplaires;
   
   public Ressources(String name, int initnbr)
