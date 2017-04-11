@@ -35,12 +35,15 @@ public class Producteur extends Client implements ProducteurInterface{
 
 
 	//Donne les ressources a un joueur
-	public int PrendreRessource()
+	public synchronized int PrendreRessource()
 	{
-		/*Si faux refuser
-		return Stock.takeRessources(nbr);
-		*/
-		return 0;
+		if(Stock.getExemplaires() >= CanGive){
+			Stock.takeRessources(CanGive);
+			return CanGive;
+		}
+		int tmp = Stock.getExemplaires();
+		Stock.takeRessources(tmp);
+		return tmp;
 	}
 
 	//Produit des ressources

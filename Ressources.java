@@ -28,4 +28,8 @@ public class Ressources {
   public synchronized void addRessources(int nb){
     exemplaires += nb;
   }
+  
+  public boolean equals(Ressources r2){
+	  return r2.name.equals(this.name);
+  }
 }
