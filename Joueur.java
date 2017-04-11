@@ -45,21 +45,38 @@ public class Joueur extends Client implements JoueurInterface{
 	}
 
 
-	public boolean DemandeRessource(int nbr)
+	public boolean DemandeRessource(Producteur p)
 	{
+		int StockPris = p.PrendreRessource();
+		String NomNewRessource = p.GetStock().getName();
+		int indexStock = SearchRessource(NomNewRessource);
 		
+		if(indexStock == -1)
+		{
+			Ressources r1 = new Ressources(NomNewRessource,StockPris);
+			StockRessources.add(r1);
+		}
+		else
+		{
+	/*Mon cerveau a brainlag donc je crois qu'on peut faire plus simple faut que je verifie*/
+			Ressources r2 = StockRessources.get(indexStock);
+			r2.addRessources(StockPris);
+			StockRessources.set(indexStock, r2);			
+		}
+
 		return true;
 	}
 
-	synchronized public boolean VolRessource(Ressources r)
+	synchronized public int VolRessource(Joueur j)
 	{
-
-		return true;
+		
+		
+		return 0;
 	}
 
 	public void AskAction()
 	{
-		/*Affichage Menu du choix d'action*/
+
 	}
 
 	public void Observation()
@@ -76,7 +93,7 @@ public class Joueur extends Client implements JoueurInterface{
 			return index;
 
 		for(int i = 0; i<this.StockRessources.size() ; i++)
-			if(this.StockRessources.get(i).getName().equals(nom))
+			if(this.StockRessources.get(i).getName().equalsIgnoreCase(nom))
 				return i;
 
 		return index;

@@ -17,7 +17,7 @@ public interface JoueurInterface extends Remote // Hérite de Remote
   public boolean GetisJoueurIRL()
   throws RemoteException;
 
-  public boolean VolRessource(Ressources r)
+  public int VolRessource(Joueur j)
   throws RemoteException;
 
 }
