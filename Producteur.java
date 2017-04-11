@@ -4,10 +4,14 @@ public class Producteur extends Client implements ProducteurInterface{
 
 	//Stock de ressource du producteur
 	private Ressources Stock;
-
-	public Producteur(String name,String nameRessource, int nbrinit) throws RemoteException {
+	private float ratioProd;
+	private int CanGive;
+	
+	public Producteur(String name,String nameRessource, int nbrinit,float ratioProd, int CanGive) throws RemoteException {
 		super(name);
 
+		this.CanGive = CanGive;
+		this.ratioProd = ratioProd;
 		this.Stock = new Ressources(nameRessource, nbrinit);
 	}
 
@@ -15,28 +19,34 @@ public class Producteur extends Client implements ProducteurInterface{
 	{
 		return this.Stock;
 	}
+	
+	public synchronized int GetCanGive(){
+		return this.CanGive;
+	}
 
+	public void run() {
+		while(true){
+			Production();
+			try{
+				Thread.sleep(1000);
+			}catch(InterruptedException e){System.out.println(e);}
+		}
+	}
 
 
 	//Donne les ressources a un joueur
-	public boolean PrendreRessource(int nbr)
+	public int PrendreRessource()
 	{
 		/*Si faux refuser
 		return Stock.takeRessources(nbr);
 		*/
-		return true;
+		return 0;
 	}
 
 	//Produit des ressources
-	public void Production()
+	public synchronized void Production()
 	{
-		// int nombre = Stock.getExemplaires();
-		// int pourcentActuel = (this.NombreMax*100)/nombre;
-		// int pourcentToAdd = (100-pourcentActuel)/10;
-		//
-		// int toAdd = (pourcentToAdd*this.NombreMax)/100;
-
-		// Stock.addRessources(toAdd);
+		Stock.addRessources((int)(Stock.getExemplaires()*ratioProd));
 	}
 
 

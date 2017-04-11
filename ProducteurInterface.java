@@ -4,7 +4,7 @@ import java.rmi.RemoteException ;
 public interface ProducteurInterface extends Remote // Hérite de Remote
 {
 
-  public boolean PrendreRessource(int nbr)
+  public int PrendreRessource()
   throws RemoteException;
 
   public Ressources GetStock()
