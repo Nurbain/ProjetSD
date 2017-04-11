@@ -19,7 +19,7 @@ public class Joueur extends Client implements JoueurInterface{
 
 
 
-	public ArrayList<Ressources> GetStock()
+	synchronized public ArrayList<Ressources> GetStock()
 	{
 		return this.StockRessources;
 	}
@@ -29,7 +29,7 @@ public class Joueur extends Client implements JoueurInterface{
 		return this.perso;
 	}
 
-	public Mode GetMode()
+	synchronized public Mode GetMode()
 	{
 		return this.mode;
 	}
@@ -47,21 +47,11 @@ public class Joueur extends Client implements JoueurInterface{
 
 	public boolean DemandeRessource(int nbr)
 	{
-
+		
 		return true;
 	}
 
-	public void AjoutStock(int nbr, Ressources r)
-	{
-
-	}
-
-	public boolean SupprStock(int nbr, Ressources r)
-	{
-		return true;
-	}
-
-	public boolean VolRessource(Ressources r)
+	synchronized public boolean VolRessource(Ressources r)
 	{
 
 		return true;
@@ -69,7 +59,7 @@ public class Joueur extends Client implements JoueurInterface{
 
 	public void AskAction()
 	{
-
+		/*Affichage Menu du choix d'action*/
 	}
 
 	public void Observation()
@@ -77,7 +67,8 @@ public class Joueur extends Client implements JoueurInterface{
 
 	}
 
-	private int SearchRessource(Ressources r)
+
+	private int SearchRessource(String nom)
 	{
 		int index = -1;
 
@@ -85,8 +76,8 @@ public class Joueur extends Client implements JoueurInterface{
 			return index;
 
 		for(int i = 0; i<this.StockRessources.size() ; i++)
-			if(r==this.StockRessources.get(i))
-				return i=index;
+			if(this.StockRessources.get(i).getName().equals(nom))
+				return i;
 
 		return index;
 	}
