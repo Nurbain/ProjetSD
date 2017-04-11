@@ -17,15 +17,15 @@ public class Ressources {
     return this.exemplaires;
   }
 
-  public Boolean takeRessources(int nb){
-    if(nb > exemplaires){
-      return false;
-    }
-    exemplaires -= nb;
-    return true;
+  public synchronized Boolean takeRessources(int nb){
+		if(nb > exemplaires){
+		  return false;
+		}
+		exemplaires -= nb;
+		return true;
   }
 
-  public void addRessources(int nb){
+  public synchronized void addRessources(int nb){
     exemplaires += nb;
   }
 }
