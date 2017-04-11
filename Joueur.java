@@ -47,31 +47,35 @@ public class Joueur extends Client implements JoueurInterface{
 
 	public boolean DemandeRessource(Producteur p)
 	{
-		int StockPris = p.PrendreRessource();
-		String NomNewRessource = p.GetStock().getName();
-		int indexStock = SearchRessource(NomNewRessource);
+		Ressources NewRessource = p.GetStock();
+		int nbr = p.PrendreRessource();
 		
-		if(indexStock == -1)
-		{
-			Ressources r1 = new Ressources(NomNewRessource,StockPris);
-			StockRessources.add(r1);
-		}
-		else
-		{
-	/*Mon cerveau a brainlag donc je crois qu'on peut faire plus simple faut que je verifie*/
-			Ressources r2 = StockRessources.get(indexStock);
-			r2.addRessources(StockPris);
-			StockRessources.set(indexStock, r2);			
-		}
-
-		return true;
+		return this.AjoutStock(NewRessource , nbr);
 	}
 
-	synchronized public int VolRessource(Joueur j)
+	//Donne le nombre pouvant etre vole
+	synchronized public int VolRessourceVictime(Ressources r)
 	{
+		int index = SearchRessource(r);
 		
+		if(index == -1)
+			return 0;
+		else
+			return 	StockRessources.get(index).getExemplaires();		
 		
-		return 0;
+	}
+
+
+	//Joueur Voleur regarde si il peut voler 
+	synchronized public boolean VolRessourceAgresseur(Joueur j, Ressources r )
+	{
+		int StockPris = j.VolRessourceVictime(r);
+		
+		//Verifie si c'est BullShit la ressource ou si y'a pas 
+		if(StockPris == 0)
+			return true;
+		else
+			return this.AjoutStock(r, StockPris);
 	}
 
 	public void AskAction()
@@ -84,16 +88,36 @@ public class Joueur extends Client implements JoueurInterface{
 
 	}
 
+	
+	
+	private boolean AjoutStock(Ressources r, int nbr)
+	{
+		int indexStock = SearchRessource(r);	
+		if(indexStock == -1)
+		{
+			Ressources r1 = new Ressources(r.getName(),nbr);
+			StockRessources.add(r1);
+		}
+		else
+		{
+	/*Mon cerveau a brainlag donc je crois qu'on peut faire plus simple faut que je verifie*/
+			Ressources r2 = StockRessources.get(indexStock);
+			r2.addRessources(nbr);
+			StockRessources.set(indexStock, r2);			
+		}
 
-	private int SearchRessource(String nom)
+		return true;
+	}
+
+	private int SearchRessource(Ressources r)
 	{
 		int index = -1;
 
-		if(this.StockRessources.isEmpty())
+		if(StockRessources.isEmpty())
 			return index;
 
-		for(int i = 0; i<this.StockRessources.size() ; i++)
-			if(this.StockRessources.get(i).getName().equalsIgnoreCase(nom))
+		for(int i = 0; i<StockRessources.size() ; i++)
+			if(StockRessources.get(i).equals(r))
 				return i;
 
 		return index;
