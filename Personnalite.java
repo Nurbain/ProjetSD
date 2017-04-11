@@ -1,4 +1,4 @@
 
 public enum Personnalite {
-	Voleur,Coopératif,Individuel,Stratège,Méfiant,Rencunier;
+	Voleur,Cooperatif,Individuel,Stratege,Mefiant,Rancunier;
 }
