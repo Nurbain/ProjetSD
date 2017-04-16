@@ -20,7 +20,10 @@ public interface JoueurInterface extends Remote // Hérite de Remote
   public boolean VolRessourceAgresseur(Joueur j, Ressources r)
   throws RemoteException;
 
-	public int VolRessourceVictime(Ressources r)
- 	throws RemoteException;
+  public int VolRessourceVictime(Ressources r)
+		  throws RemoteException;
+	
+	public ArrayList<Ressources> Observation(Joueur j)
+	throws RemoteException;
 
 }

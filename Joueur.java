@@ -61,8 +61,11 @@ public class Joueur extends Client implements JoueurInterface{
 		if(index == -1)
 			return 0;
 		else
-			return 	StockRessources.get(index).getExemplaires();		
-		
+		{
+			int tmp = 	StockRessources.get(index).getExemplaires();
+			StockRessources.get(index).takeRessources(tmp);
+			return tmp;
+		}
 	}
 
 
@@ -73,19 +76,20 @@ public class Joueur extends Client implements JoueurInterface{
 		
 		//Verifie si c'est BullShit la ressource ou si y'a pas 
 		if(StockPris == 0)
-			return true;
+			return false;
 		else
 			return this.AjoutStock(r, StockPris);
 	}
 
 	public void AskAction()
 	{
-
+		
 	}
 
-	public void Observation()
+	//Renvoie la liste des ressources du joueur observé 
+	synchronized public ArrayList<Ressources> Observation(Joueur j)
 	{
-
+		return j.StockRessources;
 	}
 
 	
@@ -117,9 +121,11 @@ public class Joueur extends Client implements JoueurInterface{
 			return index;
 
 		for(int i = 0; i<StockRessources.size() ; i++)
+		{
 			if(StockRessources.get(i).equals(r))
 				return i;
-
+		}
+		
 		return index;
 	}
 
