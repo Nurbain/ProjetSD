@@ -13,7 +13,7 @@ public class JoueurServ
 		}
 		try
 		{
-			Joueur objLocal = new Joueur(args[1],Personnalite.Cooperatif,false) ;
+			Joueur objLocal = new Joueur(args[1],Personnalite.Individuel,false) ;
 			//Thread t=new Thread(objLocal);
 			//t.start();
 			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);
