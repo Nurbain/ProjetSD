@@ -1,3 +1,17 @@
+	BESOIN POUR LOG 
+	
+Argument donnée à l'Observateur : 
+
+- Type Envoyeur 		: Le type de l'acteur							- Obligatoire
+- String NomEnvoyeur 	: Le nom de l'acteur							- Obligatoire
+- Action Action 		: L'action effectué								- Obligatoire
+- Ressources R 			: La ressources en question, utilisation du nom	
+- int Nombre 			: Le nombre produit / Enlevé
+- Type Reception 		: Le type du receptionneur
+- String NomReception 	: Le nom du receptionneur
+
+	
+	
 	
 	CONVENTION DE NOMMAGE POUR LA NORMALISATION DES LOGS 
 
@@ -5,42 +19,42 @@
 
 
 Joueur J Prends ressources R en nombre N à Producteur P : 
--> "Demande J R N P \n"
+-> "Joueur J.Nom Demande R.Nom N Producteur P.Nom  \n"
 
 ########################################################
 
 
 Producteur P se fait prendre N ressources
--> "P N \n"
+-> "Producteur P.Nom Saisie P.Stock.Name N Producteur P.Nom \n"
 
 ########################################################
 
 
 Producteur P produit N ressources 
--> "P N"
+-> "Producteur P.Nom Production P.Stock.Name N Producteur P.Nom \n"
 
 ########################################################
 
 
 Joueur J1 vol ressources R en nombre N à Joueur J2:
--> "Vol J1 R N J2"
+-> "Joueur J1.Nom Vol R.Nom N Joueur J2.Nom \n"
 
 ########################################################
 
 
 Joueur J se fait prendre N ressources R
--> "J R N"
+-> "Joueur J.nom Saisie R.Nom N Joueur J.nom"
 
 ########################################################
 
 Joueur J a fini la parti
--> "J fin"
+-> "Joueur J.nom Fin"
 
 ########################################################
 
 
 Observateur Punit le joueur voleur J
--> "Kick J"
+-> "Joueur J.Nom Punition"
 
 ########################################################
 
