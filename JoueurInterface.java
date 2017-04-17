@@ -23,7 +23,7 @@ public interface JoueurInterface extends Remote // Hérite de Remote
   public int VolRessourceVictime(Ressources r)
 		  throws RemoteException;
 	
-	public ArrayList<Ressources> Observation(Joueur j)
+	public ArrayList<Ressources> Observation(JoueurInterface j)
 	throws RemoteException;
 
 }
