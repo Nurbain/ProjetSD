@@ -55,7 +55,10 @@ public class Joueur extends Client implements JoueurInterface{
 				try {DemandeRessource(this.ListProducteur.get(indexProd1));} 
 					catch (RemoteException re) {System.out.println(re);}
 				
-				//Poke l'observateur
+				//Verifie si fini
+				boolean fin1 = FinParti();
+				
+				//Poke l'observateur de ses action et son etat
 				
 				break;
 			
@@ -93,7 +96,10 @@ public class Joueur extends Client implements JoueurInterface{
 					catch (RemoteException re) {System.out.println(re);}
 					
 				
-				//Poke l'observateur 
+				//Verifie si fini
+				boolean fin2 = FinParti();
+				
+				//Poke l'observateur de ses action et son etat
 				
 				break;
 				
@@ -146,7 +152,10 @@ public class Joueur extends Client implements JoueurInterface{
 				catch (RemoteException re) {System.out.println(re);}
 						
 				
-				//Poke l'observateur
+				//Verifie si fini
+				boolean fin3 = FinParti();
+				
+				//Poke l'observateur de ses action et son etat
 				
 				break;
 				
@@ -301,4 +310,16 @@ public class Joueur extends Client implements JoueurInterface{
 		return index;
 	}
 
+	private boolean FinParti()
+	{
+		for(int i =0 ; i<StockRessources.size() ; i++)
+		{
+			if(StockRessources.get(i).getExemplaires() < objectif)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
 }
