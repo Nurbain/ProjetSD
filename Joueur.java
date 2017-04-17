@@ -101,7 +101,7 @@ public class Joueur extends Client implements JoueurInterface{
 			//Ne fait que voler aux autres joueurs
 			case Voleur :
 				//Change pour observer le producteur de la ressource 
-				/*if(GetMode() != Mode.Observation)
+				if(GetMode() != Mode.Observation)
 					SetMode(Mode.Observation);
 				
 				
@@ -117,19 +117,34 @@ public class Joueur extends Client implements JoueurInterface{
 				}
 				
 				//Cherche les joueurs ayant cette ressources en plus grand nombre
+				int max = 0;
 				for(int j = 0; j<this.ListJoueur.size() ; j++)
 				{
+					//Recupère les stocks des joueurs 
 					ArrayList<Ressources> tmp = null;
 					try {tmp = Observation(this.ListJoueur.get(j));} 
 					catch (RemoteException re) {System.out.println(re);}
 					
 					if(tmp != null)
 					{
-						
+						for(int k =0; k<tmp.size();k++)
+						{
+							//Regarde si le joueurs possède la ressource , en plus grand nombre que le précédent
+							if(tmp.get(k).equals(this.StockRessources.get(indexRessource2)) && tmp.get(k).getExemplaires() > max)
+							{
+								max = tmp.get(k).getExemplaires();
+								//Le joueur actuelle est le plus interressent a voler
+								indexJoueur = j;
+							}
+						}
 					}
 				}
 				
-					*/		
+				SetMode(Mode.Vol);
+				
+				try {VolRessourceAgresseur(this.ListJoueur.get(indexJoueur), StockRessources.get(indexRessource2));} 
+				catch (RemoteException re) {System.out.println(re);}
+						
 				
 				//Poke l'observateur
 				
@@ -204,7 +219,7 @@ public class Joueur extends Client implements JoueurInterface{
 
 
 	//Joueur Voleur regarde si il peut voler 
-	synchronized public boolean VolRessourceAgresseur(Joueur j, Ressources r )
+	synchronized public boolean VolRessourceAgresseur(JoueurInterface j, Ressources r ) throws RemoteException
 	{
 		//Verifie que le voleur est bien en mode vol
 		if(GetMode() != Mode.Vol)
