@@ -1,6 +1,6 @@
 import java.rmi.RemoteException;
 
-public class Observateur extends Client implements ObservateurInterface{
+public class Observateur extends Client{
   static final long serialVersionUID = 42;
   Fin typeFin;
 

@@ -1,8 +1,8 @@
-import java.rmi.Remote ;
+
 import java.rmi.RemoteException ;
 import java.util.*;
 
-public interface JoueurInterface extends Remote // Hérite de Remote
+public interface JoueurInterface extends ClientInterface // Hérite de Remote
 {
 
   public ArrayList<Ressources> GetStock()
@@ -22,7 +22,7 @@ public interface JoueurInterface extends Remote // Hérite de Remote
 
   public int VolRessourceVictime(Ressources r)
 		  throws RemoteException;
-	
+
 	public ArrayList<Ressources> Observation(JoueurInterface j)
 	throws RemoteException;
 

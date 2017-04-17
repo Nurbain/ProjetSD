@@ -1,7 +1,7 @@
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-public class Joueur extends Client implements JoueurInterface{
+public class Joueur extends Client{
 
 	static final long serialVersionUID = 42;
 
@@ -83,7 +83,7 @@ public class Joueur extends Client implements JoueurInterface{
 
 						//Verifie que le producteur selectionne possede au moins ce qu'il peut donner et pas moins
 						try {
-							if(this.ListProducteur.get(indexProd2).GetStock().getExemplaires() > this.ListProducteur.get(indexProd2).GetCanGive())
+							if(this.ListProducteur.get(indexProd2).GetRessources().getExemplaires() > this.ListProducteur.get(indexProd2).GetCanGive())
 								//Le producteur peut donner , il a assez , donc on quitte la boucle
 								break;
 							}
@@ -194,13 +194,13 @@ public class Joueur extends Client implements JoueurInterface{
 	}
 
 
-	public boolean DemandeRessource(ProducteurInterface p) throws RemoteException
+	public boolean DemandeRessource(ClientInterface p) throws RemoteException
 	{
 		////Verifie que le joueur est bien en mode demande pour demander
 		if(GetMode() != Mode.Demande)
 			return false;
 
-		Ressources NewRessource = p.GetStock();
+		Ressources NewRessource = p.GetRessources();
 		int nbr = p.PrendreRessource();
 
 		return this.AjoutStock(NewRessource , nbr);
@@ -228,7 +228,7 @@ public class Joueur extends Client implements JoueurInterface{
 
 
 	//Joueur Voleur regarde si il peut voler
-	synchronized public boolean VolRessourceAgresseur(JoueurInterface j, Ressources r ) throws RemoteException
+	synchronized public boolean VolRessourceAgresseur(ClientInterface j, Ressources r ) throws RemoteException
 	{
 		//Verifie que le voleur est bien en mode vol
 		if(GetMode() != Mode.Vol)
@@ -249,7 +249,7 @@ public class Joueur extends Client implements JoueurInterface{
 	}
 
 	//Renvoie la liste des ressources du joueur observ�
-	synchronized public ArrayList<Ressources> Observation(JoueurInterface j) throws RemoteException
+	synchronized public ArrayList<Ressources> Observation(ClientInterface j) throws RemoteException
 	{
 		if(GetMode() == Mode.Observation)
 			return j.GetStock();

@@ -1,6 +1,6 @@
 import java.rmi.RemoteException;
 
-public class Producteur extends Client implements ProducteurInterface{
+public class Producteur extends Client{
   static final long serialVersionUID = 42;
 	//Stock de ressource du producteur
 	private Ressources Stock;
@@ -17,7 +17,7 @@ public class Producteur extends Client implements ProducteurInterface{
 		this.monType = Type.Producteur;
 	}
 
-	public Ressources GetStock()
+	public Ressources GetRessources()
 	{
 		return this.Stock;
 	}

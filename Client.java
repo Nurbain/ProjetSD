@@ -13,9 +13,9 @@ implements ClientInterface, Runnable // implémente l’interface
 	protected Type monType;
 	//Tout les autres clients avec les quels je suis connecté
 	protected ArrayList<ClientInterface> Peers= new ArrayList<ClientInterface>();
-	protected ArrayList<JoueurInterface> ListJoueur =new ArrayList<JoueurInterface>();
-	protected ArrayList<ProducteurInterface> ListProducteur =new ArrayList<ProducteurInterface>();
-	protected ObservateurInterface obs;
+	protected ArrayList<ClientInterface> ListJoueur =new ArrayList<ClientInterface>();
+	protected ArrayList<ClientInterface> ListProducteur =new ArrayList<ClientInterface>();
+	protected ClientInterface obs;
 
 
 	public Client (String name) throws RemoteException
@@ -40,28 +40,79 @@ implements ClientInterface, Runnable // implémente l’interface
 	/*Ajoute un client au client avec les quels je suis connecté
 		namePeer Nom du client
 		Cherche sur rmi://<ServerName>:<NumPort>/<namePeer>*/
-	public void ConnexionPeer(String ServerName,String PortNum,String namePeer) throws RemoteException {
+	public void ConnexionPeer(String ServerName,String PortNum,String namePeer,Type typePeers) throws RemoteException {
 		try
 		{
 		  System.out.println("Connexion a : "+namePeer);
 		  //Me connecte au client passé en paramettre
-		  ClientInterface b = (ClientInterface) Naming.lookup( "rmi://"+ServerName+":"+PortNum+"/"+namePeer ) ;
-			if(b instanceof JoueurInterface){
-				ListJoueur.add((JoueurInterface)b);
-				return;
-			}else if(b instanceof ProducteurInterface){
-				System.out.println("Ajout prod");
-				ListProducteur.add((ProducteurInterface)b);
-				return;
-			}else if(b instanceof ObservateurInterface){
-				obs = (ObservateurInterface)b;
-				return;
+			switch(typePeers){
+				case Observateur:
+					ClientInterface a = (ClientInterface) Naming.lookup( "rmi://"+ServerName+":"+PortNum+"/"+namePeer ) ;
+					obs = a;
+					return;
+				case Joueur:
+					ClientInterface b = (ClientInterface) Naming.lookup( "rmi://"+ServerName+":"+PortNum+"/"+namePeer ) ;
+					ListJoueur.add(b);
+					return;
+				case Producteur:
+					ClientInterface c = (ClientInterface) Naming.lookup( "rmi://"+ServerName+":"+PortNum+"/"+namePeer ) ;
+					System.out.println("Ajout prod");
+					ListProducteur.add(c);
+					return;
+				case Client:
+					return;
 			}
-		  //Puis l'ajoute à la liste
-		  Peers.add(b);
 		}
 		catch (NotBoundException re) { System.out.println(re) ; }
 		catch (RemoteException re) { System.out.println(re) ; }
 		catch (MalformedURLException e) { System.out.println(e) ; }
 	}
+
+	public int PrendreRessource(){
+		return 0;
+	}
+
+  public Ressources GetRessources(){
+		return null;
+	}
+
+  public int GetCanGive(){
+		return 0;
+	}
+
+	public ArrayList<Ressources> GetStock(){
+		return null;
+	}
+
+  public Personnalite GetPersonnalite(){
+		return Personnalite.Voleur;
+	}
+
+
+  public Mode GetMode(){
+		return Mode.Vol;
+	}
+  public boolean GetisJoueurIRL(){
+		return false;
+	}
+
+  public boolean VolRessourceAgresseur(JoueurInterface j, Ressources r){
+		return false;
+	}
+
+  public int VolRessourceVictime(Ressources r){
+		return 0;
+	}
+
+	public ArrayList<Ressources> Observation(JoueurInterface j){
+		return null;
+	}
+
+	public void generationLog(){
+	}
+
+  public void start(){
+
+	}
+
 }
