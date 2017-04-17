@@ -134,6 +134,10 @@ public class Joueur extends Client implements JoueurInterface{
 
 	public boolean DemandeRessource(ProducteurInterface p) throws RemoteException
 	{
+		////Verifie que le joueur est bien en mode demande pour demander
+		if(GetMode() != Mode.Demande)
+			return false;
+		
 		Ressources NewRessource = p.GetStock();
 		int nbr = p.PrendreRessource();
 		
@@ -144,6 +148,10 @@ public class Joueur extends Client implements JoueurInterface{
 	//Donne le nombre pouvant etre vole
 	synchronized public int VolRessourceVictime(Ressources r)
 	{
+		//Si le joueur est en mode protection marche pas 
+		if(GetMode() == Mode.Protection)
+			return 0;
+		
 		int index = SearchRessource(r);
 		
 		if(index == -1)
@@ -160,6 +168,10 @@ public class Joueur extends Client implements JoueurInterface{
 	//Joueur Voleur regarde si il peut voler 
 	synchronized public boolean VolRessourceAgresseur(Joueur j, Ressources r )
 	{
+		//Verifie que le voleur est bien en mode vol
+		if(GetMode() != Mode.Vol)
+			return false;
+		
 		int StockPris = j.VolRessourceVictime(r);
 		
 		//Verifie si c'est BullShit la ressource ou si y'a pas 
@@ -177,7 +189,9 @@ public class Joueur extends Client implements JoueurInterface{
 	//Renvoie la liste des ressources du joueur observé 
 	synchronized public ArrayList<Ressources> Observation(Joueur j)
 	{
-		return j.StockRessources;
+		if(GetMode() == Mode.Observation)
+			return j.StockRessources;
+		else return null;	
 	}
 
 	
