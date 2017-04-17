@@ -12,14 +12,32 @@ echo $ListProd
 ListJoueur=`seq -w 1 $3`
 echo $ListJoueur
 
-for i in $ListProd
-do
-  java ProducteurServ $1 P$i R$i 100 1 10 &
-done
+ListProdPropre=' '
 
 for i in $ListProd
 do
-  java JoueurServ $1 J$i &
+  ListProdPropre="$ListProdPropre P$i"
+done
+
+echo $ListProdPropre
+
+ListJoueurPropre=' '
+
+for i in $ListJoueur
+do
+  ListJoueurPropre="$ListJoueurPropre J$i"
+done
+
+echo $ListJoueurPropre
+
+for i in $ListProdPropre
+do
+  xterm -e java ProducteurServ $1 $i R$i 100 1 10 &
+done
+
+for i in $ListJoueurPropre
+do
+  xterm -e java JoueurServ $1 $i &
 done
 
 exit 0
