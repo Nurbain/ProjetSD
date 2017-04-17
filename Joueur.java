@@ -1,6 +1,5 @@
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Joueur extends Client implements JoueurInterface{
 
@@ -8,16 +7,72 @@ public class Joueur extends Client implements JoueurInterface{
 	private ArrayList<Ressources> StockRessources = new ArrayList<Ressources>();;
 	private boolean isJoueurIRL;
 	private Mode mode = Mode.Demande;
+	private int objectif;
 
 
-	public Joueur(String name, Personnalite perso, boolean isIRL ) throws RemoteException{
+	public Joueur(String name, Personnalite perso, boolean isIRL , int objectif ) throws RemoteException{
 		super(name);
 
 		this.perso = perso;
 		this.isJoueurIRL = isIRL;
+		this.objectif = objectif;
 	}
 
 
+	public void run(){
+		while(true){	
+			
+			//Récupère la personnalité du joueur
+			Personnalite perso = this.perso;	
+			
+			switch(perso)
+			{
+			
+			//Prends pour chaque ressources le nombre a avoir pour finir
+			case Individuel :
+				
+				//Change le mode si besoin en demande
+				if(GetMode() != Mode.Demande)
+					SetMode(Mode.Demande);
+				
+				//Boucle qui regarde les ressources qui n'ontpas atteint l'objectif
+				int indexRessource = 0;
+				for(int i = 0; i<StockRessources.size() ; i++)
+				{
+					if(StockRessources.get(i).getExemplaires() < objectif)
+					{
+						indexRessource = i;
+						break;
+					}
+				}
+				
+				//Recupère le producteur de la ressources manquante
+				int indexProd = SearchProducteur(StockRessources.get(indexRessource));
+				
+				//Demande la ressource 
+				try {DemandeRessource(this.ListProducteur.get(indexProd));} 
+				catch (RemoteException re) {System.out.println(re);}
+				
+				break;
+				
+			case Cooperatif :
+				
+				//Change pour observer le producteur de la ressource 
+				
+				
+				break;
+				
+			case Voleur :
+				break;
+				
+			/*Personnalité a rajouter*/
+				
+			default:
+				break;
+			}
+			//ThreadSleep ? 
+		}
+	}
 
 	synchronized public ArrayList<Ressources> GetStock()
 	{
@@ -45,7 +100,7 @@ public class Joueur extends Client implements JoueurInterface{
 	}
 
 
-	public boolean DemandeRessource(Producteur p)
+	public boolean DemandeRessource(ProducteurInterface p) throws RemoteException
 	{
 		Ressources NewRessource = p.GetStock();
 		int nbr = p.PrendreRessource();
@@ -53,6 +108,7 @@ public class Joueur extends Client implements JoueurInterface{
 		return this.AjoutStock(NewRessource , nbr);
 	}
 
+	
 	//Donne le nombre pouvant etre vole
 	synchronized public int VolRessourceVictime(Ressources r)
 	{
@@ -126,6 +182,23 @@ public class Joueur extends Client implements JoueurInterface{
 				return i;
 		}
 		
+		return index;
+	}
+	
+	private int SearchProducteur(Ressources r)
+	{
+		int index = -1;
+		
+		if(this.ListProducteur.isEmpty())
+			return index;
+
+		for(int i = 0; i<this.ListProducteur.size() ; i++)
+		{
+			try {if(this.ListProducteur.get(i).GetStock().equals(r))
+					return i;
+				} 
+			catch (RemoteException re) {System.out.println(re) ;}
+		}	
 		return index;
 	}
 
