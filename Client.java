@@ -1,6 +1,5 @@
 import java.rmi.server.UnicastRemoteObject ;
 import java.rmi.RemoteException ;
-import java.lang.*;
 import java.rmi.* ;
 import java.net.MalformedURLException ;
 import java.util.*;
@@ -9,11 +8,13 @@ public class Client
 extends UnicastRemoteObject // Hérite de UnicastRemoteObject
 implements ClientInterface, Runnable // implémente l’interface
 {
+	static final long serialVersionUID = 42;
 	protected String name;
 	//Tout les autres clients avec les quels je suis connecté
 	protected ArrayList<ClientInterface> Peers= new ArrayList<ClientInterface>();
 	protected ArrayList<JoueurInterface> ListJoueur =new ArrayList<JoueurInterface>();
 	protected ArrayList<ProducteurInterface> ListProducteur =new ArrayList<ProducteurInterface>();
+	protected ObservateurInterface obs;
 
 	public Client (String name) throws RemoteException
 	// Rmq : Le client n’a pas accès au constructeur
@@ -28,7 +29,6 @@ implements ClientInterface, Runnable // implémente l’interface
 
 	public void run() {
 		System.out.println("Run de "+this.name);
-		int i=0;
 		/*while(i< 20){
 			System.out.println("ping");
 			i++;
@@ -52,6 +52,9 @@ implements ClientInterface, Runnable // implémente l’interface
 				return;
 			}else if(b instanceof ProducteurInterface){
 				ListProducteur.add((ProducteurInterface)b);
+				return;
+			}else if(b instanceof ObservateurInterface){
+				obs = (ObservateurInterface)b;
 				return;
 			}
 		  //Puis l'ajoute à la liste

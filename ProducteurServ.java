@@ -1,6 +1,5 @@
 import java.net.* ;
 import java.rmi.* ;
-import java.lang.*;
 
 public class ProducteurServ
 {

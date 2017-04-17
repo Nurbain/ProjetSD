@@ -1,11 +1,11 @@
 import java.rmi.RemoteException;
 
 public class Producteur extends Client implements ProducteurInterface{
-
+  static final long serialVersionUID = 42;
 	//Stock de ressource du producteur
 	private Ressources Stock;
 	private float ratioProd;
-	//Nombre de ressource que le producteur peut donner a la fois 
+	//Nombre de ressource que le producteur peut donner a la fois
 	private int CanGive;
 
 	public Producteur(String name,String nameRessource, int nbrinit,float ratioProd, int CanGive) throws RemoteException {

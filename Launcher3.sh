@@ -40,8 +40,10 @@ do
   xterm -e java JoueurServ $1 $i &
 done
 
+xterm -e java ObservateurServ $1 O1 &
+
 sleep 2;
 
-java Coordinateur localhost $1 $ListJoueurPropre $ListProdPropre &
+java Coordinateur localhost $1 $ListJoueurPropre $ListProdPropre O1 &
 
 exit 0
