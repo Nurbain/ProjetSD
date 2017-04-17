@@ -14,11 +14,16 @@ public class Coordinateur
     {
 	  int i,j;
 	  int taille = args.length;
+    ObservateurInterface obs=new Observateur("O2",Fin.Brute);
 	  //args[2] nom premier client args[taille-1] nom du dernier client
 	  for(i=2;i<taille;i++){
 		  System.out.println("rmi://"+args[0]+":"+args[1]+"/"+args[i]);
 		  //Connection Client i
 		  ClientInterface b = (ClientInterface) Naming.lookup( "rmi://"+args[0]+":"+args[1]+"/"+args[i] ) ;
+      if(b instanceof ObservateurInterface){
+        System.out.println("Wewe");
+        obs=(ObservateurInterface)b;
+      }
 		  System.out.println("conn 1");
 		  for(j=2;j<taille;j++){
 			  if(j==i)
@@ -27,6 +32,7 @@ public class Coordinateur
 			  b.ConnexionPeer(args[0],args[1],args[j]);
 		  }
 	  }
+    obs.start();
     }
     catch (NotBoundException re) { System.out.println(re) ; }
     catch (RemoteException re) { System.out.println(re) ; }

@@ -13,4 +13,8 @@ public class Observateur extends Client implements ObservateurInterface{
 
   }
 
+  public void start(){
+    System.out.println(name + " Debut partie");
+  }
+
 }

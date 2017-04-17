@@ -15,6 +15,7 @@ implements ClientInterface, Runnable // implémente l’interface
 	protected ArrayList<JoueurInterface> ListJoueur =new ArrayList<JoueurInterface>();
 	protected ArrayList<ProducteurInterface> ListProducteur =new ArrayList<ProducteurInterface>();
 	protected ObservateurInterface obs;
+	protected Type monType=Type.Client;
 
 	public Client (String name) throws RemoteException
 	// Rmq : Le client n’a pas accès au constructeur
@@ -25,6 +26,10 @@ implements ClientInterface, Runnable // implémente l’interface
 	public String getName() throws RemoteException
 	{
 		return this.name;
+	}
+
+	public Type getType(){
+		return monType;
 	}
 
 	public void run() {
@@ -51,6 +56,7 @@ implements ClientInterface, Runnable // implémente l’interface
 				ListJoueur.add((JoueurInterface)b);
 				return;
 			}else if(b instanceof ProducteurInterface){
+				System.out.println("Ajout prod");
 				ListProducteur.add((ProducteurInterface)b);
 				return;
 			}else if(b instanceof ObservateurInterface){
