@@ -1,0 +1,46 @@
+	
+	CONVENTION DE NOMMAGE POUR LA NORMALISATION DES LOGS 
+
+########################################################
+
+
+Joueur J Prends ressources R en nombre N à Producteur P : 
+-> "Demande J R N P \n"
+
+########################################################
+
+
+Producteur P se fait prendre N ressources
+-> "P N \n"
+
+########################################################
+
+
+Producteur P produit N ressources 
+-> "P N"
+
+########################################################
+
+
+Joueur J1 vol ressources R en nombre N à Joueur J2:
+-> "Vol J1 R N J2"
+
+########################################################
+
+
+Joueur J se fait prendre N ressources R
+-> "J R N"
+
+########################################################
+
+Joueur J a fini la parti
+-> "J fin"
+
+########################################################
+
+
+Observateur Punit le joueur voleur J
+-> "Kick J"
+
+########################################################
+
