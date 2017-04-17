@@ -9,5 +9,8 @@ public interface ProducteurInterface extends Remote // Hérite de Remote
 
   public Ressources GetStock()
   throws RemoteException;
+  
+  public int GetCanGive()
+	throws RemoteException;
 
 }

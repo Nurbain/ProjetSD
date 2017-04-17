@@ -19,7 +19,7 @@ public class Joueur extends Client implements JoueurInterface{
 	}
 
 
-	public void run(){
+	public void run() {
 		while(true){	
 			
 			//Récupère la personnalite du joueur
@@ -36,36 +36,65 @@ public class Joueur extends Client implements JoueurInterface{
 					SetMode(Mode.Demande);
 				
 				//Boucle qui regarde les ressources qui n'ont pas atteint l'objectif
-				int indexRessource = 0;
+				int indexRessource1 = -1;
 				for(int i = 0; i<StockRessources.size() ; i++)
 				{
 					if(StockRessources.get(i).getExemplaires() < objectif)
 					{
-						indexRessource = i;
+						indexRessource1 = i;
 						break;
 					}
 				}
 				
 				//Recupere le producteur de la ressources manquante
-				int indexProd = SearchProducteur(StockRessources.get(indexRessource));
+				int indexProd1 = SearchProducteur(StockRessources.get(indexRessource1));
 				
 				//Demande la ressource 
-				try {DemandeRessource(this.ListProducteur.get(indexProd));} 
-				catch (RemoteException re) {System.out.println(re);}
+				try {DemandeRessource(this.ListProducteur.get(indexProd1));} 
+					catch (RemoteException re) {System.out.println(re);}
 				
 				break;
+			
 				
+			//Prends seulement si le producteur possède au moins une demande "entiere" de ressources
 			case Cooperatif :
 				
 				//Change pour observer le producteur de la ressource 
 				if(GetMode() != Mode.Observation)
 					SetMode(Mode.Observation);
 				
+		
+				int indexProd2 = -1;
+				for(int i = 0; i<StockRessources.size() ; i++)
+				{
+					//Trouve les ressources qui n'ont pas atteint l'objectif
+					if(StockRessources.get(i).getExemplaires() < objectif)
+					{
+						//Cherche les producteurs pouvant en donner 
+						indexProd2 = SearchProducteur(StockRessources.get(i));
+						
+						//Verifie que le producteur selectionne possede au moins ce qu'il peut donner et pas moins
+						try {
+							if(this.ListProducteur.get(indexProd2).GetStock().getExemplaires() > this.ListProducteur.get(indexProd2).GetCanGive())
+								//Le producteur peut donner , il a assez , donc on quitte la boucle
+								break;
+							} 
+						catch (RemoteException re) {System.out.println(re);}
+					}
+				}
 				
-				
+				//Passe en mode demande
+				SetMode(Mode.Demande);
+				try {DemandeRessource(this.ListProducteur.get(indexProd2));} 
+					catch (RemoteException re) {System.out.println(re);}
+					
 				break;
 				
+				
+			//Ne fait que voler aux autres joueurs
 			case Voleur :
+				
+				
 				break;
 				
 			/*Personnalite a rajouter*/
@@ -105,6 +134,10 @@ public class Joueur extends Client implements JoueurInterface{
 
 	public boolean DemandeRessource(ProducteurInterface p) throws RemoteException
 	{
+		////Verifie que le joueur est bien en mode demande pour demander
+		if(GetMode() != Mode.Demande)
+			return false;
+		
 		Ressources NewRessource = p.GetStock();
 		int nbr = p.PrendreRessource();
 		
@@ -115,6 +148,10 @@ public class Joueur extends Client implements JoueurInterface{
 	//Donne le nombre pouvant etre vole
 	synchronized public int VolRessourceVictime(Ressources r)
 	{
+		//Si le joueur est en mode protection marche pas 
+		if(GetMode() == Mode.Protection)
+			return 0;
+		
 		int index = SearchRessource(r);
 		
 		if(index == -1)
@@ -131,6 +168,10 @@ public class Joueur extends Client implements JoueurInterface{
 	//Joueur Voleur regarde si il peut voler 
 	synchronized public boolean VolRessourceAgresseur(Joueur j, Ressources r )
 	{
+		//Verifie que le voleur est bien en mode vol
+		if(GetMode() != Mode.Vol)
+			return false;
+		
 		int StockPris = j.VolRessourceVictime(r);
 		
 		//Verifie si c'est BullShit la ressource ou si y'a pas 
@@ -148,7 +189,9 @@ public class Joueur extends Client implements JoueurInterface{
 	//Renvoie la liste des ressources du joueur observé 
 	synchronized public ArrayList<Ressources> Observation(Joueur j)
 	{
-		return j.StockRessources;
+		if(GetMode() == Mode.Observation)
+			return j.StockRessources;
+		else return null;	
 	}
 
 	
