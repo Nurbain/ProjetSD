@@ -22,7 +22,7 @@ public class Joueur extends Client implements JoueurInterface{
 	public void run(){
 		while(true){	
 			
-			//Récupère la personnalité du joueur
+			//Récupère la personnalite du joueur
 			Personnalite perso = this.perso;	
 			
 			switch(perso)
@@ -58,6 +58,9 @@ public class Joueur extends Client implements JoueurInterface{
 			case Cooperatif :
 				
 				//Change pour observer le producteur de la ressource 
+				if(GetMode() != Mode.Observation)
+					SetMode(Mode.Observation);
+				
 				
 				
 				break;
