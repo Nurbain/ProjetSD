@@ -56,7 +56,7 @@ public class Joueur extends Client implements JoueurInterface{
 					catch (RemoteException re) {System.out.println(re);}
 				
 				//Verifie si fini
-				boolean fin1 = FinParti();
+				//boolean fin1 = FinParti();
 				
 				//Poke l'observateur de ses action et son etat
 				
@@ -97,7 +97,7 @@ public class Joueur extends Client implements JoueurInterface{
 					
 				
 				//Verifie si fini
-				boolean fin2 = FinParti();
+				//boolean fin2 = FinParti();
 				
 				//Poke l'observateur de ses action et son etat
 				
@@ -153,7 +153,7 @@ public class Joueur extends Client implements JoueurInterface{
 						
 				
 				//Verifie si fini
-				boolean fin3 = FinParti();
+				//boolean fin3 = FinParti();
 				
 				//Poke l'observateur de ses action et son etat
 				
@@ -310,7 +310,8 @@ public class Joueur extends Client implements JoueurInterface{
 		return index;
 	}
 
-	private boolean FinParti()
+	/*
+	synchronized private boolean FinParti()
 	{
 		for(int i =0 ; i<StockRessources.size() ; i++)
 		{
@@ -321,5 +322,6 @@ public class Joueur extends Client implements JoueurInterface{
 		}
 		return true;
 	}
+	*/
 	
 }
