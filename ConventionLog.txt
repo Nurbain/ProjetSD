@@ -1,6 +1,6 @@
 	BESOIN POUR LOG 
 	
-Argument donnée à l'Observateur : 
+Argument donnee à l'Observateur : 
 
 - Type Envoyeur 		: Le type de l'acteur							- Obligatoire
 - String NomEnvoyeur 	: Le nom de l'acteur							- Obligatoire
@@ -18,7 +18,7 @@ Argument donnée à l'Observateur :
 ########################################################
 
 
-Joueur J Prends ressources R en nombre N à Producteur P : 
+Joueur J Prends ressources R en nombre N a Producteur P : 
 -> "Joueur J.Nom Demande R.Nom N Producteur P.Nom  \n"
 
 ########################################################
@@ -36,7 +36,7 @@ Producteur P produit N ressources
 ########################################################
 
 
-Joueur J1 vol ressources R en nombre N à Joueur J2:
+Joueur J1 vol ressources R en nombre N a Joueur J2:
 -> "Joueur J1.Nom Vol R.Nom N Joueur J2.Nom \n"
 
 ########################################################
