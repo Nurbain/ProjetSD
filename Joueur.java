@@ -35,7 +35,7 @@ public class Joueur extends Client implements JoueurInterface{
 				if(GetMode() != Mode.Demande)
 					SetMode(Mode.Demande);
 				
-				//Boucle qui regarde les ressources qui n'ontpas atteint l'objectif
+				//Boucle qui regarde les ressources qui n'ont pas atteint l'objectif
 				int indexRessource = 0;
 				for(int i = 0; i<StockRessources.size() ; i++)
 				{
@@ -46,7 +46,7 @@ public class Joueur extends Client implements JoueurInterface{
 					}
 				}
 				
-				//Recupère le producteur de la ressources manquante
+				//Recupere le producteur de la ressources manquante
 				int indexProd = SearchProducteur(StockRessources.get(indexRessource));
 				
 				//Demande la ressource 
@@ -65,7 +65,7 @@ public class Joueur extends Client implements JoueurInterface{
 			case Voleur :
 				break;
 				
-			/*Personnalité a rajouter*/
+			/*Personnalite a rajouter*/
 				
 			default:
 				break;
