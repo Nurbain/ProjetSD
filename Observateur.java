@@ -7,6 +7,7 @@ public class Observateur extends Client implements ObservateurInterface{
   public Observateur(String name,Fin typeFin) throws RemoteException{
     super(name);
     this.typeFin=typeFin;
+    this.monType=Type.Observateur;
   }
 
   public void generationLog(){

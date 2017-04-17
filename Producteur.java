@@ -14,6 +14,7 @@ public class Producteur extends Client implements ProducteurInterface{
 		this.CanGive = CanGive;
 		this.ratioProd = ratioProd;
 		this.Stock = new Ressources(nameRessource, nbrinit);
+		this.monType = Type.Producteur;
 	}
 
 	public Ressources GetStock()

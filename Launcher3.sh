@@ -44,6 +44,8 @@ xterm -e java ObservateurServ $1 O1 &
 
 sleep 2;
 
+echo "wait"
+
 java Coordinateur localhost $1 $ListJoueurPropre $ListProdPropre O1 &
 
 exit 0

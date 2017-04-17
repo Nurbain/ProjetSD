@@ -10,37 +10,31 @@ implements ClientInterface, Runnable // implémente l’interface
 {
 	static final long serialVersionUID = 42;
 	protected String name;
+	protected Type monType;
 	//Tout les autres clients avec les quels je suis connecté
 	protected ArrayList<ClientInterface> Peers= new ArrayList<ClientInterface>();
 	protected ArrayList<JoueurInterface> ListJoueur =new ArrayList<JoueurInterface>();
 	protected ArrayList<ProducteurInterface> ListProducteur =new ArrayList<ProducteurInterface>();
 	protected ObservateurInterface obs;
-	protected Type monType=Type.Client;
+
 
 	public Client (String name) throws RemoteException
 	// Rmq : Le client n’a pas accès au constructeur
 	{
 		super() ;
 		this.name=name;
+		this.monType=Type.Client;
 	} ;
 	public String getName() throws RemoteException
 	{
 		return this.name;
 	}
 
-	public Type getType(){
-		return monType;
+	public Type getmonType(){
+		return this.monType;
 	}
 
 	public void run() {
-		System.out.println("Run de "+this.name);
-		/*while(i< 20){
-			System.out.println("ping");
-			i++;
-			try{
-				Thread.sleep(1000);
-			}catch(InterruptedException e){System.out.println("pb Thread");}
-		}*/
 	}
 
 	/*Ajoute un client au client avec les quels je suis connecté

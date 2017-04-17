@@ -323,5 +323,5 @@ public class Joueur extends Client implements JoueurInterface{
 		return true;
 	}
 	*/
-	
+
 }
