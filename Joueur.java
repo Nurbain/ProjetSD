@@ -104,10 +104,6 @@ public class Joueur extends Client{
 			case Cooperatif :
 
 				//Change pour observer le producteur de la ressource
-				if(GetMode() != Mode.Observation)
-					SetMode(Mode.Observation);
-
-
 				int indexProd2 = -1;
 				for(int i = 0; i<StockRessources.size() ; i++)
 				{
@@ -153,9 +149,8 @@ public class Joueur extends Client{
 
 			//Ne fait que voler aux autres joueurs
 			case Voleur :
+				
 				//Change pour observer le producteur de la ressource
-				if(GetMode() != Mode.Observation)
-					SetMode(Mode.Observation);
 
 
 				int indexJoueur = 0 , indexRessource2 = -1;;
@@ -266,7 +261,7 @@ public class Joueur extends Client{
 	synchronized public int VolRessourceVictime(Ressources r)
 	{
 		//Si le joueur est en mode protection marche pas
-		if(GetMode() == Mode.Protection)
+		if(GetMode() == Mode.Observation)
 			return 0;
 
 		int index = SearchRessource(r);
@@ -306,9 +301,7 @@ public class Joueur extends Client{
 	//Renvoie la liste des ressources du joueur observ�
 	synchronized public ArrayList<Ressources> Observation(ClientInterface j) throws RemoteException
 	{
-		if(GetMode() == Mode.Observation)
-			return j.GetStock();
-		else return null;
+		return j.GetStock();
 	}
 
 
