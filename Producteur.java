@@ -30,6 +30,7 @@ public class Producteur extends Client{
 		while(true){
       System.out.println("Production");
 			Production();
+      System.out.println("Possede : "+this.Stock.getExemplaires()+" de "+this.Stock.getName());
 			try{
 				Thread.sleep(1000);
 			}catch(InterruptedException e){System.out.println(e);}

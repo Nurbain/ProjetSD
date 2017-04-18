@@ -72,13 +72,18 @@ public class Joueur extends Client{
 				try {DemandeRessource(this.ListProducteur.get(indexProd1));}
 					catch (RemoteException re) {System.out.println(re);}
 
+				AfficheInventaire();
 				//Verifie si fini
 				boolean fin1 = FinParti();
 				if(fin1){
 					try{
 						obs.PartieFini(this.name);
+
 					}
 					catch (RemoteException re) { System.out.println(re) ; }
+					try{
+						Thread.sleep(100000);
+					}catch(InterruptedException e){System.out.println(e);}
 				}
 
 				//Poke l'observateur de ses action et son etat
@@ -118,12 +123,16 @@ public class Joueur extends Client{
 				try {DemandeRessource(this.ListProducteur.get(indexProd2));}
 					catch (RemoteException re) {System.out.println(re);}
 
+				AfficheInventaire();
 
 				//Verifie si fini
 				boolean fin2 = FinParti();
 				if(fin2){
 					try{
 						obs.PartieFini(this.name);
+						try{
+							Thread.sleep(10000);
+						}catch(InterruptedException e){System.out.println(e);}
 					}
 					catch (RemoteException re) { System.out.println(re) ; }
 				}
@@ -179,13 +188,16 @@ public class Joueur extends Client{
 
 				try {VolRessourceAgresseur(this.ListJoueur.get(indexJoueur), StockRessources.get(indexRessource2));}
 				catch (RemoteException re) {System.out.println(re);}
-
+				AfficheInventaire();
 
 				//Verifie si fini
 				boolean fin3 = FinParti();
 				if(fin3){
 					try{
 						obs.PartieFini(this.name);
+						try{
+							Thread.sleep(10000);
+						}catch(InterruptedException e){System.out.println(e);}
 					}
 					catch (RemoteException re) { System.out.println(re) ; }
 				}
@@ -336,7 +348,7 @@ public class Joueur extends Client{
 
 		for(int i = 0; i<this.ListProducteur.size() ; i++)
 		{
-			try {if(this.ListProducteur.get(i).GetStock().equals(r))
+			try {if(this.ListProducteur.get(i).GetRessources().equals(r))
 					return i;
 				}
 			catch (RemoteException re) {System.out.println(re) ;}
@@ -355,6 +367,12 @@ public class Joueur extends Client{
 			}
 		}
 		return true;
+	}
+
+	synchronized private void AfficheInventaire(){
+		for(int i=0;i<this.StockRessources.size();i++){
+			System.out.println(this.StockRessources.get(i).getName()+" : "+this.StockRessources.get(i).getExemplaires());
+		}
 	}
 
 
