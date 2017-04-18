@@ -6,7 +6,7 @@ public class Joueur extends Client{
 	static final long serialVersionUID = 42;
 
 	private Personnalite perso;
-	private ArrayList<Ressources> StockRessources = new ArrayList<Ressources>();;
+	private ArrayList<Ressources> StockRessources = new ArrayList<Ressources>();
 	private boolean isJoueurIRL;
 	private Mode mode = Mode.Demande;
 	private int objectif;
@@ -22,6 +22,21 @@ public class Joueur extends Client{
 	}
 
 
+	public void startAgent()
+	{
+		for(int i = 0; i< ListProducteur.size() ; i++)
+		{
+			try {
+				StockRessources.add(new Ressources(ListProducteur.get(i).GetRessources().getName(), 0));
+			} 
+			catch (RemoteException re) { System.out.println(re) ; }
+		}
+		
+		Thread t = new Thread(this);
+		t.start();
+	}
+	
+	
 	public void run() {
 		while(true){
 
@@ -57,8 +72,8 @@ public class Joueur extends Client{
 					catch (RemoteException re) {System.out.println(re);}
 
 				//Verifie si fini
-				//boolean fin1 = FinParti();
-
+				boolean fin1 = FinParti();
+				obs.PartieFini(this.name);
 				//Poke l'observateur de ses action et son etat
 
 				break;
@@ -98,7 +113,7 @@ public class Joueur extends Client{
 
 
 				//Verifie si fini
-				//boolean fin2 = FinParti();
+				boolean fin2 = FinParti();
 
 				//Poke l'observateur de ses action et son etat
 
@@ -154,7 +169,7 @@ public class Joueur extends Client{
 
 
 				//Verifie si fini
-				//boolean fin3 = FinParti();
+				boolean fin3 = FinParti();
 				//Poke l'observateur de ses action et son etat
 
 				break;
@@ -310,7 +325,7 @@ public class Joueur extends Client{
 		return index;
 	}
 
-	/*
+	
 	synchronized private boolean FinParti()
 	{
 		for(int i =0 ; i<StockRessources.size() ; i++)
@@ -322,6 +337,6 @@ public class Joueur extends Client{
 		}
 		return true;
 	}
-	*/
+	
 
 }
