@@ -19,7 +19,7 @@ public class Producteur extends Client{
 
 	public Ressources GetRessources()
 	{
-		return this.Stock;
+		return new Ressources(this.Stock.getName(),this.Stock.getExemplaires());
 	}
 
 	public synchronized int GetCanGive(){

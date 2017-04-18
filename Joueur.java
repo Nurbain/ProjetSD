@@ -24,19 +24,20 @@ public class Joueur extends Client{
 
 	public void startAgent()
 	{
+		System.out.println("Start");
 		for(int i = 0; i< ListProducteur.size() ; i++)
 		{
 			try {
 				StockRessources.add(new Ressources(ListProducteur.get(i).GetRessources().getName(), 0));
-			} 
+			}
 			catch (RemoteException re) { System.out.println(re) ; }
 		}
-		
+		System.out.println("Fin Init");
 		Thread t = new Thread(this);
 		t.start();
 	}
-	
-	
+
+
 	public void run() {
 		while(true){
 
@@ -73,7 +74,13 @@ public class Joueur extends Client{
 
 				//Verifie si fini
 				boolean fin1 = FinParti();
-				obs.PartieFini(this.name);
+				if(fin1){
+					try{
+						obs.PartieFini(this.name);
+					}
+					catch (RemoteException re) { System.out.println(re) ; }
+				}
+
 				//Poke l'observateur de ses action et son etat
 
 				break;
@@ -114,6 +121,12 @@ public class Joueur extends Client{
 
 				//Verifie si fini
 				boolean fin2 = FinParti();
+				if(fin2){
+					try{
+						obs.PartieFini(this.name);
+					}
+					catch (RemoteException re) { System.out.println(re) ; }
+				}
 
 				//Poke l'observateur de ses action et son etat
 
@@ -170,6 +183,12 @@ public class Joueur extends Client{
 
 				//Verifie si fini
 				boolean fin3 = FinParti();
+				if(fin3){
+					try{
+						obs.PartieFini(this.name);
+					}
+					catch (RemoteException re) { System.out.println(re) ; }
+				}
 				//Poke l'observateur de ses action et son etat
 
 				break;
@@ -325,7 +344,7 @@ public class Joueur extends Client{
 		return index;
 	}
 
-	
+
 	synchronized private boolean FinParti()
 	{
 		for(int i =0 ; i<StockRessources.size() ; i++)
@@ -337,6 +356,6 @@ public class Joueur extends Client{
 		}
 		return true;
 	}
-	
+
 
 }
