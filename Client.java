@@ -43,6 +43,9 @@ implements ClientInterface, Runnable // implémente l’interface
 	public void run() {
 	}
 
+	public void PartieFini(String name){
+	}
+
 	/*Ajoute un client au client avec les quels je suis connecté
 		namePeer Nom du client
 		Cherche sur rmi://<ServerName>:<NumPort>/<namePeer>*/

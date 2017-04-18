@@ -28,4 +28,8 @@ public class Observateur extends Client{
 
   }
 
+  public void PartieFini(String name){
+    System.out.println(name+" a fini");
+  }
+
 }

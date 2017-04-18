@@ -16,6 +16,9 @@ public interface ClientInterface extends Remote // Hérite de Remote
 	public void startAgent()
 	throws RemoteException;
 
+	public void PartieFini(String name)
+	throws RemoteException;
+
   public Ressources GetRessources()
   throws RemoteException;
 
