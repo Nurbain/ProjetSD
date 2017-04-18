@@ -28,6 +28,7 @@ public class Producteur extends Client{
 
 	public void run() {
 		while(true){
+      System.out.println("Production");
 			Production();
 			try{
 				Thread.sleep(1000);

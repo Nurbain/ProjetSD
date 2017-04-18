@@ -33,7 +33,7 @@ public class Coordinateur
 			  b.ConnexionPeer(args[0],args[1],args[j],tmp.getmonType());
 		  }
 	  }
-    obs.start();
+    obs.startAgent();
     }
     catch (NotBoundException re) { System.out.println(re) ; }
     catch (RemoteException re) { System.out.println(re) ; }

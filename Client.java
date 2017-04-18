@@ -34,6 +34,12 @@ implements ClientInterface, Runnable // implémente l’interface
 		return this.monType;
 	}
 
+	public void startAgent(){
+		System.out.println("Start");
+		Thread t=new Thread(this);
+		t.start();
+	}
+
 	public void run() {
 	}
 

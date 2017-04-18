@@ -14,8 +14,18 @@ public class Observateur extends Client{
 
   }
 
-  public void start(){
+  public void startAgent(){
     System.out.println(name + " Debut partie");
+    try{
+      for(int i=0;i < ListJoueur.size();i++){
+        ListJoueur.get(i).startAgent();
+      }
+      for(int i=0;i < ListProducteur.size();i++){
+        ListProducteur.get(i).startAgent();
+      }
+    }catch (RemoteException re) { System.out.println(re) ; }
+
+
   }
 
 }
