@@ -55,18 +55,27 @@ public class Joueur extends Client{
 					SetMode(Mode.Demande);
 
 				//Boucle qui regarde les ressources qui n'ont pas atteint l'objectif
-				int indexRessource1 = -1;
+				int indexRessource1 = -1 , indexProd1 = -1;
 				for(int i = 0; i<StockRessources.size() ; i++)
 				{
 					if(StockRessources.get(i).getExemplaires() < objectif)
 					{
 						indexRessource1 = i;
-						break;
+						
+						//Recupere le producteur de la ressources manquante
+						indexProd1 = SearchProducteur(StockRessources.get(indexRessource1));
+						
+						//Verifie qu'il n'a pas 0
+						try {
+							if(this.ListProducteur.get(indexProd1).GetRessources().getExemplaires() > 0)
+							{
+								//Si pas 0 alors il prend
+								break;
+							}
+						} 
+						catch (RemoteException re) {System.out.println(re);}
 					}
 				}
-
-				//Recupere le producteur de la ressources manquante
-				int indexProd1 = SearchProducteur(StockRessources.get(indexRessource1));
 
 				//Demande la ressource
 				try {DemandeRessource(this.ListProducteur.get(indexProd1));}
