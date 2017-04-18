@@ -10,8 +10,20 @@ public class Observateur extends Client{
     this.monType=Type.Observateur;
   }
 
-  public void generationLog(){
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event){
+    generationLog(nameEmetteur,typeEmetteur,event,null,0,"",Type.Joueur);
+  }
 
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre){
+    generationLog(nameEmetteur,typeEmetteur,event,r,nombre,"",Type.Joueur);
+  }
+
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre,String nameReceveur,Type typeReceveur){
+
+  }
+
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,String nameReceveur,Type typeReceveur){
+    generationLog(nameEmetteur,typeEmetteur,event,null,0,nameReceveur,typeReceveur);
   }
 
   public void startAgent(){

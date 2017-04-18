@@ -51,4 +51,16 @@ public interface ClientInterface extends Remote // Hérite de Remote
 
   public void start()
   throws RemoteException;
+
+	public void generationLog(String nameEmetteur,Type typeEmetteur,Action event)
+	throws RemoteException;
+
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre)
+	throws RemoteException;
+
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre,String nameReceveur,Type typeReceveur)
+	throws RemoteException;
+
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,String nameReceveur,Type typeReceveur)
+	throws RemoteException;
 }

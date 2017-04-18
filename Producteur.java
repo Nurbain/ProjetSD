@@ -53,6 +53,10 @@ public class Producteur extends Client{
 	//Produit des ressources
 	public synchronized void Production()
 	{
+    if(Stock.getExemplaires()<CanGive){
+      Stock.addRessources(CanGive);
+      return;
+    }
 		Stock.addRessources((int)(Stock.getExemplaires()*ratioProd));
 	}
 

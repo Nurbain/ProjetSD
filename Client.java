@@ -124,4 +124,16 @@ implements ClientInterface, Runnable // implémente l’interface
 
 	}
 
+	public void generationLog(String nameEmetteur,Type typeEmetteur,Action event){
+  }
+
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre){
+  }
+
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre,String nameReceveur,Type typeReceveur){
+  }
+
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,String nameReceveur,Type typeReceveur){
+  }
+
 }
