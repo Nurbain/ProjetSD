@@ -4,6 +4,8 @@ public class Observateur extends Client{
   static final long serialVersionUID = 42;
   Fin typeFin;
   protected boolean tourParTour;
+  protected int nbJoueur;
+  protected int nbJoueurFini=0;
 
   public Observateur(String name,Fin typeFin,boolean tourParTour) throws RemoteException{
     super(name);
@@ -60,6 +62,7 @@ public class Observateur extends Client{
     try{
       for(int i=0;i < ListJoueur.size();i++){
         ListJoueur.get(i).startAgent();
+        nbJoueur++;
       }
       for(int i=0;i < ListProducteur.size();i++){
         ListProducteur.get(i).startAgent();
@@ -74,15 +77,19 @@ public class Observateur extends Client{
 
   public void PartieFini(String name){
     generationLog(name , Type.Joueur , Action.Fin);
-    PartieFini();
-    try{
-      for(int i=0;i < ListJoueur.size();i++){
-        ListJoueur.get(i).PartieFini();
-      }
-      for(int i=0;i < ListProducteur.size();i++){
-        ListProducteur.get(i).PartieFini();
-      }
-    }catch (RemoteException re) { System.out.println(re) ; }
+    nbJoueurFini++;
+    if(this.typeFin == Fin.Brute || nbJoueur == nbJoueurFini){
+      PartieFini();
+      try{
+        for(int i=0;i < ListJoueur.size();i++){
+          ListJoueur.get(i).PartieFini();
+        }
+        for(int i=0;i < ListProducteur.size();i++){
+          ListProducteur.get(i).PartieFini();
+        }
+      }catch (RemoteException re) { System.out.println(re) ; }
+      return;
+    }
   }
 
   public void tourDeJeu(){
