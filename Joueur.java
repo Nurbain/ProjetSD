@@ -319,12 +319,12 @@ public class Joueur extends Client{
 
 	public void AskAction() throws RemoteException
 	{
-		int action = 0;
-		System.out.println("Plusieurs Operations sont disponibles, veuillez tapper le Numero de l'action : \n");
-		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire\n ");
+		System.out.println("Plusieurs Operations sont disponibles, veuillez tapper le Numero de l'action :");
+		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire ");
 
 		Scanner sc = new Scanner(System.in);
-		action = sc.nextInt();
+		int action = sc.nextInt();
+		System.out.println(action);
 
 		switch(action)
 		{
@@ -358,7 +358,7 @@ public class Joueur extends Client{
 			}
 			Scanner sc2 = new Scanner(System.in);
 			action2 = sc2.nextInt();
-			
+
 			System.out.println("Et quelle ressources voulez vous prendres ?");
 			Scanner sc3 = new Scanner(System.in);
 			action3 = sc3.nextInt();

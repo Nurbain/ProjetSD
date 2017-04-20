@@ -23,8 +23,9 @@ done
 
 if [ "$ANSWERreel" = "y" ]
 then
-	xterm -e java JoueurServ $1 JoueurReel $ANSWER y &
+	xterm -e java JoueurServ $1 JoueurReel y y &
 	ANSWER="y"
+	echo "ahhhhhhh"
 fi
 
 while [ "$ANSWER" != "y" -a "$ANSWER" != "n" ]
@@ -63,6 +64,11 @@ xterm -e java ObservateurServ $1 O1 $ANSWER &
 sleep 2;
 
 echo "wait"
+
+if [ "$ANSWERreel" = "y" ]
+then
+	ListJoueurPropre="$ListJoueurPropre JoueurReel"
+fi
 
 java Coordinateur localhost $1 $ListJoueurPropre $ListProdPropre O1 &
 
