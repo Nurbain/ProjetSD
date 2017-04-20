@@ -219,7 +219,7 @@ public class Joueur extends Client{
 	}
 
 	public void run() {
-		while(true)
+		while(true && !this.finParti)
 		{
 			tourDeJeu();
 		}
@@ -329,12 +329,21 @@ public class Joueur extends Client{
 		{
 		case 1 : 
 			System.out.println("A quelle producteur voulez vous prendre les ressources ?");
+			for(int i = 0 ; i < this.ListProducteur.size() ; i++)
+			{
+				
+			}
+			
+			
 			break;
 		
 		case 2 : System.out.println("A quelle joueur voulez vous prendre les ressources ?");
 			break;
 		
+			
+			
 		case 3 : System.out.println("Passage en mode Observation , vous pouvez punir les joueurs tentant de vous voler \n");
+			this.mode = Mode.Observation;
 			break;
 		
 		case 4 : 
@@ -431,6 +440,4 @@ public class Joueur extends Client{
 			System.out.println(this.StockRessources.get(i).getName()+" : "+this.StockRessources.get(i).getExemplaires());
 		}
 	}
-
-
 }
