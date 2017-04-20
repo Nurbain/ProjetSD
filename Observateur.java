@@ -30,7 +30,7 @@ public class Observateur extends Client{
 	  switch(event)
 	  {
 	  	case Demande :
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Demande  "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur);
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+" Prend "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur);
 	  		break;
 
 	  	case Production :
