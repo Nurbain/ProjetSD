@@ -324,8 +324,7 @@ public class Joueur extends Client{
 		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire\n ");
 
 		Scanner sc = new Scanner(System.in);
-		do{action = sc.nextInt();}
-		while(action != 1 || action != 2 || action != 3 || action != 4);
+		action = sc.nextInt();
 
 		switch(action)
 		{
@@ -336,8 +335,8 @@ public class Joueur extends Client{
 			{
 				System.out.println(i+":"+this.ListProducteur.get(i).getName()+","+this.ListProducteur.get(i).GetRessources().getName());
 			}
-			do{action1 = sc.nextInt();}
-			while(action1 == -1);
+			Scanner sc1 = new Scanner(System.in);
+			action1 = sc1.nextInt();
 
 			if(GetMode() != Mode.Demande)
 				SetMode(Mode.Demande);
@@ -357,11 +356,12 @@ public class Joueur extends Client{
 					System.out.println("\t"+j+":"+this.ListJoueur.get(i).GetStock().get(j).getName()+","+this.ListJoueur.get(i).GetStock().get(j).getExemplaires());
 				}
 			}
-			do{action2 = sc.nextInt();}
-			while(action2 == -1);
+			Scanner sc2 = new Scanner(System.in);
+			action2 = sc2.nextInt();
+			
 			System.out.println("Et quelle ressources voulez vous prendres ?");
-			do{action3 = sc.nextInt();}
-			while(action2 == -1);
+			Scanner sc3 = new Scanner(System.in);
+			action3 = sc3.nextInt();
 
 			SetMode(Mode.Vol);
 			VolRessourceAgresseur(this.ListJoueur.get(action2), this.ListJoueur.get(action2).GetStock().get(action3));
