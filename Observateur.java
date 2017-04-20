@@ -86,7 +86,7 @@ public class Observateur extends Client{
   }
 
   public void tourDeJeu(){
-    while(true && !finPartie){
+    while(true && !finParti){
       try{
         for(int i=0;i < ListJoueur.size();i++){
           ListJoueur.get(i).tourDeJeu();
