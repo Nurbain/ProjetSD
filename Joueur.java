@@ -1,5 +1,6 @@
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Joueur extends Client{
 
@@ -316,7 +317,34 @@ public class Joueur extends Client{
 
 	public void AskAction()
 	{
-
+		Scanner sc = new Scanner(System.in);
+		int action = 0;
+		System.out.println("Plusieurs Operations sont disponibles, veuillez tapper le Numero de l'action : \n");
+		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire\n ");
+		
+		do{action = sc.nextInt();}
+		while(action != 1 || action != 2 || action != 3 );
+		
+		switch(action)
+		{
+		case 1 : 
+			System.out.println("A quelle producteur voulez vous prendre les ressources ?");
+			break;
+		
+		case 2 : System.out.println("A quelle joueur voulez vous prendre les ressources ?");
+			break;
+		
+		case 3 : System.out.println("Passage en mode Observation , vous pouvez punir les joueurs tentant de vous voler \n");
+			break;
+		
+		case 4 : 
+			AfficheInventaire();
+			AskAction();
+			break;
+		default :
+			break;
+		}
+		
 	}
 
 	//Renvoie la liste des ressources du joueur observ�
@@ -369,6 +397,7 @@ public class Joueur extends Client{
 		if(this.ListProducteur.isEmpty())
 			return index;
 
+		
 		for(int i = 0; i<this.ListProducteur.size() ; i++)
 		{
 			try {
@@ -376,7 +405,7 @@ public class Joueur extends Client{
 				{
 					if(this.ListProducteur.get(i).GetRessources().getExemplaires() > 0)
 						return i;
-					else i = index;
+					else index = i;
 				}
 			}
 			catch (RemoteException re) {System.out.println(re) ;}
