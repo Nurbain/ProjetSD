@@ -42,11 +42,11 @@ public class Observateur extends Client{
 	  		break;
 
 	  	case Punition:
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Punit le  "+typeReceveur+"  "+nameReceveur);
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Punit "+typeReceveur+"  "+nameReceveur);
 	  		break;
 
 	  	case Fin:
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+" a fini la partie !");
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+" fini");
 
 	  	default:
 	  		break;
@@ -77,6 +77,14 @@ public class Observateur extends Client{
   }
 
   public void tourDeJeu(){
+    try{
+      for(int i=0;i < ListJoueur.size();i++){
+        ListJoueur.get(i).tourDeJeu();
+      }
+      for(int i=0;i < ListProducteur.size();i++){
+        ListProducteur.get(i).tourDeJeu();
+      }
+    }catch (RemoteException re) { System.out.println(re) ; }
 
   }
 
