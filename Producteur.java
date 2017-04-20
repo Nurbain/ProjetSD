@@ -7,14 +7,24 @@ public class Producteur extends Client{
 	private float ratioProd;
 	//Nombre de ressource que le producteur peut donner a la fois
 	private int CanGive;
+  private boolean tourParTour;
 
-	public Producteur(String name,String nameRessource, int nbrinit,float ratioProd, int CanGive) throws RemoteException {
+	public Producteur(String name,String nameRessource, int nbrinit,float ratioProd, int CanGive,boolean tourParTour) throws RemoteException {
 		super(name);
 
 		this.CanGive = CanGive;
 		this.ratioProd = ratioProd;
 		this.Stock = new Ressources(nameRessource, nbrinit);
 		this.monType = Type.Producteur;
+    this.tourParTour=tourParTour;
+	}
+
+  public void startAgent(){
+		System.out.println("Start");
+    if(!tourParTour){
+  		Thread t=new Thread(this);
+  		t.start();
+    }
 	}
 
 	public Ressources GetRessources()

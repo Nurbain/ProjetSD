@@ -34,7 +34,7 @@ implements ClientInterface, Runnable // implémente l’interface
 		return this.monType;
 	}
 	public void tourDeJeu(){
-		
+
 	}
 
 	public void startAgent(){

@@ -3,11 +3,13 @@ import java.rmi.RemoteException;
 public class Observateur extends Client{
   static final long serialVersionUID = 42;
   Fin typeFin;
+  protected boolean tourParTour;
 
-  public Observateur(String name,Fin typeFin) throws RemoteException{
+  public Observateur(String name,Fin typeFin,boolean tourParTour) throws RemoteException{
     super(name);
     this.typeFin=typeFin;
     this.monType=Type.Observateur;
+    this.tourParTour=tourParTour;
   }
 
   public void generationLog(String nameEmetteur,Type typeEmetteur,Action event){
@@ -44,7 +46,7 @@ public class Observateur extends Client{
 	  		break;
 
 	  	case Fin:
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+" � fini la partie !");
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+" a fini la partie !");
 
 	  	default:
 	  		break;
@@ -63,6 +65,9 @@ public class Observateur extends Client{
         ListProducteur.get(i).startAgent();
       }
     }catch (RemoteException re) { System.out.println(re) ; }
+    if(tourParTour){
+      tourDeJeu();
+    }
 
 
   }
@@ -72,7 +77,7 @@ public class Observateur extends Client{
   }
 
   public void tourDeJeu(){
-    
+
   }
 
 }
