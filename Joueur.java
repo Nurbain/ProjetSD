@@ -200,9 +200,7 @@ public class Joueur extends Client{
 			if(fin3){
 				try{
 					obs.PartieFini(this.name);
-					try{
-						Thread.sleep(10000);
-					}catch(InterruptedException e){System.out.println(e);}
+					return;
 				}
 				catch (RemoteException re) { System.out.println(re) ; }
 			}
@@ -315,10 +313,11 @@ public class Joueur extends Client{
 			
 	}
 
-	public void AskAction()
+	public void AskAction() throws RemoteException
 	{
 		Scanner sc = new Scanner(System.in);
 		int action = 0;
+		int action1 = 0;
 		System.out.println("Plusieurs Operations sont disponibles, veuillez tapper le Numero de l'action : \n");
 		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire\n ");
 		
@@ -331,7 +330,7 @@ public class Joueur extends Client{
 			System.out.println("A quelle producteur voulez vous prendre les ressources ?");
 			for(int i = 0 ; i < this.ListProducteur.size() ; i++)
 			{
-				
+				System.out.println(i+":"+this.ListProducteur.get(i).getName()+","+this.ListProducteur.get(i).GetRessources().getName());
 			}
 			
 			
