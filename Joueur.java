@@ -78,7 +78,8 @@ public class Joueur extends Client{
 				}
 
 				//Demande la ressource
-				try {DemandeRessource(this.ListProducteur.get(indexProd1));}
+				try {DemandeRessource(this.ListProducteur.get(indexProd1));
+					}
 					catch (RemoteException re) {System.out.println(re);}
 
 				AfficheInventaire();
@@ -87,15 +88,12 @@ public class Joueur extends Client{
 				if(fin1){
 					try{
 						obs.PartieFini(this.name);
-
 					}
 					catch (RemoteException re) { System.out.println(re) ; }
 					try{
 						Thread.sleep(100000);
 					}catch(InterruptedException e){System.out.println(e);}
 				}
-
-				//Poke l'observateur de ses action et son etat
 
 				break;
 
@@ -252,7 +250,10 @@ public class Joueur extends Client{
 
 		Ressources NewRessource = p.GetRessources();
 		int nbr = p.PrendreRessource();
-
+		
+		//Poke de l'observateur pour lui dire que le joueur demande a Producteur
+		obs.generationLog(this.name, this.monType, Action.Demande, NewRessource, nbr, p.getName(), p.getmonType());
+		
 		return this.AjoutStock(NewRessource , nbr);
 	}
 

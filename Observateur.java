@@ -18,13 +18,40 @@ public class Observateur extends Client{
     generationLog(nameEmetteur,typeEmetteur,event,r,nombre,"",Type.Joueur);
   }
 
-  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre,String nameReceveur,Type typeReceveur){
-
-  }
-
   public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,String nameReceveur,Type typeReceveur){
-    generationLog(nameEmetteur,typeEmetteur,event,null,0,nameReceveur,typeReceveur);
+	    generationLog(nameEmetteur,typeEmetteur,event,null,0,nameReceveur,typeReceveur);
+	  }
+  
+  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre,String nameReceveur,Type typeReceveur){
+	  
+	  //On fonction de l'event le log change
+	  switch(event)
+	  {
+	  	case Demande :
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Demande  "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur);
+	  		break;
+	  	
+	  	case Production :
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Produit  "+r.getName()+"  "+nombre);
+	  		break;
+	  	
+	  	case Vol:
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Vol  "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur);
+	  		break;
+	  		
+	  	case Punition:
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Punit le  "+typeReceveur+"  "+nameReceveur);
+	  		break;
+	  	
+	  	case Fin:
+	  		System.out.println(typeEmetteur+"  "+nameEmetteur+" à fini la partie !");
+	  	
+	  	default:
+	  		break;
+	  }
   }
+
+ 
 
   public void startAgent(){
     System.out.println(name + " Debut partie");
@@ -41,7 +68,7 @@ public class Observateur extends Client{
   }
 
   public void PartieFini(String name){
-    System.out.println(name+" a fini");
+    generationLog(name , Type.Joueur , Action.Fin);
   }
 
 }
