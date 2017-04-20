@@ -66,4 +66,8 @@ public interface ClientInterface extends Remote // Hérite de Remote
 
 	public void tourDeJeu()
 	throws RemoteException;
+
+	public void PartieFini()
+	throws RemoteException;
+
 }

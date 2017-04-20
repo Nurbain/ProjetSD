@@ -16,6 +16,7 @@ implements ClientInterface, Runnable // implémente l’interface
 	protected ArrayList<ClientInterface> ListJoueur =new ArrayList<ClientInterface>();
 	protected ArrayList<ClientInterface> ListProducteur =new ArrayList<ClientInterface>();
 	protected ClientInterface obs;
+	protected boolean finPartie=false;
 
 
 	public Client (String name) throws RemoteException
@@ -35,6 +36,10 @@ implements ClientInterface, Runnable // implémente l’interface
 	}
 	public void tourDeJeu(){
 
+	}
+
+	public void PartieFini(){
+		this.finPartie=true;
 	}
 
 	public void startAgent(){

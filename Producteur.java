@@ -37,7 +37,7 @@ public class Producteur extends Client{
 	}
 
 	public void run() {
-		while(true){
+		while(true && !finPartie){
       System.out.println("Production");
 			Production();
       System.out.println("Possede : "+this.Stock.getExemplaires()+" de "+this.Stock.getName());

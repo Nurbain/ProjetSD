@@ -74,10 +74,19 @@ public class Observateur extends Client{
 
   public void PartieFini(String name){
     generationLog(name , Type.Joueur , Action.Fin);
+    PartieFini();
+    try{
+      for(int i=0;i < ListJoueur.size();i++){
+        ListJoueur.get(i).PartieFini();
+      }
+      for(int i=0;i < ListProducteur.size();i++){
+        ListProducteur.get(i).PartieFini();
+      }
+    }catch (RemoteException re) { System.out.println(re) ; }
   }
 
   public void tourDeJeu(){
-    while(true){
+    while(true && !finPartie){
       try{
         for(int i=0;i < ListJoueur.size();i++){
           ListJoueur.get(i).tourDeJeu();
