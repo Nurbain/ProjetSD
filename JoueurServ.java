@@ -5,14 +5,14 @@ public class JoueurServ
 {
 	public static void main(String [] args)
 	{
-		if (args.length != 2)
+		if (args.length != 3)
 		{
-			System.out.println("Usage : java JoueurServ <port du serveur de noms> <Nom Joueur>") ;
+			System.out.println("Usage : java JoueurServ <port du serveur de noms> <Nom Joueur> <y si tour par tour n sinon>") ;
 			System.exit(0) ;
 		}
 		try
 		{
-			Joueur objLocal = new Joueur(args[1],Personnalite.Individuel,false,100,false) ;
+			Joueur objLocal = new Joueur(args[1],Personnalite.Individuel,false,100,(args[2].equals("y"))?true:false) ;
 			//Thread t=new Thread(objLocal);
 			//t.start();
 			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);

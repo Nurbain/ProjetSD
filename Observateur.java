@@ -77,15 +77,16 @@ public class Observateur extends Client{
   }
 
   public void tourDeJeu(){
-    try{
-      for(int i=0;i < ListJoueur.size();i++){
-        ListJoueur.get(i).tourDeJeu();
-      }
-      for(int i=0;i < ListProducteur.size();i++){
-        ListProducteur.get(i).tourDeJeu();
-      }
-    }catch (RemoteException re) { System.out.println(re) ; }
-
+    while(true){
+      try{
+        for(int i=0;i < ListJoueur.size();i++){
+          ListJoueur.get(i).tourDeJeu();
+        }
+        for(int i=0;i < ListProducteur.size();i++){
+          ListProducteur.get(i).tourDeJeu();
+        }
+      }catch (RemoteException re) { System.out.println(re) ; }
+    }
   }
 
 }
