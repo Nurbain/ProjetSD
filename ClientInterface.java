@@ -63,4 +63,7 @@ public interface ClientInterface extends Remote // Hérite de Remote
 
   public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,String nameReceveur,Type typeReceveur)
 	throws RemoteException;
+
+	public void tourDeJeu()
+	throws RemoteException;
 }

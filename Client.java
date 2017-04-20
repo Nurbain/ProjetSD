@@ -33,6 +33,9 @@ implements ClientInterface, Runnable // implémente l’interface
 	public Type getmonType(){
 		return this.monType;
 	}
+	public void tourDeJeu(){
+		
+	}
 
 	public void startAgent(){
 		System.out.println("Start");

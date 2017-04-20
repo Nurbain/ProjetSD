@@ -32,7 +32,7 @@ echo $ListJoueurPropre
 
 for i in $ListProdPropre
 do
-  xterm -e java ProducteurServ $1 $i R$i 100 1 10 &
+  xterm -e java ProducteurServ $1 $i R$i 100 0.25 10 &
 done
 
 for i in $ListJoueurPropre
