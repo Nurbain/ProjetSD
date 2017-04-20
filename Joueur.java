@@ -317,7 +317,6 @@ public class Joueur extends Client{
 	{
 		Scanner sc = new Scanner(System.in);
 		int action = 0;
-		int action1 = 0;
 		System.out.println("Plusieurs Operations sont disponibles, veuillez tapper le Numero de l'action : \n");
 		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire\n ");
 		
@@ -327,16 +326,43 @@ public class Joueur extends Client{
 		switch(action)
 		{
 		case 1 : 
+			int action1 = -1;
 			System.out.println("A quelle producteur voulez vous prendre les ressources ?");
 			for(int i = 0 ; i < this.ListProducteur.size() ; i++)
 			{
 				System.out.println(i+":"+this.ListProducteur.get(i).getName()+","+this.ListProducteur.get(i).GetRessources().getName());
 			}
+			do{action1 = sc.nextInt();}
+			while(action1 == -1);
 			
+			if(GetMode() != Mode.Demande)
+				SetMode(Mode.Demande);
 			
+			DemandeRessource(this.ListProducteur.get(action1));
+			System.out.println("Prise faite");
 			break;
 		
-		case 2 : System.out.println("A quelle joueur voulez vous prendre les ressources ?");
+		case 2 : 
+			int action2 =-1, action3 =-1;
+			System.out.println("A quelle joueur voulez vous prendre les ressources ?");
+			for(int i = 0 ; i < this.ListJoueur.size() ; i++)
+			{
+				System.out.println(i+":"+this.ListJoueur.get(i).getName()+"\n");
+				for(int j =0; j< this.ListJoueur.get(i).GetStock().size() ; j++)
+				{
+					System.out.println("\t"+j+":"+this.ListJoueur.get(i).GetStock().get(j).getName()+","+this.ListJoueur.get(i).GetStock().get(j).getExemplaires());
+				}
+			}
+			do{action2 = sc.nextInt();}
+			while(action2 == -1);
+			System.out.println("Et quelle ressources voulez vous prendres ?");
+			do{action3 = sc.nextInt();}
+			while(action2 == -1);
+			
+			SetMode(Mode.Vol);
+			VolRessourceAgresseur(this.ListJoueur.get(action2), this.ListJoueur.get(action2).GetStock().get(action3));
+			System.out.println("Vol fait");
+			
 			break;
 		
 			
