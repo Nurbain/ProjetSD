@@ -315,11 +315,11 @@ public class Joueur extends Client{
 
 	public void AskAction() throws RemoteException
 	{
-		Scanner sc = new Scanner(System.in);
 		int action = 0;
 		System.out.println("Plusieurs Operations sont disponibles, veuillez tapper le Numero de l'action : \n");
 		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire\n ");
 		
+		Scanner sc = new Scanner(System.in);
 		do{action = sc.nextInt();}
 		while(action != 1 || action != 2 || action != 3 );
 		
