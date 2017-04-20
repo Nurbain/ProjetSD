@@ -350,9 +350,14 @@ public class Joueur extends Client{
 
 		for(int i = 0; i<this.ListProducteur.size() ; i++)
 		{
-			try {if(this.ListProducteur.get(i).GetRessources().equals(r))
-					return i;
+			try {
+				if(this.ListProducteur.get(i).GetRessources().equals(r) )
+				{
+					if(this.ListProducteur.get(i).GetRessources().getExemplaires() > 0)
+						return i;
+					else i = index;
 				}
+			}
 			catch (RemoteException re) {System.out.println(re) ;}
 		}
 		return index;
