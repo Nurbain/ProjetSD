@@ -14,9 +14,18 @@ echo $ListJoueur
 
 ListProdPropre=' '
 
-read -p "Jouer en tour par tour ? (y/n)" ANSWER
+read -p "Jouer avec un joueur reel ? (y/n)" ANSWERreel
 
-echo $ANSWER
+while [ "$ANSWERreel" != "y" -a "$ANSWERreel" != "n" ]
+do
+	read -p "Jouer avec un joueur reel ? (y/n)" ANSWERreel
+done
+
+if [ "$ANSWERreel" = "y" ]
+then
+	xterm -e java JoueurServ $1 JoueurReel $ANSWER y &
+	ANSWER="y"
+fi
 
 while [ "$ANSWER" != "y" -a "$ANSWER" != "n" ]
 do
@@ -46,7 +55,7 @@ done
 
 for i in $ListJoueurPropre
 do
-  xterm -e java JoueurServ $1 $i $ANSWER &
+  xterm -e java JoueurServ $1 $i $ANSWER n &
 done
 
 xterm -e java ObservateurServ $1 O1 $ANSWER &

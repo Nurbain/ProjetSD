@@ -44,6 +44,14 @@ public class Joueur extends Client{
 
 
 	public void tourDeJeu(){
+
+		if(isJoueurIRL){
+			try{
+				AskAction();
+			}catch(RemoteException re) { System.out.println(re) ; }
+			return;
+		}
+
 		//Recupere la personnalite du joueur
 		Personnalite perso = this.perso;
 
@@ -93,9 +101,7 @@ public class Joueur extends Client{
 					obs.PartieFini(this.name);
 				}
 				catch (RemoteException re) { System.out.println(re) ; }
-				try{
-					Thread.sleep(100000);
-				}catch(InterruptedException e){System.out.println(e);}
+				return;
 			}
 
 			break;
@@ -136,9 +142,7 @@ public class Joueur extends Client{
 			if(fin2){
 				try{
 					obs.PartieFini(this.name);
-					try{
-						Thread.sleep(10000);
-					}catch(InterruptedException e){System.out.println(e);}
+					return;
 				}
 				catch (RemoteException re) { System.out.println(re) ; }
 			}
@@ -273,7 +277,7 @@ public class Joueur extends Client{
 		{
 			return 0;
 		}
-			
+
 
 		int index = SearchRessource(r);
 
@@ -310,22 +314,22 @@ public class Joueur extends Client{
 			obs.generationLog(this.name, this.monType, Action.Vol, r, StockPris, j.getName(), j.getmonType());
 			return this.AjoutStock(r, StockPris);
 		}
-			
+
 	}
 
 	public void AskAction() throws RemoteException
 	{
-		Scanner sc = new Scanner(System.in);
 		int action = 0;
 		System.out.println("Plusieurs Operations sont disponibles, veuillez tapper le Numero de l'action : \n");
 		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire\n ");
-		
+
+		Scanner sc = new Scanner(System.in);
 		do{action = sc.nextInt();}
-		while(action != 1 || action != 2 || action != 3 );
-		
+		while(action != 1 || action != 2 || action != 3 || action != 4);
+
 		switch(action)
 		{
-		case 1 : 
+		case 1 :
 			int action1 = -1;
 			System.out.println("A quelle producteur voulez vous prendre les ressources ?");
 			for(int i = 0 ; i < this.ListProducteur.size() ; i++)
@@ -334,15 +338,15 @@ public class Joueur extends Client{
 			}
 			do{action1 = sc.nextInt();}
 			while(action1 == -1);
-			
+
 			if(GetMode() != Mode.Demande)
 				SetMode(Mode.Demande);
-			
+
 			DemandeRessource(this.ListProducteur.get(action1));
 			System.out.println("Prise faite");
 			break;
-		
-		case 2 : 
+
+		case 2 :
 			int action2 =-1, action3 =-1;
 			System.out.println("A quelle joueur voulez vous prendre les ressources ?");
 			for(int i = 0 ; i < this.ListJoueur.size() ; i++)
@@ -358,27 +362,27 @@ public class Joueur extends Client{
 			System.out.println("Et quelle ressources voulez vous prendres ?");
 			do{action3 = sc.nextInt();}
 			while(action2 == -1);
-			
+
 			SetMode(Mode.Vol);
 			VolRessourceAgresseur(this.ListJoueur.get(action2), this.ListJoueur.get(action2).GetStock().get(action3));
 			System.out.println("Vol fait");
-			
+
 			break;
-		
-			
-			
+
+
+
 		case 3 : System.out.println("Passage en mode Observation , vous pouvez punir les joueurs tentant de vous voler \n");
 			this.mode = Mode.Observation;
 			break;
-		
-		case 4 : 
+
+		case 4 :
 			AfficheInventaire();
 			AskAction();
 			break;
 		default :
 			break;
 		}
-		
+
 	}
 
 	//Renvoie la liste des ressources du joueur observ�
@@ -431,7 +435,7 @@ public class Joueur extends Client{
 		if(this.ListProducteur.isEmpty())
 			return index;
 
-		
+
 		for(int i = 0; i<this.ListProducteur.size() ; i++)
 		{
 			try {
