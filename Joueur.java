@@ -442,12 +442,15 @@ public class Joueur extends Client{
 	{
 		//Si le joueur est en mode protection marche pas
 		if(GetMode() == Mode.Observation)
+		{
 			return 0;
+		}
+			
 
 		int index = SearchRessource(r);
 
 		if(index == -1)
-			return 0;
+			return -1;
 		else
 		{
 			int tmp = 	StockRessources.get(index).getExemplaires();
@@ -468,9 +471,18 @@ public class Joueur extends Client{
 
 		//Verifie si c'est BullShit la ressource ou si y'a pas
 		if(StockPris == 0)
+		{
+			obs.generationLog(j.getName(), j.getmonType(), Action.Punition, this.getName(), this.getmonType());
+			//Punition
 			return false;
-		else
+		}
+		else if(StockPris == -1)
+			return false;
+		else{
+			obs.generationLog(this.name, this.monType, Action.Vol, r, StockPris, j.getName(), j.getmonType());
 			return this.AjoutStock(r, StockPris);
+		}
+			
 	}
 
 	public void AskAction()
