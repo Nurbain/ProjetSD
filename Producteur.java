@@ -55,9 +55,14 @@ public class Producteur extends Client{
 	{
     if(Stock.getExemplaires()<CanGive){
       Stock.addRessources(CanGive);
+      try {obs.generationLog(this.name,this.monType,Action.Production,this.Stock,CanGive);} 
+      catch (RemoteException e) {	System.out.println(e);}
       return;
     }
-		Stock.addRessources((int)(Stock.getExemplaires()*ratioProd));
+    	int nombre = (int)(Stock.getExemplaires()*ratioProd);
+		Stock.addRessources(nombre);
+		try {obs.generationLog(this.name,this.monType,Action.Production,this.Stock,nombre);} 
+	    catch (RemoteException e) {	System.out.println(e);}
 	}
 
 
