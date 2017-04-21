@@ -1,4 +1,8 @@
+body {
+  padding-top: 10px;
+}
+
 [class*="col-"]{
   background-color: lightgreen;
-  border : 2px solid black;
+  border: 2px solid black;
 }

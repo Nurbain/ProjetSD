@@ -12,14 +12,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-  <script src="./stylesheet.css"></script>
+  <link rel="stylesheet" href="stylesheet.css"></script>
   <script src="./graphique.js"></script>
 </head>
 <body>
   <!-- Title -->
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 col-md-offset-2 test">
         <h1 class="title">Simulation de parti pour le projet de SD</h1>
       </div>
     </div>
@@ -28,29 +28,25 @@
   <!-- Container graphique -->
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-
+      <div class="col-md-9 ">
         <!-- Subtitle graphique -->
-        <div class="row">
           <h2 class="subtitle">Graphique de Partie</h2>
-        </div>
 
-        <input type="file" id="inputfile">
-        <button id="commitFile">Go !</button>
+          <input type="file" id="inputfile">
+          <button id="commitFile">Go !</button>
 
-        <div id="curve_chart" style="width: 900px; height: 500px"></div>
-
+          <div id="curve_chart" style="width: 900px; height: 500px"></div>
       </div>
+
+      <div class"col-md-3 ">
+        <h2>Auteur</h2>
+        <h2>Pourquoi ce projet ?</h2>
+      </div>
+
     </div>
   </div>
 
-  <!-- Footer -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 col-md-offset-8">
-        <h3>Pourquoi ce projet ? <h3>
-      </div>
-    </div>
+
   </div>
 
 </body>
