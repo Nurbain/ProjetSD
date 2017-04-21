@@ -11,10 +11,45 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script src="./stylesheet.css"></script>
   <script src="./graphique.js"></script>
 </head>
 <body>
-  <input type="file" id="inpurfile">
-  <div id="curve_chart" style="width: 900px; height: 500px"></div>
+  <!-- Title -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="title">Simulation de parti pour le projet de SD</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container graphique -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+
+        <!-- Subtitle graphique -->
+        <div class="row">
+          <h2 class="subtitle">Graphique de Partie</h2>
+        </div>
+
+        <input type="file" id="inpurfile">
+        <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-8">
+
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
