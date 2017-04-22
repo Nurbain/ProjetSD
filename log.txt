@@ -1,1 +1,66 @@
+Mode Auto
+Objectif 100
+Joueurs :
+J1
+J2
+
+Producteurs :
+P1 RP1 100
+P2 RP2 100
+
+Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J1 Prend RP1  10  Producteur  P1
+Producteur  P1  Produit  RP1  15
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P2  Produit  RP2  25
+Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP1  5  Producteur  P1
+Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP2  5  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Producteur  P2  Produit  RP2  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J1 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P2  Produit  RP2  10
+Joueur  J1 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P2  Produit  RP2  10
+Joueur  J2 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Producteur  P2  Produit  RP2  10
+Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Producteur  P2  Produit  RP2  10
+Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P2  Produit  RP2  10
+Joueur  J2 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J1 Prend RP1  10  Producteur  P1
+Producteur  P2  Produit  RP2  10
+Joueur  J2 Prend RP2  10  Producteur  P2
 Joueur  J2 fini

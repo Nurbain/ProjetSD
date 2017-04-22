@@ -18,6 +18,8 @@ public class JoueurLog {
   }
 
   public void add(String name,int nb){
+    if(findRessources(name) == null)
+      StockRessources.add(new RessourcesLog(name,0));
     findRessources(name).add(nb);
   }
 
