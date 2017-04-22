@@ -1,4 +1,8 @@
 import java.rmi.RemoteException;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class Observateur extends Client{
   static final long serialVersionUID = 42;
@@ -6,12 +10,14 @@ public class Observateur extends Client{
   protected boolean tourParTour;
   protected int nbJoueur;
   protected int nbJoueurFini=0;
+  private String Nomfichier;
 
-  public Observateur(String name,Fin typeFin,boolean tourParTour) throws RemoteException{
+  public Observateur(String name,Fin typeFin,boolean tourParTour, String Nomfichier) throws RemoteException{
     super(name);
     this.typeFin=typeFin;
     this.monType=Type.Observateur;
     this.tourParTour=tourParTour;
+    this.Nomfichier = Nomfichier;
   }
 
   public void generationLog(String nameEmetteur,Type typeEmetteur,Action event){
@@ -32,23 +38,34 @@ public class Observateur extends Client{
 	  switch(event)
 	  {
 	  	case Demande :
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+" Prend "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur);
+	  		String str1 = typeEmetteur+"  "+nameEmetteur+" Prend "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur;
+	  		System.out.println(str1);
+	  		EcritureLog(str1);
 	  		break;
 
 	  	case Production :
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Produit  "+r.getName()+"  "+nombre);
+	  		String str2 = typeEmetteur+"  "+nameEmetteur+"  Produit  "+r.getName()+"  "+nombre;
+	  		System.out.println(str2);
+	  		EcritureLog(str2);
 	  		break;
 
 	  	case Vol:
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Vol  "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur);
+	  		String str3 = typeEmetteur+"  "+nameEmetteur+"  Vol  "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur;
+	  		System.out.println(str3);
+	  		EcritureLog(str3);
 	  		break;
 
 	  	case Punition:
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+"  Punit "+typeReceveur+"  "+nameReceveur);
+	  		String str4 = typeEmetteur+"  "+nameEmetteur+"  Punit "+typeReceveur+"  "+nameReceveur ;
+	  		System.out.println(str4);
+	  		EcritureLog(str4);
 	  		break;
 
 	  	case Fin:
-	  		System.out.println(typeEmetteur+"  "+nameEmetteur+" fini");
+	  		String str5 = typeEmetteur+"  "+nameEmetteur+" fini";
+	  		System.out.println(str5);
+	  		EcritureLog(str5);
+	  		break;
 
 	  	default:
 	  		break;
@@ -59,29 +76,51 @@ public class Observateur extends Client{
   {
 	  String mode = (this.tourParTour)? "TPT" : "Auto" ;
 	  System.out.println("Mode "+mode+ "\n");
+	  EcritureLog("Mode "+mode);
 	  try{
 		  System.out.println("Objectif "+ListJoueur.get(0).Getobjectif()+"\n");
+		  EcritureLog("Objectif "+ListJoueur.get(0).Getobjectif());
 		  
-		  System.out.println("Joueurs \n");
+		  System.out.println("Joueurs : \n");
+		  EcritureLog("Joueurs :");
 	      for(int i=0;i < ListJoueur.size();i++){
 	    	  ClientInterface c = ListJoueur.get(i);
 	    	  String pseudo = c.getName();
 	    	  String IRL = (c.GetisJoueurIRL())? "IRL" : "noIRL" ;
-	    	  System.out.println("\t"+pseudo+" "+IRL+ "\n");
+	    	  
+	    	  System.out.println(pseudo+" "+IRL+ "\n");
+	    	  EcritureLog(pseudo+" "+IRL);
 	      }
 	      
-	      System.out.println("Producteurs \n");
+	      System.out.println("Producteurs :\n");
 	      for(int j=0;j<ListProducteur.size();j++)
 	      {
 	    	  ClientInterface c = ListProducteur.get(j);
 	    	  String pseudo = c.getName();
 	    	  String ressource = c.GetRessources().getName();
-	    	  System.out.println("\t"+pseudo+" "+ressource+"\n");
+	    	  
+	    	  System.out.println(pseudo+" "+ressource+"\n");
+	    	  EcritureLog(pseudo+" "+ressource);
 	      }
 	  }
 	  catch(RemoteException re) { System.out.println(re) ; }
   }
 
+  public void EcritureLog(String log)
+  {
+	  
+	File f = new File(Nomfichier);
+	try {
+		FileWriter fw = new FileWriter(f);
+		fw.write(log);
+		fw.write("\n");
+		fw.close();
+	} 
+	catch (IOException e) {e.printStackTrace();}
+	
+  }
+  
+  
   public void startAgent(){
     System.out.println(name + " Debut partie");
     LogDebutJeu();
