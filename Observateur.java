@@ -10,7 +10,9 @@ public class Observateur extends Client{
   protected boolean tourParTour;
   protected int nbJoueur;
   protected int nbJoueurFini=0;
+  
   private File fichier;
+  private FileWriter fw;
 
   public Observateur(String name,Fin typeFin,boolean tourParTour, String Nomfichier) throws RemoteException{
     super(name);
@@ -18,6 +20,11 @@ public class Observateur extends Client{
     this.monType=Type.Observateur;
     this.tourParTour=tourParTour;
     this.fichier = new File(Nomfichier);
+    
+    try {
+		this.fw = new FileWriter(this.fichier);
+	} 
+    catch (IOException e) {e.printStackTrace();}
   }
 
   public void generationLog(String nameEmetteur,Type typeEmetteur,Action event){
@@ -109,10 +116,8 @@ public class Observateur extends Client{
   public void EcritureLog(String log)
   {
 	try {
-		FileWriter fw = new FileWriter(fichier);
 		fw.write(log);
 		fw.write("\n");
-		fw.close();
 	} 
 	catch (IOException e) {e.printStackTrace();}
 	
