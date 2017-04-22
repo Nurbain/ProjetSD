@@ -14,6 +14,8 @@ public class Observateur extends Client{
   private File fichier;
   private FileWriter fw;
 
+
+  
   public Observateur(String name,Fin typeFin,boolean tourParTour, String Nomfichier) throws RemoteException{
     super(name);
     this.typeFin=typeFin;
@@ -105,8 +107,8 @@ public class Observateur extends Client{
 	    	  ClientInterface c = ListProducteur.get(j);
 	    	  String pseudo = c.getName();
 	    	  String ressource = c.GetRessources().getName();
-	    	  
-	    	  System.out.println(pseudo+" "+ressource+"\n");
+	    	  int nombre = c.GetRessources().getExemplaires();
+	    	  System.out.println(pseudo+" "+ressource+" "+nombre+"\n");
 	    	  EcritureLog(pseudo+" "+ressource);
 	      }
 	      EcritureLog("");
