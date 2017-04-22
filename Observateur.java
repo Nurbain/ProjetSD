@@ -99,7 +99,7 @@ public class Observateur extends Client{
 	      }
 	      
 	      System.out.println("Producteurs :\n");
-	      EcritureLog("\n Producteurs :");
+	      EcritureLog("\nProducteurs :");
 	      for(int j=0;j<ListProducteur.size();j++)
 	      {
 	    	  ClientInterface c = ListProducteur.get(j);
@@ -109,7 +109,7 @@ public class Observateur extends Client{
 	    	  System.out.println(pseudo+" "+ressource+"\n");
 	    	  EcritureLog(pseudo+" "+ressource);
 	      }
-	      EcritureLog("\n");
+	      EcritureLog("");
 	  }
 	  catch(RemoteException re) { System.out.println(re) ; }
   }
