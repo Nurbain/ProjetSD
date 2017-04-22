@@ -66,7 +66,7 @@ public class Joueur extends Client{
 				SetMode(Mode.Demande);
 
 			//Boucle qui regarde les ressources qui n'ont pas atteint l'objectif
-			int indexRessource1 = -1 , indexProd1 = -1;
+			int indexRessource1 = -1 , indexProd1 = -1 , nbrRessource;
 			for(int i = 0; i<StockRessources.size() ; i++)
 			{
 				if(StockRessources.get(i).getExemplaires() < objectif)
@@ -88,10 +88,15 @@ public class Joueur extends Client{
 				}
 			}
 
-			//Demande la ressource
-			try {DemandeRessource(this.ListProducteur.get(indexProd1));
+			SetMode(Mode.Demande);
+			try {
+				if(this.ListProducteur.get(indexProd1).GetRessources().getExemplaires() != 0){
+					DemandeRessource(this.ListProducteur.get(indexProd1));
 				}
-				catch (RemoteException re) {System.out.println(re);}
+				else 
+					SetMode(Mode.Observation);
+			} catch (RemoteException re) {System.out.println(re);}
+
 
 			AfficheInventaire();
 			//Verifie si fini
@@ -132,8 +137,13 @@ public class Joueur extends Client{
 
 			//Passe en mode demande
 			SetMode(Mode.Demande);
-			try {DemandeRessource(this.ListProducteur.get(indexProd2));}
-				catch (RemoteException re) {System.out.println(re);}
+			try {
+				if(this.ListProducteur.get(indexProd2).GetRessources().getExemplaires() != 0){
+					DemandeRessource(this.ListProducteur.get(indexProd2));
+				}
+				else 
+					SetMode(Mode.Observation);
+			} catch (RemoteException re) {System.out.println(re);}
 
 			AfficheInventaire();
 
