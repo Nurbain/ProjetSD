@@ -109,7 +109,7 @@ public class Observateur extends Client{
   public void EcritureLog(String log)
   {
 	  
-	File f = new File(Nomfichier);
+	File f = new File(Nomfichier+".txt");
 	try {
 		FileWriter fw = new FileWriter(f);
 		fw.write(log);
