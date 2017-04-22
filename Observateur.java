@@ -109,7 +109,7 @@ public class Observateur extends Client{
 	    	  String ressource = c.GetRessources().getName();
 	    	  int nombre = c.GetRessources().getExemplaires();
 	    	  System.out.println(pseudo+" "+ressource+" "+nombre+"\n");
-	    	  EcritureLog(pseudo+" "+ressource);
+	    	  EcritureLog(pseudo+" "+ressource+" "+nombre);
 	      }
 	      EcritureLog("");
 	  }
