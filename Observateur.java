@@ -156,7 +156,14 @@ public class Observateur extends Client{
           ListProducteur.get(i).PartieFini();
         }
       }catch (RemoteException re) { System.out.println(re) ; }
+      
+      
+      try {
+		fw.close();
+      } 
+      catch (IOException e) {e.printStackTrace();}
       return;
+      
     }
   }
 
