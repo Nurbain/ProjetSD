@@ -93,13 +93,13 @@ public class Observateur extends Client{
 	      for(int i=0;i < ListJoueur.size();i++){
 	    	  ClientInterface c = ListJoueur.get(i);
 	    	  String pseudo = c.getName();
-	    	  String IRL = (c.GetisJoueurIRL())? "IRL" : "noIRL" ;
 	    	  
-	    	  System.out.println(pseudo+" "+IRL+ "\n");
-	    	  EcritureLog(pseudo+" "+IRL);
+	    	  System.out.println(pseudo+"\n");
+	    	  EcritureLog(pseudo);
 	      }
 	      
 	      System.out.println("Producteurs :\n");
+	      EcritureLog("\n Producteurs :");
 	      for(int j=0;j<ListProducteur.size();j++)
 	      {
 	    	  ClientInterface c = ListProducteur.get(j);
@@ -109,6 +109,7 @@ public class Observateur extends Client{
 	    	  System.out.println(pseudo+" "+ressource+"\n");
 	    	  EcritureLog(pseudo+" "+ressource);
 	      }
+	      EcritureLog("\n");
 	  }
 	  catch(RemoteException re) { System.out.println(re) ; }
   }
