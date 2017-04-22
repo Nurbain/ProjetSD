@@ -276,9 +276,12 @@ public class Joueur extends Client{
 		Ressources NewRessource = p.GetRessources();
 		int nbr = p.PrendreRessource();
 
+		if(nbr != 0)
+		{
 		//Poke de l'observateur pour lui dire que le joueur demande a Producteur
 		obs.generationLog(this.name, this.monType, Action.Demande, NewRessource, nbr, p.getName(), p.getmonType());
-
+		}
+		
 		return this.AjoutStock(NewRessource , nbr);
 	}
 
