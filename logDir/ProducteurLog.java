@@ -8,4 +8,12 @@ public class ProducteurLog {
     stock=new RessourcesLog(nameRessource,nbrinit);
   }
 
+  public void add(int nb){
+    this.stock.add(nb);
+  }
+
+  public void sub(int nb){
+    this.stock.sub(nb);
+  }
+
 }
