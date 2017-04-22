@@ -25,4 +25,8 @@ public class JoueurLog {
     findRessources(name).sub(nb);
   }
 
+  public ArrayList<RessourcesLog> getStock(){
+    return this.StockRessources;
+  }
+
 }
