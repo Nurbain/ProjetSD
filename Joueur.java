@@ -66,7 +66,7 @@ public class Joueur extends Client{
 				SetMode(Mode.Demande);
 
 			//Boucle qui regarde les ressources qui n'ont pas atteint l'objectif
-			int indexRessource1 = -1 , indexProd1 = -1 , nbrRessource;
+			int indexRessource1 = -1 , indexProd1 = -1 ;
 			for(int i = 0; i<StockRessources.size() ; i++)
 			{
 				if(StockRessources.get(i).getExemplaires() < objectif)
