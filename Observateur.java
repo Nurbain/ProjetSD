@@ -14,7 +14,7 @@ public class Observateur extends Client{
   private File fichier;
   private FileWriter fw;
 
-
+  private long StartTimer;
   
   public Observateur(String name,Fin typeFin,boolean tourParTour, String Nomfichier) throws RemoteException{
     super(name);
@@ -141,6 +141,8 @@ public class Observateur extends Client{
       }
     }catch (RemoteException re) { System.out.println(re) ; }
     
+    StartTimer = System.currentTimeMillis();
+    
     if(tourParTour){
       tourDeJeu();
     }
@@ -160,8 +162,9 @@ public class Observateur extends Client{
         }
       }catch (RemoteException re) { System.out.println(re) ; }
       
-      
+      long fin = System.currentTimeMillis() - StartTimer;
       try {
+    	fw.write(String.valueOf(fin));
 		fw.close();
       } 
       catch (IOException e) {e.printStackTrace();}
