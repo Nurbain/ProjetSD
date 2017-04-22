@@ -57,19 +57,26 @@ public class Observateur extends Client{
 
   public void LogDebutJeu()
   {
-	  System.out.println("Mode "+(this.tourParTour) != null?"TPT" : "Auto"+ "\n");
+	  String mode = (this.tourParTour)? "TPT" : "Auto" ;
+	  System.out.println("Mode "+mode+ "\n");
 	  try{
 		  System.out.println("Objectif "+ListJoueur.get(0).Getobjectif()+"\n");
 		  
 		  System.out.println("Joueurs \n");
 	      for(int i=0;i < ListJoueur.size();i++){
-	    	  System.out.println("\t"+ListJoueur.get(i).getName()+" "+(ListJoueur.get(i).GetisJoueurIRL()) != null?"IRL" :"noIRL" + "\n");
+	    	  ClientInterface c = ListJoueur.get(i);
+	    	  String pseudo = c.getName();
+	    	  String IRL = (c.GetisJoueurIRL())? "IRL" : "noIRL" ;
+	    	  System.out.println("\t"+pseudo+" "+IRL+ "\n");
 	      }
 	      
 	      System.out.println("Producteurs \n");
 	      for(int j=0;j<ListProducteur.size();j++)
 	      {
-	    	  System.out.println("\t"+ListProducteur.get(j).getName()+" "+ListProducteur.get(j).GetRessources().getName()+"\n");
+	    	  ClientInterface c = ListProducteur.get(j);
+	    	  String pseudo = c.getName();
+	    	  String ressource = c.GetRessources().getName();
+	    	  System.out.println("\t"+pseudo+" "+ressource+"\n");
 	      }
 	  }
 	  catch(RemoteException re) { System.out.println(re) ; }
