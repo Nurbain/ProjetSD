@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ $# -ne 3 ]
+if [ $# -ne 4 ]
 then
-	echo "use : $0 <port num> <nb prod> <nb Joueur>"
+	echo "use : $0 <port num> <nb prod> <nb Joueur> <Nom fichier log>"
 	exit 1
 fi
 
@@ -59,7 +59,7 @@ do
   xterm -e java JoueurServ $1 $i $ANSWER n &
 done
 
-xterm -e java ObservateurServ $1 O1 $ANSWER &
+xterm -e java ObservateurServ $1 O1 $ANSWER $4 &
 
 sleep 2;
 

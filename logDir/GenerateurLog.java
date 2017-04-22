@@ -6,29 +6,64 @@ public class GenerateurLog{
   private ArrayList<ProducteurLog> ListProducteur = new ArrayList<ProducteurLog>();
 
   public static void main(String[] args){
-    FileInputStream fis = null;
+    BufferedReader bis =null;
     try{
-      fis = new FileInputStream(new File(args[0]));
-      byte[] buf = new byte[8];
-      while((fis.read(buf)) >= 0){
-        for(byte bit : buf){
-          System.out.print((char) bit);
+      bis = new BufferedReader(new FileReader(new File(args[0])));
+      String line;
+      while((line = bis.readLine()) != null){
+
+        System.out.println(line);
+        if(line.equals("Producteurs :")){
+          System.out.println("Liste Prod :");
+          LectureProducteur(bis);
         }
-        buf = new byte[8];
+        if(line.equals("Joueur :")){
+          System.out.println("Liste Joueur :");
+          LectureJoueur(bis);
+        }
+
       }
     }
     catch (FileNotFoundException e){e.printStackTrace();}
     catch (IOException e){e.printStackTrace();}
     finally{
       try{
-        if(fis != null)
-          fis.close();
+        if(bis != null)
+          bis.close();
       } catch (IOException e){ e.printStackTrace(); }
     }
     try{
-      if(fis != null)
-        fis.close();
+      if(bis != null)
+        bis.close();
     } catch (IOException e){ e.printStackTrace(); }
+  }
+
+  public static void LectureProducteur(BufferedReader bis){
+    try{
+      String line;
+      while((line = bis.readLine()) != null){
+        if(line.equals("")){
+          System.out.println("Fin des prod");
+          return;
+        }
+        System.out.println(line);
+      }
+    }catch (IOException e){e.printStackTrace();}
+
+  }
+
+  public static void LectureJoueur(BufferedReader bis){
+    try{
+      String line;
+      while((line = bis.readLine()) != null){
+        if(line.equals("")){
+          System.out.println("Fin des joueur");
+          return;
+        }
+        System.out.println(line);
+      }
+    }catch (IOException e){e.printStackTrace();}
+
   }
 
 
