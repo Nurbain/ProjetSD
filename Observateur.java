@@ -55,11 +55,31 @@ public class Observateur extends Client{
 	  }
   }
 
-
+  public void LogDebutJeu()
+  {
+	  System.out.println("Mode "+(this.tourParTour) != null?"TPT" : "Auto"+ "\n");
+	  try{
+		  System.out.println("Objectif "+ListJoueur.get(0).Getobjectif()+"\n");
+		  
+		  System.out.println("Joueurs \n");
+	      for(int i=0;i < ListJoueur.size();i++){
+	    	  System.out.println("\t"+ListJoueur.get(i).getName()+" "+(ListJoueur.get(i).GetisJoueurIRL()) != null?"IRL" :"noIRL" + "\n");
+	      }
+	      
+	      System.out.println("Producteurs \n");
+	      for(int j=0;j<ListProducteur.size();j++)
+	      {
+	    	  System.out.println("\t"+ListProducteur.get(j).getName()+" "+ListProducteur.get(j).GetRessources().getName()+"\n");
+	      }
+	  }
+	  catch(RemoteException re) { System.out.println(re) ; }
+  }
 
   public void startAgent(){
     System.out.println(name + " Debut partie");
+    LogDebutJeu();
     try{
+    	
       for(int i=0;i < ListJoueur.size();i++){
         ListJoueur.get(i).startAgent();
         nbJoueur++;
@@ -68,11 +88,10 @@ public class Observateur extends Client{
         ListProducteur.get(i).startAgent();
       }
     }catch (RemoteException re) { System.out.println(re) ; }
+    
     if(tourParTour){
       tourDeJeu();
     }
-
-
   }
 
   public void PartieFini(String name){

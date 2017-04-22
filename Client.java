@@ -121,6 +121,11 @@ implements ClientInterface, Runnable // implémente l’interface
 		return 0;
 	}
 
+  public int Getobjectif()
+  {
+	  return 0;
+  }
+  
 	public ArrayList<Ressources> Observation(JoueurInterface j){
 		return null;
 	}

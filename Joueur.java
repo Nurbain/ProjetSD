@@ -252,7 +252,11 @@ public class Joueur extends Client{
 		this.mode = m;
 	}
 
-
+	public int Getobjectif()
+	{
+		return this.objectif;
+	}
+	
 	public boolean DemandeRessource(ClientInterface p) throws RemoteException
 	{
 		////Verifie que le joueur est bien en mode demande pour demander
