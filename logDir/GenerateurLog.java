@@ -9,6 +9,11 @@ public class GenerateurLog{
   private static int Objectif;
 
   public static void main(String[] args){
+    if (args.length != 4)
+		{
+			System.out.println("Usage : java GenerateurLog <nom du fichier de log> <destination>") ;
+			System.exit(0) ;
+		}
     BufferedReader bis =null;
     FileWriter fw=null;
     try {
