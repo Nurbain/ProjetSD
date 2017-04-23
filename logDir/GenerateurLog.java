@@ -9,7 +9,7 @@ public class GenerateurLog{
   private static int Objectif;
 
   public static void main(String[] args){
-    if (args.length != 4)
+    if (args.length != 2)
 		{
 			System.out.println("Usage : java GenerateurLog <nom du fichier de log> <destination>") ;
 			System.exit(0) ;
@@ -159,14 +159,14 @@ public class GenerateurLog{
     String delims = "[ ]+";
     String[] tokens = line.split(delims);
     if(tokens[0].equals("Joueur")){
-      System.out.println("Action Joueur "+tokens[1]);
+      System.out.println("Action Joueur "+tokens[1]+" "+tokens[2]);
       JoueurLog jTmp=findJoueur(tokens[1]);
       if(tokens[2].equals("Prend")){
         System.out.println("Prend ");
         jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
         findProducteur(tokens[6]).sub(Integer.parseInt(tokens[4]));
       }
-    }else{
+    }else if(tokens[0].equals("Producteur")){
       System.out.println("Action Producteur "+tokens[1]);
       ProducteurLog pTmp=findProducteur(tokens[1]);
       if(tokens[2].equals("Produit")){

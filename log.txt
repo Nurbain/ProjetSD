@@ -3,64 +3,262 @@ Objectif 100
 Joueurs :
 J1
 J2
+J3
+J4
 
 Producteurs :
 P1 RP1 100
 P2 RP2 100
+P3 RP3 100
+P4 RP4 100
 
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J2 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP1  10  Producteur  P1
-Producteur  P1  Produit  RP1  15
-Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P1  Produit  RP1  25
 Producteur  P2  Produit  RP2  25
-Joueur  J1 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  25
 Joueur  J2 Prend RP1  10  Producteur  P1
 Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J3 Prend RP1  10  Producteur  P1
+Producteur  P4  Produit  RP4  25
+Joueur  J4 Prend RP1  10  Producteur  P1
 Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J4 Prend RP1  10  Producteur  P1
+Joueur  J3 Prend RP1  10  Producteur  P1
 Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J2 Prend RP1  5  Producteur  P1
+Joueur  J4 Prend RP1  10  Producteur  P1
+Joueur  J3 Prend RP1  10  Producteur  P1
+Joueur  J4 Prend RP1  10  Producteur  P1
+Joueur  J3 Prend RP1  10  Producteur  P1
+Joueur  J1 Prend RP1  5  Producteur  P1
+Joueur  J4 Prend RP2  10  Producteur  P2
+Joueur  J3 Prend RP2  10  Producteur  P2
 Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J4 Prend RP2  10  Producteur  P2
 Joueur  J2 Prend RP2  10  Producteur  P2
 Joueur  J1 Prend RP2  10  Producteur  P2
 Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J4 Prend RP2  10  Producteur  P2
 Joueur  J1 Prend RP2  10  Producteur  P2
 Joueur  J2 Prend RP2  10  Producteur  P2
-Joueur  J1 Prend RP2  10  Producteur  P2
+Joueur  J4 Prend RP2  10  Producteur  P2
 Joueur  J2 Prend RP2  10  Producteur  P2
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J2 Prend RP2  10  Producteur  P2
-Joueur  J2 Prend RP2  10  Producteur  P2
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J2 Prend RP2  5  Producteur  P2
-Producteur  P1  Produit  RP1  10
+Joueur  J1 Prend RP2  5  Producteur  P2
+Joueur  J2 Prend RP3  10  Producteur  P3
+Joueur  J3 Prend RP3  10  Producteur  P3
+Joueur  J2 Prend RP3  10  Producteur  P3
+Joueur  J4 Prend RP3  10  Producteur  P3
+Joueur  J3 Prend RP3  10  Producteur  P3
+Joueur  J4 Prend RP3  10  Producteur  P3
+Joueur  J2 Prend RP3  10  Producteur  P3
+Joueur  J1 Prend RP3  10  Producteur  P3
+Joueur  J4 Prend RP3  10  Producteur  P3
+Joueur  J3 Prend RP3  10  Producteur  P3
+Joueur  J1 Prend RP3  10  Producteur  P3
+Joueur  J2 Prend RP3  10  Producteur  P3
+Joueur  J4 Prend RP3  5  Producteur  P3
+Joueur  J2 Prend RP4  10  Producteur  P4
+Joueur  J1 Prend RP4  10  Producteur  P4
+Joueur  J3 Prend RP4  10  Producteur  P4
+Joueur  J4 Prend RP4  10  Producteur  P4
+Joueur  J1 Prend RP4  10  Producteur  P4
+Joueur  J2 Prend RP4  10  Producteur  P4
+Joueur  J3 Prend RP4  10  Producteur  P4
+Joueur  J4 Prend RP4  10  Producteur  P4
+Joueur  J1 Prend RP4  10  Producteur  P4
+Joueur  J2 Prend RP4  10  Producteur  P4
+Joueur  J3 Prend RP4  10  Producteur  P4
+Joueur  J4 Prend RP4  10  Producteur  P4
+Joueur  J1 Prend RP4  5  Producteur  P4
 Producteur  P2  Produit  RP2  10
-Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J3 Prend RP1  10  Producteur  P1
 Joueur  J1 Prend RP2  10  Producteur  P2
-Producteur  P1  Produit  RP1  10
-Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J3 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J4 Prend RP4  10  Producteur  P4
 Producteur  P2  Produit  RP2  10
-Joueur  J1 Prend RP2  10  Producteur  P2
+Producteur  P3  Produit  RP3  10
 Producteur  P1  Produit  RP1  10
-Joueur  J2 Prend RP1  10  Producteur  P1
-Producteur  P2  Produit  RP2  10
-Joueur  J2 Prend RP2  10  Producteur  P2
-Producteur  P1  Produit  RP1  10
-Producteur  P2  Produit  RP2  10
 Joueur  J1 Prend RP1  10  Producteur  P1
 Joueur  J2 Prend RP2  10  Producteur  P2
-Producteur  P1  Produit  RP1  10
+Producteur  P4  Produit  RP4  10
+Joueur  J1 Prend RP3  10  Producteur  P3
+Joueur  J3 Prend RP4  10  Producteur  P4
 Producteur  P2  Produit  RP2  10
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J4 Prend RP1  10  Producteur  P1
 Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J2 Prend RP1  10  Producteur  P1
-Producteur  P1  Produit  RP1  10
-Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J1 Prend RP4  10  Producteur  P4
 Producteur  P2  Produit  RP2  10
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
 Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J1 Prend RP3  10  Producteur  P3
+Joueur  J4 Prend RP1  10  Producteur  P1
+Producteur  P4  Produit  RP4  10
+Joueur  J3 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J3 Prend RP2  10  Producteur  P2
+Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J3 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J1 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J3 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J1 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J4 Prend RP3  10  Producteur  P3
+Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP2  10  Producteur  P2
+Producteur  P4  Produit  RP4  10
+Joueur  J2 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J4 Prend RP2  10  Producteur  P2
+Producteur  P3  Produit  RP3  10
 Producteur  P1  Produit  RP1  10
 Joueur  J1 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J2 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J4 Prend RP2  10  Producteur  P2
+Joueur  J3 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J1 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J4 Prend RP1  10  Producteur  P1
+Joueur  J2 Prend RP3  10  Producteur  P3
+Joueur  J4 Prend RP2  10  Producteur  P2
+Producteur  P4  Produit  RP4  10
+Joueur  J1 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J4 Prend RP2  10  Producteur  P2
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J3 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J1 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP2  10  Producteur  P2
+Joueur  J2 Prend RP1  10  Producteur  P1
+Joueur  J3 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J1 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J4 Prend RP2  10  Producteur  P2
+Producteur  P3  Produit  RP3  10
+Producteur  P1  Produit  RP1  10
+Joueur  J4 Prend RP3  10  Producteur  P3
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P4  Produit  RP4  10
+Joueur  J3 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J4 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Producteur  P3  Produit  RP3  10
+Joueur  J2 Prend RP3  10  Producteur  P3
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P4  Produit  RP4  10
+Joueur  J3 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J1 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Producteur  P3  Produit  RP3  10
+Joueur  J3 Prend RP3  10  Producteur  P3
+Joueur  J4 Prend RP1  10  Producteur  P1
+Producteur  P4  Produit  RP4  10
+Joueur  J2 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J3 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J4 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Joueur  J3 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J3 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J3 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Joueur  J4 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J2 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J1 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J4 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Joueur  J4 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J2 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J1 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Joueur  J4 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J4 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J3 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Joueur  J1 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J3 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J1 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J1 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Joueur  J1 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J3 Prend RP4  10  Producteur  P4
+Producteur  P2  Produit  RP2  10
+Joueur  J3 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J2 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Producteur  P4  Produit  RP4  10
+Joueur  J2 Prend RP4  10  Producteur  P4
+Joueur  J4 Prend RP3  10  Producteur  P3
+Producteur  P2  Produit  RP2  10
+Joueur  J3 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J1 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Joueur  J2 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J4 Prend RP4  10  Producteur  P4
 Producteur  P2  Produit  RP2  10
 Joueur  J2 Prend RP2  10  Producteur  P2
+Producteur  P1  Produit  RP1  10
+Joueur  J3 Prend RP1  10  Producteur  P1
+Producteur  P3  Produit  RP3  10
+Joueur  J4 Prend RP3  10  Producteur  P3
+Producteur  P4  Produit  RP4  10
+Joueur  J2 Prend RP4  10  Producteur  P4
 Joueur  J2 fini
+24489

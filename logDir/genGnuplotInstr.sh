@@ -6,12 +6,20 @@ then
 	exit 1
 fi
 
+tmp=`expr $1 + 1`
+
+List=`seq -w 3 $tmp`
+echo $List
+
 touch InstrGNUPLOT
 
-java GenerateurLog $3 "tmplog"
+java GenerateurLog $3 "tmplog" >> /dev/null
 
 echo "plot \"tmplog\" title \"P1\" with linespoints" > InstrGNUPLOT
-echo "replot \"tmplog\" using 1:3 title \"P2\" with linespoints" >> InstrGNUPLOT
+for i in $List
+do
+  echo "replot \"tmplog\" using 1:$i title \"P2\" with linespoints" >> InstrGNUPLOT
+done
 echo "set terminal png" >> InstrGNUPLOT
 echo "set output \"$2\"" >> InstrGNUPLOT
 echo "replot" >> InstrGNUPLOT
@@ -20,10 +28,3 @@ gnuplot InstrGNUPLOT
 
 rm tmplog
 rm InstrGNUPLOT
-
-# plot "testWrite.txt" title "P1" with linespoints
-# replot "testWrite.txt" using 1:3 title "P2" with linespoints
-# set terminal png
-# set output "resultat.png"
-# replot
-# echo ""
