@@ -4,11 +4,18 @@ import java.io.*;
 public class GenerateurLog{
   private static ArrayList<JoueurLog> ListJoueur = new ArrayList<JoueurLog>();
   private static ArrayList<ProducteurLog> ListProducteur = new ArrayList<ProducteurLog>();
+  private static ArrayList<RessourcesLog> ListRessources = new ArrayList<RessourcesLog>();
   private static String mode;
   private static int Objectif;
 
   public static void main(String[] args){
     BufferedReader bis =null;
+    FileWriter fw=null;
+    try {
+		    fw = new FileWriter(new File(args[1]));
+	   }
+    catch (IOException e) {e.printStackTrace();}
+
     try{
       bis = new BufferedReader(new FileReader(new File(args[0])));
       String line;
@@ -47,6 +54,11 @@ public class GenerateurLog{
       if(bis != null)
         bis.close();
     } catch (IOException e){ e.printStackTrace(); }
+    ecrireGNUplot(fw);
+    try {
+      fw.close();
+    }
+    catch (IOException e) {e.printStackTrace();}
   }
 
   public static void LectureProducteur(BufferedReader bis){
@@ -60,6 +72,9 @@ public class GenerateurLog{
         String delims = "[ ]+";
         String[] tokens = line.split(delims);
         ListProducteur.add(new ProducteurLog(tokens[0],tokens[1],Integer.parseInt(tokens[2])));
+        if(!existRessources(tokens[1])){
+          ListRessources.add(new RessourcesLog(tokens[1],0));
+        }
       }
     }catch (IOException e){e.printStackTrace();}
 
@@ -153,6 +168,51 @@ public class GenerateurLog{
         System.out.println("Produit");
         pTmp.add(Integer.parseInt(tokens[4]));
       }
+    }
+
+  }
+
+  public static boolean existRessources(String name){
+    for(RessourcesLog r : ListRessources){
+      if(r.name.equals(name))
+        return true;
+    }
+    return false;
+  }
+
+  public static int nbActionRessourcemax(String name){
+    int tmp,max=0;
+    for(int i=0;i<ListJoueur.size();i++){
+      tmp = ListJoueur.get(i).nbActionRessource(name);
+      if(tmp>max)
+        max=tmp;
+    }
+    return max;
+  }
+
+  public static void ecrireGNUplot(FileWriter fw){
+    boolean NonFini=true;
+    int j=0;
+    System.out.println("nb joueur : "+ListJoueur.size());
+    while(NonFini){
+      NonFini=false;
+      try {
+        fw.write(j+" ");
+      }
+      catch (IOException e) {e.printStackTrace();}
+      for(int i=0;i<ListJoueur.size();i++){
+        NonFini = ListJoueur.get(i).ecritureLog(fw,ListRessources.get(0).name,j) || NonFini;
+        System.out.println("num joueur : " + i);
+        try {
+          fw.write(" ");
+        }
+        catch (IOException e) {e.printStackTrace();}
+      }
+      try {
+        fw.write("\n");
+      }
+      catch (IOException e) {e.printStackTrace();}
+      j++;
     }
 
   }

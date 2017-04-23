@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.io.*;
 
 public class JoueurLog {
   public final String name;
@@ -29,6 +30,30 @@ public class JoueurLog {
 
   public ArrayList<RessourcesLog> getStock(){
     return this.StockRessources;
+  }
+
+  public boolean ecritureLog(FileWriter fw,String nomRessource,int i){
+    RessourcesLog r=findRessources(nomRessource);
+
+    if(i >= r.getHistorique().size()-1){
+      try {
+        System.out.println(r.getHistorique().get(r.getHistorique().size()-1));
+    		fw.write(""+r.getHistorique().get(r.getHistorique().size()-1));
+        return false;
+    	}
+    	catch (IOException e) {e.printStackTrace();return false;}
+    }
+    try {
+      System.out.println(r.getHistorique().get(i));
+      fw.write(""+r.getHistorique().get(i));
+      return true;
+    }
+    catch (IOException e) {e.printStackTrace();return true;}
+
+  }
+
+  public int nbActionRessource(String name){
+    return findRessources(name).getHistorique().size();
   }
 
 }
