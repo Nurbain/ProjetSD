@@ -59,6 +59,12 @@ public class GenerateurLog{
       if(bis != null)
         bis.close();
     } catch (IOException e){ e.printStackTrace(); }
+    try {
+		    FileWriter fw2 = new FileWriter(new File("tmpParam"));
+        fw2.write(""+ListJoueur.size());
+        fw2.close();
+	   }
+    catch (IOException e) {e.printStackTrace();}
     ecrireGNUplot(fw);
     try {
       fw.close();
