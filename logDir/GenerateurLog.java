@@ -69,11 +69,23 @@ public class GenerateurLog{
         fw2.close();
 	   }
     catch (IOException e) {e.printStackTrace();}
-    ecrireGNUplot(fw);
+    ecrireGNUplot(fw,0);
     try {
       fw.close();
     }
     catch (IOException e) {e.printStackTrace();}
+    for(int j=1;j<ListRessources.size();j++){
+		try {
+		    fw = new FileWriter(new File(args[1]+j));
+		   }
+		catch (IOException e) {e.printStackTrace();}
+		ecrireGNUplot(fw,j);
+		try {
+			fw.close();
+		}
+		catch (IOException e) {e.printStackTrace();}
+	}
+    
   }
 
   public static void LectureProducteur(BufferedReader bis){
@@ -215,14 +227,13 @@ public class GenerateurLog{
     return max;
   }
 
-  public static void ecrireGNUplot(FileWriter fw){
+  public static void ecrireGNUplot(FileWriter fw,int i){
     boolean NonFini=true;
-    int j=0;
     System.out.println("nb joueur : "+ListJoueur.size()); 
-    for(int i=0;i<ListLog.get(0).size();i++){
-		String tmp=i+" ";
-		for(int k=0;k<ListLog.get(0).get(i).size();k++){
-			tmp = tmp+ListLog.get(0).get(i).get(k)+" ";
+    for(int j=0;j<ListLog.get(i).size();j++){
+		String tmp=j+" ";
+		for(int k=0;k<ListLog.get(i).get(j).size();k++){
+			tmp = tmp+ListLog.get(i).get(j).get(k)+" ";
 		}
 		tmp=tmp+"\n";
 		System.out.print(tmp);

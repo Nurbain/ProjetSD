@@ -19,17 +19,24 @@ echo $List
 
 rm tmpParam
 
-echo "plot \"tmplog\" title \"P0\" with linespoints" > InstrGNUPLOT
-for i in $List
+tmp=`expr $nbColonne - 1`
+
+Listresult=`seq -w 0 $tmp`
+
+for j in $Listresult
 do
-  tmp=`expr $i - 2`
-  echo "replot \"tmplog\" using 1:$i title \"P$tmp\" with linespoints" >> InstrGNUPLOT
+	echo "plot \"tmplog$j\" title \"P0\" with linespoints" > InstrGNUPLOT
+	for i in $List
+	do
+	  tmp=`expr $i - 2`
+	  echo "replot \"tmplog$j\" using 1:$i title \"P$tmp\" with linespoints" >> InstrGNUPLOT
+	done
+	echo "set terminal png" >> InstrGNUPLOT
+	echo "set output \"$1$j.png\"" >> InstrGNUPLOT
+	echo "replot" >> InstrGNUPLOT
+	gnuplot InstrGNUPLOT
+	rm tmplog$j
 done
-echo "set terminal png" >> InstrGNUPLOT
-echo "set output \"$1.png\"" >> InstrGNUPLOT
-echo "replot" >> InstrGNUPLOT
 
-gnuplot InstrGNUPLOT
 
-rm tmplog
 rm InstrGNUPLOT
