@@ -41,7 +41,7 @@ public class Observateur extends Client{
 	    generationLog(nameEmetteur,typeEmetteur,event,null,0,nameReceveur,typeReceveur);
 	  }
 
-  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre,String nameReceveur,Type typeReceveur){
+  public synchronized void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre,String nameReceveur,Type typeReceveur){
 
 	  //On fonction de l'event le log change
 	  switch(event)
@@ -148,7 +148,7 @@ public class Observateur extends Client{
     }
   }
 
-  public void PartieFini(String name){
+  public synchronized void PartieFini(String name){
     generationLog(name , Type.Joueur , Action.Fin);
     nbJoueurFini++;
     if(this.typeFin == Fin.Brute || nbJoueur == nbJoueurFini){
