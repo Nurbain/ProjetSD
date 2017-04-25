@@ -5,6 +5,7 @@ public class GenerateurLog{
   private static ArrayList<JoueurLog> ListJoueur = new ArrayList<JoueurLog>();
   private static ArrayList<ProducteurLog> ListProducteur = new ArrayList<ProducteurLog>();
   private static ArrayList<RessourcesLog> ListRessources = new ArrayList<RessourcesLog>();
+  private static ArrayList<ArrayList<ArrayList<Integer>>> ListLog = new ArrayList<ArrayList<ArrayList<Integer>>>();
   private static String mode;
   private static int Objectif;
 
@@ -17,7 +18,7 @@ public class GenerateurLog{
     BufferedReader bis =null;
     FileWriter fw=null;
     try {
-		    fw = new FileWriter(new File(args[1]));
+		    fw = new FileWriter(new File(args[1]+"0"));
 	   }
     catch (IOException e) {e.printStackTrace();}
 
@@ -43,6 +44,9 @@ public class GenerateurLog{
         }
 
       }
+      for(int i=0;i<ListRessources.size();i++){
+		  ListLog.add(new ArrayList<ArrayList<Integer>>());
+	  }
       while((line = bis.readLine()) != null){
         LectureAction(line);
       }
@@ -124,6 +128,14 @@ public class GenerateurLog{
     }catch (IOException e){e.printStackTrace();}
 
   }
+  
+  public static int indexRessources(String name){
+	  for(int i=0;i<ListRessources.size();i++){
+		  if(ListRessources.get(i).name.equals(name))
+			return i;
+	  }
+	  return -1;
+  }
 
   public static void LectureObjectif(BufferedReader bis){
     try{
@@ -170,7 +182,9 @@ public class GenerateurLog{
       if(tokens[2].equals("Prend")){
         System.out.println("Prend ");
         jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
+        addLog(tokens[3]);
         findProducteur(tokens[6]).sub(Integer.parseInt(tokens[4]));
+        
       }
     }else if(tokens[0].equals("Producteur")){
       System.out.println("Action Producteur "+tokens[1]);
@@ -204,28 +218,33 @@ public class GenerateurLog{
   public static void ecrireGNUplot(FileWriter fw){
     boolean NonFini=true;
     int j=0;
-    System.out.println("nb joueur : "+ListJoueur.size());
-    while(NonFini){
-      NonFini=false;
-      try {
-        fw.write(j+" ");
-      }
-      catch (IOException e) {e.printStackTrace();}
-      for(int i=0;i<ListJoueur.size();i++){
-        NonFini = ListJoueur.get(i).ecritureLog(fw,ListRessources.get(0).name,j) || NonFini;
-        System.out.println("num joueur : " + i);
-        try {
-          fw.write(" ");
-        }
-        catch (IOException e) {e.printStackTrace();}
-      }
-      try {
-        fw.write("\n");
-      }
-      catch (IOException e) {e.printStackTrace();}
-      j++;
-    }
+    System.out.println("nb joueur : "+ListJoueur.size()); 
+    for(int i=0;i<ListLog.get(0).size();i++){
+		String tmp=i+" ";
+		for(int k=0;k<ListLog.get(0).get(i).size();k++){
+			tmp = tmp+ListLog.get(0).get(i).get(k)+" ";
+		}
+		tmp=tmp+"\n";
+		System.out.print(tmp);
+		try {
+			fw.write(tmp);
+			
+		  }
+		  catch (IOException e) {e.printStackTrace();}
+	}
 
+  }
+  
+  public static void addLog(String name){
+	  System.out.println(name);
+	  ArrayList<Integer> tmpList=new ArrayList<Integer>();
+	  for(int i=0;i<ListJoueur.size();i++){
+		  int tmp =ListJoueur.get(i).lastAction(name);
+		  if(tmp==-1)
+			tmp=0;
+		  tmpList.add(tmp);
+	  }
+	  ListLog.get(indexRessources(name)).add(tmpList);
   }
 
 

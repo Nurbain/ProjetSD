@@ -15,12 +15,16 @@ public class JoueurLog {
         return StockRessources.get(i);
       }
     }
+    System.out.println("Pas trouve");
     return null;
   }
 
   public void add(String name,int nb){
-    if(findRessources(name) == null)
+	System.out.println("add :"+name);
+    if(findRessources(name) == null){
+		System.out.println("creation :"+name);
       StockRessources.add(new RessourcesLog(name,0));
+	}
     findRessources(name).add(nb);
   }
 
@@ -54,6 +58,12 @@ public class JoueurLog {
 
   public int nbActionRessource(String name){
     return findRessources(name).getHistorique().size();
+  }
+  
+  public int lastAction(String name){
+	  if(findRessources(name) == null)
+		return -1;
+	  return findRessources(name).lastAction();
   }
 
 }

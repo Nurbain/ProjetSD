@@ -20,5 +20,9 @@ public class RessourcesLog {
   public ArrayList<Integer> getHistorique(){
     return this.historique;
   }
+  
+  public int lastAction(){
+	  return historique.get(historique.size()-1);
+  }
 
 }
