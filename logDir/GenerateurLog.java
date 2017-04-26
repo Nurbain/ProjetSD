@@ -6,6 +6,7 @@ public class GenerateurLog{
   private static ArrayList<ProducteurLog> ListProducteur = new ArrayList<ProducteurLog>();
   private static ArrayList<RessourcesLog> ListRessources = new ArrayList<RessourcesLog>();
   private static ArrayList<ArrayList<ArrayList<Integer>>> ListLog = new ArrayList<ArrayList<ArrayList<Integer>>>();
+  private static ArrayList<ArrayList<ArrayList<Integer>>> ListLogJoueur = new ArrayList<ArrayList<ArrayList<Integer>>>();
   private static String mode;
   private static int Objectif;
 
@@ -47,6 +48,9 @@ public class GenerateurLog{
       for(int i=0;i<ListRessources.size();i++){
 		  ListLog.add(new ArrayList<ArrayList<Integer>>());
 	  }
+	  for(int i=0;i<ListJoueur.size();i++){
+		  ListLogJoueur.add(new ArrayList<ArrayList<Integer>>());
+	  }
       while((line = bis.readLine()) != null){
         LectureAction(line);
       }
@@ -69,6 +73,12 @@ public class GenerateurLog{
         fw2.close();
 	   }
     catch (IOException e) {e.printStackTrace();}
+    try {
+		    FileWriter fw3 = new FileWriter(new File("tmpParam2"));
+        fw3.write(""+ListRessources.size());
+        fw3.close();
+	   }
+    catch (IOException e) {e.printStackTrace();}
     ecrireGNUplot(fw,0);
     try {
       fw.close();
@@ -80,6 +90,18 @@ public class GenerateurLog{
 		   }
 		catch (IOException e) {e.printStackTrace();}
 		ecrireGNUplot(fw,j);
+		try {
+			fw.close();
+		}
+		catch (IOException e) {e.printStackTrace();}
+	}
+	
+	for(int j=0;j<ListJoueur.size();j++){
+		try {
+		    fw = new FileWriter(new File(args[1]+"J"+j));
+		   }
+		catch (IOException e) {e.printStackTrace();}
+		ecrireGNUplotJoueur(fw,j);
 		try {
 			fw.close();
 		}
@@ -148,6 +170,14 @@ public class GenerateurLog{
 	  }
 	  return -1;
   }
+  
+  public static int indexJoueur(String name){
+	  for(int i=0;i<ListJoueur.size();i++){
+		  if(ListJoueur.get(i).name.equals(name))
+			return i;
+	  }
+	  return -1;
+  }
 
   public static void LectureObjectif(BufferedReader bis){
     try{
@@ -195,6 +225,7 @@ public class GenerateurLog{
         System.out.println("Prend ");
         jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
         addLog(tokens[3]);
+        addLogJoueur(tokens[1]);
         findProducteur(tokens[6]).sub(Integer.parseInt(tokens[4]));
         
       }
@@ -246,6 +277,23 @@ public class GenerateurLog{
 
   }
   
+  public static void ecrireGNUplotJoueur(FileWriter fw,int i){
+    for(int j=0;j<ListLogJoueur.get(i).size();j++){
+		String tmp=j+" ";
+		for(int k=0;k<ListLogJoueur.get(i).get(j).size();k++){
+			tmp = tmp+ListLogJoueur.get(i).get(j).get(k)+" ";
+		}
+		tmp=tmp+"\n";
+		System.out.print(tmp);
+		try {
+			fw.write(tmp);
+			
+		  }
+		  catch (IOException e) {e.printStackTrace();}
+	}
+
+  }
+  
   public static void addLog(String name){
 	  System.out.println(name);
 	  ArrayList<Integer> tmpList=new ArrayList<Integer>();
@@ -256,6 +304,19 @@ public class GenerateurLog{
 		  tmpList.add(tmp);
 	  }
 	  ListLog.get(indexRessources(name)).add(tmpList);
+  }
+  
+  public static void addLogJoueur(String name){
+	  System.out.println(name);
+	  ArrayList<Integer> tmpList=new ArrayList<Integer>();
+	  ArrayList<RessourcesLog> StockRessources = findJoueur(name).getStock();
+	  for(int i=0;i<StockRessources.size();i++){
+		  int tmp =StockRessources.get(i).lastAction();
+		  if(tmp==-1)
+			tmp=0;
+		  tmpList.add(tmp);
+	  }
+	  ListLogJoueur.get(indexJoueur(name)).add(tmpList);
   }
 
 
