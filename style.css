@@ -1,0 +1,29 @@
+#graphe
+{
+  border : 2px solid grey ;
+  border-radius: 5px;
+}
+
+#titlegraphe
+{
+  padding-left: 20px;
+  font-style: italic;
+}
+
+#author
+{
+  padding-top: 0px;
+  padding-left: 30px;
+  font-size: 1.20em;
+  font-style: italic;
+}
+
+#title{
+  padding-bottom: 0px;
+
+}
+
+
+.titre{
+  text-align: center;
+}

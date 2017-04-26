@@ -15,10 +15,10 @@
 </head>
 <body>
 
-<div class="container">
-	<div class="row">
+<div class="container ">
+	<div class="row titre">
 		<h1 id="title">Visualisation Projet SD</h1>
-		<h3>Quentin Wendling & Nathan Urbain</h3>
+		<h3 id="author">Quentin Wendling & Nathan Urbain</h3>
 	</div>
 	<br><br>
 
@@ -28,10 +28,10 @@
 				</button>
 				<ul class="dropdown-menu">
 				<!-- modif selon nombre joueur -->
-					<li>Tous</li>			 	 	
-					<li>Joueur 1</li>
-				 	<li>Joueur 2</li>
-					<li>Joueur 3</li>
+					<li><a href="#">Tous</a></li>
+					<li><a href="#">Joueur 1</a></li>
+				 	<li><a href="#">Joueur 2</a></li>
+					<li><a href="#">Joueur 3</a></li>
 				</ul>
 		</div>
 		<div class="btn-group" role="group">
@@ -39,22 +39,32 @@
 				</button>
 				<ul class="dropdown-menu">
 				<!-- modif selon nombre producteur-->
-					<li>Tous</li>	
-			 	 	<li>Producteur 1</li>
-				 	<li>Producteur 2</li>
-					<li>Producteur 3</li>
+					<li><a href="#">Tous</a></li>
+			 	 	<li><a href="#">Producteur 1</a></li>
+				 	<li><a href="#">Producteur 2</a></li>
+					<li><a href="#">Producteur 3</a></li>
 				</ul>
 		</div>
 	</div>
 
-	<div class="row" id="graphe">
+	<br>
+	<div class="row" >
 		<!-- modif suivant l'actif-->
-		<h3>Tout les joueurs</h3>
-		<img src="logDir/result.png">
-	</div>
+		<div class="col-md-10" id="graphe">
+			<h3 id="titlegraphe">Tout les joueurs</h3>
+			<img src="logDir/test.png">
+		</div>
 
+		<div class="col-md-2">
+			<h4 id="Param">Paramêtre de Partie</h4>
+			<p>Joueurs : 3 </p>
+			<p>Producteurs : 3</p>
+			<p>Tour par tour : Non </p>
+	</div>
+</div>
 	<div class="row" id="description">
 	<h3>Description projet</h3>
+	<p>Bla bla</p>
 	</div>
 </div>
 
