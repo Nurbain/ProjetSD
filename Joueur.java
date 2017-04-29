@@ -1,8 +1,6 @@
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Joueur extends Client{
 
@@ -436,7 +434,10 @@ public class Joueur extends Client{
 		Scanner sc = new Scanner(System.in);
 		int action = sc.nextInt();
 		System.out.println(action);
-
+		
+		//Ajout pour voir si le double input est reglé 
+		sc.close();
+		
 		switch(action)
 		{
 		case 1 :
@@ -448,6 +449,9 @@ public class Joueur extends Client{
 			}
 			Scanner sc1 = new Scanner(System.in);
 			action1 = sc1.nextInt();
+			
+			//Ajout pour voir si le double input est reglé 
+			sc1.close();
 
 			if(GetMode() != Mode.Demande)
 				SetMode(Mode.Demande);
@@ -469,7 +473,10 @@ public class Joueur extends Client{
 			}
 			Scanner sc2 = new Scanner(System.in);
 			action2 = sc2.nextInt();
-
+			
+			//Ajout pour voir si le double input est reglé 
+			sc2.close();
+			
 			System.out.println("Et quelle ressources voulez vous prendres ?");
 			Scanner sc3 = new Scanner(System.in);
 			action3 = sc3.nextInt();
