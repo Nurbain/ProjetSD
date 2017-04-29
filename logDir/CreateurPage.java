@@ -11,11 +11,12 @@ public class CreateurPage {
 	public boolean isTourParTour;
 	public String nomFichier;
 
-	public CreateurPage(int nbr1, int nbr2 , boolean tour)
+	public CreateurPage(int nbr1, int nbr2 , boolean tour , String nomFichier)
 	{
 		this.nbrjoueur = nbr1;
 		this.nbrprod = nbr2;
 		this.isTourParTour = tour;
+		this.nomFichier = nomFichier;
 	}
 
 	public void Creation() throws FileNotFoundException, UnsupportedEncodingException

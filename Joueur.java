@@ -1,5 +1,6 @@
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Joueur extends Client{
@@ -321,8 +322,19 @@ public class Joueur extends Client{
 		//Verifie si c'est BullShit la ressource ou si y'a pas
 		if(StockPris == 0)
 		{
+			//Prend la moitié de la plus grande ressource
+			int indexR = 0;
+			for(int i = 0 ; i<StockRessources.size() ; i++)
+			{
+				if(StockRessources.get(indexR).getExemplaires() >= indexR)
+				{
+					indexR = i;
+				}
+			}
+			StockRessources.get(indexR).takeRessources(StockRessources.get(indexR).getExemplaires()/2);
+			
+			
 			obs.generationLog(j.getName(), j.getmonType(), Action.Punition, this.getName(), this.getmonType());
-			//Punition
 			return false;
 		}
 		else if(StockPris == -1)
