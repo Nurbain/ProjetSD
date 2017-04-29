@@ -331,10 +331,56 @@ public class Joueur extends Client{
 			
 		break;
 			
-		//COMPORTEMENT : Regarde chez tout les joueurs et tout les producteurs pour voir qui possède le plus de ressource n'ayant pas atteint l'objectif
+		//COMPORTEMENT : Regarde chez tout les producteurs pour voir qui possède le plus de ressource n'ayant pas atteint l'objectif en préviligiant les ressources dont il a le plus besoin
 		case Stratege :
 			
+			/*
+			int MaxRessourcePro =  0 , IndexMaxProd = 0 , Differenceobj = 0;
+			for(int i=0 ; i < this.ListProducteur.size() ; i++)
+			{
+				int indexR = 0;
+				try {
+					indexR = SearchRessource(ListProducteur.get(i).GetRessources());
+				} catch (RemoteException re) {System.out.println(re);}
+				
+				if(StockRessources.get(indexR).getExemplaires() < this.objectif)
+				{
+					try {
+					int tmpDifferenceobj =  this.objectif - this.StockRessources.get(indexR).getExemplaires();
+					if(tmpDifferenceobj > Differenceobj)
+					//Si la difference entre l'objectif et les exemplaires est plus importante dans cette ressource alors choisit celle ci
+						if(tmpDifference < MaxRessourcePro)
+						{
+							MaxRessourcePro = tmpDifference;
+							IndexMaxProd = i;
+						}
+					} catch (RemoteException re) {System.out.println(re);}
+				}
+				
+			}
 			
+			SetMode(Mode.Demande);
+			
+			try {
+				//Verifie que quelqu'un n'a pas pris entre temps
+				if(this.ListProducteur.get(IndexMaxProd).GetRessources().getExemplaires() != 0){
+					DemandeRessource(this.ListProducteur.get(IndexMaxProd));
+				}
+				else 
+					SetMode(Mode.Observation);
+			} catch (RemoteException re) {System.out.println(re);}
+
+			AfficheInventaire();
+
+			//Verifie si le joueur a fini la partie
+			boolean fin5 = FinParti();
+			if(fin5){
+				try{
+					obs.PartieFini(this.name);
+					return;
+				}
+				catch (RemoteException re) { System.out.println(re) ; }
+			}*/
 			
 			break;
 				
