@@ -1,3 +1,5 @@
+package logDir;
+
 import java.util.ArrayList;
 
 public class RessourcesLog {

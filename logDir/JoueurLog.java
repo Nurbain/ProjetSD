@@ -1,3 +1,5 @@
+package logDir;
+
 import java.util.ArrayList;
 import java.io.*;
 

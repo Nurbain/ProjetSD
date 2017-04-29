@@ -1,3 +1,4 @@
+package logDir;
 
 public class ProducteurLog {
   public final String name;
