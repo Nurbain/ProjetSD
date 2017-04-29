@@ -2,6 +2,7 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Joueur extends Client{
 
@@ -13,6 +14,7 @@ public class Joueur extends Client{
 	private Mode mode = Mode.Demande;
 	private int objectif;
 	private boolean tourParTour;
+	private boolean Ispunit = false ;
 
 
 	public Joueur(String name, Personnalite perso, boolean isIRL , int objectif,boolean tourParTour ) throws RemoteException{
@@ -53,6 +55,16 @@ public class Joueur extends Client{
 			return;
 		}
 
+		if(Ispunit && tourParTour)
+		{
+			return;
+		}
+		else if(Ispunit && !tourParTour)
+		{
+			try{
+			      Thread.sleep(1000);
+			    }catch(InterruptedException e){System.out.println(e);}
+		}
 		//Recupere la personnalite du joueur
 		Personnalite perso = this.perso;
 
@@ -219,12 +231,82 @@ public class Joueur extends Client{
 				}
 				catch (RemoteException re) { System.out.println(re) ; }
 			}
-			//Poke l'observateur de ses action et son etat
-
+			
 			break;
 
-		/*Personnalite a rajouter*/
+		//Plus il est pret de la victoire plus il se met en  protection
+		case Mefiant : 
+			
+			int nbrFini=0;
+			for(int i = 0 ; i<StockRessources.size() ; i++)
+			{
+				if(StockRessources.get(i).getExemplaires() == this.objectif)
+				{
+					nbrFini++;
+				}
+			}
+			
+			//Si le nombre aleatoire entre 0 et le nombre de ressources fini et Superieur au nbr des ressources alors le joueur se met en Observation
+			if(Math.random()*nbrFini > StockRessources.size()/2)
+			{
+				SetMode(Mode.Observation);
+				return;
+			}
+			else
+			{
+				//Cherche le producteur le plus rentable , c'est a dire celui qui possède le plus de ressource des ressources dont le joueur a besoin
+				int indexProdRentable = 0;
+				int MaxProdRentable = 0;
+				for(int i = 0 ; i<ListProducteur.size();i++)
+				{
+					int indexR = 0;
+					try {
+						indexR = SearchRessource(ListProducteur.get(i).GetRessources());
+					} catch (RemoteException re) {System.out.println(re);}
+					if(StockRessources.get(indexR).getExemplaires() < this.objectif)
+					{
+						try {
+							if(ListProducteur.get(i).GetRessources().getExemplaires() > MaxProdRentable)
+							{
+								MaxProdRentable = ListProducteur.get(i).GetRessources().getExemplaires();
+								indexProdRentable = i;
+							}
+						} catch (RemoteException re) {System.out.println(re);}
+					}
+				}
+				
+				//Passe en mode demande
+				SetMode(Mode.Demande);
+				
+				try {
+					if(this.ListProducteur.get(indexProdRentable).GetRessources().getExemplaires() != 0){
+						DemandeRessource(this.ListProducteur.get(indexProdRentable));
+					}
+					else 
+						SetMode(Mode.Observation);
+				} catch (RemoteException re) {System.out.println(re);}
 
+				AfficheInventaire();
+
+				//Verifie si fini
+				boolean fin4 = FinParti();
+				if(fin4){
+					try{
+						obs.PartieFini(this.name);
+						return;
+					}
+					catch (RemoteException re) { System.out.println(re) ; }
+				}
+
+			}
+			
+		break;
+			
+		//Regarde chez tout les joueurs et tout les producteurs pour voir qui possède le plus de ressource demandé
+		case Stratege :
+			
+			break;
+				
 		default:
 			break;
 		}
@@ -322,7 +404,7 @@ public class Joueur extends Client{
 		//Verifie si c'est BullShit la ressource ou si y'a pas
 		if(StockPris == 0)
 		{
-			//Prend la moitié de la plus grande ressource
+			//Prend la moitié de la plus grande ressource et Le punit d'un tour
 			int indexR = 0;
 			for(int i = 0 ; i<StockRessources.size() ; i++)
 			{
@@ -332,7 +414,7 @@ public class Joueur extends Client{
 				}
 			}
 			StockRessources.get(indexR).takeRessources(StockRessources.get(indexR).getExemplaires()/2);
-			
+			Ispunit = true;
 			
 			obs.generationLog(j.getName(), j.getmonType(), Action.Punition, this.getName(), this.getmonType());
 			return false;
