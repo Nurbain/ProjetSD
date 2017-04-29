@@ -2,19 +2,34 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Joueur extends Client{
 
 	static final long serialVersionUID = 42;
 
+	//Personnalité du joueurs
 	private Personnalite perso;
+	
+	//Liste de ressources du joueurs
 	private ArrayList<Ressources> StockRessources = new ArrayList<Ressources>();
+	
+	//true si le joueur est reel
 	private boolean isJoueurIRL;
+	
+	//Mode actuel du joueurs
 	private Mode mode = Mode.Demande;
+	
+	//Nombre d'exemplaire que doit atteindre chaque ressources de la liste StockRessources
 	private int objectif;
+	
+	//True si c'est en mode tour par tour
 	private boolean tourParTour;
+	
+	//Variable permettant de savoir si le joueur est actuellement puni
 	private boolean Ispunit = false ;
 
 
+	//Constructeur
 	public Joueur(String name, Personnalite perso, boolean isIRL , int objectif,boolean tourParTour ) throws RemoteException{
 		super(name);
 
@@ -26,9 +41,14 @@ public class Joueur extends Client{
 	}
 
 
+	/** Debute l'Agent Joueur en initialisant sa liste de ressources
+	 * @return void
+	 */
 	public void startAgent()
 	{
 		System.out.println("Start");
+		
+		//Cree chaque ressource et l'initialise a 0
 		for(int i = 0; i< ListProducteur.size() ; i++)
 		{
 			try {
@@ -44,8 +64,12 @@ public class Joueur extends Client{
 	}
 
 
+	/** Fonction dictant le tour de jeu du joueur suivant sa personnalite
+	 * @return void
+	 */
 	public void tourDeJeu(){
 
+		//Si le joueur est reel alors demande au joueur son action par la fonction AskAction()
 		if(isJoueurIRL){
 			try{
 				AskAction();
@@ -53,6 +77,7 @@ public class Joueur extends Client{
 			return;
 		}
 
+		//Si le joueur est puni alors passe son tour
 		if(Ispunit && tourParTour)
 		{
 			return;
@@ -60,16 +85,20 @@ public class Joueur extends Client{
 		else if(Ispunit && !tourParTour)
 		{
 			try{
+				//Fait dormir le joueur 1 seconde si le mode de jeu est en auto
 			      Thread.sleep(1000);
 			    }catch(InterruptedException e){System.out.println(e);}
 		}
+		
 		//Recupere la personnalite du joueur
 		Personnalite perso = this.perso;
 
+		
+		//Choisit l'action suivant la personnalite
 		switch(perso)
 		{
 
-		//Prends pour chaque ressources le nombre a avoir pour finir
+		//COMPORTEMENT : Prends pour chaque ressources n'ayant pas atteint l'objectif le nombre a avoir pour finir dans le 1er producteur
 		case Individuel :
 
 			//Change le mode si besoin en demande
@@ -91,7 +120,7 @@ public class Joueur extends Client{
 					try {
 						if(this.ListProducteur.get(indexProd1).GetRessources().getExemplaires() > 0)
 						{
-							//Si pas 0 alors il prend
+							//Si pas 0 alors il prend ce producteur
 							break;
 						}
 					}
@@ -101,6 +130,7 @@ public class Joueur extends Client{
 
 			SetMode(Mode.Demande);
 			try {
+				//Verifie que quelqu'un n'a pas pris entre temps
 				if(this.ListProducteur.get(indexProd1).GetRessources().getExemplaires() != 0){
 					DemandeRessource(this.ListProducteur.get(indexProd1));
 				}
@@ -110,7 +140,8 @@ public class Joueur extends Client{
 
 
 			AfficheInventaire();
-			//Verifie si fini
+			
+			//Verifie si le joueur a fini la partie
 			boolean fin1 = FinParti();
 			if(fin1){
 				try{
@@ -123,14 +154,14 @@ public class Joueur extends Client{
 			break;
 
 
-		//Prends seulement si le producteur possï¿½de au moins une demande "entiere" de ressources
+		//COMPORTEMENT : Prends seulement si le producteur possede au moins une demande "entiere" de ressources
 		case Cooperatif :
 
-			//Change pour observer le producteur de la ressource
 			int indexProd2 = -1;
+			
+			//Trouve les ressources qui n'ont pas atteint l'objectif
 			for(int i = 0; i<StockRessources.size() ; i++)
 			{
-				//Trouve les ressources qui n'ont pas atteint l'objectif
 				if(StockRessources.get(i).getExemplaires() < objectif)
 				{
 					//Cherche les producteurs pouvant en donner
@@ -146,9 +177,9 @@ public class Joueur extends Client{
 				}
 			}
 
-			//Passe en mode demande
 			SetMode(Mode.Demande);
 			try {
+				//Verifie que quelqu'un n'a pas pris entre temps
 				if(this.ListProducteur.get(indexProd2).GetRessources().getExemplaires() != 0){
 					DemandeRessource(this.ListProducteur.get(indexProd2));
 				}
@@ -158,7 +189,7 @@ public class Joueur extends Client{
 
 			AfficheInventaire();
 
-			//Verifie si fini
+			//Verifie si le joueur a fini la partie
 			boolean fin2 = FinParti();
 			if(fin2){
 				try{
@@ -168,21 +199,17 @@ public class Joueur extends Client{
 				catch (RemoteException re) { System.out.println(re) ; }
 			}
 
-			//Poke l'observateur de ses action et son etat
-
 			break;
 
 
-		//Ne fait que voler aux autres joueurs
+		//COMPORTEMENT : Vol les ressources manquantes aux different joueur
 		case Voleur :
 
-			//Change pour observer le producteur de la ressource
-
-
-			int indexJoueur = 0 , indexRessource2 = -1;;
+			int indexJoueur = 0 , indexRessource2 = -1;
+			
+			//Trouve la ressources qui n'ont pas atteint l'objectif
 			for(int i = 0; i<StockRessources.size() ; i++)
 			{
-				//Trouve les ressources qui n'ont pas atteint l'objectif
 				if(StockRessources.get(i).getExemplaires() < objectif)
 				{
 					indexRessource2 = i;
@@ -194,20 +221,21 @@ public class Joueur extends Client{
 			int max = 0;
 			for(int j = 0; j<this.ListJoueur.size() ; j++)
 			{
-				//Recupï¿½re les stocks des joueurs
-				ArrayList<Ressources> tmp = null;
-				try {tmp = Observation(this.ListJoueur.get(j));}
+				//Recupere les stocks du joueur j
+				ArrayList<Ressources> tmpJoueur = null;
+				try {tmpJoueur = Observation(this.ListJoueur.get(j));}
 				catch (RemoteException re) {System.out.println(re);}
 
-				if(tmp != null)
+				
+				if(tmpJoueur != null)
 				{
-					for(int k =0; k<tmp.size();k++)
+					for(int k =0; k<tmpJoueur.size();k++)
 					{
-						//Regarde si le joueurs possï¿½de la ressource , en plus grand nombre que le prï¿½cï¿½dent
-						if(tmp.get(k).equals(this.StockRessources.get(indexRessource2)) && tmp.get(k).getExemplaires() > max)
+						//Regarde si le joueurs possede la ressource , en plus grand nombre que le precedent
+						if(tmpJoueur.get(k).equals(this.StockRessources.get(indexRessource2)) && tmpJoueur.get(k).getExemplaires() > max)
 						{
-							max = tmp.get(k).getExemplaires();
-							//Le joueur actuelle est le plus interressent a voler
+							max = tmpJoueur.get(k).getExemplaires();
+							//Le joueur actuel est le plus interressent a voler
 							indexJoueur = j;
 						}
 					}
@@ -220,7 +248,7 @@ public class Joueur extends Client{
 			catch (RemoteException re) {System.out.println(re);}
 			AfficheInventaire();
 
-			//Verifie si fini
+			//Verifie si le joueur a fini la partie
 			boolean fin3 = FinParti();
 			if(fin3){
 				try{
@@ -232,9 +260,10 @@ public class Joueur extends Client{
 			
 			break;
 
-		//Plus il est pret de la victoire plus il se met en  protection
+		//COMPORTEMENT : Plus il est pret de la victoire plus il a de chance de se mettre en  protection pour eviter de se faire voler
 		case Mefiant : 
 			
+			//Recupere le nombre de ressource ayant atteint l'objectif
 			int nbrFini=0;
 			for(int i = 0 ; i<StockRessources.size() ; i++)
 			{
@@ -244,7 +273,7 @@ public class Joueur extends Client{
 				}
 			}
 			
-			//Si le nombre aleatoire entre 0 et le nombre de ressources fini et Superieur au nbr des ressources alors le joueur se met en Observation
+			//Si le nombre entre 0 et le nombre de ressources fini est Superieur au nbr des ressources de la liste/2 alors le joueur se met en Observation
 			if(Math.random()*nbrFini > StockRessources.size()/2)
 			{
 				SetMode(Mode.Observation);
@@ -252,7 +281,7 @@ public class Joueur extends Client{
 			}
 			else
 			{
-				//Cherche le producteur le plus rentable , c'est a dire celui qui possède le plus de ressource des ressources dont le joueur a besoin
+				//Cherche le producteur le plus rentable , c'est a dire celui qui possède le plus de ressource parmi les ressources dont le joueur a besoin
 				int indexProdRentable = 0;
 				int MaxProdRentable = 0;
 				for(int i = 0 ; i<ListProducteur.size();i++)
@@ -261,6 +290,8 @@ public class Joueur extends Client{
 					try {
 						indexR = SearchRessource(ListProducteur.get(i).GetRessources());
 					} catch (RemoteException re) {System.out.println(re);}
+					
+					//Si la ressource du producteur na pas atteint l'objectif alors ca choisit celle ci
 					if(StockRessources.get(indexR).getExemplaires() < this.objectif)
 					{
 						try {
@@ -273,10 +304,10 @@ public class Joueur extends Client{
 					}
 				}
 				
-				//Passe en mode demande
 				SetMode(Mode.Demande);
 				
 				try {
+					//Verifie que quelqu'un n'a pas pris entre temps
 					if(this.ListProducteur.get(indexProdRentable).GetRessources().getExemplaires() != 0){
 						DemandeRessource(this.ListProducteur.get(indexProdRentable));
 					}
@@ -286,7 +317,7 @@ public class Joueur extends Client{
 
 				AfficheInventaire();
 
-				//Verifie si fini
+				//Verifie si le joueur a fini la partie
 				boolean fin4 = FinParti();
 				if(fin4){
 					try{
@@ -300,17 +331,21 @@ public class Joueur extends Client{
 			
 		break;
 			
-		//Regarde chez tout les joueurs et tout les producteurs pour voir qui possède le plus de ressource demandé
+		//COMPORTEMENT : Regarde chez tout les joueurs et tout les producteurs pour voir qui possède le plus de ressource n'ayant pas atteint l'objectif
 		case Stratege :
+			
+			
 			
 			break;
 				
 		default:
 			break;
 		}
-		//ThreadSleep ?
 	}
 
+	/** Fonction qui permet au joueur de jouer en automatique
+	 * return void
+	 */
 	public void run() {
 		while(true && !this.finParti)
 		{
@@ -318,10 +353,12 @@ public class Joueur extends Client{
 		}
 	}
 
+
 	synchronized public ArrayList<Ressources> GetStock()
 	{
 		return this.StockRessources;
 	}
+
 
 	public Personnalite GetPersonnalite()
 	{
@@ -348,6 +385,10 @@ public class Joueur extends Client{
 		return this.objectif;
 	}
 	
+	/** Demande et prend le nombre de ressource que lui donne le producteur
+	 * @param p 	InterfaceClient mais etant un producteur
+	 * @return boolean	suivant si cela a echoue ou non
+	 */
 	public boolean DemandeRessource(ClientInterface p) throws RemoteException
 	{
 		////Verifie que le joueur est bien en mode demande pour demander
@@ -363,14 +404,18 @@ public class Joueur extends Client{
 		obs.generationLog(this.name, this.monType, Action.Demande, NewRessource, nbr, p.getName(), p.getmonType());
 		}
 		
+		//Ajoute le nombre que le producteur lui a donne
 		return this.AjoutStock(NewRessource , nbr);
 	}
 
 
-	//Donne le nombre pouvant etre vole
+	/** Si en mode protection renvoit 0 , sinon le nombre de ressource
+	 * @param r ressource demande
+	 * @return int 
+	 */
 	synchronized public int VolRessourceVictime(Ressources r)
 	{
-		//Si le joueur est en mode protection marche pas
+		//Si le joueur est en mode observation, marche pas
 		if(GetMode() == Mode.Observation)
 		{
 			return 0;
@@ -390,7 +435,11 @@ public class Joueur extends Client{
 	}
 
 
-	//Joueur Voleur regarde si il peut voler
+	/** Si la demande de vol retourne 0 alors punit le joueur voleur sinon vole la victime
+	 * @param j Joueur a voler
+	 * @param r ressource a voler
+	 * @return boolean  suivant si ca marche ou pas
+	 */
 	synchronized public boolean VolRessourceAgresseur(ClientInterface j, Ressources r ) throws RemoteException
 	{
 		//Verifie que le voleur est bien en mode vol
@@ -399,7 +448,7 @@ public class Joueur extends Client{
 
 		int StockPris = j.VolRessourceVictime(r);
 
-		//Verifie si c'est BullShit la ressource ou si y'a pas
+		//Punit le joueur
 		if(StockPris == 0)
 		{
 			//Prend la moitié de la plus grande ressource et Le punit d'un tour
@@ -414,20 +463,28 @@ public class Joueur extends Client{
 			StockRessources.get(indexR).takeRessources(StockRessources.get(indexR).getExemplaires()/2);
 			Ispunit = true;
 			
+			//Poke l'observateur de l'action
 			obs.generationLog(j.getName(), j.getmonType(), Action.Punition, this.getName(), this.getmonType());
 			return false;
 		}
 		else if(StockPris == -1)
 			return false;
 		else{
+			//Poke l'observateur de l'action
 			obs.generationLog(this.name, this.monType, Action.Vol, r, StockPris, j.getName(), j.getmonType());
+			
 			return this.AjoutStock(r, StockPris);
 		}
 
 	}
 
+	
+	/** Demande au joueur reel l'action a effectuer
+	 * @return void
+	 */
 	public void AskAction() throws RemoteException
 	{
+		//Menu de l'utilisateur
 		System.out.println("Plusieurs Operations sont disponibles, veuillez tapper le Numero de l'action :");
 		System.out.println("1:Demande Ressource \t 2:Vol Ressource \t 3:Mode Observation \t 4:Afficher Inventaire ");
 
@@ -438,10 +495,15 @@ public class Joueur extends Client{
 		//Ajout pour voir si le double input est reglé 
 		sc.close();
 		
+		//Regarde l'action demander
 		switch(action)
 		{
+		
+		//Demande a un producteur
 		case 1 :
 			int action1 = -1;
+			
+			//Choisit le producteur
 			System.out.println("A quelle producteur voulez vous prendre les ressources ?");
 			for(int i = 0 ; i < this.ListProducteur.size() ; i++)
 			{
@@ -460,8 +522,11 @@ public class Joueur extends Client{
 			System.out.println("Prise faite");
 			break;
 
+		//Vol a un joueur
 		case 2 :
 			int action2 =-1, action3 =-1;
+			
+			//Choisit le joueur
 			System.out.println("A quelle joueur voulez vous prendre les ressources ?");
 			for(int i = 0 ; i < this.ListJoueur.size() ; i++)
 			{
@@ -477,6 +542,7 @@ public class Joueur extends Client{
 			//Ajout pour voir si le double input est reglé 
 			sc2.close();
 			
+			//Choisit la ressource
 			System.out.println("Et quelle ressources voulez vous prendres ?");
 			Scanner sc3 = new Scanner(System.in);
 			action3 = sc3.nextInt();
@@ -488,11 +554,12 @@ public class Joueur extends Client{
 			break;
 
 
-
+		//Passe en mode observation
 		case 3 : System.out.println("Passage en mode Observation , vous pouvez punir les joueurs tentant de vous voler \n");
 			this.mode = Mode.Observation;
 			break;
 
+		//Affiche l'inventaire du joueur et redemande une action
 		case 4 :
 			AfficheInventaire();
 			AskAction();
@@ -503,7 +570,11 @@ public class Joueur extends Client{
 
 	}
 
-	//Renvoie la liste des ressources du joueur observï¿½
+	/** Retourne la liste de ressource du joueur 
+	 * @param j le joueur observe
+	 * @return Liste de ressource
+	 * @throws RemoteException
+	 */
 	synchronized public ArrayList<Ressources> Observation(ClientInterface j) throws RemoteException
 	{
 		return j.GetStock();
@@ -511,6 +582,11 @@ public class Joueur extends Client{
 
 
 
+	/** Ajout au stock de ressource le nombre donne
+	 * @param r Ressource a ajouter
+	 * @param nbr le nombre a ajouter
+	 * @return boolean suivant si cela a reussit
+	 */
 	private boolean AjoutStock(Ressources r, int nbr)
 	{
 		int indexStock = SearchRessource(r);
@@ -521,7 +597,6 @@ public class Joueur extends Client{
 		}
 		else
 		{
-	/*Mon cerveau a brainlag donc je crois qu'on peut faire plus simple faut que je verifie*/
 			Ressources r2 = StockRessources.get(indexStock);
 			r2.addRessources(nbr);
 			StockRessources.set(indexStock, r2);
@@ -530,6 +605,11 @@ public class Joueur extends Client{
 		return true;
 	}
 
+	
+	/** Recherche la ressource dans le stock du joueur 
+	 * @param r Ressource a chercher
+	 * @return int l'index dans la liste de la ressource rechercher
+	 */
 	private int SearchRessource(Ressources r)
 	{
 		int index = -1;
@@ -546,6 +626,11 @@ public class Joueur extends Client{
 		return index;
 	}
 
+	
+	/** Recherche le producteur produisant la ressource
+	 * @param r Ressource chercher chez les producteur
+	 * @return int l'index dans la liste de producteur du producteur trouver
+	 */
 	private int SearchProducteur(Ressources r)
 	{
 		int index = -1;
@@ -570,6 +655,9 @@ public class Joueur extends Client{
 	}
 
 
+	/** Verifie si le joueur a fini la parti en checkant toute les ressources
+	 * @return boolean , true si fini false sinon
+	 */
 	synchronized private boolean FinParti()
 	{
 		for(int i =0 ; i<StockRessources.size() ; i++)
@@ -582,6 +670,9 @@ public class Joueur extends Client{
 		return true;
 	}
 
+	/** Affiche l'inventaire du joueur
+	 * @return void
+	 */
 	synchronized private void AfficheInventaire(){
 		for(int i=0;i<this.StockRessources.size();i++){
 			System.out.println(this.StockRessources.get(i).getName()+" : "+this.StockRessources.get(i).getExemplaires());
