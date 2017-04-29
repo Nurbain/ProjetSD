@@ -52,7 +52,7 @@ public class CreateurPage {
 		
 		for(int i = 0; i<this.nbrjoueur ; i++)
 		{
-			w.write("<li><a href=\"#\">Joueur "+(i+1)+"</a></li> \n");
+			w.write("<li><button id=\"J"+i+"\" onclick=\"ChangementJoueur(this)\">Joueur "+(i+1)+"</button></li> \n");
 		}
 		
 		w.write("</ul></div> \n");
@@ -67,7 +67,7 @@ public class CreateurPage {
 		
 		for(int i = 0; i<this.nbrprod ; i++)
 		{
-			w.write("<li><a href=\"#\">Producteur "+(i+1)+"</a></li> \n");
+			w.write("<li><button id=\"P"+i+"\" onclick=\"ChangementProducteur(this)\">Joueur "+(i+1)+"</button></li> </li> \n");
 		}
 		w.write("</ul></div></div><br> \n");	
 		
@@ -76,7 +76,7 @@ public class CreateurPage {
 		w.write("<div class=\"row titre\"> \n"
 				+"<div class=\"col-md-10\" id=\"graphe\"> \n"
 				+"<h3 id=\"titlegraphe\">Tout les joueurs</h3> \n"
-				+"<img src=\"test.png\"> \n"
+				+"<img id=\"grapheImg\" src=\"test.png\"> \n"
 				+"</div> \n");
 		
 		//Ecriture Paramêtre
@@ -95,7 +95,8 @@ public class CreateurPage {
 				+"</div></div> \n");		
 		
 		//Ecriture Script
-		w.write("<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script> \n"
+		w.write("<script src=\"ChangementImg.js\"></script> \n"
+				+"<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script> \n"
 				+"<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script> \n"
 				+"</body></html>");
 		w.close();
