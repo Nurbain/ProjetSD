@@ -26,7 +26,7 @@ public class CreateurPage {
 				"<head>\n"
 				+ "<meta charset=\"utf-8\"></meta>"
 				+"<title>Projet SD</title>\n"
-				+"<link href=\"style.css\" rel=\"stylesheet\"></link> \n"
+				+"<link href=\"..\\style.css\" rel=\"stylesheet\"></link> \n"
 				+"<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"> \n"
 				+"<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css\"> \n"
 				+"</head>"
