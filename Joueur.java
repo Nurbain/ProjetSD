@@ -553,9 +553,15 @@ public class Joueur extends Client{
 			{
 				System.out.println(i+":"+this.ListProducteur.get(i).getName()+","+this.ListProducteur.get(i).GetRessources().getName());
 			}
+			System.out.println("-1 : Retour Menu Choix");
 			Scanner sc1 = new Scanner(System.in);
 			action1 = sc1.nextInt();
 
+			if(action1 == -1)
+			{
+				AskAction();
+				return;
+			}
 			//Ajout pour voir si le double input est regl�
 			sc1.close();
 
@@ -580,6 +586,13 @@ public class Joueur extends Client{
 					System.out.println("\t"+j+":"+this.ListJoueur.get(i).GetStock().get(j).getName()+","+this.ListJoueur.get(i).GetStock().get(j).getExemplaires());
 				}
 			}
+			System.out.println("-1 : Retour Menu Choix");
+			if(action2 == -1)
+			{
+				AskAction();
+				return;
+			}
+			
 			Scanner sc2 = new Scanner(System.in);
 			action2 = sc2.nextInt();
 
@@ -589,8 +602,10 @@ public class Joueur extends Client{
 			//Choisit la ressource
 			System.out.println("Et quelle ressources voulez vous prendres ?");
 			Scanner sc3 = new Scanner(System.in);
-			action3 = sc3.nextInt();
-
+			action3 = sc3.nextInt();			
+			sc3.close();
+			
+			
 			SetMode(Mode.Vol);
 			VolRessourceAgresseur(this.ListJoueur.get(action2), this.ListJoueur.get(action2).GetStock().get(action3));
 			System.out.println("Vol fait");
