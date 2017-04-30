@@ -81,4 +81,4 @@ done
 rm InstrGNUPLOT
 
 #Parti de creation de la page web, faut trouver un moyen de chopper tour par tour
-java CreateurPage $nbrjoueur $nbrRessources $2 $1 #nomDOssier si besoin
+java CreateurPage $nbrjoueur $nbrRessources $1
