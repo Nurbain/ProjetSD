@@ -1,5 +1,6 @@
 package logDir;
 
+import java.io.*;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -8,31 +9,57 @@ public class CreateurPage {
 
 	private static int nbrjoueur;
 	private static int nbrprod;
-	private static String isTourParTour;
+	private static String isTourParTour = "false";
 	private static String nomFichier;
 	private static String Dossier;
-	
+	private static int Objectif = 100;
+
 	 public static void main(String[] args){
-		 
-		 if (args.length != 5)
-			{
-				System.out.println("Usage : java CreateurPage <nombre Joueur> <nombre Producteur> <bool Tour par tour> <Nom de fichier de log> <Dossier des images>") ;
+
+		 if (args.length != 5 || (args.length != 4))
+		{
+				System.out.println("Usage : java CreateurPage <nbrJoueur> <nbrProducteur> <Nom fichierLog> <Nom de fichier des images> <Dossier des images>") ;
 				System.exit(0) ;
-			}
-		 
-		 nbrjoueur = Integer.parseInt(args[0]);
-		 nbrprod = Integer.parseInt(args[1]);
-		 
-		 isTourParTour = args[2];
-		 nomFichier = args[3];
-		 Dossier = args[4];
-		 
+		}
+
+		/*BufferedReader bis =null;
+
+		try{
+	      bis = new BufferedReader(new FileReader(new File(args[0])));
+	      String line;
+	      LectureMode(bis);
+	      System.out.println("Mode = "+mode);
+	      LectureObjectif(bis);
+	      System.out.println("Objectif = "+Objectif);
+	      while((line = bis.readLine()) != null){
+
+	        System.out.println(line);
+	        if(line.equals("Producteurs :")){
+	          System.out.println("Liste Prod :");
+	          LectureProducteur(bis);
+	          break;
+	        }
+	        if(line.equals("Joueurs :")){
+	          System.out.println("Liste Joueur :");
+	          LectureJoueur(bis);
+
+	        }
+				}
+		}*/
+
+		nbrjoueur = args[0];
+		nbrProducteur = args[1];
+		nomFichier = args[3];
+
+		 if(args.length != 4)
+			 Dossier = args[4]+"/";
+
 		 try {
 			Creation();
-		} 
-		 catch (FileNotFoundException e) {e.printStackTrace();} 
+		}
+		 catch (FileNotFoundException e) {e.printStackTrace();}
 		 catch (UnsupportedEncodingException e) {e.printStackTrace();}
-		 
+
 	 }
 
 	public static void Creation() throws FileNotFoundException, UnsupportedEncodingException
@@ -103,6 +130,7 @@ public class CreateurPage {
 				+"<p>Joueurs : "+nbrjoueur+"</p> \n"
 				+"<p>Producteurs : "+nbrprod+"</p> \n"
 				+"<p>Tour par tour :"+isTourParTour+"</p> \n"
+				+"<p>Objectif :"+ Objectif +"</p> \n"
 				+"</div></div> \n");
 
 
