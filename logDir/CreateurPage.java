@@ -1,6 +1,5 @@
 package logDir;
 
-import java.io.*;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -47,8 +46,8 @@ public class CreateurPage {
 				}
 		}*/
 
-		nbrjoueur = args[0];
-		nbrProducteur = args[1];
+		nbrjoueur = Integer.parseInt(args[0]);
+		nbrprod = Integer.parseInt(args[1]);
 		nomFichier = args[3];
 
 		 if(args.length != 4)
