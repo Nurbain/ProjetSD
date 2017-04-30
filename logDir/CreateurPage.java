@@ -6,20 +6,36 @@ import java.io.UnsupportedEncodingException;
 
 public class CreateurPage {
 
-	public int nbrprod;
-	public int nbrjoueur;
-	public boolean isTourParTour;
-	public String nomFichier;
+	private static int nbrjoueur;
+	private static int nbrprod;
+	private static String isTourParTour;
+	private static String nomFichier;
+	private static String Dossier;
+	
+	 public static void main(String[] args){
+		 
+		 if (args.length != 5)
+			{
+				System.out.println("Usage : java CreateurPage <nombre Joueur> <nombre Producteur> <bool Tour par tour> <Nom de fichier de log> <Dossier des images>") ;
+				System.exit(0) ;
+			}
+		 
+		 nbrjoueur = Integer.parseInt(args[0]);
+		 nbrprod = Integer.parseInt(args[1]);
+		 
+		 isTourParTour = args[2];
+		 nomFichier = args[3];
+		 Dossier = args[4];
+		 
+		 try {
+			Creation();
+		} 
+		 catch (FileNotFoundException e) {e.printStackTrace();} 
+		 catch (UnsupportedEncodingException e) {e.printStackTrace();}
+		 
+	 }
 
-	public CreateurPage(int nbr1, int nbr2 , boolean tour , String nomFichier)
-	{
-		this.nbrjoueur = nbr1;
-		this.nbrprod = nbr2;
-		this.isTourParTour = tour;
-		this.nomFichier = nomFichier;
-	}
-
-	public void Creation() throws FileNotFoundException, UnsupportedEncodingException
+	public static void Creation() throws FileNotFoundException, UnsupportedEncodingException
 	{
 		PrintWriter w = new PrintWriter("Visualisation.html");
 
@@ -52,9 +68,9 @@ public class CreateurPage {
 				+"<ul class=\"dropdown-menu\"> \n"
 				+"<li><a href=\"#\">Tous</a></li> \n");
 
-		for(int i = 0; i<this.nbrjoueur ; i++)
+		for(int i = 0; i<nbrjoueur ; i++)
 		{
-			w.write("<li><button id=\""+nomFichier+"J"+i+"\" onclick=\"ChangementJoueur(this)\">Joueur "+(i+1)+"</button></li> \n");
+			w.write("<li><button id=\""+nomFichier+"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"' )\" >Joueur "+(i+1)+"</button></li> \n");
 		}
 
 		w.write("</ul></div> \n");
@@ -67,9 +83,9 @@ public class CreateurPage {
 				+"<ul class=\"dropdown-menu\"> \n"
 				+"<li><a href=\"#\">Tous</a></li> \n");
 
-		for(int i = 0; i<this.nbrprod ; i++)
+		for(int i = 0; i<nbrprod ; i++)
 		{
-			w.write("<li><button id=\""+nomFichier+"P"+i+"\" onclick=\"ChangementProducteur(this)\">Joueur "+(i+1)+"</button></li> </li> \n");
+			w.write("<li><button id=\""+nomFichier+"P"+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' )\">Joueur "+(i+1)+"</button></li> </li> \n");
 		}
 		w.write("</ul></div></div><br> \n");
 
@@ -84,9 +100,9 @@ public class CreateurPage {
 		//Ecriture Param�tre
 		w.write("<div class=\"col-md-2\"> \n"
 				+"<h4 id=\"Param\">Parametre de Partie</h4> \n"
-				+"<p>Joueurs : "+this.nbrjoueur+"</p> \n"
-				+"<p>Producteurs : "+this.nbrprod+"</p> \n"
-				+"<p>Tour par tour :"+this.isTourParTour+"</p> \n"
+				+"<p>Joueurs : "+nbrjoueur+"</p> \n"
+				+"<p>Producteurs : "+nbrprod+"</p> \n"
+				+"<p>Tour par tour :"+isTourParTour+"</p> \n"
 				+"</div></div> \n");
 
 

@@ -1,12 +1,12 @@
-function ChangementJoueur(element , nomFichier)
+function ChangementJoueur(element , dossier)
 {
-  var srcimg = nomFichier+"J"+element.id+".png";
-  document.getElementById("grapheImg").src =  srcimg;
+  var srcimg = element.id+".png";
+  document.getElementById("grapheImg").src =  dossier+"/"+srcimg;
 }
 
 
-function ChangementProducteur(element)
+function ChangementProducteur(element , dossier)
 {
-  var srcimg = nomFichier+"P"+".png";
-  document.getElementById("grapheImg").src =  srcimg;
+  var srcimg = element.id+".png";
+  document.getElementById("grapheImg").src =  dossier+"/"+srcimg;
 }
