@@ -60,6 +60,8 @@ implements ClientInterface, Runnable // implémente l’interface
 		try
     {
 	  	Naming.unbind("rmi://"+ServerName+":" + NumPort + "/" + NomServise );
+			System.out.println("Fin serv");
+			System.exit(0) ;
     }
     catch (NotBoundException re) { System.out.println(re) ; }
     catch (MalformedURLException e) { System.out.println(e) ; }

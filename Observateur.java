@@ -168,14 +168,21 @@ public class Observateur extends Client{
 		  fw.close();
       }
       catch (IOException e) {e.printStackTrace();}
-      try{
-        for(int i=0;i < ListJoueur.size();i++){
+      for(int i=0;i < ListJoueur.size();i++){
+        try{
           ListJoueur.get(i).disconnect();
-        }
-        for(int i=0;i < ListProducteur.size();i++){
+        }catch (RemoteException re) { continue; }
+      }
+      for(int i=0;i < ListProducteur.size();i++){
+        try{
           ListProducteur.get(i).disconnect();
-        }
+        }catch (RemoteException re) { continue ; }
+
+      }
+      try{
+        this.disconnect();
       }catch (RemoteException re) { System.out.println(re) ; }
+
       return;
 
     }
