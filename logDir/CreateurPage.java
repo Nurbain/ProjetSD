@@ -1,3 +1,5 @@
+package logDir;
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
@@ -12,43 +14,15 @@ public class CreateurPage {
 
 	 public static void main(String[] args){
 
-		 if (args.length != 5 || (args.length != 4))
+		 if (args.length != 3))
 		{
-				System.out.println("Usage : java CreateurPage <nbrJoueur> <nbrProducteur> <Nom fichierLog> <Nom de fichier des images> <Dossier des images>") ;
+				System.out.println("Usage : java CreateurPage <nbrJoueur> <nbrProducteur> <Dossier des images>") ;
 				System.exit(0) ;
 		}
 
-		/*BufferedReader bis =null;
-
-		try{
-	      bis = new BufferedReader(new FileReader(new File(args[0])));
-	      String line;
-	      LectureMode(bis);
-	      System.out.println("Mode = "+mode);
-	      LectureObjectif(bis);
-	      System.out.println("Objectif = "+Objectif);
-	      while((line = bis.readLine()) != null){
-
-	        System.out.println(line);
-	        if(line.equals("Producteurs :")){
-	          System.out.println("Liste Prod :");
-	          LectureProducteur(bis);
-	          break;
-	        }
-	        if(line.equals("Joueurs :")){
-	          System.out.println("Liste Joueur :");
-	          LectureJoueur(bis);
-
-	        }
-				}
-		}*/
-
 		nbrjoueur = Integer.parseInt(args[0]);
 		nbrprod = Integer.parseInt(args[1]);
-		nomFichier = args[3];
-
-		 if(args.length != 4)
-			 Dossier = args[4]+"/";
+		Dossier = args[2]+"/";
 
 		 try {
 			Creation();
@@ -92,7 +66,7 @@ public class CreateurPage {
 
 		for(int i = 0; i<nbrjoueur ; i++)
 		{
-			w.write("<li><button id=\""+nomFichier+"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"' )\" >Joueur "+(i+1)+"</button></li> \n");
+			w.write("<li><button id=\"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"' )\" >Joueur "+(i+1)+"</button></li> \n");
 		}
 
 		w.write("</ul></div> \n");
@@ -107,7 +81,7 @@ public class CreateurPage {
 
 		for(int i = 0; i<nbrprod ; i++)
 		{
-			w.write("<li><button id=\""+nomFichier+"P"+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' )\">Joueur "+(i+1)+"</button></li> </li> \n");
+			w.write("<li><button id=\""+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' )\">Joueur "+(i+1)+"</button></li> </li> \n");
 		}
 		w.write("</ul></div></div><br> \n");
 
@@ -116,7 +90,7 @@ public class CreateurPage {
 		w.write("<div class=\"row titre\"> \n"
 				+"<div class=\"col-md-10\" id=\"graphe\"> \n"
 				+"<h3 id=\"titlegraphe\">Tout les joueurs</h3> \n"
-				+"<img id=\"grapheImg\" src=\"test.png\"> \n"
+				+"<img id=\"grapheImg\" src=\""+Dossier+"J0.png\"> \n"
 				+"</div> \n");
 
 		//Ecriture Param�tre
