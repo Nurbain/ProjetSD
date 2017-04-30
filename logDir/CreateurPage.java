@@ -6,7 +6,6 @@ public class CreateurPage {
 	private static int nbrjoueur;
 	private static int nbrprod;
 	private static String isTourParTour = "false";
-	private static String nomFichier;
 	private static String Dossier;
 	private static int Objectif = 100;
 
@@ -14,7 +13,6 @@ public class CreateurPage {
 
 		 if (args.length != 3)
 		{
-				System.out.println(args.length);
 				System.out.println("Usage : java CreateurPage <nbrJoueur> <nbrProducteur> <Dossier des images>") ;
 				System.exit(0) ;
 		}
@@ -22,7 +20,7 @@ public class CreateurPage {
 		nbrjoueur = Integer.parseInt(args[0]);
 		nbrprod = Integer.parseInt(args[1]);
 		Dossier = args[2]+"/";
-
+		 
 		 try {
 			Creation();
 		}
@@ -65,7 +63,7 @@ public class CreateurPage {
 
 		for(int i = 0; i<nbrjoueur ; i++)
 		{
-			w.write("<li><button id=\"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"' )\" >Joueur "+(i+1)+"</button></li> \n");
+			w.write("<li><a id=\"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"' )\" >Joueur "+i+"</a></li> \n");
 		}
 
 		w.write("</ul></div> \n");
@@ -73,14 +71,14 @@ public class CreateurPage {
 
 		//Ecriture Producteurs
 		w.write("<div class=\"btn-group\" role=\"group\"> \n"
-				+"<button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\"> Producteurs <span class=\"caret\"></span>"
+				+"<button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\"> Ressources <span class=\"caret\"></span>"
 				+"</button> \n"
 				+"<ul class=\"dropdown-menu\"> \n"
 				+"<li><a href=\"#\">Tous</a></li> \n");
 
 		for(int i = 0; i<nbrprod ; i++)
 		{
-			w.write("<li><button id=\""+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' )\">Joueur "+(i+1)+"</button></li> </li> \n");
+			w.write("<li><a id=\""+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' )\">Ressource "+i+"</a></li> </li> \n");
 		}
 		w.write("</ul></div></div><br> \n");
 
@@ -88,7 +86,7 @@ public class CreateurPage {
 		//Ecriture Graphe
 		w.write("<div class=\"row titre\"> \n"
 				+"<div class=\"col-md-10\" id=\"graphe\"> \n"
-				+"<h3 id=\"titlegraphe\">Tout les joueurs</h3> \n"
+				+"<h3 id=\"titlegraphe\">Graphe de Joueur J0</h3> \n"
 				+"<img id=\"grapheImg\" src=\""+Dossier+"J0.png\"> \n"
 				+"</div> \n");
 
@@ -105,7 +103,9 @@ public class CreateurPage {
 		//Ecriture Description
 		w.write("<div class=\"row\" id=\"description\"> \n"
 				+"<h3>Description projet</h3> \n"
-				+"<p>Bla bla</p> \n"
+				+"<p>Projet de Systeme distribue du Semestre 6 de printemps 2017</p> \n"
+				+"<p>Ce mini-jeu met en place des joueurs ayant une personnalite propre ayant pour but de recuperer des ressources produites par des producteurs uniques</p> \n"
+				+"<p>Les joueurs doivent atteindre un nombre fixe d'exemplaire de ressource pour chaque type de ressources</p> \n"
 				+"</div></div> \n");
 
 		//Ecriture Script
