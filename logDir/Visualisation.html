@@ -15,33 +15,37 @@
 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Joueurs <span class="caret"></span> </button>
 <ul class="dropdown-menu"> 
 <li><a href="#">Tous</a></li> 
-<li><button id="J0" onclick="ChangementJoueur(this,'result/' )" >Joueur 1</button></li> 
-<li><button id="J1" onclick="ChangementJoueur(this,'result/' )" >Joueur 2</button></li> 
-<li><button id="J2" onclick="ChangementJoueur(this,'result/' )" >Joueur 3</button></li> 
+<li><a id="J0" onclick="ChangementJoueur(this,'result/' )" >Joueur 0</a></li> 
+<li><a id="J1" onclick="ChangementJoueur(this,'result/' )" >Joueur 1</a></li> 
+<li><a id="J2" onclick="ChangementJoueur(this,'result/' )" >Joueur 2</a></li> 
+<li><a id="J3" onclick="ChangementJoueur(this,'result/' )" >Joueur 3</a></li> 
+<li><a id="J4" onclick="ChangementJoueur(this,'result/' )" >Joueur 4</a></li> 
 </ul></div> 
 <div class="btn-group" role="group"> 
-<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Producteurs <span class="caret"></span></button> 
+<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Ressources <span class="caret"></span></button> 
 <ul class="dropdown-menu"> 
 <li><a href="#">Tous</a></li> 
-<li><button id="0" onclick="ChangementProducteur(this ,'result/' )">Joueur 1</button></li> </li> 
-<li><button id="1" onclick="ChangementProducteur(this ,'result/' )">Joueur 2</button></li> </li> 
-<li><button id="2" onclick="ChangementProducteur(this ,'result/' )">Joueur 3</button></li> </li> 
+<li><a id="0" onclick="ChangementProducteur(this ,'result/' )">Ressource 0</a></li> </li> 
+<li><a id="1" onclick="ChangementProducteur(this ,'result/' )">Ressource 1</a></li> </li> 
+<li><a id="2" onclick="ChangementProducteur(this ,'result/' )">Ressource 2</a></li> </li> 
 </ul></div></div><br> 
 <div class="row titre"> 
 <div class="col-md-10" id="graphe"> 
-<h3 id="titlegraphe">Tout les joueurs</h3> 
+<h3 id="titlegraphe">Graphe de Joueur J0</h3> 
 <img id="grapheImg" src="result/J0.png"> 
 </div> 
 <div class="col-md-2"> 
 <h4 id="Param">Parametre de Partie</h4> 
-<p>Joueurs : 3</p> 
+<p>Joueurs : 5</p> 
 <p>Producteurs : 3</p> 
 <p>Tour par tour :false</p> 
 <p>Objectif :100</p> 
 </div></div> 
 <div class="row" id="description"> 
 <h3>Description projet</h3> 
-<p>Bla bla</p> 
+<p>Projet de Systeme distribue du Semestre 6 de printemps 2017</p> 
+<p>Ce mini-jeu met en place des joueurs ayant une personnalite propre ayant pour but de recuperer des ressources produites par des producteurs uniques</p> 
+<p>Les joueurs doivent atteindre un nombre fixe d'exemplaire de ressource pour chaque type de ressources</p> 
 </div></div> 
 <script src="ChangementImg.js"></script> 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 

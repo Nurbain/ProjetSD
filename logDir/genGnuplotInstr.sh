@@ -17,18 +17,23 @@ touch InstrGNUPLOT
 
 java GenerateurLog $2 "tmplog"
 
+nbColonne=`cat tmpParam2`
+
+nbrRessources=$nbColonne
+
 nbColonne=`cat tmpParam`
 
 nbrjoueur=$nbColonne
 
-tmp=`expr $nbColonne + 1`
+tmp=`expr $nbrjoueur + 1`
 
 List=`seq -w 3 $tmp`
 echo $List
 
 rm tmpParam
+rm tmpParam2
 
-tmp=`expr $nbColonne - 1`
+tmp=`expr $nbrRessources - 1`
 
 Listresult=`seq -w 0 $tmp`
 
@@ -47,18 +52,12 @@ do
 	rm tmplog$j
 done
 
-nbColonne=`cat tmpParam2`
-
-nbrRessources=$nbColonne
-
-tmp=`expr $nbColonne + 1`
+tmp=`expr $nbrRessources + 1`
 
 List=`seq -w 3 $tmp`
 echo $List
 
-rm tmpParam2
-
-tmp=`expr $nbColonne - 1`
+tmp=`expr $nbrjoueur - 1`
 
 Listresult=`seq -w 0 $tmp`
 
