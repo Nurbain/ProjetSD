@@ -56,7 +56,7 @@ tmp=`expr $nbColonne + 1`
 List=`seq -w 3 $tmp`
 echo $List
 
-#rm tmpParam2
+rm tmpParam2
 
 tmp=`expr $nbColonne - 1`
 
