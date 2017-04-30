@@ -508,15 +508,14 @@ public class Joueur extends Client{
 			StockRessources.get(indexR).takeRessources(StockRessources.get(indexR).getExemplaires()/2);
 			Ispunit = true;
 
-			//Poke l'observateur de l'action
-			obs.generationLog(j.getName(), j.getmonType(), Action.Punition, this.getName(), this.getmonType());
+			this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Punit "+this.getmonType()+"  "+this.getName()));
 			return false;
 		}
 		else if(StockPris == -1)
 			return false;
 		else{
 			//Poke l'observateur de l'action
-			obs.generationLog(this.name, this.monType, Action.Vol, r, StockPris, j.getName(), j.getmonType());
+			this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Vol "+r.getName()+"  "+StockPris+"  "+j.getmonType()+"  "+j.getName()));
 
 			return this.AjoutStock(r, StockPris);
 		}
