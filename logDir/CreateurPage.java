@@ -74,7 +74,7 @@ public class CreateurPage {
 				+"<button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\"> Ressources <span class=\"caret\"></span>"
 				+"</button> \n"
 				+"<ul class=\"dropdown-menu\"> \n"
-				+"<li><a href=\"#\">Tous</a></li> \n");
+				+"<li><a id=\"GL\" onclick=\"ChangementGL(this ,'"+Dossier+"' )\">Tous</a></li> \n");
 
 		for(int i = 0; i<nbrprod ; i++)
 		{
@@ -86,8 +86,8 @@ public class CreateurPage {
 		//Ecriture Graphe
 		w.write("<div class=\"row titre\"> \n"
 				+"<div class=\"col-md-10\" id=\"graphe\"> \n"
-				+"<h3 id=\"titlegraphe\">Graphe de Joueur J0</h3> \n"
-				+"<img id=\"grapheImg\" src=\""+Dossier+"J0.png\"> \n"
+				+"<h3 id=\"titlegraphe\">Graphe de Tous les Joueurs</h3> \n"
+				+"<img id=\"grapheImg\" src=\""+Dossier+"GL.png\"> \n"
 				+"</div> \n");
 
 		//Ecriture Param�tre
