@@ -2,6 +2,7 @@ import java.rmi.RemoteException;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.*;
 
 
 public class Observateur extends Client{
@@ -160,6 +161,7 @@ public class Observateur extends Client{
         }
       }catch (RemoteException re) { System.out.println(re) ; }
 
+      creationLog();
       long fin = System.currentTimeMillis() - StartTimer;
       try {
     	fw.write(String.valueOf(fin));
@@ -182,6 +184,54 @@ public class Observateur extends Client{
         }
       }catch (RemoteException re) { System.out.println(re) ; }
     }
+  }
+
+  public void creationLog(){
+    ArrayList<ArrayList<LogEntries>> listLog = new ArrayList<ArrayList<LogEntries>>();
+    try{
+      for(int i=0;i < ListJoueur.size();i++){
+        listLog.add(ListJoueur.get(i).getLogPerso());
+      }
+      for(int i=0;i < ListProducteur.size();i++){
+        listLog.add(ListProducteur.get(i).getLogPerso());
+      }
+    }catch (RemoteException re) { System.out.println(re) ; }
+
+    LogEntries min = listLog.get(0).get(0);
+    int tmp=0;
+    while(!isEmpty(listLog)){
+      for(int i=0;i<listLog.size();i++){
+        System.out.println(listLog.get(i).size());
+        if(listLog.get(i).size() == 0)
+          continue;
+        if(min.time > listLog.get(i).get(0).time){
+          min=listLog.get(i).get(0);
+          tmp=i;
+          System.out.println("select : "+i);
+        }
+        System.out.println(listLog.get(i).get(0).time + "  "+listLog.get(i).get(0).action);
+      }
+      System.out.println("++++++++++++\n"+min.action+"\n++++++++++++");
+      EcritureLog(min.action);
+      System.out.println("tmp : "+tmp);
+      listLog.get(tmp).remove(listLog.get(tmp).get(0));
+      for(int i=0;i<listLog.size();i++){
+        if(listLog.get(i).size() == 0)
+          continue;
+        min=listLog.get(i).get(0);
+        tmp=i;
+      }
+    }
+
+  }
+
+  private boolean isEmpty(ArrayList<ArrayList<LogEntries>> l){
+    for(int i=0;i<l.size();i++){
+      if(!(l.get(i).size() == 0))
+        return false;
+    }
+    System.out.println("Fini");
+    return true;
   }
 
 }

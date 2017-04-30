@@ -21,6 +21,7 @@ public class Producteur extends Client{
 
   public void startAgent(){
 		System.out.println("Start");
+    StartTimer = System.currentTimeMillis();
     if(!tourParTour){
   		Thread t=new Thread(this);
   		t.start();
@@ -40,6 +41,7 @@ public class Producteur extends Client{
 		while(true && !finParti){
       System.out.println("Production");
 			Production();
+          System.out.println(System.currentTimeMillis()-StartTimer);
       System.out.println("Possede : "+this.Stock.getExemplaires()+" de "+this.Stock.getName());
 			try{
 				Thread.sleep(1000);
@@ -74,14 +76,16 @@ public class Producteur extends Client{
 	{
     if(Stock.getExemplaires()<CanGive){
       Stock.addRessources(CanGive);
-      try {obs.generationLog(this.name,this.monType,Action.Production,this.Stock,CanGive);}
-      catch (RemoteException e) {	System.out.println(e);}
+      /*try {obs.generationLog(this.name,this.monType,Action.Production,this.Stock,CanGive);}
+      catch (RemoteException e) {	System.out.println(e);}*/
+      this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Produit "+Stock.getName()+"  "+CanGive));
       return;
     }
     	int nombre = (int)(Stock.getExemplaires()*ratioProd);
 		Stock.addRessources(nombre);
-		try {obs.generationLog(this.name,this.monType,Action.Production,this.Stock,nombre);}
-	    catch (RemoteException e) {	System.out.println(e);}
+		/*try {obs.generationLog(this.name,this.monType,Action.Production,this.Stock,nombre);}
+	    catch (RemoteException e) {	System.out.println(e);}*/
+      this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Produit "+Stock.getName()+"  "+nombre));
 	}
 
 

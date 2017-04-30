@@ -448,6 +448,7 @@ public class Joueur extends Client{
 		//Poke de l'observateur pour lui dire que le joueur demande a Producteur
 		//obs.generationLog(this.name, this.monType, Action.Demande, NewRessource, nbr, p.getName(), p.getmonType());
 		this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Prend "+NewRessource.getName()+"  "+nbr+"  "+p.getmonType()+"  "+p.getName()));
+		System.out.println(this.monType+"  "+this.name+" Prend "+NewRessource.getName()+"  "+nbr+"  "+p.getmonType()+"  "+p.getName());
 		}
 
 		//Ajoute le nombre que le producteur lui a donne
