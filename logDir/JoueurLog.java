@@ -1,5 +1,3 @@
-package logDir;
-
 import java.util.ArrayList;
 import java.io.*;
 
@@ -61,7 +59,7 @@ public class JoueurLog {
   public int nbActionRessource(String name){
     return findRessources(name).getHistorique().size();
   }
-  
+
   public int lastAction(String name){
 	  if(findRessources(name) == null)
 		return -1;

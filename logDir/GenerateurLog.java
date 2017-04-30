@@ -1,5 +1,3 @@
-package logDir;
-
 import java.util.ArrayList;
 import java.io.*;
 
@@ -97,7 +95,7 @@ public class GenerateurLog{
 		}
 		catch (IOException e) {e.printStackTrace();}
 	}
-	
+
 	for(int j=0;j<ListJoueur.size();j++){
 		try {
 		    fw = new FileWriter(new File(args[1]+"J"+j));
@@ -109,7 +107,7 @@ public class GenerateurLog{
 		}
 		catch (IOException e) {e.printStackTrace();}
 	}
-    
+
   }
 
   public static void LectureProducteur(BufferedReader bis){
@@ -164,7 +162,7 @@ public class GenerateurLog{
     }catch (IOException e){e.printStackTrace();}
 
   }
-  
+
   public static int indexRessources(String name){
 	  for(int i=0;i<ListRessources.size();i++){
 		  if(ListRessources.get(i).name.equals(name))
@@ -172,7 +170,7 @@ public class GenerateurLog{
 	  }
 	  return -1;
   }
-  
+
   public static int indexJoueur(String name){
 	  for(int i=0;i<ListJoueur.size();i++){
 		  if(ListJoueur.get(i).name.equals(name))
@@ -229,7 +227,7 @@ public class GenerateurLog{
         addLog(tokens[3]);
         addLogJoueur(tokens[1]);
         findProducteur(tokens[6]).sub(Integer.parseInt(tokens[4]));
-        
+
       }
     }else if(tokens[0].equals("Producteur")){
       System.out.println("Action Producteur "+tokens[1]);
@@ -261,8 +259,7 @@ public class GenerateurLog{
   }
 
   public static void ecrireGNUplot(FileWriter fw,int i){
-    boolean NonFini=true;
-    System.out.println("nb joueur : "+ListJoueur.size()); 
+    System.out.println("nb joueur : "+ListJoueur.size());
     for(int j=0;j<ListLog.get(i).size();j++){
 		String tmp=j+" ";
 		for(int k=0;k<ListLog.get(i).get(j).size();k++){
@@ -272,13 +269,13 @@ public class GenerateurLog{
 		System.out.print(tmp);
 		try {
 			fw.write(tmp);
-			
+
 		  }
 		  catch (IOException e) {e.printStackTrace();}
 	}
 
   }
-  
+
   public static void ecrireGNUplotJoueur(FileWriter fw,int i){
     for(int j=0;j<ListLogJoueur.get(i).size();j++){
 		String tmp=j+" ";
@@ -289,13 +286,13 @@ public class GenerateurLog{
 		System.out.print(tmp);
 		try {
 			fw.write(tmp);
-			
+
 		  }
 		  catch (IOException e) {e.printStackTrace();}
 	}
 
   }
-  
+
   public static void addLog(String name){
 	  System.out.println(name);
 	  ArrayList<Integer> tmpList=new ArrayList<Integer>();
@@ -307,7 +304,7 @@ public class GenerateurLog{
 	  }
 	  ListLog.get(indexRessources(name)).add(tmpList);
   }
-  
+
   public static void addLogJoueur(String name){
 	  System.out.println(name);
 	  ArrayList<Integer> tmpList=new ArrayList<Integer>();

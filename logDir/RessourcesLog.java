@@ -1,5 +1,3 @@
-package logDir;
-
 import java.util.ArrayList;
 
 public class RessourcesLog {
@@ -22,7 +20,7 @@ public class RessourcesLog {
   public ArrayList<Integer> getHistorique(){
     return this.historique;
   }
-  
+
   public int lastAction(){
 	  return historique.get(historique.size()-1);
   }

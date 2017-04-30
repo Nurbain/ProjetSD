@@ -1,8 +1,5 @@
-package logDir;
-
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 
 public class CreateurPage {
 
@@ -57,11 +54,10 @@ public class CreateurPage {
 			Creation();
 		}
 		 catch (FileNotFoundException e) {e.printStackTrace();}
-		 catch (UnsupportedEncodingException e) {e.printStackTrace();}
 
 	 }
 
-	public static void Creation() throws FileNotFoundException, UnsupportedEncodingException
+	public static void Creation() throws FileNotFoundException
 	{
 		PrintWriter w = new PrintWriter("Visualisation.html");
 
