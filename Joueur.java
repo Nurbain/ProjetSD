@@ -29,8 +29,8 @@ public class Joueur extends Client{
 	private boolean Ispunit = false ;
 
 	//Constructeur
-	public Joueur(String name, Personnalite perso, boolean isIRL , int objectif,boolean tourParTour ) throws RemoteException{
-		super(name);
+	public Joueur(String name,String ServerName,String NumPort,String NomServise, Personnalite perso, boolean isIRL , int objectif,boolean tourParTour ) throws RemoteException{
+		super(name,ServerName,NumPort,NomServise);
 
 		this.perso = perso;
 		this.isJoueurIRL = isIRL;

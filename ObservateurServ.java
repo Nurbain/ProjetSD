@@ -12,7 +12,7 @@ public class ObservateurServ
 		}
 		try
 		{
-			Observateur objLocal = new Observateur (args[1],Fin.Brute,(args[2].equals("y"))?true:false , args[3]) ;
+			Observateur objLocal = new Observateur (args[1],"localhost",args[0],args[1],Fin.Brute,(args[2].equals("y"))?true:false , args[3]) ;
 			//Thread t=new Thread(objLocal);
 			//t.start();
 			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);

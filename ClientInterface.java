@@ -13,6 +13,9 @@ public interface ClientInterface extends Remote // Hérite de Remote
 	public int PrendreRessource()
   throws RemoteException;
 
+	public void disconnect()
+	throws RemoteException;
+
 	public ArrayList<LogEntries> getLogPerso()
 	throws RemoteException;
 

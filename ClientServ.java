@@ -12,7 +12,7 @@ public class ClientServ
 		}
 		try
 		{
-			Client objLocal = new Client (args[1]) ;
+			Client objLocal = new Client (args[1],"localhost",args[0],args[1]) ;
 			Thread t=new Thread(objLocal);
 			t.start();
 			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);

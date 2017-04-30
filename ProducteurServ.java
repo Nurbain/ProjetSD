@@ -12,7 +12,7 @@ public class ProducteurServ
 		}
 		try
 		{
-  			Producteur objLocal = new Producteur(args[1],args[2],Integer.parseInt(args[3]),Float.valueOf(args[4]),Integer.parseInt(args[5]),(args[6].equals("y"))?true:false) ;
+  			Producteur objLocal = new Producteur(args[1],"localhost",args[0],args[1],args[2],Integer.parseInt(args[3]),Float.valueOf(args[4]),Integer.parseInt(args[5]),(args[6].equals("y"))?true:false) ;
 			//Thread t=new Thread(objLocal);
 			//t.start();
 			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);

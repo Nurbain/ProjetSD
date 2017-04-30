@@ -9,8 +9,8 @@ public class Producteur extends Client{
 	private int CanGive;
   private boolean tourParTour;
 
-	public Producteur(String name,String nameRessource, int nbrinit,float ratioProd, int CanGive,boolean tourParTour) throws RemoteException {
-		super(name);
+	public Producteur(String name,String ServerName,String NumPort,String NomServise,String nameRessource, int nbrinit,float ratioProd, int CanGive,boolean tourParTour) throws RemoteException {
+		super(name,ServerName,NumPort,NomServise);
 
 		this.CanGive = CanGive;
 		this.ratioProd = ratioProd;

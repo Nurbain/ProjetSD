@@ -18,15 +18,23 @@ implements ClientInterface, Runnable // implémente l’interface
 	protected ArrayList<LogEntries> LogPerso = new ArrayList<LogEntries>();
 	protected ClientInterface obs;
 	protected boolean finParti=false;
+	private final String ServerName;
+	private final String NumPort;
+	private final String NomServise;
+
+
 		protected long StartTimer;
 
 
-	public Client (String name) throws RemoteException
+	public Client (String name,String ServerName,String NumPort,String NomServise) throws RemoteException
 	// Rmq : Le client n’a pas accès au constructeur
 	{
 		super() ;
 		this.name=name;
 		this.monType=Type.Client;
+		this.ServerName=ServerName;
+		this.NumPort=NumPort;
+		this.NomServise=NomServise;
 	} ;
 	public String getName() throws RemoteException
 	{
@@ -46,6 +54,16 @@ implements ClientInterface, Runnable // implémente l’interface
 
 	public void PartieFini(){
 		this.finParti=true;
+	}
+
+	public void disconnect() throws RemoteException{
+		try
+    {
+	  	Naming.unbind("rmi://"+ServerName+":" + NumPort + "/" + NomServise );
+    }
+    catch (NotBoundException re) { System.out.println(re) ; }
+    catch (MalformedURLException e) { System.out.println(e) ; }
+
 	}
 
 	public void startAgent(){

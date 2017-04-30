@@ -15,8 +15,8 @@ public class Observateur extends Client{
   private File fichier;
   private FileWriter fw;
 
-  public Observateur(String name,Fin typeFin,boolean tourParTour, String Nomfichier) throws RemoteException{
-    super(name);
+  public Observateur(String name,String ServerName,String NumPort,String NomServise,Fin typeFin,boolean tourParTour, String Nomfichier) throws RemoteException{
+    super(name,ServerName,NumPort,NomServise);
     this.typeFin=typeFin;
     this.monType=Type.Observateur;
     this.tourParTour=tourParTour;

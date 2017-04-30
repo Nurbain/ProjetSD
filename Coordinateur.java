@@ -14,7 +14,7 @@ public class Coordinateur
     {
 	  int i,j;
 	  int taille = args.length;
-    ClientInterface obs=new Client("O2");
+    ClientInterface obs=null;
 	  //args[2] nom premier client args[taille-1] nom du dernier client
 	  for(i=2;i<taille;i++){
 		  System.out.println("rmi://"+args[0]+":"+args[1]+"/"+args[i]);
