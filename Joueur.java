@@ -505,10 +505,11 @@ public class Joueur extends Client{
 					indexR = i;
 				}
 			}
-			StockRessources.get(indexR).takeRessources(StockRessources.get(indexR).getExemplaires()/2);
+			int punition = StockRessources.get(indexR).getExemplaires()/2;
+			StockRessources.get(indexR).takeRessources(punition);
 			Ispunit = true;
 
-			this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Punit "+this.getmonType()+"  "+this.getName()));
+			this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Punit "+r.getName()+"  "+punition+"  "+this.getmonType()+"  "+this.getName()));
 			return false;
 		}
 		else if(StockPris == -1)
