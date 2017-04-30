@@ -52,6 +52,23 @@ do
 	rm tmplog$j
 done
 
+
+
+echo "plot \"tmplogGL\" title \"J0\" with linespoints" > InstrGNUPLOT
+for i in $List
+do
+  tmp=`expr $i - 2`
+  echo "replot \"tmplogGL\" using 1:$i title \"J$tmp\" with linespoints" >> InstrGNUPLOT
+done
+echo "set terminal png" >> InstrGNUPLOT
+echo "set output \"$1/GL.png\"" >> InstrGNUPLOT
+echo "replot" >> InstrGNUPLOT
+gnuplot InstrGNUPLOT
+rm tmplogGL
+
+
+
+
 tmp=`expr $nbrRessources + 1`
 
 List=`seq -w 3 $tmp`
@@ -75,6 +92,7 @@ do
 	gnuplot InstrGNUPLOT
 	rm tmplogJ$j
 done
+
 
 
 rm InstrGNUPLOT

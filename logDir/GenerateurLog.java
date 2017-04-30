@@ -107,6 +107,15 @@ public class GenerateurLog{
 		}
 		catch (IOException e) {e.printStackTrace();}
 	}
+  try {
+      fw = new FileWriter(new File(args[1]+"GL"));
+     }
+  catch (IOException e) {e.printStackTrace();}
+  ecrireGNUplotGlobal(fw);
+  try {
+    fw.close();
+  }
+  catch (IOException e) {e.printStackTrace();}
 
   }
 
@@ -278,19 +287,57 @@ public class GenerateurLog{
 
   public static void ecrireGNUplotJoueur(FileWriter fw,int i){
     for(int j=0;j<ListLogJoueur.get(i).size();j++){
-		String tmp=j+" ";
-		for(int k=0;k<ListLogJoueur.get(i).get(j).size();k++){
-			tmp = tmp+ListLogJoueur.get(i).get(j).get(k)+" ";
-		}
-		tmp=tmp+"\n";
-		System.out.print(tmp);
-		try {
-			fw.write(tmp);
+  		String tmp=j+" ";
+  		for(int k=0;k<ListLogJoueur.get(i).get(j).size();k++){
+  			tmp = tmp+ListLogJoueur.get(i).get(j).get(k)+" ";
+  		}
+  		tmp=tmp+"\n";
+  		System.out.print(tmp);
+  		try {
+  			fw.write(tmp);
 
-		  }
-		  catch (IOException e) {e.printStackTrace();}
-	}
+  		  }
+  		  catch (IOException e) {e.printStackTrace();}
+	   }
 
+  }
+
+  public static void ecrireGNUplotGlobal(FileWriter fw){
+    ArrayList<ArrayList<Integer>> ListGL = new ArrayList<ArrayList<Integer>>();
+    for(int i=0;i<ListJoueur.size();i++){
+      ListGL.add(ListJoueur.get(i).getProgress());
+    }
+    int max = maxAction();
+    int objectifTotal = ListRessources.size()*Objectif;
+    for(int i=0;i<max;i++){
+      String tmp=i+" ";
+      for(int j=0;j<ListGL.size();j++){
+        if(i >= ListGL.get(j).size()){
+          tmp=tmp+(double)ListGL.get(j).get(ListGL.get(j).size()-1)/(double)objectifTotal+" ";
+        }else{
+          tmp=tmp+(double)ListGL.get(j).get(i)/(double)objectifTotal+" ";
+        }
+      }
+      tmp=tmp+"\n";
+  		System.out.print(tmp);
+  		try {
+  			fw.write(tmp);
+  		}catch (IOException e) {e.printStackTrace();}
+    }
+
+  }
+
+  private static int maxAction(){
+    ArrayList<ArrayList<Integer>> ListGL = new ArrayList<ArrayList<Integer>>();
+    for(int i=0;i<ListJoueur.size();i++){
+      ListGL.add(ListJoueur.get(i).getProgress());
+    }
+    int max=0;
+    for(int i=0;i<ListGL.size();i++){
+      if(max < ListGL.get(i).size())
+        max=ListGL.get(i).size();
+    }
+    return max;
   }
 
   public static void addLog(String name){

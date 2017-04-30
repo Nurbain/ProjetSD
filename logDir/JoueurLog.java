@@ -4,9 +4,15 @@ import java.io.*;
 public class JoueurLog {
   public final String name;
   private ArrayList<RessourcesLog> StockRessources = new ArrayList<RessourcesLog>();
+  private ArrayList<Integer> logProgress = new ArrayList<Integer>();
 
   public JoueurLog(String name){
     this.name=name;
+    logProgress.add(0);
+  }
+
+  public ArrayList<Integer> getProgress(){
+    return this.logProgress;
   }
 
   private RessourcesLog findRessources(String name){
@@ -25,6 +31,7 @@ public class JoueurLog {
 		System.out.println("creation :"+name);
       StockRessources.add(new RessourcesLog(name,0));
 	}
+    logProgress.add(logProgress.get(logProgress.size()-1)+nb);
     findRessources(name).add(nb);
   }
 

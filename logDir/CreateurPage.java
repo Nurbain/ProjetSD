@@ -20,7 +20,7 @@ public class CreateurPage {
 		nbrjoueur = Integer.parseInt(args[0]);
 		nbrprod = Integer.parseInt(args[1]);
 		Dossier = args[2]+"/";
-		 
+
 		 try {
 			Creation();
 		}
@@ -73,8 +73,7 @@ public class CreateurPage {
 		w.write("<div class=\"btn-group\" role=\"group\"> \n"
 				+"<button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\"> Ressources <span class=\"caret\"></span>"
 				+"</button> \n"
-				+"<ul class=\"dropdown-menu\"> \n"
-				+"<li><a id=\"GL\" onclick=\"ChangementGL(this ,'"+Dossier+"' )\">Tous</a></li> \n");
+				+"<ul class=\"dropdown-menu\"> \n");
 
 		for(int i = 0; i<nbrprod ; i++)
 		{
