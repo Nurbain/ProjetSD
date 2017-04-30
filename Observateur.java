@@ -10,22 +10,20 @@ public class Observateur extends Client{
   protected boolean tourParTour;
   protected int nbJoueur;
   protected int nbJoueurFini=0;
-  
+
   private File fichier;
   private FileWriter fw;
 
-  private long StartTimer;
-  
   public Observateur(String name,Fin typeFin,boolean tourParTour, String Nomfichier) throws RemoteException{
     super(name);
     this.typeFin=typeFin;
     this.monType=Type.Observateur;
     this.tourParTour=tourParTour;
     this.fichier = new File(Nomfichier);
-    
+
     try {
 		this.fw = new FileWriter(this.fichier);
-	} 
+	}
     catch (IOException e) {e.printStackTrace();}
   }
 
@@ -89,17 +87,17 @@ public class Observateur extends Client{
 	  try{
 		  System.out.println("Objectif "+ListJoueur.get(0).Getobjectif()+"\n");
 		  EcritureLog("Objectif "+ListJoueur.get(0).Getobjectif());
-		  
+
 		  System.out.println("Joueurs : \n");
 		  EcritureLog("Joueurs :");
 	      for(int i=0;i < ListJoueur.size();i++){
 	    	  ClientInterface c = ListJoueur.get(i);
 	    	  String pseudo = c.getName();
-	    	  
+
 	    	  System.out.println(pseudo+"\n");
 	    	  EcritureLog(pseudo);
 	      }
-	      
+
 	      System.out.println("Producteurs :\n");
 	      EcritureLog("\nProducteurs :");
 	      for(int j=0;j<ListProducteur.size();j++)
@@ -121,17 +119,17 @@ public class Observateur extends Client{
 	try {
 		fw.write(log);
 		fw.write("\n");
-	} 
+	}
 	catch (IOException e) {e.printStackTrace();}
-	
+
   }
-  
-  
+
+
   public void startAgent(){
     System.out.println(name + " Debut partie");
     LogDebutJeu();
     try{
-    	
+
       for(int i=0;i < ListJoueur.size();i++){
         ListJoueur.get(i).startAgent();
         nbJoueur++;
@@ -140,9 +138,9 @@ public class Observateur extends Client{
         ListProducteur.get(i).startAgent();
       }
     }catch (RemoteException re) { System.out.println(re) ; }
-    
+
     StartTimer = System.currentTimeMillis();
-    
+
     if(tourParTour){
       tourDeJeu();
     }
@@ -161,15 +159,15 @@ public class Observateur extends Client{
           ListProducteur.get(i).PartieFini();
         }
       }catch (RemoteException re) { System.out.println(re) ; }
-      
+
       long fin = System.currentTimeMillis() - StartTimer;
       try {
     	fw.write(String.valueOf(fin));
 		fw.close();
-      } 
+      }
       catch (IOException e) {e.printStackTrace();}
       return;
-      
+
     }
   }
 

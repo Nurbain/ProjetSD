@@ -15,8 +15,10 @@ implements ClientInterface, Runnable // implémente l’interface
 	protected ArrayList<ClientInterface> Peers= new ArrayList<ClientInterface>();
 	protected ArrayList<ClientInterface> ListJoueur =new ArrayList<ClientInterface>();
 	protected ArrayList<ClientInterface> ListProducteur =new ArrayList<ClientInterface>();
+	protected ArrayList<LogEntries> LogPerso = new ArrayList<LogEntries>();
 	protected ClientInterface obs;
 	protected boolean finParti=false;
+		protected long StartTimer;
 
 
 	public Client (String name) throws RemoteException
@@ -29,6 +31,10 @@ implements ClientInterface, Runnable // implémente l’interface
 	public String getName() throws RemoteException
 	{
 		return this.name;
+	}
+
+	public ArrayList<LogEntries> getLogPerso() throws RemoteException{
+		return this.LogPerso;
 	}
 
 	public Type getmonType(){
@@ -125,7 +131,7 @@ implements ClientInterface, Runnable // implémente l’interface
   {
 	  return 0;
   }
-  
+
 	public ArrayList<Ressources> Observation(JoueurInterface j){
 		return null;
 	}

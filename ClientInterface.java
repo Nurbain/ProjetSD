@@ -13,6 +13,9 @@ public interface ClientInterface extends Remote // Hérite de Remote
 	public int PrendreRessource()
   throws RemoteException;
 
+	public ArrayList<LogEntries> getLogPerso()
+	throws RemoteException;
+
 	public void startAgent()
 	throws RemoteException;
 
@@ -39,7 +42,7 @@ public interface ClientInterface extends Remote // Hérite de Remote
 
   public int Getobjectif()
 throws RemoteException;
-  
+
   public boolean VolRessourceAgresseur(JoueurInterface j, Ressources r)
   throws RemoteException;
 
