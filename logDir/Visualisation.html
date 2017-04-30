@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"></meta><title>Projet SD</title>
+<link href="style.css" rel="stylesheet"></link> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> 
+</head><body> 
+<div class="container "> 
+<div class="row titre"> 
+<h1 id="title">Visualisation Projet SD</h1> 
+<h3 id="author">Quentin Wendling & Nathan Urbain</h3> 
+</div><br><br> 
+<div class= "row"> 
+<div class="btn-group" role="group"> 
+<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Joueurs <span class="caret"></span> </button>
+<ul class="dropdown-menu"> 
+<li><a href="#">Tous</a></li> 
+<li><button id="J0" onclick="ChangementJoueur(this,'result/' )" >Joueur 1</button></li> 
+<li><button id="J1" onclick="ChangementJoueur(this,'result/' )" >Joueur 2</button></li> 
+<li><button id="J2" onclick="ChangementJoueur(this,'result/' )" >Joueur 3</button></li> 
+</ul></div> 
+<div class="btn-group" role="group"> 
+<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Producteurs <span class="caret"></span></button> 
+<ul class="dropdown-menu"> 
+<li><a href="#">Tous</a></li> 
+<li><button id="0" onclick="ChangementProducteur(this ,'result/' )">Joueur 1</button></li> </li> 
+<li><button id="1" onclick="ChangementProducteur(this ,'result/' )">Joueur 2</button></li> </li> 
+<li><button id="2" onclick="ChangementProducteur(this ,'result/' )">Joueur 3</button></li> </li> 
+</ul></div></div><br> 
+<div class="row titre"> 
+<div class="col-md-10" id="graphe"> 
+<h3 id="titlegraphe">Tout les joueurs</h3> 
+<img id="grapheImg" src="result/J0.png"> 
+</div> 
+<div class="col-md-2"> 
+<h4 id="Param">Parametre de Partie</h4> 
+<p>Joueurs : 3</p> 
+<p>Producteurs : 3</p> 
+<p>Tour par tour :false</p> 
+<p>Objectif :100</p> 
+</div></div> 
+<div class="row" id="description"> 
+<h3>Description projet</h3> 
+<p>Bla bla</p> 
+</div></div> 
+<script src="ChangementImg.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</body></html>

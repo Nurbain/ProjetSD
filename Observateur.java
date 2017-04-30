@@ -165,9 +165,17 @@ public class Observateur extends Client{
       long fin = System.currentTimeMillis() - StartTimer;
       try {
     	fw.write(String.valueOf(fin));
-		fw.close();
+		  fw.close();
       }
       catch (IOException e) {e.printStackTrace();}
+      try{
+        for(int i=0;i < ListJoueur.size();i++){
+          ListJoueur.get(i).disconnect();
+        }
+        for(int i=0;i < ListProducteur.size();i++){
+          ListProducteur.get(i).disconnect();
+        }
+      }catch (RemoteException re) { System.out.println(re) ; }
       return;
 
     }

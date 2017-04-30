@@ -12,8 +12,9 @@ public class CreateurPage {
 
 	 public static void main(String[] args){
 
-		 if (args.length != 3))
+		 if (args.length != 3)
 		{
+				System.out.println(args.length);
 				System.out.println("Usage : java CreateurPage <nbrJoueur> <nbrProducteur> <Dossier des images>") ;
 				System.exit(0) ;
 		}

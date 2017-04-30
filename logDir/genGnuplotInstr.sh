@@ -19,7 +19,7 @@ java GenerateurLog $2 "tmplog"
 
 nbColonne=`cat tmpParam`
 
-nbrJoueur=$nbColonne
+nbrjoueur=$nbColonne
 
 tmp=`expr $nbColonne + 1`
 
