@@ -46,13 +46,7 @@ public interface ClientInterface extends Remote // Hérite de Remote
   public int Getobjectif()
 throws RemoteException;
 
-  public boolean VolRessourceAgresseur(JoueurInterface j, Ressources r)
-  throws RemoteException;
-
   public int VolRessourceVictime(Ressources r)
-		  throws RemoteException;
-
-	public ArrayList<Ressources> Observation(JoueurInterface j)
 	throws RemoteException;
 
 	public void generationLog()

@@ -139,9 +139,6 @@ implements ClientInterface, Runnable // implémente l’interface
 		return false;
 	}
 
-  public boolean VolRessourceAgresseur(JoueurInterface j, Ressources r){
-		return false;
-	}
 
   public int VolRessourceVictime(Ressources r){
 		return 0;
@@ -151,10 +148,6 @@ implements ClientInterface, Runnable // implémente l’interface
   {
 	  return 0;
   }
-
-	public ArrayList<Ressources> Observation(JoueurInterface j){
-		return null;
-	}
 
 	public void generationLog(){
 	}
