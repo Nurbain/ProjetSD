@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.io.*;
 
+/**@author WENDLING Quentin URBAIN Nathan
+*/
+
 public class GenerateurLog{
   //Liste des historiques des joueurs
   private static ArrayList<JoueurLog> ListJoueur = new ArrayList<JoueurLog>();
