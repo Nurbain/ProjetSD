@@ -104,9 +104,6 @@ public class Joueur extends Client{
 		//COMPORTEMENT : Demande a un producteur ayant de la ressource la 1er ressource du stock n'ayant pas atteint l'objectif
 		case Individuel :
 
-			//Change le mode en observation pour analyser la partie
-			SetMode(Mode.Observation);
-
 			//Boucle qui regarde les ressources qui n'ont pas atteint l'objectif
 			int indexRessource1 = -1 , indexProd1 = -1 ;
 			for(int i = 0; i<StockRessources.size() ; i++)
@@ -161,9 +158,6 @@ public class Joueur extends Client{
 
 		//COMPORTEMENT : Prend au producteur de la ressource n'ayant pas atteint l'objectif si il possede au moins une demande "entiere" de ressource en question
 		case Cooperatif :
-
-			//Passe en observation pour observer l'etat des stock des producteurs
-			SetMode(Mode.Observation);
 			
 			int indexProd2 = -1;
 
@@ -566,7 +560,7 @@ public class Joueur extends Client{
 			int MaxR = 0;
 			for(int i = 0 ; i<StockRessources.size() ; i++)
 			{
-				if(StockRessources.get(indexR).getExemplaires() >= MaxR)
+				if(StockRessources.get(i).getExemplaires() >= MaxR)
 				{
 					MaxR = StockRessources.get(indexR).getExemplaires();
 					indexR = i;
@@ -579,7 +573,7 @@ public class Joueur extends Client{
 			//Actuellement punits
 			Ispunit = true;
 
-			//Ajoute le log detaillant l'action venant de se produire
+			//Ajoute le log detaillant la punition
 			this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Punit "+r.getName()+"  "+punition+"  "+this.getmonType()+"  "+this.getName()));
 			return false;
 		}
