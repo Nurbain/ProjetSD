@@ -6,17 +6,17 @@ import java.util.*;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
-//Classe de l'Agent Observateur 
+//Classe de l'Agent Observateur
 
 public class Observateur extends Client{
   static final long serialVersionUID = 42;
-  
+
 	Fin typeFin;
   protected boolean tourParTour;
-  
+
 	//Nombre de joueur dans la partie
 	protected int nbJoueur;
-  
+
 	//Nombre de Joueur ayant fini la partie
 	protected int nbJoueurFini=0;
 
@@ -38,7 +38,7 @@ public class Observateur extends Client{
   }
 
 	//Generation du log de fin
-  public void generationLog(String nameEmetteur,Type typeEmetteur){    
+  public void generationLog(String nameEmetteur,Type typeEmetteur){
 		String str = typeEmetteur+"  "+nameEmetteur+" fini";
 	  System.out.println(str);
 	  EcritureLog(str);
@@ -49,7 +49,7 @@ public class Observateur extends Client{
   {
 	  String mode = (this.tourParTour)? "TPT" : "Auto" ;
 	  System.out.println("Mode "+mode+ "\n");
-		//Ecriture du Mode	  
+		//Ecriture du Mode
 		EcritureLog("Mode "+mode);
 	  try{
 		  System.out.println("Objectif "+ListJoueur.get(0).Getobjectif()+"\n");
@@ -58,7 +58,7 @@ public class Observateur extends Client{
 
 		  System.out.println("Joueurs : \n");
 		  EcritureLog("Joueurs :");
-			//Boucle ecrivant tout les noms des joueurs 
+			//Boucle ecrivant tout les noms des joueurs
 	      for(int i=0;i < ListJoueur.size();i++){
 	    	  ClientInterface c = ListJoueur.get(i);
 	    	  String pseudo = c.getName();
@@ -125,7 +125,7 @@ public class Observateur extends Client{
 		//Eciture dans le fichier le joueur gagnant
     generationLog(name , Type.Joueur);
     nbJoueurFini++;
-    
+
 		//Si la partie est en fin Brute alors dit au autre de s'arreter sinon attent que tous les joueurs aient fini
 		if(this.typeFin == Fin.Brute || nbJoueur == nbJoueurFini){
       PartieFini();
@@ -138,7 +138,7 @@ public class Observateur extends Client{
         }
       }catch (RemoteException re) { System.out.println(re) ; }
 
-			//Cree les logs 
+			//Cree les logs
       creationLog();
 
 			//Recupe la duree de la partie
@@ -149,7 +149,7 @@ public class Observateur extends Client{
 		  fw.close();
       }
       catch (IOException e) {e.printStackTrace();}
-      
+
 			//Deconnecte Tous les agents
 			for(int i=0;i < ListJoueur.size();i++){
         try{
@@ -171,7 +171,7 @@ public class Observateur extends Client{
     }
   }
 
-	//Fonction donnant le tour de jeu au different agents joueurs et producteur 
+	//Fonction donnant le tour de jeu au different agents joueurs et producteur
   public void tourDeJeu(){
     while(true && !finParti){
       try{
@@ -191,6 +191,7 @@ public class Observateur extends Client{
   public void creationLog(){
     ArrayList<ArrayList<LogEntries>> listLog = new ArrayList<ArrayList<LogEntries>>();
     try{
+      //On recupere la liste des log de chaque joueurs et de chaque producteurs
       for(int i=0;i < ListJoueur.size();i++){
         listLog.add(ListJoueur.get(i).getLogPerso());
       }
@@ -201,9 +202,12 @@ public class Observateur extends Client{
 
     LogEntries min = listLog.get(0).get(0);
     int tmp=0;
+    //Tant que les liste ne sont pas vite on ecrit le plus petit parmis
+    //les premier elements de chaque liste puis on le retire de ca liste
     while(!isEmpty(listLog)){
+      //On cherche le plus petit element
       for(int i=0;i<listLog.size();i++){
-        System.out.println(listLog.get(i).size());
+        //Si la liste est deja vide on passe a la prochaine
         if(listLog.get(i).size() == 0)
           continue;
         if(min.time > listLog.get(i).get(0).time){
@@ -214,14 +218,18 @@ public class Observateur extends Client{
         System.out.println(listLog.get(i).get(0).time + "  "+listLog.get(i).get(0).action);
       }
       System.out.println("++++++++++++\n"+min.action+"\n++++++++++++");
+      //On ecrit le log
       EcritureLog(min.action);
       System.out.println("tmp : "+tmp);
+      //On retire le log de ca liste
       listLog.get(tmp).remove(listLog.get(tmp).get(0));
+      //On recupere le premier element non nul
       for(int i=0;i<listLog.size();i++){
         if(listLog.get(i).size() == 0)
           continue;
         min=listLog.get(i).get(0);
         tmp=i;
+        break;
       }
     }
 
