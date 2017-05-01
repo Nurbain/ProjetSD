@@ -50,7 +50,8 @@ public class Joueur extends Client{
 		for(int i = 0; i< ListProducteur.size() ; i++)
 		{
 			try {
-				StockRessources.add(new Ressources(ListProducteur.get(i).GetRessources().getName(), 0));
+				if(SearchRessource(ListProducteur.get(i).GetRessources())==-1)
+					StockRessources.add(new Ressources(ListProducteur.get(i).GetRessources().getName(), 0));
 			}
 			catch (RemoteException re) { System.out.println(re) ; }
 		}
@@ -592,7 +593,7 @@ public class Joueur extends Client{
 				AskAction();
 				return;
 			}
-			
+
 			Scanner sc2 = new Scanner(System.in);
 			action2 = sc2.nextInt();
 
@@ -602,10 +603,10 @@ public class Joueur extends Client{
 			//Choisit la ressource
 			System.out.println("Et quelle ressources voulez vous prendres ?");
 			Scanner sc3 = new Scanner(System.in);
-			action3 = sc3.nextInt();			
+			action3 = sc3.nextInt();
 			sc3.close();
-			
-			
+
+
 			SetMode(Mode.Vol);
 			VolRessourceAgresseur(this.ListJoueur.get(action2), this.ListJoueur.get(action2).GetStock().get(action3));
 			System.out.println("Vol fait");
