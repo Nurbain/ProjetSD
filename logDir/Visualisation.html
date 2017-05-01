@@ -14,30 +14,30 @@
 <div class="btn-group" role="group"> 
 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Joueurs <span class="caret"></span> </button>
 <ul class="dropdown-menu"> 
-<li><a id="GL" onclick="ChangementGL(this,'result2/' )" >Tous</a></li> 
-<li><a id="J0" onclick="ChangementJoueur(this,'result2/' )" >J1</a></li> 
-<li><a id="J1" onclick="ChangementJoueur(this,'result2/' )" >J2</a></li> 
-<li><a id="J2" onclick="ChangementJoueur(this,'result2/' )" >J3</a></li> 
-<li><a id="J3" onclick="ChangementJoueur(this,'result2/' )" >J4</a></li> 
+<li><a id="GL" onclick="ChangementGL(this,'result/' )" >Tous</a></li> 
+<li><a id="J0" onclick="ChangementJoueur(this,'result/', 'J1')" >J1</a></li> 
+<li><a id="J1" onclick="ChangementJoueur(this,'result/', 'J2')" >J2</a></li> 
+<li><a id="J2" onclick="ChangementJoueur(this,'result/', 'J3')" >J3</a></li> 
+<li><a id="J3" onclick="ChangementJoueur(this,'result/', 'J4')" >J4</a></li> 
 </ul></div> 
 <div class="btn-group" role="group"> 
 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Ressources <span class="caret"></span></button> 
 <ul class="dropdown-menu"> 
-<li><a id="0" onclick="ChangementProducteur(this ,'result2/' )">Petrole</a></li> </li> 
-<li><a id="1" onclick="ChangementProducteur(this ,'result2/' )">Coton</a></li> </li> 
-<li><a id="2" onclick="ChangementProducteur(this ,'result2/' )">Diamant</a></li> </li> 
-<li><a id="3" onclick="ChangementProducteur(this ,'result2/' )">SteackdeSoja</a></li> </li> 
+<li><a id="0" onclick="ChangementProducteur(this ,'result/' , 'Petrole')">Petrole</a></li> </li> 
+<li><a id="1" onclick="ChangementProducteur(this ,'result/' , 'Coton')">Coton</a></li> </li> 
+<li><a id="2" onclick="ChangementProducteur(this ,'result/' , 'Diamant')">Diamant</a></li> </li> 
+<li><a id="3" onclick="ChangementProducteur(this ,'result/' , 'SteackdeSoja')">SteackdeSoja</a></li> </li> 
 </ul></div></div><br> 
 <div class="row titre"> 
 <div class="col-md-10" id="graphe"> 
 <h3 id="titlegraphe">Graphe de Tous les Joueurs</h3> 
-<img id="grapheImg" src="result2/GL.png"> 
+<img id="grapheImg" src="result/GL.png"> 
 </div> 
 <div class="col-md-2"> 
 <h4 id="Param">Parametre de Partie</h4> 
 <p>Joueurs : 4</p> 
 <p>Producteurs : 4</p> 
-<p>Tour par tour :Auto</p> 
+<p>Tour par tour :TPT</p> 
 <p>Objectif :200</p> 
 </div></div> 
 <div class="row" id="description"> 

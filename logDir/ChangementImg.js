@@ -1,16 +1,16 @@
-function ChangementJoueur(element , dossier)
+function ChangementJoueur(element , dossier, nom)
 {
   var srcimg = element.id+".png";
   document.getElementById("grapheImg").src =  dossier+srcimg;
-  document.getElementById("titlegraphe").innerHTML = "Graphe du Joueur "+element.id;
+  document.getElementById("titlegraphe").innerHTML = "Graphe du Joueur "+nom;
 }
 
 
-function ChangementProducteur(element , dossier)
+function ChangementProducteur(element , dossier, nom)
 {
   var srcimg = element.id+".png";
   document.getElementById("grapheImg").src = dossier+srcimg;
-  document.getElementById("titlegraphe").innerHTML = "Graphe de la Ressource "+element.id;
+  document.getElementById("titlegraphe").innerHTML = "Graphe de la Ressource "+nom;
 }
 
 function ChangementGL(element , dossier)

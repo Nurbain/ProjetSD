@@ -95,7 +95,7 @@ public class CreateurPage {
 
 		for(int i = 0; i<nbrjoueur ; i++)
 		{
-			w.write("<li><a id=\"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"' )\" >"+NomsJoueur[i]+"</a></li> \n");
+			w.write("<li><a id=\"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"', '"+NomsJoueur[i]+"')\" >"+NomsJoueur[i]+"</a></li> \n");
 		}
 
 		w.write("</ul></div> \n");
@@ -109,7 +109,7 @@ public class CreateurPage {
 
 		for(int i = 0; i<nbrprod ; i++)
 		{
-			w.write("<li><a id=\""+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' )\">"+NomsRessources[i]+"</a></li> </li> \n");
+			w.write("<li><a id=\""+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' , '"+NomsRessources[i]+"')\">"+NomsRessources[i]+"</a></li> </li> \n");
 		}
 		w.write("</ul></div></div><br> \n");
 
