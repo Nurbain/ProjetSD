@@ -30,6 +30,16 @@ do
 	read -p "Jouer en tour par tour ? (y/n)" ANSWER
 done
 
+while [ "$ANSWERFIN" != "y" -a "$ANSWERFIN" != "n" ]
+do
+	read -p "Faire une fin brute ? (y/n)" ANSWERFIN
+done
+if [[ "$ANSWERFIN" = "y" ]]; then
+	ANSWERFIN="Brute"
+else
+	ANSWERFIN="Attente"
+fi
+
 read -p "Nombre d'exemplaire de chaque ressources pour la victoire :" objectif
 if [ -z $objectif ]
 then
@@ -127,7 +137,7 @@ do
   xterm -e java JoueurServ $1 $i $ANSWER n $p $objectif &
 done
 
-xterm -e java ObservateurServ $1 O1 $ANSWER $4 &
+xterm -e java ObservateurServ $1 O1 $ANSWER $4 $ANSWERFIN &
 
 sleep 2;
 
