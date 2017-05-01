@@ -88,7 +88,7 @@ public class Joueur extends Client{
 			try{
 				//Fait dormir le joueur 1 seconde si le mode de jeu est en auto
 				System.out.println("Je suis punis ='(");
-			      Thread.sleep(1000);
+			      Thread.sleep(2000);
 			    }catch(InterruptedException e){System.out.println(e);}
 		}
 
@@ -569,15 +569,23 @@ public class Joueur extends Client{
 				}
 			}
 			int punition = StockRessources.get(indexR).getExemplaires()/2;
+			if(punition < 0)
+			{
+				punition = 0;
+			}			
 			//Prend la moitie de la ressource
 			StockRessources.get(indexR).takeRessources(punition);
 
 			//Actuellement punits
 			Ispunit = true;
-
 			try{
-				//Ajoute le log detaillant la punition
-				this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Punit "+r.getName()+"  "+punition+"  "+this.getmonType()+"  "+this.getName()));
+				if(punition > 0)
+					//Ajoute le log detaillant la punition
+					this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Punit "+r.getName()+"  "+punition+"  "+this.getmonType()+"  "+this.getName()));
+					//Ajoute le log detaillant le gain de ressource pour le vole
+					punition = punition/2;					
+					j.DonnerAmende(r, punition);
+					this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Prend "+r.getName()+"  "+(punition/2)+"  "+this.getmonType()+"  "+this.getName()));
 			}catch (RemoteException re) { System.out.println(re) ; }
 			return false;
 		}
@@ -595,6 +603,11 @@ public class Joueur extends Client{
 
 	}
 
+	public void DonnerAmende(Ressources r,int amende){
+		this.AjoutStock(r,amende);
+		return;
+	}
+	
 
 	/** Demande au joueur reel l'action a effectuer
 	 * @return void
