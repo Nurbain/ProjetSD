@@ -1,64 +1,79 @@
 import java.util.ArrayList;
 import java.io.*;
 
+/**@author WENDLING Quentin URBAIN Nathan
+*/
+
 public class GenerateurLog{
+  //Liste des historiques des joueurs
   private static ArrayList<JoueurLog> ListJoueur = new ArrayList<JoueurLog>();
+  //Liste des historiques des producteurs
   private static ArrayList<ProducteurLog> ListProducteur = new ArrayList<ProducteurLog>();
+  //Liste des historiques des ressources
   private static ArrayList<RessourcesLog> ListRessources = new ArrayList<RessourcesLog>();
+  //Historique de l'état de chaque ressources aprés chaque action
   private static ArrayList<ArrayList<ArrayList<Integer>>> ListLog = new ArrayList<ArrayList<ArrayList<Integer>>>();
+  //Historique de l'état de chaque joueurs aprés chaque action
   private static ArrayList<ArrayList<ArrayList<Integer>>> ListLogJoueur = new ArrayList<ArrayList<ArrayList<Integer>>>();
+  //Mode de la partie Tour par tour / Temps réel
   private static String mode;
+  //Objectif à atteindre pour chaque ressources
   private static int Objectif;
 
   public static void main(String[] args){
+    //On verifie qu'on a bien les bon arguments
     if (args.length != 2)
 		{
-			//System.out.println("Usage : java GenerateurLog <nom du fichier de log> <destination>") ;
+			System.out.println("Usage : java GenerateurLog <nom du fichier de log> <destination>") ;
 			System.exit(0) ;
 		}
     BufferedReader bis =null;
     FileWriter fw=null;
-    try {
-		    fw = new FileWriter(new File(args[1]+"0"));
-	   }
-    catch (IOException e) {e.printStackTrace();}
 
     try{
+      //On initialise bis pour lire dans le fichier de log
       bis = new BufferedReader(new FileReader(new File(args[0])));
       String line;
+      //On lis le mode de la partie
       LectureMode(bis);
       System.out.println("Mode = "+mode);
+      //On lis l'objectif à atteindre
       LectureObjectif(bis);
       System.out.println("Objectif = "+Objectif);
+
+      //On initialise les producteurs et joueurs
       while((line = bis.readLine()) != null){
 
-        //System.out.println(line);
         if(line.equals("Producteurs :")){
-          //System.out.println("Liste Prod :");
+          //On initialise la liste de producteur
           LectureProducteur(bis);
           break;
         }
+
         if(line.equals("Joueurs :")){
-          //System.out.println("Liste Joueur :");
+          //On initialise la liste de joueur
           LectureJoueur(bis);
-
         }
-
       }
+
+      //Pour chaque ressource on initialise son historique d'états et on initialise tout les joueur avec
       for(int i=0;i<ListRessources.size();i++){
-  		  ListLog.add(new ArrayList<ArrayList<Integer>>());
+        ListLog.add(new ArrayList<ArrayList<Integer>>());
         for(int j=0;j<ListJoueur.size();j++){
-    		  ListJoueur.get(j).add(ListRessources.get(i).name,0);
-    	  }
+          ListJoueur.get(j).add(ListRessources.get(i).name,0);
+        }
+      }
+
+      //On initialise l'Historique d'états de chaque joueurs
+  	  for(int i=0;i<ListJoueur.size();i++){
+  		  ListLogJoueur.add(new ArrayList<ArrayList<Integer>>());
   	  }
-	  for(int i=0;i<ListJoueur.size();i++){
-		  ListLogJoueur.add(new ArrayList<ArrayList<Integer>>());
-	  }
+
+      //On lis toutes les actions
       while((line = bis.readLine()) != null){
         LectureAction(line);
       }
-    }
-    catch (FileNotFoundException e){e.printStackTrace();}
+    }catch (FileNotFoundException e){e.printStackTrace();}
     catch (IOException e){e.printStackTrace();}
     finally{
       try{
@@ -70,69 +85,75 @@ public class GenerateurLog{
       if(bis != null)
         bis.close();
     } catch (IOException e){ e.printStackTrace(); }
+
+    //On écris le nombre de joueur dans un fichier temporaire
     try {
 		    FileWriter fw2 = new FileWriter(new File("tmpParam"));
         fw2.write(""+ListJoueur.size());
         fw2.close();
 	   }
     catch (IOException e) {e.printStackTrace();}
+
+    //On écris le nombre de ressources dans un fichier temporaire
     try {
 		    FileWriter fw3 = new FileWriter(new File("tmpParam2"));
         fw3.write(""+ListRessources.size());
         fw3.close();
 	   }
     catch (IOException e) {e.printStackTrace();}
-    ecrireGNUplot(fw,0);
+
+    //Creation des fichier GNUPlot pour les ressources
+    for(int j=0;j<ListRessources.size();j++){
+      try {
+        fw = new FileWriter(new File(args[1]+j));
+      }catch (IOException e) {e.printStackTrace();}
+
+      ecrireGNUplot(fw,j);
+
+      try {
+        fw.close();
+      }catch (IOException e) {e.printStackTrace();}
+    }
+
+    //Creation des fichier GNUPlot pour les joueur
+    for(int j=0;j<ListJoueur.size();j++){
+      try {
+      fw = new FileWriter(new File(args[1]+"J"+j));
+      }catch (IOException e) {e.printStackTrace();}
+
+      ecrireGNUplotJoueur(fw,j);
+
+      try {
+      fw.close();
+      }catch (IOException e) {e.printStackTrace();}
+    }
+
+    //Creation du fichier GNUplot pour l'avancement des joueur
+    try {
+        fw = new FileWriter(new File(args[1]+"GL"));
+    }catch (IOException e) {e.printStackTrace();}
+
+    ecrireGNUplotGlobal(fw);
+
     try {
       fw.close();
-    }
-    catch (IOException e) {e.printStackTrace();}
-    for(int j=1;j<ListRessources.size();j++){
-		try {
-		    fw = new FileWriter(new File(args[1]+j));
-		   }
-		catch (IOException e) {e.printStackTrace();}
-		ecrireGNUplot(fw,j);
-		try {
-			fw.close();
-		}
-		catch (IOException e) {e.printStackTrace();}
-	}
-
-	for(int j=0;j<ListJoueur.size();j++){
-		try {
-		    fw = new FileWriter(new File(args[1]+"J"+j));
-		   }
-		catch (IOException e) {e.printStackTrace();}
-		ecrireGNUplotJoueur(fw,j);
-		try {
-			fw.close();
-		}
-		catch (IOException e) {e.printStackTrace();}
-	}
-  try {
-      fw = new FileWriter(new File(args[1]+"GL"));
-     }
-  catch (IOException e) {e.printStackTrace();}
-  ecrireGNUplotGlobal(fw);
-  try {
-    fw.close();
-  }
-  catch (IOException e) {e.printStackTrace();}
-
+    }catch (IOException e) {e.printStackTrace();}
   }
 
+  //Fonction pour lire la liste des Producteurs
   public static void LectureProducteur(BufferedReader bis){
     try{
       String line;
       while((line = bis.readLine()) != null){
         if(line.equals("")){
-          //System.out.println("Fin des prod");
           return;
         }
+        //log de la forme Nom NomRessource NbInitiale
         String delims = "[ ]+";
+        //On separe les différentes info sur le producteur dans un tableau
         String[] tokens = line.split(delims);
         ListProducteur.add(new ProducteurLog(tokens[0],tokens[1],Integer.parseInt(tokens[2])));
+        //Si la ressource n'est pas deja dans la liste des ressources on la rajoute
         if(!existRessources(tokens[1])){
           ListRessources.add(new RessourcesLog(tokens[1],0));
         }
@@ -141,12 +162,12 @@ public class GenerateurLog{
 
   }
 
+  //Fonction pour lire la liste des Joueurs
   public static void LectureJoueur(BufferedReader bis){
     try{
       String line;
       while((line = bis.readLine()) != null){
         if(line.equals("")){
-          //System.out.println("Fin des joueur");
           return;
         }
         ListJoueur.add(new JoueurLog(line));
@@ -155,6 +176,7 @@ public class GenerateurLog{
 
   }
 
+  //Fonction pour lire le mode de la partie
   public static void LectureMode(BufferedReader bis){
     try{
       String line;
@@ -162,19 +184,20 @@ public class GenerateurLog{
       if((line = bis.readLine()) != null){
         String[] tokens = line.split(delims);
         if(tokens.length != 2){
-          //System.out.println(line+" non reconu");
+          System.out.println(line+" non reconu");
           return;
         }
         if(tokens[1].equals("Auto") || tokens[1].equals("TPT")){
           mode=tokens[1];
           return;
         }
-        //System.out.println(tokens[1]+" non reconu");
+        System.out.println(tokens[1]+" non reconu");
       }
     }catch (IOException e){e.printStackTrace();}
 
   }
 
+  //Renvoie l'index de la ressource de nom "name" dans la liste des ressources
   public static int indexRessources(String name){
 	  for(int i=0;i<ListRessources.size();i++){
 		  if(ListRessources.get(i).name.equals(name))
@@ -183,6 +206,7 @@ public class GenerateurLog{
 	  return -1;
   }
 
+  //Renvoie l'index du Joueur de nom "name" dans la liste des joueurs
   public static int indexJoueur(String name){
 	  for(int i=0;i<ListJoueur.size();i++){
 		  if(ListJoueur.get(i).name.equals(name))
@@ -191,6 +215,7 @@ public class GenerateurLog{
 	  return -1;
   }
 
+  //Lecture de l'objectif de la partie
   public static void LectureObjectif(BufferedReader bis){
     try{
       String line;
@@ -198,7 +223,7 @@ public class GenerateurLog{
       if((line = bis.readLine()) != null){
         String[] tokens = line.split(delims);
         if(tokens.length != 2){
-          //System.out.println(line+" non reconu");
+          System.out.println(line+" non reconu");
           return;
         }
         try{
@@ -211,6 +236,7 @@ public class GenerateurLog{
 
   }
 
+  //Renvoie le joueur de nom "name" null si il n'est pas dans la liste
   public static JoueurLog findJoueur(String name){
     for(int i=0;i<ListJoueur.size();i++){
       if(ListJoueur.get(i).name.equals(name))
@@ -227,51 +253,61 @@ public class GenerateurLog{
     return null;
   }
 
+  //Lis une action dans le fichier de log
   public static void LectureAction(String line){
     String delims = "[ ]+";
     String[] tokens = line.split(delims);
 
+
     if(tokens[0].equals("Joueur")){
-      //System.out.println("Action Joueur "+tokens[1]+" "+tokens[2]);
+      //Si on lis une action sur un joueur
       JoueurLog jTmp=findJoueur(tokens[1]);
 
       if(tokens[2].equals("Prend")){
-        //System.out.println("Prend ");
+        //Si l'action est une prise de ressource
+        //On rajoute dans le joueur concerné
         jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
+        //On rajoute les log pour la ressource et le joueur
         addLog(tokens[3]);
         addLogJoueur(tokens[1]);
+        //On prend chez le producteur
         findProducteur(tokens[6]).sub(Integer.parseInt(tokens[4]));
 
       }
       else if(tokens[2].equals("Punit"))
       {
-    	  //System.out.println("Punit ");
+        //Si l'action est une punition
     	  JoueurLog JpTmp = findJoueur(tokens[6]);
-        //System.out.println("Joueur punis : "+JpTmp.name+"  "+tokens[3]);
+        //On prends au joueur
     	  JpTmp.sub(tokens[3], Integer.parseInt(tokens[4]));
+        //On rajoute les log pour la ressource et le joueur
         addLog(tokens[3]);
     	  addLogJoueur(tokens[6]);
       }
       else if(tokens[2].equals("Vol"))
       {
-    	  //System.out.println("Vol ");
+        //Si l'action est un vol
+        //On rajoute au joueur qui vole
     	  jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
-
+        //On enleve au joueur qui se fais voler
     	  findJoueur(tokens[6]).sub(tokens[3],Integer.parseInt(tokens[4]));
+        //On rajoute les log pour la ressource et le joueur
         addLog(tokens[3]);
         addLogJoueur(tokens[1]);
       }
     }else if(tokens[0].equals("Producteur")){
-      //System.out.println("Action Producteur "+tokens[1]);
+      //Si on lis une action sur un producteur
       ProducteurLog pTmp=findProducteur(tokens[1]);
       if(tokens[2].equals("Produit")){
-        //System.out.println("Produit");
+        //Si il s'agit d'une production
         pTmp.add(Integer.parseInt(tokens[4]));
       }
     }
 
   }
 
+  //Verifie si une ressource de nom "name" exist
+  //true si elle existe false sinon
   public static boolean existRessources(String name){
     for(RessourcesLog r : ListRessources){
       if(r.name.equals(name))
@@ -280,6 +316,7 @@ public class GenerateurLog{
     return false;
   }
 
+  //Renvoie le nombre maximum d'action sur une ressource "name"
   public static int nbActionRessourcemax(String name){
     int tmp,max=0;
     for(int i=0;i<ListJoueur.size();i++){
@@ -290,24 +327,21 @@ public class GenerateurLog{
     return max;
   }
 
+  //Fonction qui écris le fichier GNUplot pour les ressources
   public static void ecrireGNUplot(FileWriter fw,int i){
-    //System.out.println("nb joueur : "+ListJoueur.size());
     for(int j=0;j<ListLog.get(i).size();j++){
-		String tmp=j+" ";
-		for(int k=0;k<ListLog.get(i).get(j).size();k++){
-			tmp = tmp+ListLog.get(i).get(j).get(k)+" ";
-		}
-		tmp=tmp+"\n";
-		//System.out.print(tmp);
-		try {
-			fw.write(tmp);
-
-		  }
-		  catch (IOException e) {e.printStackTrace();}
-	}
-
+      String tmp=j+" ";
+      for(int k=0;k<ListLog.get(i).get(j).size();k++){
+        tmp = tmp+ListLog.get(i).get(j).get(k)+" ";
+      }
+      tmp=tmp+"\n";
+      try {
+        fw.write(tmp);
+      }catch (IOException e) {e.printStackTrace();}
+    }
   }
 
+  //Fonction qui écris le fichier GNUplot pour les joueur
   public static void ecrireGNUplotJoueur(FileWriter fw,int i){
     for(int j=0;j<ListLogJoueur.get(i).size();j++){
   		String tmp=j+" ";
@@ -315,16 +349,13 @@ public class GenerateurLog{
   			tmp = tmp+ListLogJoueur.get(i).get(j).get(k)+" ";
   		}
   		tmp=tmp+"\n";
-  		//System.out.print(tmp);
   		try {
   			fw.write(tmp);
-
-  		  }
-  		  catch (IOException e) {e.printStackTrace();}
+  		  }catch (IOException e) {e.printStackTrace();}
 	   }
-
   }
 
+  //Fonction qui écris le fichier GNUplot pour l'avancement de chaque joueur
   public static void ecrireGNUplotGlobal(FileWriter fw){
     ArrayList<ArrayList<Integer>> ListGL = new ArrayList<ArrayList<Integer>>();
     for(int i=0;i<ListJoueur.size();i++){
@@ -350,6 +381,7 @@ public class GenerateurLog{
 
   }
 
+  //Renvoie le nombre d'action maximal effectué par les joueur
   private static int maxAction(){
     ArrayList<ArrayList<Integer>> ListGL = new ArrayList<ArrayList<Integer>>();
     for(int i=0;i<ListJoueur.size();i++){
@@ -363,8 +395,8 @@ public class GenerateurLog{
     return max;
   }
 
+  //Ajoute l'état de la ressource "name" dans les log
   public static void addLog(String name){
-	  //System.out.println(name);
 	  ArrayList<Integer> tmpList=new ArrayList<Integer>();
 	  for(int i=0;i<ListJoueur.size();i++){
 		  int tmp =ListJoueur.get(i).lastAction(name);
@@ -375,6 +407,7 @@ public class GenerateurLog{
 	  ListLog.get(indexRessources(name)).add(tmpList);
   }
 
+  //Ajoute l'etat du joueur "name" dans les log
   public static void addLogJoueur(String name){
 	  //System.out.println(name);
 	  ArrayList<Integer> tmpList=new ArrayList<Integer>();
