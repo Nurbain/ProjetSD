@@ -585,7 +585,6 @@ public class Joueur extends Client{
 					//Ajoute le log detaillant le gain de ressource pour le vole
 					punition = punition/2;					
 					j.DonnerAmende(r, punition);
-					this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Prend "+r.getName()+"  "+(punition/2)+"  "+this.getmonType()+"  "+this.getName()));
 			}catch (RemoteException re) { System.out.println(re) ; }
 			return false;
 		}
