@@ -124,6 +124,14 @@ public class GenerateurLog{
 	   }
     catch (IOException e) {e.printStackTrace();}
 
+    try {
+		    FileWriter fw3 = new FileWriter(new File("tmpParam5"));
+        fw3.write(""+mode);
+        fw3.write("\n"+Objectif);
+        fw3.close();
+	   }
+    catch (IOException e) {e.printStackTrace();}
+
     //Creation des fichier GNUPlot pour les ressources
     for(int j=0;j<ListRessources.size();j++){
       try {

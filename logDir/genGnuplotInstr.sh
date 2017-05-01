@@ -24,8 +24,7 @@ java GenerateurLog $2 "tmplog"
 #On récupère la liste des noms des joueurs et des ressources
 ListNomRessources=`cat tmpParam3`
 ListNomJoueurs=`cat tmpParam4`
-rm tmpParam3
-rm tmpParam4
+
 
 #On recupere le nombre de Ressources qu'on stock dans nbrRessources
 nbColonne=`cat tmpParam2`
@@ -130,3 +129,7 @@ rm InstrGNUPLOT
 
 #Parti de creation de la page web, faut trouver un moyen de chopper tour par tour
 java CreateurPage $nbrjoueur $nbrRessources $1
+
+rm tmpParam3
+rm tmpParam4
+rm tmpParam5

@@ -1,5 +1,4 @@
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 
 public class CreateurPage {
 
@@ -8,6 +7,8 @@ public class CreateurPage {
 	private static String isTourParTour = "false";
 	private static String Dossier;
 	private static int Objectif = 100;
+	private static String[] NomsJoueur;
+	private static String[] NomsRessources;
 
 	 public static void main(String[] args){
 
@@ -20,6 +21,37 @@ public class CreateurPage {
 		nbrjoueur = Integer.parseInt(args[0]);
 		nbrprod = Integer.parseInt(args[1]);
 		Dossier = args[2]+"/";
+
+
+		BufferedReader bis = null;
+		try{
+			//On initialise bis pour lire dans le fichier de log
+			bis = new BufferedReader(new FileReader(new File("tmpParam4")));
+			String line;
+			line = bis.readLine();
+			String delims = "[ ]+";
+	    NomsJoueur = line.split(delims);
+			bis.close();
+
+			bis = new BufferedReader(new FileReader(new File("tmpParam3")));
+			line = bis.readLine();
+	    NomsRessources = line.split(delims);
+			bis.close();
+
+			bis = new BufferedReader(new FileReader(new File("tmpParam5")));
+			isTourParTour = bis.readLine();
+			line = bis.readLine();
+	    Objectif = Integer.parseInt(line);
+			bis.close();
+
+		}catch (FileNotFoundException e){e.printStackTrace();}
+		catch (IOException e){e.printStackTrace();}
+		finally{
+			try{
+				if(bis != null)
+					bis.close();
+			} catch (IOException e){ e.printStackTrace(); }
+		}
 
 		 try {
 			Creation();
@@ -63,7 +95,7 @@ public class CreateurPage {
 
 		for(int i = 0; i<nbrjoueur ; i++)
 		{
-			w.write("<li><a id=\"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"' )\" >Joueur "+i+"</a></li> \n");
+			w.write("<li><a id=\"J"+i+"\" onclick=\"ChangementJoueur(this,'"+Dossier+"' )\" >"+NomsJoueur[i]+"</a></li> \n");
 		}
 
 		w.write("</ul></div> \n");
@@ -77,7 +109,7 @@ public class CreateurPage {
 
 		for(int i = 0; i<nbrprod ; i++)
 		{
-			w.write("<li><a id=\""+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' )\">Ressource "+i+"</a></li> </li> \n");
+			w.write("<li><a id=\""+i+"\" onclick=\"ChangementProducteur(this ,'"+Dossier+"' )\">"+NomsRessources[i]+"</a></li> </li> \n");
 		}
 		w.write("</ul></div></div><br> \n");
 
