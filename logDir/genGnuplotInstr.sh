@@ -65,7 +65,7 @@ do
 done
 #Fin de la creation des graphes de ressource
 
-
+#Creation du graphe de l'avancement générale des joueurs
 echo "plot \"tmplogGL\" title \"J0\" with linespoints" > InstrGNUPLOT
 for i in $List
 do
@@ -77,7 +77,7 @@ echo "set output \"$1/GL.png\"" >> InstrGNUPLOT
 echo "replot" >> InstrGNUPLOT
 gnuplot InstrGNUPLOT
 rm tmplogGL
-
+#Fin creation du graphe de l'avancement générale des joueurs
 
 
 tmp=`expr $nbrRessources + 1`
