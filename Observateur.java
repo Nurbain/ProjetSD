@@ -38,7 +38,7 @@ public class Observateur extends Client{
   }
 
 	//Generation du log de fin
-  public void generationLogFin(String nameEmetteur,Type typeEmetteur){    
+  public void generationLog(String nameEmetteur,Type typeEmetteur){    
 		String str = typeEmetteur+"  "+nameEmetteur+" fini";
 	  System.out.println(str);
 	  EcritureLog(str);
@@ -123,7 +123,7 @@ public class Observateur extends Client{
 	//Fonction detectant la fin de partie
   public synchronized void PartieFini(String name){
 		//Eciture dans le fichier le joueur gagnant
-    generationLogFin(name , Type.Joueur);
+    generationLog(name , Type.Joueur);
     nbJoueurFini++;
     
 		//Si la partie est en fin Brute alors dit au autre de s'arreter sinon attent que tous les joueurs aient fini
