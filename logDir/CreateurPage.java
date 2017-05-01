@@ -59,7 +59,7 @@ public class CreateurPage {
 				+"<button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\"> Joueurs <span class=\"caret\"></span> "
 				+"</button>\n"
 				+"<ul class=\"dropdown-menu\"> \n"
-				+"<li><a href=\"#\">Tous</a></li> \n");
+				+"<li><a id=\"GL\" onclick=\"ChangementGL(this,'"+Dossier+"' )\" >Tous</a></li> \n");
 
 		for(int i = 0; i<nbrjoueur ; i++)
 		{
