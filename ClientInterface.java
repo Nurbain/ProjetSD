@@ -4,7 +4,7 @@ import java.util.*;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
-//Interface de la classe Client 
+//Interface de la classe Client
 public interface ClientInterface extends Remote // Hérite de Remote
 {
 	public String getName()
@@ -48,6 +48,9 @@ public interface ClientInterface extends Remote // Hérite de Remote
 
   public int Getobjectif()
 throws RemoteException;
+
+	public void DonnerAmende(Ressources r,int amende)
+	throws RemoteException;
 
   public int VolRessourceVictime(Ressources r)
 	throws RemoteException;
