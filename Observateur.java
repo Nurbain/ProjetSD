@@ -63,7 +63,7 @@ public class Observateur extends Client{
 	    	  ClientInterface c = ListJoueur.get(i);
 	    	  String pseudo = c.getName();
 
-	    	  System.out.println(pseudo+"\n");$
+	    	  System.out.println(pseudo+"\n");
 					//Ecriture dans le log du joueur
 	    	  EcritureLog(pseudo);
 	      }
