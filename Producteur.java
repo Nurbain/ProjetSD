@@ -1,5 +1,8 @@
 import java.rmi.RemoteException;
 
+/**@author WENDLING Quentin URBAIN Nathan*/
+
+//Classe de l'Agent producteur 
 public class Producteur extends Client{
   static final long serialVersionUID = 42;
 	//Stock de ressource du producteur
