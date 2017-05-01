@@ -21,14 +21,14 @@ public class JoueurLog {
         return StockRessources.get(i);
       }
     }
-    System.out.println("Pas trouve");
+    //System.out.println(name+" Pas trouve");
     return null;
   }
 
   public void add(String name,int nb){
-	System.out.println("add :"+name);
+	//System.out.println("add :"+name);
     if(findRessources(name) == null){
-		System.out.println("creation :"+name);
+		//System.out.println("creation :"+name);
       StockRessources.add(new RessourcesLog(name,0));
 	}
     logProgress.add(logProgress.get(logProgress.size()-1)+nb);
@@ -36,6 +36,12 @@ public class JoueurLog {
   }
 
   public void sub(String name,int nb){
+    //System.out.println("sub :"+name);
+      if(findRessources(name) == null){
+    		//System.out.println("creation :"+name);
+        StockRessources.add(new RessourcesLog(name,0));
+    	}
+    logProgress.add(logProgress.get(logProgress.size()-1)-nb);
     findRessources(name).sub(nb);
   }
 
@@ -48,14 +54,14 @@ public class JoueurLog {
 
     if(i >= r.getHistorique().size()-1){
       try {
-        System.out.println(r.getHistorique().get(r.getHistorique().size()-1));
+        //System.out.println(r.getHistorique().get(r.getHistorique().size()-1));
     		fw.write(""+r.getHistorique().get(r.getHistorique().size()-1));
         return false;
     	}
     	catch (IOException e) {e.printStackTrace();return false;}
     }
     try {
-      System.out.println(r.getHistorique().get(i));
+      //System.out.println(r.getHistorique().get(i));
       fw.write(""+r.getHistorique().get(i));
       return true;
     }

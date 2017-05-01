@@ -6,182 +6,161 @@ J2
 J3
 
 Producteurs :
-P1 RP1 100
-P2 RP2 100
-P3 RP3 100
+P1 Petrole 100
+P2 Coton 100
+P3 Lin 100
 
-Joueur  J3 fini
-Producteur  P2 Produit RP2  25
-Producteur  P3 Produit RP3  25
-Producteur  P1 Produit RP1  25
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J2 Vol RP1  20  Joueur  J3
-Joueur  J2 Vol RP1  40  Joueur  J1
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J2 Vol RP1  40  Joueur  J3
-Joueur  J3 Prend RP1  5  Producteur  P1
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J2 Vol RP2  10  Joueur  J1
-Joueur  J2 Vol RP2  10  Joueur  J1
-Joueur  J3 Prend RP2  10  Producteur  P2
-Joueur  J1 Punit RP2  0  Joueur  J2
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J3 Prend RP2  10  Producteur  P2
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J3 Prend RP2  10  Producteur  P2
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J3 Prend RP2  10  Producteur  P2
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J3 Prend RP2  5  Producteur  P2
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J3 Prend RP3  10  Producteur  P3
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J3 Prend RP3  10  Producteur  P3
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J3 Prend RP3  10  Producteur  P3
-Joueur  J3 Prend RP3  10  Producteur  P3
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J3 Prend RP3  10  Producteur  P3
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J3 Prend RP3  10  Producteur  P3
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J3 Prend RP3  10  Producteur  P3
-Joueur  J1 Prend RP3  5  Producteur  P3
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J1 Punit RP2  0  Joueur  J2
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Producteur  P1 Produit RP1  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J2 Vol RP2  65  Joueur  J3
-Producteur  P2 Produit RP2  10
-Producteur  P3 Produit RP3  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J1 Punit RP2  0  Joueur  J2
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Producteur  P1 Produit RP1  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J1 Punit RP2  0  Joueur  J2
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP3  10  Producteur  P3
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP2  0  Joueur  J2
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP3  10  Producteur  P3
-Producteur  P1 Produit RP1  10
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Prend RP2  10  Producteur  P2
-Joueur  J1 Punit RP2  0  Joueur  J2
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP3  10  Producteur  P3
-Producteur  P1 Produit RP1  10
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J3 Prend RP2  10  Producteur  P2
-Joueur  J1 Punit RP2  0  Joueur  J2
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP3  10  Producteur  P3
-Joueur  J1 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J2 Vol RP2  90  Joueur  J1
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Joueur  J1 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J3 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  2
-Producteur  P2 Produit RP2  10
-Joueur  J1 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  3
-Producteur  P2 Produit RP2  10
-Joueur  J1 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  2
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  3
-Producteur  P2 Produit RP2  10
-Joueur  J1 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  4
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  5
-Producteur  P2 Produit RP2  10
-Joueur  J1 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  6
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  8
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  10
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  12
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  15
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-Joueur  J1 Prend RP1  10  Producteur  P1
-Joueur  J1 Punit RP3  0  Joueur  J2
-Producteur  P3 Produit RP3  19
-Producteur  P2 Produit RP2  10
-Joueur  J3 Prend RP2  10  Producteur  P2
-Producteur  P1 Produit RP1  10
-20474
+Joueur  J2 fini
+Producteur  P1 Produit Petrole  20
+Producteur  P3 Produit Lin  25
+Producteur  P2 Produit Coton  25
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  0  Joueur  J1
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J2 Prend Coton  5  Producteur  P2
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J2 Prend Lin  5  Producteur  P3
+Producteur  P1 Produit Petrole  10
+Producteur  P2 Produit Coton  10
+Producteur  P3 Produit Lin  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J1 Vol Petrole  70  Joueur  J3
+Producteur  P1 Produit Petrole  10
+Producteur  P2 Produit Coton  10
+Producteur  P3 Produit Lin  10
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J2 Punit Petrole  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P2 Produit Coton  10
+Producteur  P3 Produit Lin  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Coton  10  Producteur  P2
+Joueur  J2 Punit Petrole  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P2 Produit Coton  10
+Producteur  P3 Produit Lin  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Lin  10  Producteur  P3
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J2 Punit Petrole  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P2 Produit Coton  10
+Producteur  P3 Produit Lin  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J2 Punit Petrole  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P2 Produit Coton  10
+Producteur  P3 Produit Lin  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J2 Punit Petrole  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  10
+Producteur  P2 Produit Coton  10
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J2 Punit Petrole  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  10
+Joueur  J3 Prend Lin  10  Producteur  P3
+Joueur  J2 Prend Coton  10  Producteur  P2
+Joueur  J1 Vol Petrole  70  Joueur  J3
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  10
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  2
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  2
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  3
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  3
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  3
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  3
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  4
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  4
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  5
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  5
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  6
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  6
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  8
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  8
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  10
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  12
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  12
+Joueur  J2 Punit Coton  0  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Lin  15
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  15
+19363

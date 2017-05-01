@@ -13,7 +13,7 @@ public class GenerateurLog{
   public static void main(String[] args){
     if (args.length != 2)
 		{
-			System.out.println("Usage : java GenerateurLog <nom du fichier de log> <destination>") ;
+			//System.out.println("Usage : java GenerateurLog <nom du fichier de log> <destination>") ;
 			System.exit(0) ;
 		}
     BufferedReader bis =null;
@@ -32,22 +32,25 @@ public class GenerateurLog{
       System.out.println("Objectif = "+Objectif);
       while((line = bis.readLine()) != null){
 
-        System.out.println(line);
+        //System.out.println(line);
         if(line.equals("Producteurs :")){
-          System.out.println("Liste Prod :");
+          //System.out.println("Liste Prod :");
           LectureProducteur(bis);
           break;
         }
         if(line.equals("Joueurs :")){
-          System.out.println("Liste Joueur :");
+          //System.out.println("Liste Joueur :");
           LectureJoueur(bis);
 
         }
 
       }
       for(int i=0;i<ListRessources.size();i++){
-		  ListLog.add(new ArrayList<ArrayList<Integer>>());
-	  }
+  		  ListLog.add(new ArrayList<ArrayList<Integer>>());
+        for(int j=0;j<ListJoueur.size();j++){
+    		  ListJoueur.get(j).add(ListRessources.get(i).name,0);
+    	  }
+  	  }
 	  for(int i=0;i<ListJoueur.size();i++){
 		  ListLogJoueur.add(new ArrayList<ArrayList<Integer>>());
 	  }
@@ -124,7 +127,7 @@ public class GenerateurLog{
       String line;
       while((line = bis.readLine()) != null){
         if(line.equals("")){
-          System.out.println("Fin des prod");
+          //System.out.println("Fin des prod");
           return;
         }
         String delims = "[ ]+";
@@ -143,7 +146,7 @@ public class GenerateurLog{
       String line;
       while((line = bis.readLine()) != null){
         if(line.equals("")){
-          System.out.println("Fin des joueur");
+          //System.out.println("Fin des joueur");
           return;
         }
         ListJoueur.add(new JoueurLog(line));
@@ -159,14 +162,14 @@ public class GenerateurLog{
       if((line = bis.readLine()) != null){
         String[] tokens = line.split(delims);
         if(tokens.length != 2){
-          System.out.println(line+" non reconu");
+          //System.out.println(line+" non reconu");
           return;
         }
         if(tokens[1].equals("Auto") || tokens[1].equals("TPT")){
           mode=tokens[1];
           return;
         }
-        System.out.println(tokens[1]+" non reconu");
+        //System.out.println(tokens[1]+" non reconu");
       }
     }catch (IOException e){e.printStackTrace();}
 
@@ -195,7 +198,7 @@ public class GenerateurLog{
       if((line = bis.readLine()) != null){
         String[] tokens = line.split(delims);
         if(tokens.length != 2){
-          System.out.println(line+" non reconu");
+          //System.out.println(line+" non reconu");
           return;
         }
         try{
@@ -227,13 +230,13 @@ public class GenerateurLog{
   public static void LectureAction(String line){
     String delims = "[ ]+";
     String[] tokens = line.split(delims);
-    
+
     if(tokens[0].equals("Joueur")){
-      System.out.println("Action Joueur "+tokens[1]+" "+tokens[2]);
+      //System.out.println("Action Joueur "+tokens[1]+" "+tokens[2]);
       JoueurLog jTmp=findJoueur(tokens[1]);
-      
+
       if(tokens[2].equals("Prend")){
-        System.out.println("Prend ");
+        //System.out.println("Prend ");
         jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
         addLog(tokens[3]);
         addLogJoueur(tokens[1]);
@@ -242,23 +245,27 @@ public class GenerateurLog{
       }
       else if(tokens[2].equals("Punit"))
       {
-    	  System.out.println("Punit ");
+    	  //System.out.println("Punit ");
     	  JoueurLog JpTmp = findJoueur(tokens[6]);
+        //System.out.println("Joueur punis : "+JpTmp.name+"  "+tokens[3]);
     	  JpTmp.sub(tokens[3], Integer.parseInt(tokens[4]));
+        addLog(tokens[3]);
     	  addLogJoueur(tokens[6]);
       }
       else if(tokens[2].equals("Vol"))
       {
-    	  System.out.println("Vol ");
+    	  //System.out.println("Vol ");
     	  jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
-    	  addLogJoueur(tokens[1]);
+
     	  findJoueur(tokens[6]).sub(tokens[3],Integer.parseInt(tokens[4]));
+        addLog(tokens[3]);
+        addLogJoueur(tokens[1]);
       }
     }else if(tokens[0].equals("Producteur")){
-      System.out.println("Action Producteur "+tokens[1]);
+      //System.out.println("Action Producteur "+tokens[1]);
       ProducteurLog pTmp=findProducteur(tokens[1]);
       if(tokens[2].equals("Produit")){
-        System.out.println("Produit");
+        //System.out.println("Produit");
         pTmp.add(Integer.parseInt(tokens[4]));
       }
     }
@@ -284,14 +291,14 @@ public class GenerateurLog{
   }
 
   public static void ecrireGNUplot(FileWriter fw,int i){
-    System.out.println("nb joueur : "+ListJoueur.size());
+    //System.out.println("nb joueur : "+ListJoueur.size());
     for(int j=0;j<ListLog.get(i).size();j++){
 		String tmp=j+" ";
 		for(int k=0;k<ListLog.get(i).get(j).size();k++){
 			tmp = tmp+ListLog.get(i).get(j).get(k)+" ";
 		}
 		tmp=tmp+"\n";
-		System.out.print(tmp);
+		//System.out.print(tmp);
 		try {
 			fw.write(tmp);
 
@@ -308,7 +315,7 @@ public class GenerateurLog{
   			tmp = tmp+ListLogJoueur.get(i).get(j).get(k)+" ";
   		}
   		tmp=tmp+"\n";
-  		System.out.print(tmp);
+  		//System.out.print(tmp);
   		try {
   			fw.write(tmp);
 
@@ -335,7 +342,7 @@ public class GenerateurLog{
         }
       }
       tmp=tmp+"\n";
-  		System.out.print(tmp);
+  		//System.out.print(tmp);
   		try {
   			fw.write(tmp);
   		}catch (IOException e) {e.printStackTrace();}
@@ -357,7 +364,7 @@ public class GenerateurLog{
   }
 
   public static void addLog(String name){
-	  System.out.println(name);
+	  //System.out.println(name);
 	  ArrayList<Integer> tmpList=new ArrayList<Integer>();
 	  for(int i=0;i<ListJoueur.size();i++){
 		  int tmp =ListJoueur.get(i).lastAction(name);
@@ -369,7 +376,7 @@ public class GenerateurLog{
   }
 
   public static void addLogJoueur(String name){
-	  System.out.println(name);
+	  //System.out.println(name);
 	  ArrayList<Integer> tmpList=new ArrayList<Integer>();
 	  ArrayList<RessourcesLog> StockRessources = findJoueur(name).getStock();
 	  for(int i=0;i<StockRessources.size();i++){

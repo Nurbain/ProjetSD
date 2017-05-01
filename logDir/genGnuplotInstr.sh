@@ -6,43 +6,55 @@ then
 	exit 1
 fi
 
+#Si le répertoire destination existe deja on le supprime
 if [ -e $1 ]
 then
 	rm -r $1
 fi
 
+#On crée le répertoire de destination
 mkdir $1
 
+#On crée le fichier d'instruction GNUplot
 touch InstrGNUPLOT
 
+#On genere tous les fichier GNUplot qui commence par tmplog
 java GenerateurLog $2 "tmplog"
 
+#On recupere le nombre de Ressources qu'on stock dans nbrRessources
 nbColonne=`cat tmpParam2`
-
 nbrRessources=$nbColonne
 
+#On recupere le nombre de Joueur qu'on stock dans nbrjoueur
 nbColonne=`cat tmpParam`
-
 nbrjoueur=$nbColonne
 
+#Fichier GNUPLOT de la forme x yj1 yj2 ... yjn
+#tmp correspond au numero de la colonne yjn
 tmp=`expr $nbrjoueur + 1`
 
+# x et yj1 deja trouvé du  coup on commence à la 3eme colonne
 List=`seq -w 3 $tmp`
-echo $List
 
+#Suppresion des fichiers temporaire
 rm tmpParam
 rm tmpParam2
 
 tmp=`expr $nbrRessources - 1`
 
+#pour n ressources liste de 0 à n-1 pour numéroter nos ressources et trouver les fichiers
 Listresult=`seq -w 0 $tmp`
 
+#Pour chaque ressources de 0 à n-1
 for j in $Listresult
 do
 	echo "plot \"tmplog$j\" title \"P0\" with linespoints" > InstrGNUPLOT
+	#Pour chaque joueur de 1 à n-1
+	#Joueur n = colonne n+2
 	for i in $List
 	do
 	  tmp=`expr $i - 2`
+		#On trace la courbe du joueur tmp
 	  echo "replot \"tmplog$j\" using 1:$i title \"P$tmp\" with linespoints" >> InstrGNUPLOT
 	done
 	echo "set terminal png" >> InstrGNUPLOT
@@ -51,7 +63,7 @@ do
 	gnuplot InstrGNUPLOT
 	rm tmplog$j
 done
-
+#Fin de la creation des graphes de ressource
 
 
 echo "plot \"tmplogGL\" title \"J0\" with linespoints" > InstrGNUPLOT
@@ -68,11 +80,9 @@ rm tmplogGL
 
 
 
-
 tmp=`expr $nbrRessources + 1`
 
 List=`seq -w 3 $tmp`
-echo $List
 
 tmp=`expr $nbrjoueur - 1`
 
