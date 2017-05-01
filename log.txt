@@ -5,2908 +5,376 @@ J1
 J2
 J3
 J4
-J5
 
 Producteurs :
 P1 Petrole 100
-P2 Coton 150
-P3 Charbon 284
-P4 Diamant 50
-P5 SteckDeSoja 250
+P2 Coton 103
+P3 Diamant 150
+P4 SteackdeSoja 200
 
-Joueur  J3 fini
-Producteur  P3 Produit Charbon  142
-Producteur  P5 Produit SteckDeSoja  187
-Producteur  P2 Produit Coton  37
-Producteur  P1 Produit Petrole  21
+Joueur  J4 fini
+Producteur  P3 Produit Diamant  60
+Producteur  P4 Produit SteackdeSoja  36
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Joueur  J3 Prend Petrole  10  Producteur  P1
 Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P2 Produit Coton  17
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J3 Prend Petrole  10  Producteur  P1
 Joueur  J1 Prend Petrole  10  Producteur  P1
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  5  Joueur  J2
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J1 Vol Petrole  25  Joueur  J2
 Joueur  J1 Vol Petrole  20  Joueur  J3
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J3 Prend Petrole  1  Producteur  P1
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J5 Prend SteckDeSoja  25  Producteur  P5
-Producteur  P4 Produit Diamant  10
-Joueur  J1 Vol Petrole  32  Joueur  J2
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J1 Vol Petrole  16  Joueur  J2
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J1 Vol Petrole  12  Joueur  J2
 Joueur  J1 Vol Petrole  10  Joueur  J3
-Joueur  J1 Vol Petrole  8  Joueur  J2
-Joueur  J5 Prend Charbon  20  Producteur  P3
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J2 Prend Coton  15  Producteur  P2
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J1 Vol Petrole  6  Joueur  J2
 Joueur  J1 Vol Petrole  5  Joueur  J3
-Joueur  J5 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J2 Prend Coton  15  Producteur  P2
-Joueur  J1 Vol Petrole  4  Joueur  J2
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J1 Vol Petrole  3  Joueur  J3
-Joueur  J5 Prend Charbon  20  Producteur  P3
+Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J1 Vol Petrole  3  Joueur  J2
+Joueur  J1 Vol Petrole  2  Joueur  J3
 Joueur  J1 Vol Petrole  2  Joueur  J2
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J2 Prend Coton  15  Producteur  P2
-Joueur  J5 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J1 Vol Petrole  1  Joueur  J2
-Joueur  J2 Prend Coton  15  Producteur  P2
-Joueur  J5 Prend Charbon  20  Producteur  P3
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J1 Vol Petrole  1  Joueur  J3
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J1 Vol Petrole  1  Joueur  J2
-Joueur  J5 Prend Charbon  20  Producteur  P3
-Joueur  J2 Prend Coton  15  Producteur  P2
-Joueur  J1 Vol Petrole  1  Joueur  J3
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J5 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J3 Prend Coton  7  Producteur  P2
-Joueur  J2 Prend Coton  15  Producteur  P2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J5 Prend Charbon  20  Producteur  P3
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend SteckDeSoja  25  Producteur  P5
-Producteur  P5 Produit SteckDeSoja  177
-Producteur  P3 Produit Charbon  103
-Producteur  P2 Produit Coton  15
-Joueur  J5 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Producteur  P1 Produit Petrole  10
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J5 Prend Charbon  20  Producteur  P3
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Charbon  20  Producteur  P3
-Producteur  P4 Produit Diamant  12
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  5  Joueur  J3
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Diamant  5  Producteur  P4
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J1 Vol Petrole  6  Joueur  J3
 Joueur  J1 Vol Petrole  3  Joueur  J3
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J5 Prend Diamant  5  Producteur  P4
+Joueur  J3 Prend Coton  10  Producteur  P2
 Joueur  J1 Vol Petrole  1  Joueur  J3
-Joueur  J2 Prend Charbon  9  Producteur  P3
-Joueur  J5 Prend Diamant  5  Producteur  P4
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J1 Vol Petrole  1  Joueur  J2
+Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J1 Vol Petrole  1  Joueur  J3
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J5 Prend Diamant  2  Producteur  P4
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Producteur  P5 Produit SteckDeSoja  291
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Producteur  P1 Produit Petrole  10
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J2 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J3 Prend SteckDeSoja  25  Producteur  P5
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J1 Vol Petrole  0  Joueur  J2
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  64  Joueur  J1
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J2 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J2 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J2 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J3 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J2 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J3 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J2 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J3 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J2 Prend SteckDeSoja  25  Producteur  P5
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Joueur  J3 Prend SteckDeSoja  25  Producteur  P5
-Producteur  P5 Produit SteckDeSoja  285
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J3 Prend Charbon  20  Producteur  P3
-Joueur  J2 Prend SteckDeSoja  25  Producteur  P5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J3 Prend SteckDeSoja  25  Producteur  P5
-Joueur  J5 Punit Petrole  32  Joueur  J1
-Joueur  J3 Prend SteckDeSoja  25  Producteur  P5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  442
-Joueur  J3 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  15  Joueur  J5
-Producteur  P3 Produit Charbon  10
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  774
-Joueur  J3 Prend Coton  15  Producteur  P2
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  24  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P5 Produit SteckDeSoja  1354
-Joueur  J2 Prend Charbon  20  Producteur  P3
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  12  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  2370
-Joueur  J3 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  12  Joueur  J5
-Producteur  P3 Produit Charbon  15
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  4147
-Joueur  J3 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  22
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  7257
-Joueur  J5 Prend Coton  15  Producteur  P2
-Joueur  J3 Punit Petrole  12  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  33
-Producteur  P2 Produit Coton  15
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P5 Produit SteckDeSoja  12700
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  50
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  22225
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  75
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  38894
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  21  Joueur  J5
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  112
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  68064
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  25  Joueur  J3
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  168
-Producteur  P2 Produit Coton  15
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P5 Produit SteckDeSoja  119112
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  24  Joueur  J1
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  252
-Producteur  P2 Produit Coton  15
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P5 Produit SteckDeSoja  208446
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  12  Joueur  J1
-Producteur  P3 Produit Charbon  378
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  364781
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Producteur  P3 Produit Charbon  567
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  638367
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P3 Produit Charbon  851
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  1117142
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Coton  15  Producteur  P2
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P3 Produit Charbon  1276
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  1954998
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P3 Produit Charbon  1914
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  3421247
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  2871
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  5987182
-Joueur  J5 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  4307
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  10477569
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  6460
-Producteur  P2 Produit Coton  3
-Producteur  P5 Produit SteckDeSoja  18335744
-Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Coton  15  Producteur  P2
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  9690
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  32087552
-Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Coton  15  Producteur  P2
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  14535
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  56153220
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Coton  15  Producteur  P2
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  21803
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  98268128
-Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Coton  15  Producteur  P2
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  32704
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  171969232
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Coton  15  Producteur  P2
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  49056
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  300946144
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Coton  15  Producteur  P2
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  73584
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  526655744
-Joueur  J2 Prend Coton  15  Producteur  P2
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  110376
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  921647616
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Coton  15  Producteur  P2
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  165564
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  248346
-Producteur  P2 Produit Coton  4
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  372519
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  5
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  558779
-Joueur  J1 Vol Petrole  63  Joueur  J3
-Producteur  P2 Produit Coton  6
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  838168
-Producteur  P2 Produit Coton  8
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  32  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  1257252
-Producteur  P2 Produit Coton  10
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  16  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  1885878
-Producteur  P2 Produit Coton  12
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  71  Joueur  J5
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  2828817
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  43  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  4243226
-Producteur  P2 Produit Coton  19
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  45  Joueur  J5
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  6364839
-Producteur  P2 Produit Coton  24
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  44  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  9547258
-Producteur  P2 Produit Coton  30
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  22  Joueur  J1
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  14320888
-Producteur  P2 Produit Coton  37
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  46  Joueur  J3
-Producteur  P3 Produit Charbon  21481332
-Producteur  P2 Produit Coton  47
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  34  Joueur  J1
-Producteur  P3 Produit Charbon  32221998
-Producteur  P2 Produit Coton  58
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  17  Joueur  J1
-Producteur  P3 Produit Charbon  48332996
-Producteur  P2 Produit Coton  73
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  48  Joueur  J5
-Producteur  P3 Produit Charbon  72499496
-Producteur  P2 Produit Coton  91
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  33  Joueur  J1
-Producteur  P3 Produit Charbon  108749240
-Producteur  P2 Produit Coton  114
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  16  Joueur  J1
-Producteur  P3 Produit Charbon  163123856
-Producteur  P2 Produit Coton  142
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  8  Joueur  J1
-Producteur  P3 Produit Charbon  244685792
-Producteur  P2 Produit Coton  178
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  4  Joueur  J1
-Producteur  P3 Produit Charbon  367028672
-Producteur  P2 Produit Coton  222
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  550543040
-Producteur  P2 Produit Coton  278
-Joueur  J5 Punit Petrole  2  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  825814528
-Producteur  P2 Produit Coton  347
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  1  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  434
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  1  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  543
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  64  Joueur  J5
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  678
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  37  Joueur  J5
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  848
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  51  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  1060
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  25  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  1325
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  13  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  1656
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  2070
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  3  Joueur  J1
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  2588
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  2  Joueur  J1
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  3235
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  1  Joueur  J1
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  4043
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  5054
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  48  Joueur  J5
-Producteur  P2 Produit Coton  6318
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  24  Joueur  J1
-Producteur  P2 Produit Coton  7897
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  12  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  9871
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  12339
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  48  Joueur  J3
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15424
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  44  Joueur  J5
-Producteur  P2 Produit Coton  19280
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  24100
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  49  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  1
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  30125
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  34  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  37656
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  42  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  47070
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Punit Petrole  21  Joueur  J1
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  58838
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  10  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  73547
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  5  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  91934
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  114917
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  143647
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  179558
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  224448
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  280560
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  57  Joueur  J3
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  350700
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  37  Joueur  J5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  438375
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  47  Joueur  J1
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  547969
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  24  Joueur  J1
-Producteur  P2 Produit Coton  684961
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  12  Joueur  J1
-Producteur  P2 Produit Coton  856201
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Producteur  P2 Produit Coton  1070251
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J1 Vol Petrole  49  Joueur  J3
-Producteur  P2 Produit Coton  1337814
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  27  Joueur  J1
-Producteur  P2 Produit Coton  1672268
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  14  Joueur  J1
-Producteur  P2 Produit Coton  2090335
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  2612918
-Joueur  J5 Punit Petrole  7  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  3266148
-Producteur  P3 Produit Charbon  20
-Joueur  J1 Vol Petrole  49  Joueur  J5
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  4082685
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  28  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  5103356
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  14  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  6379195
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Punit Petrole  7  Joueur  J1
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  7973994
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  9967493
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  12459366
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  49  Joueur  J3
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  15574208
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  25  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  19467760
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  13  Joueur  J1
-Producteur  P2 Produit Coton  24334700
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  6  Joueur  J1
-Producteur  P2 Produit Coton  30418374
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Joueur  J5 Punit Petrole  3  Joueur  J1
-Producteur  P2 Produit Coton  38022968
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  47528712
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  2  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  59410888
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  54  Joueur  J5
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  74263608
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  28  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  92829512
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  40  Joueur  J3
-Producteur  P4 Produit Diamant  5
-Joueur  J2 Prend Diamant  5  Producteur  P4
-Producteur  P2 Produit Coton  116036888
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  34  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  145046112
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  37  Joueur  J5
-Producteur  P4 Produit Diamant  1
-Producteur  P2 Produit Coton  181307648
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  35  Joueur  J1
-Producteur  P4 Produit Diamant  1
-Producteur  P2 Produit Coton  226634560
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  18  Joueur  J1
-Producteur  P4 Produit Diamant  1
-Producteur  P2 Produit Coton  283293184
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  40  Joueur  J3
-Producteur  P4 Produit Diamant  1
-Producteur  P2 Produit Coton  354116480
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  2
-Joueur  J3 Punit Petrole  29  Joueur  J1
-Producteur  P2 Produit Coton  442645600
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  2
-Joueur  J3 Punit Petrole  14  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  2
-Joueur  J3 Punit Petrole  7  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  3
-Joueur  J3 Punit Petrole  4  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  3
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  4
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  6
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  7
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  8
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  10
-Joueur  J1 Vol Petrole  55  Joueur  J3
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  12
-Joueur  J5 Punit Petrole  28  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  14
-Joueur  J5 Punit Petrole  14  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  17
-Joueur  J5 Punit Petrole  7  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  21
-Joueur  J5 Punit Petrole  3  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  25
-Joueur  J5 Punit Petrole  2  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  30
-Joueur  J1 Vol Petrole  54  Joueur  J5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  36
-Joueur  J3 Punit Petrole  28  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  43
-Joueur  J3 Punit Petrole  14  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  52
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  7  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  62
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  74
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  89
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P4 Produit Diamant  107
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  128
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  154
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  185
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  222
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  266
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  319
-Joueur  J1 Vol Petrole  82  Joueur  J3
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  383
-Joueur  J1 Vol Petrole  62  Joueur  J5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  460
-Joueur  J3 Punit Petrole  72  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  552
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  36  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  662
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  51  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  795
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  44  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  954
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  22  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  1144
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  11  Joueur  J1
-Producteur  P4 Produit Diamant  1373
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  5  Joueur  J1
-Producteur  P4 Produit Diamant  1648
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  3  Joueur  J1
-Producteur  P4 Produit Diamant  1977
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P4 Produit Diamant  2373
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  2847
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  3417
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  4100
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  4920
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5904
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  7085
-Joueur  J1 Vol Petrole  66  Joueur  J5
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  8502
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  33  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  10202
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  17  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  12243
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  8  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  14691
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Punit Petrole  4  Joueur  J1
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  17630
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P4 Produit Diamant  21156
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  25387
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  30464
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  36557
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  43868
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  52642
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  63170
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  75804
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Joueur  J1 Vol Petrole  91  Joueur  J3
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  90965
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Joueur  J1 Vol Petrole  68  Joueur  J5
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  109158
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  80  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  130990
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  40  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  157188
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  20  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  188625
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  10  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  226350
-Producteur  P3 Produit Charbon  20
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  70  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  271620
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  40  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  325944
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  20  Joueur  J1
-Producteur  P4 Produit Diamant  391133
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  469360
-Joueur  J5 Punit Petrole  10  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  563232
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  5  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  675878
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J1 Vol Petrole  55  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  811054
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  30  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  973265
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Punit Petrole  15  Joueur  J1
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  1167918
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  59  Joueur  J5
-Producteur  P4 Produit Diamant  1401501
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  37  Joueur  J1
-Producteur  P4 Produit Diamant  1681801
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  43  Joueur  J3
-Producteur  P4 Produit Diamant  2018162
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  40  Joueur  J1
-Producteur  P4 Produit Diamant  2421794
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  2906153
-Joueur  J5 Punit Petrole  20  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  3487384
-Joueur  J5 Punit Petrole  10  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  4184860
-Joueur  J5 Punit Petrole  5  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5021833
-Joueur  J5 Punit Petrole  2  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  6026199
-Producteur  P2 Produit Coton  15
-Joueur  J1 Vol Petrole  49  Joueur  J5
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  7231439
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  26  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  8677727
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  13  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  10413272
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  12495927
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  14995112
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  17994134
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  21592962
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  25911554
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  31093866
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  71  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  37312636
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  36  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  44775164
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  18  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  53730196
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  50  Joueur  J5
-Producteur  P4 Produit Diamant  64476236
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  34  Joueur  J1
-Producteur  P4 Produit Diamant  77371480
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  41  Joueur  J3
-Producteur  P4 Produit Diamant  92845784
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  111414936
-Joueur  J5 Punit Petrole  37  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  133697920
-Joueur  J5 Punit Petrole  19  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  160437504
-Joueur  J1 Vol Petrole  40  Joueur  J5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  192525008
-Joueur  J3 Punit Petrole  29  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  231030016
-Joueur  J3 Punit Petrole  15  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  277236032
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  7  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  332683232
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  4  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  399219872
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J1 Vol Petrole  60  Joueur  J3
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  30  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  46  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  23  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  11  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  30  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  21  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  10  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J1 Vol Petrole  30  Joueur  J3
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  20  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  10  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  5  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  45  Joueur  J3
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  23  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  11  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  6  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  3  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J1 Vol Petrole  55  Joueur  J5
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  28  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  53  Joueur  J3
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  40  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  20  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  10  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  5  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Punit Petrole  3  Joueur  J1
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  47  Joueur  J5
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  25  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  12  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J1 Vol Petrole  94  Joueur  J5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J1 Vol Petrole  81  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J1 Vol Petrole  57  Joueur  J5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J2 Punit Coton  116  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  58  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  51  Joueur  J3
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  55  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  27  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J1 Vol Petrole  43  Joueur  J5
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  35  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  53  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  26  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  13  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  7  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  3  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  42  Joueur  J5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Punit Petrole  23  Joueur  J1
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  11  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  53  Joueur  J3
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  36  Joueur  J5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  31  Joueur  J3
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  61  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  30  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  15  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  8  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  38  Joueur  J5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  23  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  11  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  6  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  3  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  46  Joueur  J3
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  24  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  39  Joueur  J5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  31  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J1 Vol Petrole  1  Joueur  J2
+Joueur  J1 Vol Petrole  1  Joueur  J3
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  7
+Producteur  P3 Produit Diamant  15
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend SteackdeSoja  3  Producteur  P4
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Punit Petrole  55  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P1 Produit Petrole  10
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Punit Petrole  27  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Coton  11  Producteur  P2
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Punit Petrole  14  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P1 Produit Petrole  10
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J1 Vol Petrole  43  Joueur  J4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Punit Petrole  28  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Coton  11  Producteur  P2
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J4 Punit Petrole  14  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  4
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Punit Petrole  7  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Punit Petrole  4  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J1 Vol Petrole  60  Joueur  J4
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J3 Punit Petrole  32  Joueur  J1
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P4 Produit SteackdeSoja  4
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  6
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
 Joueur  J3 Punit Petrole  16  Joueur  J1
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  5
 Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  6
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
 Joueur  J3 Punit Petrole  8  Joueur  J1
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  7
 Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  9
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
 Joueur  J3 Punit Petrole  4  Joueur  J1
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  11
 Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  2  Joueur  J1
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  13
 Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  1  Joueur  J1
-Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J4 Punit Petrole  2  Joueur  J1
 Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  0  Joueur  J1
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  15
 Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P4 Produit SteackdeSoja  18
 Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J4 Punit Petrole  1  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  22
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  8
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  11
+Producteur  P2 Produit Coton  11
+Producteur  P4 Produit SteackdeSoja  26
+Joueur  J4 Prend Coton  11  Producteur  P2
 Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
 Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  16
+Producteur  P2 Produit Coton  11
+Producteur  P4 Produit SteackdeSoja  32
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  22
+Producteur  P2 Produit Coton  3
+Producteur  P4 Produit SteackdeSoja  38
+Joueur  J2 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  31
+Producteur  P2 Produit Coton  11
+Producteur  P4 Produit SteackdeSoja  46
 Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
+Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  43
+Producteur  P2 Produit Coton  11
+Producteur  P4 Produit SteackdeSoja  55
 Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
+Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  60
+Producteur  P2 Produit Coton  11
+Producteur  P4 Produit SteackdeSoja  66
 Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
+Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
+Producteur  P3 Produit Diamant  84
+Producteur  P2 Produit Coton  11
+Producteur  P4 Produit SteackdeSoja  79
 Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
+Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Joueur  J1 Vol Petrole  69  Joueur  J5
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  35  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  17  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  9  Joueur  J1
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  4  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  73  Joueur  J3
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  55  Joueur  J5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Punit Petrole  66  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J1 Vol Petrole  46  Joueur  J3
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  56  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  28  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Punit Petrole  14  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J1 Vol Petrole  47  Joueur  J5
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J5 Punit Petrole  31  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  15  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  8  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  4  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit Diamant  5
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  2  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J5 Punit Petrole  1  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P3 Produit Charbon  20
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J5 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  69  Joueur  J5
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  35  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  17  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  9  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  4  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  2  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P1 Produit Petrole  10
-Producteur  P4 Produit Diamant  5
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Joueur  J3 Punit Petrole  0  Joueur  J1
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J5 Prend Petrole  10  Producteur  P1
-Producteur  P2 Produit Coton  15
-Producteur  P5 Produit SteckDeSoja  25
-Producteur  P3 Produit Charbon  20
-Producteur  P4 Produit Diamant  5
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  103  Joueur  J3
-380567
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  118
+Producteur  P2 Produit Coton  11
+Producteur  P4 Produit SteackdeSoja  95
+Joueur  J2 Prend Coton  11  Producteur  P2
+40028

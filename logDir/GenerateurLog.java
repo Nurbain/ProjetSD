@@ -280,9 +280,11 @@ public class GenerateurLog{
     	  JoueurLog JpTmp = findJoueur(tokens[6]);
         //On prends au joueur
     	  JpTmp.sub(tokens[3], Integer.parseInt(tokens[4]));
+        jTmp.add(tokens[3],Integer.parseInt(tokens[4])/2);
         //On rajoute les log pour la ressource et le joueur
         addLog(tokens[3]);
     	  addLogJoueur(tokens[6]);
+    	  addLogJoueur(tokens[1]);
       }
       else if(tokens[2].equals("Vol"))
       {
