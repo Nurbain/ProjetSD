@@ -1,10 +1,13 @@
 import java.net.* ;
 import java.rmi.* ;
 
+/**@author WENDLING Quentin URBAIN Nathan*/
+
 public class JoueurServ
 {
 	public static void main(String [] args)
 	{
+		//Verifie que tout les arguments ont ete rentre
 		if (args.length != 6)
 		{
 			System.out.println("Usage : java JoueurServ <port du serveur de noms> <Nom Joueur> <y si tour par tour n sinon> <y si joueur humain n sinon> <Personnalite> <Objectif>") ;
@@ -12,6 +15,7 @@ public class JoueurServ
 		}
 		try
 		{
+		//Set la personalite du joueur suivant la selection
 			Personnalite p=Personnalite.Individuel;
 			if(args[4].equals("Voleur")){
 				p=Personnalite.Voleur;
@@ -26,9 +30,9 @@ public class JoueurServ
 			}else if (args[4].equals("Rancunier")) {
 				p=Personnalite.Rancunier;
 			}
+			
+			//Cree le joueuer
 			Joueur objLocal = new Joueur(args[1],"localhost",args[0],args[1],p,(args[3].equals("y"))?true:false,Integer.parseInt(args[5]),(args[2].equals("y"))?true:false) ;
-			//Thread t=new Thread(objLocal);
-			//t.start();
 			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);
 			System.out.println("Serveur pret");
 		}

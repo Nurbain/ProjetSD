@@ -2,8 +2,7 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**@author WENDLING Quentin URBAIN Nathan
-*/
+/**@author WENDLING Quentin URBAIN Nathan*/
 
 public class Joueur extends Client{
 
@@ -501,7 +500,7 @@ public class Joueur extends Client{
 
 		if(nbr != 0)
 		{
-		//Ajoute le log detaillant l'action venant de se produire
+		//Ajoute le log detaillant la prise de ressource au producteur
 		this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Prend "+NewRessource.getName()+"  "+nbr+"  "+p.getmonType()+"  "+p.getName()));
 		System.out.println(this.monType+"  "+this.name+" Prend "+NewRessource.getName()+"  "+nbr+"  "+p.getmonType()+"  "+p.getName());
 		}
@@ -587,7 +586,7 @@ public class Joueur extends Client{
 			return false;
 		else{
 			try{
-				//Ajoute le log detaillant l'action venant de se produire
+				//Ajoute le log detaillant le vol de ressource au joueur
 				this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Vol "+r.getName()+"  "+StockPris+"  "+j.getmonType()+"  "+j.getName()));
 			}catch (RemoteException re) { System.out.println(re) ; }
 			//Ajoute le nombre vole au stock du joueur voleur
@@ -791,7 +790,7 @@ public class Joueur extends Client{
 			try {
 				if(this.ListProducteur.get(i).GetRessources().equals(r) )
 				{
-					//Si le producteur poss�de plus que 0 de ressource alors le retourne immediatement
+					//Si le producteur possede plus que 0 de ressource alors le retourne immediatement
 					if(this.ListProducteur.get(i).GetRessources().getExemplaires() > 0)
 						return i;
 					else index = i;
