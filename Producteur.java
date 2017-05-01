@@ -4,7 +4,10 @@ public class Producteur extends Client{
   static final long serialVersionUID = 42;
 	//Stock de ressource du producteur
 	private Ressources Stock;
+
+	//Ratio de production de la ressource 
 	private float ratioProd;
+
 	//Nombre de ressource que le producteur peut donner a la fois
 	private int CanGive;
   private boolean tourParTour;
@@ -19,6 +22,8 @@ public class Producteur extends Client{
     this.tourParTour=tourParTour;
 	}
 
+
+	//Fonction demarent le producteur
   public void startAgent(){
 		System.out.println("Start");
     StartTimer = System.currentTimeMillis();
@@ -28,31 +33,44 @@ public class Producteur extends Client{
     }
 	}
 
+	//Ressource retournant l'etat du stock actuel
 	public Ressources GetRessources()
 	{
 		return new Ressources(this.Stock.getName(),this.Stock.getExemplaires());
 	}
 
+	//Retourne ce que peut donner au maxium en une fois le producteur
 	public synchronized int GetCanGive(){
 		return this.CanGive;
 	}
 
+	//Fonction run du producteur en mode automatique
 	public void run() {
+		//Tant que la parti n'est pas fini alors produit
 		while(true && !finParti){
-      System.out.println("Production");
-			Production();
-          System.out.println(System.currentTimeMillis()-StartTimer);
-      System.out.println("Possede : "+this.Stock.getExemplaires()+" de "+this.Stock.getName());
+			//Pour eviter que le producteur produise trop
+			if(this.Stock.getExemplaires()<10000)
+			{
+		    System.out.println("Production");
+				//Produit la ressource 
+				Production();
+		    System.out.println(System.currentTimeMillis()-StartTimer);
+		    System.out.println("Possede : "+this.Stock.getExemplaires()+" de "+this.Stock.getName());
+			}
 			try{
 				Thread.sleep(1000);
 			}catch(InterruptedException e){System.out.println(e);}
 		}
 	}
 
+	//Fonction de run en mode tour par tour
   public void tourDeJeu(){
+		if(this.Stock.getExemplaires()<10000)
+		{
     System.out.println("Production");
     Production();
     System.out.println("Possede : "+this.Stock.getExemplaires()+" de "+this.Stock.getName());
+		}
     try{
       Thread.sleep(1000);
     }catch(InterruptedException e){System.out.println(e);}
@@ -62,10 +80,12 @@ public class Producteur extends Client{
 	//Donne les ressources a un joueur
 	public synchronized int PrendreRessource()
 	{
+		//Si possede plus que ce qu'il peut donner en une fois alors donne ce nombre 
 		if(Stock.getExemplaires() >= CanGive){
 			Stock.takeRessources(CanGive);
 			return CanGive;
 		}
+		//Sinon donne le nombre qu'il lui reste
 		int tmp = Stock.getExemplaires();
 		Stock.takeRessources(tmp);
 		return tmp;
@@ -74,17 +94,17 @@ public class Producteur extends Client{
 	//Produit des ressources
 	public synchronized void Production()
 	{
+		//Si possede moi que ce qu'il peut donner en une fois alors se le rajoute 
     if(Stock.getExemplaires()<CanGive){
       Stock.addRessources(CanGive);
-      /*try {obs.generationLog(this.name,this.monType,Action.Production,this.Stock,CanGive);}
-      catch (RemoteException e) {	System.out.println(e);}*/
+			//Ajoute les logs de la production en detail
       this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Produit "+Stock.getName()+"  "+CanGive));
       return;
     }
+		//Sinon produit le nombre de ressource fois sont ratio de production
     	int nombre = (int)(Stock.getExemplaires()*ratioProd);
 		Stock.addRessources(nombre);
-		/*try {obs.generationLog(this.name,this.monType,Action.Production,this.Stock,nombre);}
-	    catch (RemoteException e) {	System.out.println(e);}*/
+			//Ajoute les logs de la production en detail
       this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Produit "+Stock.getName()+"  "+nombre));
 	}
 

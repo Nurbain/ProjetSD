@@ -3,6 +3,8 @@ import java.rmi.* ;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
+
+//Classe de creation du serveur observateur
 public class ObservateurServ
 {
 	public static void main(String [] args)
