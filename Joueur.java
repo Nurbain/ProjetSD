@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
+//Classe de l'Agent Joueur 
+
 public class Joueur extends Client{
 
 	static final long serialVersionUID = 42;

@@ -4,14 +4,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
+/**@author WENDLING Quentin URBAIN Nathan*/
+
+//Classe de l'Agent Observateur 
 
 public class Observateur extends Client{
   static final long serialVersionUID = 42;
-  Fin typeFin;
+  
+	Fin typeFin;
   protected boolean tourParTour;
-  protected int nbJoueur;
-  protected int nbJoueurFini=0;
+  
+	//Nombre de joueur dans la partie
+	protected int nbJoueur;
+  
+	//Nombre de Joueur ayant fini la partie
+	protected int nbJoueurFini=0;
 
+	//Fichier de log general
   private File fichier;
   private FileWriter fw;
 
@@ -28,86 +37,48 @@ public class Observateur extends Client{
     catch (IOException e) {e.printStackTrace();}
   }
 
-  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event){
-    generationLog(nameEmetteur,typeEmetteur,event,null,0,"",Type.Joueur);
+	//Generation du log de fin
+  public void generationLogFin(String nameEmetteur,Type typeEmetteur){    
+		String str = typeEmetteur+"  "+nameEmetteur+" fini";
+	  System.out.println(str);
+	  EcritureLog(str);
   }
 
-  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre){
-    generationLog(nameEmetteur,typeEmetteur,event,r,nombre,"",Type.Joueur);
-  }
-
-  public void generationLog(String nameEmetteur,Type typeEmetteur,Action event,String nameReceveur,Type typeReceveur){
-	    generationLog(nameEmetteur,typeEmetteur,event,null,0,nameReceveur,typeReceveur);
-	  }
-
-  public synchronized void generationLog(String nameEmetteur,Type typeEmetteur,Action event,Ressources r,int nombre,String nameReceveur,Type typeReceveur){
-
-	  //On fonction de l'event le log change
-	  switch(event)
-	  {
-	  	case Demande :
-	  		String str1 = typeEmetteur+"  "+nameEmetteur+" Prend "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur;
-	  		System.out.println(str1);
-	  		EcritureLog(str1);
-	  		break;
-
-	  	case Production :
-	  		String str2 = typeEmetteur+"  "+nameEmetteur+"  Produit  "+r.getName()+"  "+nombre;
-	  		System.out.println(str2);
-	  		EcritureLog(str2);
-	  		break;
-
-	  	case Vol:
-	  		String str3 = typeEmetteur+"  "+nameEmetteur+"  Vol  "+r.getName()+"  "+nombre+"  "+typeReceveur+"  "+nameReceveur;
-	  		System.out.println(str3);
-	  		EcritureLog(str3);
-	  		break;
-
-	  	case Punition:
-	  		String str4 = typeEmetteur+"  "+nameEmetteur+"  Punit "+typeReceveur+"  "+nameReceveur ;
-	  		System.out.println(str4);
-	  		EcritureLog(str4);
-	  		break;
-
-	  	case Fin:
-	  		String str5 = typeEmetteur+"  "+nameEmetteur+" fini";
-	  		System.out.println(str5);
-	  		EcritureLog(str5);
-	  		break;
-
-	  	default:
-	  		break;
-	  }
-  }
-
+	//Fonction d'ecriture de Log en debut de jeu
   public void LogDebutJeu()
   {
 	  String mode = (this.tourParTour)? "TPT" : "Auto" ;
 	  System.out.println("Mode "+mode+ "\n");
-	  EcritureLog("Mode "+mode);
+		//Ecriture du Mode	  
+		EcritureLog("Mode "+mode);
 	  try{
 		  System.out.println("Objectif "+ListJoueur.get(0).Getobjectif()+"\n");
-		  EcritureLog("Objectif "+ListJoueur.get(0).Getobjectif());
+		  //Ecriture de l'objectif
+			EcritureLog("Objectif "+ListJoueur.get(0).Getobjectif());
 
 		  System.out.println("Joueurs : \n");
 		  EcritureLog("Joueurs :");
+			//Boucle ecrivant tout les noms des joueurs 
 	      for(int i=0;i < ListJoueur.size();i++){
 	    	  ClientInterface c = ListJoueur.get(i);
 	    	  String pseudo = c.getName();
 
-	    	  System.out.println(pseudo+"\n");
+	    	  System.out.println(pseudo+"\n");$
+					//Ecriture dans le log du joueur
 	    	  EcritureLog(pseudo);
 	      }
 
 	      System.out.println("Producteurs :\n");
 	      EcritureLog("\nProducteurs :");
-	      for(int j=0;j<ListProducteur.size();j++)
+	      //Boucle ecrivant tout les noms des producteurs , leur ressource et leur nombre
+				for(int j=0;j<ListProducteur.size();j++)
 	      {
 	    	  ClientInterface c = ListProducteur.get(j);
 	    	  String pseudo = c.getName();
 	    	  String ressource = c.GetRessources().getName();
 	    	  int nombre = c.GetRessources().getExemplaires();
 	    	  System.out.println(pseudo+" "+ressource+" "+nombre+"\n");
+					//Ecriture dans le log du producteur ressource nombre
 	    	  EcritureLog(pseudo+" "+ressource+" "+nombre);
 	      }
 	      EcritureLog("");
@@ -115,6 +86,7 @@ public class Observateur extends Client{
 	  catch(RemoteException re) { System.out.println(re) ; }
   }
 
+	//Fonction ecrivant dans le fichier de log le string donnee
   public void EcritureLog(String log)
   {
 	try {
@@ -125,7 +97,7 @@ public class Observateur extends Client{
 
   }
 
-
+	//Starte l'agent observateur
   public void startAgent(){
     System.out.println(name + " Debut partie");
     LogDebutJeu();
@@ -133,6 +105,7 @@ public class Observateur extends Client{
 
       for(int i=0;i < ListJoueur.size();i++){
         ListJoueur.get(i).startAgent();
+				//Compte le nombre de joueur dans la partie
         nbJoueur++;
       }
       for(int i=0;i < ListProducteur.size();i++){
@@ -147,10 +120,14 @@ public class Observateur extends Client{
     }
   }
 
+	//Fonction detectant la fin de partie
   public synchronized void PartieFini(String name){
-    generationLog(name , Type.Joueur , Action.Fin);
+		//Eciture dans le fichier le joueur gagnant
+    generationLogFin(name , Type.Joueur);
     nbJoueurFini++;
-    if(this.typeFin == Fin.Brute || nbJoueur == nbJoueurFini){
+    
+		//Si la partie est en fin Brute alors dit au autre de s'arreter sinon attent que tous les joueurs aient fini
+		if(this.typeFin == Fin.Brute || nbJoueur == nbJoueurFini){
       PartieFini();
       try{
         for(int i=0;i < ListJoueur.size();i++){
@@ -161,14 +138,20 @@ public class Observateur extends Client{
         }
       }catch (RemoteException re) { System.out.println(re) ; }
 
+			//Cree les logs 
       creationLog();
+
+			//Recupe la duree de la partie
       long fin = System.currentTimeMillis() - StartTimer;
       try {
+			//Ecrit le temps de la partie
     	fw.write(String.valueOf(fin));
 		  fw.close();
       }
       catch (IOException e) {e.printStackTrace();}
-      for(int i=0;i < ListJoueur.size();i++){
+      
+			//Deconnecte Tous les agents
+			for(int i=0;i < ListJoueur.size();i++){
         try{
           ListJoueur.get(i).disconnect();
         }catch (RemoteException re) { continue; }
@@ -188,12 +171,15 @@ public class Observateur extends Client{
     }
   }
 
+	//Fonction donnant le tour de jeu au different agents joueurs et producteur 
   public void tourDeJeu(){
     while(true && !finParti){
       try{
+				//Tous les Joueurs jouent l'un apres l'autre
         for(int i=0;i < ListJoueur.size();i++){
           ListJoueur.get(i).tourDeJeu();
         }
+				//Tous les producteurs jouent l'un apres l'autre
         for(int i=0;i < ListProducteur.size();i++){
           ListProducteur.get(i).tourDeJeu();
         }
@@ -201,6 +187,7 @@ public class Observateur extends Client{
     }
   }
 
+	//Fonction creeant les logs
   public void creationLog(){
     ArrayList<ArrayList<LogEntries>> listLog = new ArrayList<ArrayList<LogEntries>>();
     try{

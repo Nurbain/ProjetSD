@@ -6,6 +6,9 @@ import java.util.*;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
+//Classe client , classe mere. 
+//Tous les agents sont des clients, soit producteur joueur ou observateur
+
 public class Client
 extends UnicastRemoteObject // Hérite de UnicastRemoteObject
 implements ClientInterface, Runnable // implémente l’interface

@@ -1,10 +1,14 @@
 import java.rmi.* ;
 import java.net.MalformedURLException ;
 
+/**@author WENDLING Quentin URBAIN Nathan*/
+
+//Classe qui permet de connecter tout les agents entre eux 
 public class Coordinateur
 {
   public static void main(String [] args)
   {
+		//Verifie que toute les donnees voulus sont rentre
     if (args.length < 2)
     {
       System.out.println("Usage : java Coordinateur <machine du Serveur> <port du rmiregistry>") ;
@@ -21,10 +25,8 @@ public class Coordinateur
 		  //Connection Client i
 		  ClientInterface b = (ClientInterface) Naming.lookup( "rmi://"+args[0]+":"+args[1]+"/"+args[i] ) ;
       if(b.getmonType() == Type.Observateur){
-        System.out.println("Wewe");
         obs=b;
       }
-		  System.out.println("conn 1");
 		  for(j=2;j<taille;j++){
 			  if(j==i)
 				continue;

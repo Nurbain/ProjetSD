@@ -3,6 +3,8 @@ import java.rmi.* ;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
+//Classe Lancent le Serveur Joueur 
+
 public class JoueurServ
 {
 	public static void main(String [] args)

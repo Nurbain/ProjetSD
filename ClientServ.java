@@ -3,6 +3,8 @@ import java.rmi.* ;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
+//Classe permettant de lancer le serveur Classe
+
 public class ClientServ
 {
 	public static void main(String [] args)
