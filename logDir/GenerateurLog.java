@@ -227,9 +227,11 @@ public class GenerateurLog{
   public static void LectureAction(String line){
     String delims = "[ ]+";
     String[] tokens = line.split(delims);
+    
     if(tokens[0].equals("Joueur")){
       System.out.println("Action Joueur "+tokens[1]+" "+tokens[2]);
       JoueurLog jTmp=findJoueur(tokens[1]);
+      
       if(tokens[2].equals("Prend")){
         System.out.println("Prend ");
         jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
@@ -237,6 +239,20 @@ public class GenerateurLog{
         addLogJoueur(tokens[1]);
         findProducteur(tokens[6]).sub(Integer.parseInt(tokens[4]));
 
+      }
+      else if(tokens[2].equals("Punit"))
+      {
+    	  System.out.println("Punit ");
+    	  JoueurLog JpTmp = findJoueur(tokens[6]);
+    	  JpTmp.sub(tokens[3], Integer.parseInt(tokens[4]));
+    	  addLogJoueur(tokens[6]);
+      }
+      else if(tokens[2].equals("Vol"))
+      {
+    	  System.out.println("Vol ");
+    	  jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
+    	  addLogJoueur(tokens[1]);
+    	  findJoueur(tokens[6]).sub(tokens[3],Integer.parseInt(tokens[4]));
       }
     }else if(tokens[0].equals("Producteur")){
       System.out.println("Action Producteur "+tokens[1]);
