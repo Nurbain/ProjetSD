@@ -1,18 +1,3 @@
-	BESOIN POUR LOG 
-	
-Argument donnee à l'Observateur : 
-
-- Type Envoyeur 		: Le type de l'acteur							- Obligatoire
-- String NomEnvoyeur 	: Le nom de l'acteur							- Obligatoire
-- Action Action 		: L'action effectué								- Obligatoire
-- Ressources R 			: La ressources en question, utilisation du nom	
-- int Nombre 			: Le nombre produit / Enlevé
-- Type Reception 		: Le type du receptionneur
-- String NomReception 	: Le nom du receptionneur
-
-	
-	
-	
 	CONVENTION DE NOMMAGE POUR LA NORMALISATION DES LOGS 
 
 ########################################################

@@ -4,26 +4,42 @@ import java.rmi.* ;
 import java.net.MalformedURLException ;
 import java.util.*;
 
+/**@author WENDLING Quentin URBAIN Nathan*/
+
 public class Client
 extends UnicastRemoteObject // Hérite de UnicastRemoteObject
 implements ClientInterface, Runnable // implémente l’interface
 {
 	static final long serialVersionUID = 42;
+	
+	//Nom du client
 	protected String name;
+
+	//Type du clinet 
 	protected Type monType;
+
 	//Tout les autres clients avec les quels je suis connecté
 	protected ArrayList<ClientInterface> Peers= new ArrayList<ClientInterface>();
+
+	//Tous les joueurs de la partie
 	protected ArrayList<ClientInterface> ListJoueur =new ArrayList<ClientInterface>();
+	
+	//Tous les producteurs de la partie
 	protected ArrayList<ClientInterface> ListProducteur =new ArrayList<ClientInterface>();
+	
+	//Liste de Log personel
 	protected ArrayList<LogEntries> LogPerso = new ArrayList<LogEntries>();
+	
+	//Observateur de la partie 
 	protected ClientInterface obs;
+
 	protected boolean finParti=false;
 	private final String ServerName;
 	private final String NumPort;
 	private final String NomServise;
 
-
-		protected long StartTimer;
+	//Variable permettant de connaitre la duree de la partie
+	protected long StartTimer;
 
 
 	public Client (String name,String ServerName,String NumPort,String NomServise) throws RemoteException
@@ -36,18 +52,23 @@ implements ClientInterface, Runnable // implémente l’interface
 		this.NumPort=NumPort;
 		this.NomServise=NomServise;
 	} ;
+
+	//Retourne le nom du client 
 	public String getName() throws RemoteException
 	{
 		return this.name;
 	}
 
+	//Retourne son log personnel
 	public ArrayList<LogEntries> getLogPerso() throws RemoteException{
 		return this.LogPerso;
 	}
 
+	//Retourne son type
 	public Type getmonType(){
 		return this.monType;
 	}
+
 	public void tourDeJeu(){
 
 	}
@@ -56,6 +77,7 @@ implements ClientInterface, Runnable // implémente l’interface
 		this.finParti=true;
 	}
 
+	//Fonction deconnectant le client 
 	public void disconnect() throws RemoteException{
 		try
     {
@@ -68,6 +90,7 @@ implements ClientInterface, Runnable // implémente l’interface
 
 	}
 
+	//Fonction lancant le client 
 	public void startAgent(){
 		System.out.println("Start");
 		Thread t=new Thread(this);

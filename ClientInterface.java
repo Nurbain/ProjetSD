@@ -2,6 +2,9 @@ import java.rmi.Remote ;
 import java.rmi.RemoteException ;
 import java.util.*;
 
+/**@author WENDLING Quentin URBAIN Nathan*/
+
+//Interface de la classe Client 
 public interface ClientInterface extends Remote // Hérite de Remote
 {
 	public String getName()
