@@ -209,6 +209,8 @@ public class Joueur extends Client{
 		//COMPORTEMENT : Vol les ressources manquantes aux differents joueurs
 		case Voleur :
 
+			//IndexJoueur -> index dans la liste du joueur a voler 
+			//IndexRessource2 -> Ressource a voler
 			int indexJoueur = 0 , indexRessource2 = -1;
 
 			//Trouve la 1er ressource qui n'a pas atteint l'objectif
@@ -220,6 +222,7 @@ public class Joueur extends Client{
 					break;
 				}
 			}
+
 
 			//Cherche les joueurs ayant cette ressources en plus grand nombre
 			int max = 0;
@@ -239,8 +242,6 @@ public class Joueur extends Client{
 						if(tmpJoueur.get(k).equals(this.StockRessources.get(indexRessource2)) && (tmpJoueur.get(k).getExemplaires() > max))
 						{
 							max = tmpJoueur.get(k).getExemplaires();
-							System.out.println(max);
-
 							//Le joueur actuel est le plus interressent a voler
 							indexJoueur = j;
 						}
@@ -251,7 +252,6 @@ public class Joueur extends Client{
 			//Si rien a voler alors prend chez les producteurs
 			if(max == 0)
 			{
-				System.out.println("La je dois prendre");
 				int MaxR = 0;
 				int indexPM = 0;
 				for(int i = 0 ; i<this.ListProducteur.size() ; i++)
@@ -529,10 +529,17 @@ public class Joueur extends Client{
 			return -1;
 		else
 		{
+			if(StockRessources.get(index).getExemplaires() == 1)
+			{
+				StockRessources.get(index).takeRessources(1);
+				return 1;
+			}
+			else{
 			//Renvoie le nombre de ressource vole et on soustrait ce nombre au stock actuel
-			int tmp = 	StockRessources.get(index).getExemplaires() /2 ;
+			int tmp = 	StockRessources.get(index).getExemplaires()/2 ;
 			StockRessources.get(index).takeRessources(tmp);
 			return tmp;
+			}
 		}
 	}
 
