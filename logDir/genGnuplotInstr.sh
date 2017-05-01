@@ -21,6 +21,12 @@ touch InstrGNUPLOT
 #On genere tous les fichier GNUplot qui commence par tmplog
 java GenerateurLog $2 "tmplog"
 
+#On récupère la liste des noms des joueurs et des ressources
+ListNomRessources=`cat tmpParam3`
+ListNomJoueurs=`cat tmpParam4`
+rm tmpParam3
+rm tmpParam4
+
 #On recupere le nombre de Ressources qu'on stock dans nbrRessources
 nbColonne=`cat tmpParam2`
 nbrRessources=$nbColonne
@@ -48,14 +54,19 @@ Listresult=`seq -w 0 $tmp`
 #Pour chaque ressources de 0 à n-1
 for j in $Listresult
 do
-	echo "plot \"tmplog$j\" title \"P0\" with linespoints" > InstrGNUPLOT
+	ListNomJoueurstmp="$ListNomJoueurs"
+	NomJoueur=`echo "$ListNomJoueurstmp" |cut -d' ' -f1`
+	ListNomJoueurstmp=`echo "$ListNomJoueurstmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
+	echo "plot \"tmplog$j\" title \"$NomJoueur\" with linespoints" > InstrGNUPLOT
 	#Pour chaque joueur de 1 à n-1
 	#Joueur n = colonne n+2
 	for i in $List
 	do
+		NomJoueur=`echo "$ListNomJoueurstmp" |cut -d ' ' -f 1`
+		ListNomJoueurstmp=`echo "$ListNomJoueurstmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
 	  tmp=`expr $i - 2`
 		#On trace la courbe du joueur tmp
-	  echo "replot \"tmplog$j\" using 1:$i title \"P$tmp\" with linespoints" >> InstrGNUPLOT
+	  echo "replot \"tmplog$j\" using 1:$i title \"$NomJoueur\" with linespoints" >> InstrGNUPLOT
 	done
 	echo "set terminal png" >> InstrGNUPLOT
 	echo "set output \"$1/$j.png\"" >> InstrGNUPLOT
@@ -66,11 +77,16 @@ done
 #Fin de la creation des graphes de ressource
 
 #Creation du graphe de l'avancement générale des joueurs
-echo "plot \"tmplogGL\" title \"J0\" with linespoints" > InstrGNUPLOT
+ListNomJoueurstmp="$ListNomJoueurs"
+NomJoueur=`echo "$ListNomJoueurstmp" |cut -d ' ' -f 1`
+ListNomJoueurstmp=`echo "$ListNomJoueurstmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
+echo "plot \"tmplogGL\" title \"$NomJoueur\" with linespoints" > InstrGNUPLOT
 for i in $List
 do
+	NomJoueur=`echo "$ListNomJoueurstmp" |cut -d ' ' -f 1`
+	ListNomJoueurstmp=`echo "$ListNomJoueurstmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
   tmp=`expr $i - 2`
-  echo "replot \"tmplogGL\" using 1:$i title \"J$tmp\" with linespoints" >> InstrGNUPLOT
+  echo "replot \"tmplogGL\" using 1:$i title \"$NomJoueur\" with linespoints" >> InstrGNUPLOT
 done
 echo "set terminal png" >> InstrGNUPLOT
 echo "set output \"$1/GL.png\"" >> InstrGNUPLOT
@@ -90,11 +106,16 @@ Listresult=`seq -w 0 $tmp`
 
 for j in $Listresult
 do
-	echo "plot \"tmplogJ$j\" title \"R0\" with linespoints" > InstrGNUPLOT
+	ListNomRessourcestmp="$ListNomRessources"
+	NomRessources=`echo "$ListNomRessourcestmp" |cut -d ' ' -f 1`
+	ListNomRessourcestmp=`echo "$ListNomRessourcestmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
+	echo "plot \"tmplogJ$j\" title \"$NomRessources\" with linespoints" > InstrGNUPLOT
 	for i in $List
 	do
+		NomRessources=`echo "$ListNomRessourcestmp" |cut -d ' ' -f 1`
+		ListNomRessourcestmp=`echo "$ListNomRessourcestmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
 	  tmp=`expr $i - 2`
-	  echo "replot \"tmplogJ$j\" using 1:$i title \"R$tmp\" with linespoints" >> InstrGNUPLOT
+	  echo "replot \"tmplogJ$j\" using 1:$i title \"$NomRessources\" with linespoints" >> InstrGNUPLOT
 	done
 	echo "set terminal png" >> InstrGNUPLOT
 	echo "set output \"$1/J$j.png\"" >> InstrGNUPLOT

@@ -102,6 +102,28 @@ public class GenerateurLog{
 	   }
     catch (IOException e) {e.printStackTrace();}
 
+    try {
+		    FileWriter fw3 = new FileWriter(new File("tmpParam3"));
+        String tmp="";
+        for(int i=0;i<ListRessources.size();i++){
+          tmp=tmp+ListRessources.get(i).name+" ";
+        }
+        fw3.write(tmp);
+        fw3.close();
+	   }
+    catch (IOException e) {e.printStackTrace();}
+
+    try {
+		    FileWriter fw3 = new FileWriter(new File("tmpParam4"));
+        String tmp="";
+        for(int i=0;i<ListJoueur.size();i++){
+          tmp=tmp+ListJoueur.get(i).name+" ";
+        }
+        fw3.write(tmp);
+        fw3.close();
+	   }
+    catch (IOException e) {e.printStackTrace();}
+
     //Creation des fichier GNUPlot pour les ressources
     for(int j=0;j<ListRessources.size();j++){
       try {
