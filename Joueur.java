@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
-//Classe de l'Agent Joueur 
+//Classe de l'Agent Joueur
 
 public class Joueur extends Client{
 
@@ -211,7 +211,7 @@ public class Joueur extends Client{
 		//COMPORTEMENT : Vol les ressources manquantes aux differents joueurs
 		case Voleur :
 
-			//IndexJoueur -> index dans la liste du joueur a voler 
+			//IndexJoueur -> index dans la liste du joueur a voler
 			//IndexRessource2 -> Ressource a voler
 			int indexJoueur = 0 , indexRessource2 = -1;
 
@@ -581,7 +581,7 @@ public class Joueur extends Client{
 			if(punition < 0)
 			{
 				punition = 0;
-			}			
+			}
 			//Prend la moitie de la ressource
 			StockRessources.get(indexR).takeRessources(punition);
 
@@ -592,7 +592,7 @@ public class Joueur extends Client{
 					//Ajoute le log detaillant la punition
 					this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,j.getmonType()+"  "+j.getName()+" Punit "+r.getName()+"  "+punition+"  "+this.getmonType()+"  "+this.getName()));
 					//Ajoute le log detaillant le gain de ressource pour le vole
-					punition = punition/2;					
+					punition = punition/2;
 					j.DonnerAmende(r, punition);
 			}catch (RemoteException re) { System.out.println(re) ; }
 			return false;
@@ -615,7 +615,7 @@ public class Joueur extends Client{
 		this.AjoutStock(r,amende);
 		return;
 	}
-	
+
 
 	/** Demande au joueur reel l'action a effectuer
 	 * @return void
