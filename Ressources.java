@@ -35,7 +35,7 @@ public class Ressources implements Serializable{
 		return true;
   }
 
-	//Ajoute au nombre d'exemplaire le nombr donne en arguement
+	//Ajoute au nombre d'exemplaire le nombre donne en arguement
   public synchronized void addRessources(int nb){
     exemplaires += nb;
   }
