@@ -209,9 +209,6 @@ public class Joueur extends Client{
 
 		//COMPORTEMENT : Vol les ressources manquantes aux differents joueurs
 		case Voleur :
-
-			//Passe en observation pour observer les différents joueurs
-			SetMode(Mode.Observation);
 			
 			int indexJoueur = 0 , indexRessource2 = -1;
 
@@ -234,7 +231,7 @@ public class Joueur extends Client{
 				try {tmpJoueur = Observation(this.ListJoueur.get(j));}
 				catch (RemoteException re) {System.out.println(re);}
 
-				//Si sont stock n'est pas nul alors cherche la ressource voulu
+				//Si sont stock n'est pas null alors cherche la ressource voulu
 				if(tmpJoueur != null)
 				{
 					for(int k =0; k<tmpJoueur.size();k++)
@@ -254,6 +251,7 @@ public class Joueur extends Client{
 			//Si rien a voler alors prend chez les producteurs
 			if(max == 0)
 			{
+				System.out.println("La je dois prendre");
 				int MaxR = 0;
 				int indexPM = 0;
 				for(int i = 0 ; i<this.ListProducteur.size() ; i++)
@@ -562,7 +560,7 @@ public class Joueur extends Client{
 			{
 				if(StockRessources.get(i).getExemplaires() >= MaxR)
 				{
-					MaxR = StockRessources.get(indexR).getExemplaires();
+					MaxR = StockRessources.get(i).getExemplaires();
 					indexR = i;
 				}
 			}
