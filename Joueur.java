@@ -257,11 +257,44 @@ public class Joueur extends Client{
 				}
 			}
 
-			//Passe en mode vol pour voler le joueur
-			SetMode(Mode.Vol);
-
-			try {VolRessourceAgresseur(this.ListJoueur.get(indexJoueur), StockRessources.get(indexRessource2));}
-			catch (RemoteException re) {System.out.println(re);}
+			//Si rien a voler alors prend chez les producteurs
+			if(max == 0)
+			{
+				int MaxR = 0;
+				int indexPM = 0;
+				for(int i = 0 ; i<this.ListProducteur.size() ; i++)
+				{
+					try {
+						if( this.ListProducteur.get(i).GetRessources().equals(this.StockRessources.get(indexRessource2)) && this.ListProducteur.get(i).GetRessources().getExemplaires() > MaxR)
+						{
+							indexPM = i;
+							MaxR = this.ListProducteur.get(i).GetRessources().getExemplaires();
+						}
+					}catch (RemoteException re) {System.out.println(re);}
+				}
+				
+				//Passe en mode demande
+				SetMode(Mode.Demande);
+				
+				try {
+					//Verifie que quelqu'un n'a pas pris entre temps
+					if(this.ListProducteur.get(indexPM).GetRessources().getExemplaires() != 0){
+						DemandeRessource(this.ListProducteur.get(indexPM));
+					}
+					//Si le producteur de possede plus de ressource alors se remet en observateur
+					else
+						SetMode(Mode.Observation);
+				} catch (RemoteException re) {System.out.println(re);}
+				
+			}
+			else
+			{
+				//Passe en mode vol pour voler le joueur
+				SetMode(Mode.Vol);
+	
+				try {VolRessourceAgresseur(this.ListJoueur.get(indexJoueur), StockRessources.get(indexRessource2));}
+				catch (RemoteException re) {System.out.println(re);}
+			}
 			
 			AfficheInventaire();
 
