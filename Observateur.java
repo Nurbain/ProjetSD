@@ -138,6 +138,9 @@ public class Observateur extends Client{
         }
       }catch (RemoteException re) { System.out.println(re) ; }
 
+
+      ArrayList<Integer> classement = new ArrayList<Integer>();
+
 			//Cree les logs
       creationLog();
 

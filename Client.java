@@ -6,7 +6,7 @@ import java.util.*;
 
 /**@author WENDLING Quentin URBAIN Nathan*/
 
-//Classe client , classe mere. 
+//Classe client , classe mere.
 //Tous les agents sont des clients, soit producteur joueur ou observateur
 
 public class Client
@@ -60,6 +60,10 @@ implements ClientInterface, Runnable // implémente l’interface
 	public String getName() throws RemoteException
 	{
 		return this.name;
+	}
+
+	public int SommeRessources(){
+		return 0;
 	}
 
 	//Retourne son log personnel

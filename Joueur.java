@@ -849,4 +849,16 @@ public class Joueur extends Client{
 		}
 		System.out.println("--------------------------------- \n");
 	}
+
+	public int SommeRessources(){
+		int tmp=0,tmp2=0;
+		for(int i=0;i<this.StockRessources.size();i++){
+			tmp2=this.StockRessources.get(i).getExemplaires();
+			if( tmp2 > objectif)
+				tmp2=objectif;
+			tmp+=tmp2;
+		}
+		return tmp;
+	}
+
 }
