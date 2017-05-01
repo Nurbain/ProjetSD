@@ -538,7 +538,7 @@ public class Joueur extends Client{
 		else
 		{
 			//Renvoie le nombre de ressource vole et on soustrait ce nombre au stock actuel
-			int tmp = 	StockRessources.get(index).getExemplaires();
+			int tmp = 	StockRessources.get(index).getExemplaires() /2 ;
 			StockRessources.get(index).takeRessources(tmp);
 			return tmp;
 		}
@@ -563,10 +563,12 @@ public class Joueur extends Client{
 		{
 			//Prend la moitie de la plus grande ressource et Le punit d'un tour
 			int indexR = 0;
+			int MaxR = 0;
 			for(int i = 0 ; i<StockRessources.size() ; i++)
 			{
-				if(StockRessources.get(indexR).getExemplaires() >= indexR)
+				if(StockRessources.get(indexR).getExemplaires() >= MaxR)
 				{
+					MaxR = StockRessources.get(indexR).getExemplaires();
 					indexR = i;
 				}
 			}
