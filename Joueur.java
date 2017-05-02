@@ -73,6 +73,8 @@ public class Joueur extends Client{
 	 */
 	public void tourDeJeu(){
 
+		if(AFini)
+			return;
 		//Si le joueur est reel alors demande au joueur son action de tour
 		if(isJoueurIRL){
 			try{
@@ -499,6 +501,8 @@ public class Joueur extends Client{
 	public void run() {
 		while(true && !this.finParti)
 		{
+			if(AFini)
+				return;
 			tourDeJeu();
 		}
 	}
