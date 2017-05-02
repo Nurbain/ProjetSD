@@ -42,7 +42,7 @@ public class Observateur extends Client{
   public void generationLog(String nameEmetteur,Type typeEmetteur){
 		String str = typeEmetteur+"  "+nameEmetteur+" fini";
 	  System.out.println(str);
-	  EcritureLog(str);
+	  //EcritureLog(str);
   }
 
 	//Fonction d'ecriture de Log en debut de jeu
@@ -140,6 +140,11 @@ public class Observateur extends Client{
         }
       }catch (RemoteException re) { System.out.println(re) ; }
 
+      try {
+      //Ecrit le temps de la partie
+        fw.write("Classement :\n");
+      }
+      catch (IOException e) {e.printStackTrace();}
       if(typeFin == Fin.Brute){
         ArrayList<Integer> classement = new ArrayList<Integer>();
 
@@ -159,7 +164,7 @@ public class Observateur extends Client{
           }
           try {
     			//Ecrit le temps de la partie
-          	fw.write(""+(i+1)+" "+ListJoueur.get(indexmax).getName()+"\n");
+          	fw.write(ListJoueur.get(indexmax).getName()+"\n");
           }
           catch (IOException e) {e.printStackTrace();}
           classement.set(indexmax,0);
@@ -168,21 +173,32 @@ public class Observateur extends Client{
         for(int i=0;i<ListJoueur.size();i++){
           try {
     			//Ecrit le temps de la partie
-          	fw.write(""+(i+1)+" "+OrdreArrive.get(i)+"\n");
+          	fw.write(OrdreArrive.get(i)+"\n");
           }
           catch (IOException e) {e.printStackTrace();}
         }
       }
 
+      try {
+      //Ecrit le temps de la partie
+        fw.write("\n");
+      }
+      catch (IOException e) {e.printStackTrace();}
+
+
+      //Recupe la duree de la partie
+      long fin = System.currentTimeMillis() - StartTimer;
+      try {
+      //Ecrit le temps de la partie
+        fw.write("Fin de Partie :\n"+fin+"\n");
+      }
+      catch (IOException e) {e.printStackTrace();}
+
 			//Cree les logs
       creationLog();
 
-			//Recupe la duree de la partie
-      long fin = System.currentTimeMillis() - StartTimer;
       try {
-			//Ecrit le temps de la partie
-    	fw.write(String.valueOf(fin));
-		  fw.close();
+		      fw.close();
       }
       catch (IOException e) {e.printStackTrace();}
 

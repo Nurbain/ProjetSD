@@ -45,6 +45,17 @@ public class CreateurPage {
 	    Objectif = Integer.parseInt(line);
 			bis.close();
 
+			bis = new BufferedReader(new FileReader(new File("tmpTemps")));
+			line = bis.readLine();
+	    Temps = Integer.parseInt(line);
+			bis.close();
+
+			bis = new BufferedReader(new FileReader(new File("tmpClassement")));
+			line = bis.readLine();
+			delims = "[ ]+";
+	    Classement = line.split(delims);
+			bis.close();
+
 		}catch (FileNotFoundException e){e.printStackTrace();}
 		catch (IOException e){e.printStackTrace();}
 		finally{
@@ -129,14 +140,14 @@ public class CreateurPage {
 				+"<p>Producteurs : "+nbrprod+"</p> \n"
 				+"<p>Tour par tour :"+isTourParTour+"</p> \n"
 				+"<p>Objectif :"+ Objectif +"</p> \n"
-				+"<p>Durée partie :"+ Temps +"</p> \n"
+				+"<p>Durée partie :"+ ((double)Temps/1000) +"s</p> \n"
 				+"<h4 id=\"Classement\">Classement de Partie</h4> \n");
 
 		for(int i = 0; i<Classement.length ; i++)
 		{
-			w.write("<p>"+i+" : "+Classement[i]+"</p> \n");
+			w.write("<p>"+(i+1)+" : "+Classement[i]+"</p> \n");
 		}
-				
+
 		w.write("</div></div> \n");
 
 		//Ecriture Description

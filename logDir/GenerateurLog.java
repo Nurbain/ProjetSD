@@ -47,6 +47,14 @@ public class GenerateurLog{
         if(line.equals("Producteurs :")){
           //On initialise la liste de producteur
           LectureProducteur(bis);
+        }
+
+        if(line.equals("Classement :")){
+          LectureClassement(bis);
+        }
+
+        if(line.equals("Fin de Partie :")){
+          LectureFinPartie(bis);
           break;
         }
 
@@ -203,6 +211,38 @@ public class GenerateurLog{
         ListJoueur.add(new JoueurLog(line));
       }
     }catch (IOException e){e.printStackTrace();}
+
+  }
+
+  public static void LectureFinPartie(BufferedReader bis){
+    try{
+      String line;
+      line = bis.readLine();
+      FileWriter fw = new FileWriter(new File("tmpTemps"));
+      fw.write(line);
+      fw.close();
+    }catch (IOException e){e.printStackTrace();}
+
+  }
+
+  public static void LectureClassement(BufferedReader bis){
+    String tmp="";
+    try{
+      String line;
+      while((line = bis.readLine()) != null){
+        if(line.equals("")){
+          break;
+        }
+        tmp=tmp+line+" ";
+      }
+    }catch (IOException e){e.printStackTrace();}
+
+    try {
+        FileWriter fw = new FileWriter(new File("tmpClassement"));
+        fw.write(tmp);
+        fw.close();
+     }
+    catch (IOException e) {e.printStackTrace();}
 
   }
 

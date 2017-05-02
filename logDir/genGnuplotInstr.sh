@@ -133,3 +133,5 @@ java CreateurPage $nbrjoueur $nbrRessources $1
 rm tmpParam3
 rm tmpParam4
 rm tmpParam5
+rm tmpClassement
+rm tmpTemps
