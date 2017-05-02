@@ -34,7 +34,7 @@ while [ "$ANSWERFIN" != "y" -a "$ANSWERFIN" != "n" ]
 do
 	read -p "Faire une fin brute ? (y/n)" ANSWERFIN
 done
-if [[ "$ANSWERFIN" = "y" ]]; then
+if [ "$ANSWERFIN" = "y" ]; then
 	ANSWERFIN="Brute"
 else
 	ANSWERFIN="Attente"

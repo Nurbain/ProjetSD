@@ -141,6 +141,29 @@ public class Observateur extends Client{
 
       ArrayList<Integer> classement = new ArrayList<Integer>();
 
+      for(int i=0;i<ListJoueur.size();i++){
+        try{
+          classement.add(ListJoueur.get(i).SommeRessources());
+        }catch (RemoteException re) { System.out.println(re) ; }
+
+      }
+
+      for(int i=0;i<ListJoueur.size();i++){
+        int indexmax=0;
+        for(int j=0;j<ListJoueur.size();j++){
+          if(classement.get(j) > classement.get(indexmax)){
+            indexmax=j;
+          }
+        }
+        try {
+  			//Ecrit le temps de la partie
+        	fw.write(""+(i+1)+" "+ListJoueur.get(indexmax).getName()+"\n");
+        }
+        catch (IOException e) {e.printStackTrace();}
+        classement.set(indexmax,0);
+
+      }
+
 			//Cree les logs
       creationLog();
 
