@@ -40,10 +40,12 @@ implements ClientInterface, Runnable // implémente l’interface
 	private final String ServerName;
 	private final String NumPort;
 	private final String NomServise;
-	
+
 	//Variable permettant de connaitre la duree de la partie
 	protected long StartTimer;
 
+	//Variable qui permet de proteger les joueurs
+	protected boolean AFini = false;
 
 	public Client (String name,String ServerName,String NumPort,String NomServise) throws RemoteException
 	// Rmq : Le client n’a pas accès au constructeur
@@ -82,6 +84,10 @@ implements ClientInterface, Runnable // implémente l’interface
 
 	public void PartieFini(){
 		this.finParti=true;
+	}
+
+	public boolean getAfini(){
+		return AFini;
 	}
 
 	//Fonction deconnectant le client

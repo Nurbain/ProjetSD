@@ -19,6 +19,9 @@ public interface ClientInterface extends Remote // Hérite de Remote
 	public int SommeRessources()
 	throws RemoteException;
 
+	public boolean getAfini()
+	throws RemoteException;
+
 	public void disconnect()
 	throws RemoteException;
 

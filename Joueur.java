@@ -31,8 +31,6 @@ public class Joueur extends Client{
 	//Variable permettant de savoir si le joueur est actuellement puni
 	private boolean Ispunit = false ;
 
-	//Variable qui permet de proteger les joueurs 
-	public boolean AFini = false;
 
 	//Constructeur
 	public Joueur(String name,String ServerName,String NumPort,String NomServise, Personnalite perso, boolean isIRL , int objectif,boolean tourParTour ) throws RemoteException{
@@ -435,10 +433,10 @@ public class Joueur extends Client{
 				catch (RemoteException re) { System.out.println(re) ; }
 			}
 
-		
+
 
 		break;
-		
+
 		//COMPORTEMENT : Regarde chez tout les producteurs pour voir qui possede le plus de ressource n'ayant pas atteint l'objectif en previligiant les ressources dont il a le plus besoin
 		case Stratege :
 
@@ -577,12 +575,12 @@ public class Joueur extends Client{
 	 * @return int le nombre de ressource vole , ou -2 si le joueur �tait en Observation
 	 */
 	synchronized public int VolRessourceVictime(Ressources r){
-		
+
 		//Si le joueur etait rencunier alors passe en mode voleur
 		if(this.GetPersonnalite() == Personnalite.Rancunier)
 		{
 			this.perso = Personnalite.Voleur;
-		}		
+		}
 
 		//Si le joueur est en mode observation, renvoie 0 , aucun vol
 		if(GetMode() == Mode.Observation)
@@ -805,11 +803,12 @@ public class Joueur extends Client{
 	 * @return Liste de ressource
 	 */
 	synchronized public ArrayList<Ressources> Observation(ClientInterface j) {
-		if(j.AFini == true)
-		{
-			return null;
-		}		
 		try{
+			if(j.getAfini() == true)
+			{
+				return null;
+			}
+
 			return j.GetStock();
 		}catch (RemoteException re) { System.out.println(re) ;return null; }
 
