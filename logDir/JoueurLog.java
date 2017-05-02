@@ -84,5 +84,9 @@ public class JoueurLog {
 		  return -1;
 	  return findRessources(name).lastAction();
   }
+  
+  public void UpdateProgress(){
+	  logProgress.add(logProgress.get(logProgress.size()-1));
+  }
 
 }

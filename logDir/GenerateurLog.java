@@ -342,6 +342,7 @@ public class GenerateurLog{
         addLogJoueur(tokens[1]);
         //On prend chez le producteur
         findProducteur(tokens[6]).sub(Integer.parseInt(tokens[4]));
+        UpdateJoueur(tokens[1]);
 
       }
       else if(tokens[2].equals("Punit"))
@@ -350,7 +351,9 @@ public class GenerateurLog{
     	  JoueurLog JpTmp = findJoueur(tokens[6]);
         //On prends au joueur
     	  JpTmp.sub(tokens[3], Integer.parseInt(tokens[4]));
+    	  UpdateJoueur(tokens[6]);
         jTmp.add(tokens[3],Integer.parseInt(tokens[4])/2);
+        UpdateJoueur(tokens[1]);
         //On rajoute les log pour la ressource et le joueur
         addLog(tokens[3]);
     	  addLogJoueur(tokens[6]);
@@ -361,8 +364,10 @@ public class GenerateurLog{
         //Si l'action est un vol
         //On rajoute au joueur qui vole
     	  jTmp.add(tokens[3],Integer.parseInt(tokens[4]));
+    	  UpdateJoueur(tokens[1]);
         //On enleve au joueur qui se fais voler
     	  findJoueur(tokens[6]).sub(tokens[3],Integer.parseInt(tokens[4]));
+    	  UpdateJoueur(tokens[6]);
         //On rajoute les log pour la ressource et le joueur
         addLog(tokens[3]);
         addLogJoueur(tokens[1]);
@@ -491,6 +496,14 @@ public class GenerateurLog{
 		  tmpList.add(tmp);
 	  }
 	  ListLogJoueur.get(indexJoueur(name)).add(tmpList);
+  }
+  
+  public static void UpdateJoueur(String name){
+	  for(int i=0;i<ListJoueur.size();i++){
+		  if(ListJoueur.get(i).name.equals(name))
+			continue;
+		  ListJoueur.get(i).UpdateProgress();
+	  }
   }
 
 
