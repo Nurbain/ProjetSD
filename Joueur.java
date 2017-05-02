@@ -86,11 +86,13 @@ public class Joueur extends Client{
 		//Si le joueur est puni alors passe son tour, en tour par tour
 		if(Ispunit && tourParTour)
 		{
+			Ispunit = false;
 			return;
 		}
 		else if(Ispunit && !tourParTour)
 		{
 			try{
+				Ispunit = false;
 				//Fait dormir le joueur 1 seconde si le mode de jeu est en auto
 				System.out.println("Je suis punis ='(");
 			      Thread.sleep(2000);
