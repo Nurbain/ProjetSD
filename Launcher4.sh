@@ -17,6 +17,13 @@ echo $ListJoueur
 
 ListProdPropre=' '
 
+read -p "Nombre d'exemplaire de chaque ressources pour la victoire :" objectif
+if [ -z $objectif ]
+then
+	echo "Valeur par defaut 100"
+	nomRessource=100
+fi
+
 while [ "$ANSWERreel" != "y" -a "$ANSWERreel" != "n" ]
 do
 	read -p "Jouer avec un joueur reel ? (y/n)" ANSWERreel
@@ -24,7 +31,7 @@ done
 
 if [ "$ANSWERreel" = "y" ]
 then
-	xterm -e java JoueurServ "$ServerName" $1 JoueurReel y y &
+	xterm -e java JoueurServ "$ServerName" $1 JoueurReel y y "Individuel" $objectif &
 	ANSWER="y"
 fi
 
@@ -41,13 +48,6 @@ if [ "$ANSWERFIN" = "y" ]; then
 	ANSWERFIN="Brute"
 else
 	ANSWERFIN="Attente"
-fi
-
-read -p "Nombre d'exemplaire de chaque ressources pour la victoire :" objectif
-if [ -z $objectif ]
-then
-	echo "Valeur par defaut 100"
-	nomRessource=100
 fi
 
 for i in $ListProd
