@@ -31,6 +31,9 @@ public class Joueur extends Client{
 	//Variable permettant de savoir si le joueur est actuellement puni
 	private boolean Ispunit = false ;
 
+	//Variable qui permet de proteger les joueurs 
+	public boolean AFini = false;
+
 	//Constructeur
 	public Joueur(String name,String ServerName,String NumPort,String NomServise, Personnalite perso, boolean isIRL , int objectif,boolean tourParTour ) throws RemoteException{
 		super(name,ServerName,NumPort,NomServise);
@@ -147,6 +150,7 @@ public class Joueur extends Client{
 			boolean fin1 = FinParti();
 			if(fin1){
 				try{
+					this.AFini = true;
 					//Si la partie est fini alors le signale a l'observateur
 					obs.PartieFini(this.name);
 				}
@@ -198,6 +202,7 @@ public class Joueur extends Client{
 			boolean fin2 = FinParti();
 			if(fin2){
 				try{
+					this.AFini = true;
 					//Si la partie est fini alors le signale a l'observateur
 					obs.PartieFini(this.name);
 					return;
@@ -296,6 +301,7 @@ public class Joueur extends Client{
 			boolean fin3 = FinParti();
 			if(fin3){
 				try{
+					this.AFini = true;
 					//Si la partie est fini alors le signale a l'observateur
 					obs.PartieFini(this.name);
 					return;
@@ -369,6 +375,7 @@ public class Joueur extends Client{
 				boolean fin4 = FinParti();
 				if(fin4){
 					try{
+						this.AFini = true;
 						obs.PartieFini(this.name);
 						return;
 					}
@@ -379,6 +386,59 @@ public class Joueur extends Client{
 
 		break;
 
+		//COMPORTEMENT : De base meme comportement que coopératif mais dès qu'il se fait voler alors il se met en personnalité voleur
+		case Rancunier:
+
+			int indexProd5 = -1;
+
+			//Trouve les ressources qui n'ont pas atteint l'objectif
+			for(int i = 0; i<StockRessources.size() ; i++)
+			{
+				if(StockRessources.get(i).getExemplaires() < objectif)
+				{
+					//Cherche les producteurs pouvant en donner
+					indexProd5 = SearchProducteur(StockRessources.get(i));
+
+					//Verifie que le producteur selectionne possede au moins ce qu'il peut donner et pas moins
+					try {
+						if(this.ListProducteur.get(indexProd5).GetRessources().getExemplaires() > this.ListProducteur.get(indexProd5).GetCanGive())
+							//Le producteur peut donner , il a assez , donc on quitte la boucle
+							break;
+						}
+					catch (RemoteException re) {System.out.println(re);}
+				}
+			}
+
+			//Pass en mode demande car a selectionne le producteur
+			SetMode(Mode.Demande);
+			try {
+				//Verifie que quelqu'un n'a pas pris entre temps et que le producteur encore possede assez
+				if(this.ListProducteur.get(indexProd5).GetRessources().getExemplaires() > this.ListProducteur.get(indexProd5).GetCanGive()){
+					DemandeRessource(this.ListProducteur.get(indexProd5));
+				}
+				else
+				//Si le producteur de possede pas assez de ressource alors se remet en observateur
+					SetMode(Mode.Observation);
+			} catch (RemoteException re) {System.out.println(re);}
+
+			AfficheInventaire();
+
+			//Verifie si le joueur a fini la partie
+			boolean fin5 = FinParti();
+			if(fin5){
+				try{
+					this.AFini = true;
+					//Si la partie est fini alors le signale a l'observateur
+					obs.PartieFini(this.name);
+					return;
+				}
+				catch (RemoteException re) { System.out.println(re) ; }
+			}
+
+		
+
+		break;
+		
 		//COMPORTEMENT : Regarde chez tout les producteurs pour voir qui possede le plus de ressource n'ayant pas atteint l'objectif en previligiant les ressources dont il a le plus besoin
 		case Stratege :
 
@@ -517,6 +577,13 @@ public class Joueur extends Client{
 	 * @return int le nombre de ressource vole , ou -2 si le joueur �tait en Observation
 	 */
 	synchronized public int VolRessourceVictime(Ressources r){
+		
+		//Si le joueur etait rencunier alors passe en mode voleur
+		if(this.GetPersonnalite() == Personnalite.Rancunier)
+		{
+			this.perso = Personnalite.Voleur;
+		}		
+
 		//Si le joueur est en mode observation, renvoie 0 , aucun vol
 		if(GetMode() == Mode.Observation)
 		{
@@ -738,6 +805,10 @@ public class Joueur extends Client{
 	 * @return Liste de ressource
 	 */
 	synchronized public ArrayList<Ressources> Observation(ClientInterface j) {
+		if(j.AFini == true)
+		{
+			return null;
+		}		
 		try{
 			return j.GetStock();
 		}catch (RemoteException re) { System.out.println(re) ;return null; }

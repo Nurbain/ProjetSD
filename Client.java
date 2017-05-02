@@ -18,7 +18,7 @@ implements ClientInterface, Runnable // implémente l’interface
 	//Nom du client
 	protected String name;
 
-	//Type du clinet
+	//Type du client
 	protected Type monType;
 
 	//Tout les autres clients avec les quels je suis connecté
@@ -40,7 +40,7 @@ implements ClientInterface, Runnable // implémente l’interface
 	private final String ServerName;
 	private final String NumPort;
 	private final String NomServise;
-
+	
 	//Variable permettant de connaitre la duree de la partie
 	protected long StartTimer;
 
