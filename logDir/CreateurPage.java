@@ -9,7 +9,8 @@ public class CreateurPage {
 	private static int Objectif = 100;
 	private static String[] NomsJoueur;
 	private static String[] NomsRessources;
-
+	private static int Temps;
+	private static String[] Classement;
 	 public static void main(String[] args){
 
 		 if (args.length != 3)
@@ -128,8 +129,15 @@ public class CreateurPage {
 				+"<p>Producteurs : "+nbrprod+"</p> \n"
 				+"<p>Tour par tour :"+isTourParTour+"</p> \n"
 				+"<p>Objectif :"+ Objectif +"</p> \n"
-				+"</div></div> \n");
+				+"<p>Durée partie :"+ Temps +"</p> \n"
+				+"<h4 id=\"Classement\">Classement de Partie</h4> \n");
 
+		for(int i = 0; i<Classement.length ; i++)
+		{
+			w.write("<p>"+i+" : "+Classement[i]+"</p> \n");
+		}
+				
+		w.write("</div></div> \n");
 
 		//Ecriture Description
 		w.write("<div class=\"row\" id=\"description\"> \n"
