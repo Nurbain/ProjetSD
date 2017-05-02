@@ -56,7 +56,7 @@ do
 	ListNomJoueurstmp="$ListNomJoueurs"
 	NomJoueur=`echo "$ListNomJoueurstmp" |cut -d' ' -f1`
 	ListNomJoueurstmp=`echo "$ListNomJoueurstmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
-	echo "plot \"tmplog$j\" title \"$NomJoueur\" with linespoints" > InstrGNUPLOT
+	echo "plot \"tmplog$j\" title \"$NomJoueur\" with lines" > InstrGNUPLOT
 	#Pour chaque joueur de 1 à n-1
 	#Joueur n = colonne n+2
 	for i in $List
@@ -65,7 +65,7 @@ do
 		ListNomJoueurstmp=`echo "$ListNomJoueurstmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
 	  tmp=`expr $i - 2`
 		#On trace la courbe du joueur tmp
-	  echo "replot \"tmplog$j\" using 1:$i title \"$NomJoueur\" with linespoints" >> InstrGNUPLOT
+	  echo "replot \"tmplog$j\" using 1:$i title \"$NomJoueur\" with lines" >> InstrGNUPLOT
 	done
 	echo "set terminal png" >> InstrGNUPLOT
 	echo "set output \"$1/$j.png\"" >> InstrGNUPLOT
@@ -79,13 +79,13 @@ done
 ListNomJoueurstmp="$ListNomJoueurs"
 NomJoueur=`echo "$ListNomJoueurstmp" |cut -d ' ' -f 1`
 ListNomJoueurstmp=`echo "$ListNomJoueurstmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
-echo "plot \"tmplogGL\" title \"$NomJoueur\" with linespoints" > InstrGNUPLOT
+echo "plot \"tmplogGL\" title \"$NomJoueur\" with lines" > InstrGNUPLOT
 for i in $List
 do
 	NomJoueur=`echo "$ListNomJoueurstmp" |cut -d ' ' -f 1`
 	ListNomJoueurstmp=`echo "$ListNomJoueurstmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
   tmp=`expr $i - 2`
-  echo "replot \"tmplogGL\" using 1:$i title \"$NomJoueur\" with linespoints" >> InstrGNUPLOT
+  echo "replot \"tmplogGL\" using 1:$i title \"$NomJoueur\" with lines" >> InstrGNUPLOT
 done
 echo "set terminal png" >> InstrGNUPLOT
 echo "set output \"$1/GL.png\"" >> InstrGNUPLOT
@@ -108,13 +108,13 @@ do
 	ListNomRessourcestmp="$ListNomRessources"
 	NomRessources=`echo "$ListNomRessourcestmp" |cut -d ' ' -f 1`
 	ListNomRessourcestmp=`echo "$ListNomRessourcestmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
-	echo "plot \"tmplogJ$j\" title \"$NomRessources\" with linespoints" > InstrGNUPLOT
+	echo "plot \"tmplogJ$j\" title \"$NomRessources\" with lines" > InstrGNUPLOT
 	for i in $List
 	do
 		NomRessources=`echo "$ListNomRessourcestmp" |cut -d ' ' -f 1`
 		ListNomRessourcestmp=`echo "$ListNomRessourcestmp" |sed 's/[^ ]* *\(.*\)$/\1/'`
 	  tmp=`expr $i - 2`
-	  echo "replot \"tmplogJ$j\" using 1:$i title \"$NomRessources\" with linespoints" >> InstrGNUPLOT
+	  echo "replot \"tmplogJ$j\" using 1:$i title \"$NomRessources\" with lines" >> InstrGNUPLOT
 	done
 	echo "set terminal png" >> InstrGNUPLOT
 	echo "set output \"$1/J$j.png\"" >> InstrGNUPLOT
