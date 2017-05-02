@@ -1,0 +1,1 @@
+cat JeuxTest1.txt |./Launcher4.sh localhost 8080 2 2 log.txt
