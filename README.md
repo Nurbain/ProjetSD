@@ -1,5 +1,5 @@
 La partie se lance grâce à l’utilisation d’un script bash utilisable comme ceci :
-./Launcher4 <Port> <NbrProducteur>  <NbrJoueur> <FichierLogGeneral>
+./Launcher4 NomServeur Port NbrProducteur  NbrJoueur FichierLogGeneral 
 
 
 
@@ -18,7 +18,7 @@ Enfin l’utilisateur peut choisir la personnalité de chaque joueur en rentrant
 
 
 La génération de la simulation se fait lorsque la partie est fini par la commande : 
-./genGenuplotInstr.sh <RepertoireDestination> <FichierLogGeneral>
+./genGenuplotInstr.sh RepertoireDestination FichierLogGeneral
 
 
 Une page web est ainsi créée pour pouvoir voir les résultats à l’aide de graphiques.
@@ -26,5 +26,5 @@ Une page web est ainsi créée pour pouvoir voir les résultats à l’aide de g
 
 
 Pour faciliter le lancement de la partie, nous avons mis quelques jeux de Test lançables par la commande :
-cat JeuxTest.txt | ./Launcher4 <Port> <NbrProducteur>  <NbrJoueur> <FichierLogGeneral>
+cat JeuxTest.txt | ./Launcher4 NomServeur Port NbrProducteur  NbrJoueur FichierLogGeneral
 
