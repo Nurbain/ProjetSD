@@ -79,7 +79,14 @@ public class Joueur extends Client{
 		if(isJoueurIRL){
 			try{
 				AskAction();
-			}catch(RemoteException re) { System.out.println(re) ; }
+				boolean finIRL = FinParti();
+				if(finIRL){
+					this.AFini = true;
+					obs.PartieFini(this.name);
+					return;
+				}
+			}
+			catch(RemoteException re) { System.out.println(re) ; }
 			return;
 		}
 
@@ -716,7 +723,7 @@ public class Joueur extends Client{
 			System.out.println("A quelle producteur voulez vous prendre les ressources ?");
 			for(int i = 0 ; i < this.ListProducteur.size() ; i++)
 			{
-				System.out.println(i+":"+this.ListProducteur.get(i).getName()+","+this.ListProducteur.get(i).GetRessources().getName());
+				System.out.println(i+":"+this.ListProducteur.get(i).getName()+","+this.ListProducteur.get(i).GetRessources().getName()+" : "+this.ListProducteur.get(i).GetRessources().getExemplaires());
 			}
 			//Choix de au menu principale
 			System.out.println("-1 : Retour Menu Choix");
@@ -792,7 +799,7 @@ public class Joueur extends Client{
 
 		//Passe en mode observation le temps d'un tour
 		case 3 : System.out.println("Passage en mode Observation , vous pouvez punir les joueurs tentant de vous voler \n");
-			this.mode = Mode.Observation;
+			SetMode(Mode.Observation);
 			break;
 
 		//Affiche l'inventaire du joueur et redemande une action a effectuer
@@ -804,6 +811,7 @@ public class Joueur extends Client{
 			break;
 		}
 
+		
 	}
 
 	/** Retourne la liste de ressource du joueur
