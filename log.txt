@@ -12,63 +12,62 @@ P2 Coton 103
 P3 Diamant 150
 P4 SteackdeSoja 200
 
-Joueur  J3 fini
 Joueur  J4 fini
+Joueur  J3 fini
 Joueur  J2 fini
 Joueur  J1 fini
-1 J1
-2 J2
-3 J3
-4 J4
+1 J4
+2 J3
+3 J2
+4 J1
 Producteur  P2 Produit Coton  30
-Producteur  P3 Produit Diamant  60
 Producteur  P4 Produit SteackdeSoja  40
-Producteur  P1 Produit Petrole  25
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  60
 Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  20
+Joueur  J2 Prend Petrole  10  Producteur  P1
 Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Petrole  10  Producteur  P1
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  10  Joueur  J3
 Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J1 Vol Petrole  10  Joueur  J2
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  10  Joueur  J2
-Joueur  J4 Prend Diamant  15  Producteur  P3
 Joueur  J2 Prend Petrole  10  Producteur  P1
 Joueur  J3 Prend Petrole  10  Producteur  P1
 Joueur  J1 Vol Petrole  15  Joueur  J3
-Joueur  J1 Vol Petrole  15  Joueur  J2
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J2 Prend Petrole  5  Producteur  P1
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J1 Vol Petrole  12  Joueur  J3
-Joueur  J2 Prend Coton  11  Producteur  P2
-Joueur  J1 Vol Petrole  11  Joueur  J3
+Joueur  J2 Prend Petrole  10  Producteur  P1
 Joueur  J1 Vol Petrole  10  Joueur  J2
-Joueur  J1 Vol Petrole  6  Joueur  J3
-Joueur  J1 Vol Petrole  5  Joueur  J2
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  12  Joueur  J3
+Joueur  J1 Vol Petrole  11  Joueur  J3
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J1 Vol Petrole  15  Joueur  J2
+Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J1 Vol Petrole  11  Joueur  J3
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J1 Vol Petrole  7  Joueur  J2
+Joueur  J1 Vol Petrole  5  Joueur  J3
+Joueur  J1 Vol Petrole  4  Joueur  J2
 Joueur  J1 Vol Petrole  3  Joueur  J3
 Joueur  J1 Vol Petrole  2  Joueur  J2
-Joueur  J1 Vol Petrole  1  Joueur  J2
 Joueur  J1 Vol Petrole  1  Joueur  J3
 Joueur  J1 Vol Petrole  1  Joueur  J2
 Joueur  J1 Vol Petrole  1  Joueur  J3
 Joueur  J1 Vol Petrole  1  Joueur  J2
-Joueur  J4 Prend Diamant  15  Producteur  P3
 Joueur  J1 Vol Petrole  1  Joueur  J3
-Joueur  J4 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend Coton  11  Producteur  P2
+Joueur  J4 Prend Diamant  15  Producteur  P3
 Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J2 Prend Coton  11  Producteur  P2
 Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Coton  11  Producteur  P2
 Joueur  J4 Prend Diamant  15  Producteur  P3
 Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend Coton  11  Producteur  P2
@@ -76,593 +75,766 @@ Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend Coton  11  Producteur  P2
 Joueur  J4 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J2 Prend Coton  1  Producteur  P2
+Joueur  J3 Prend Coton  1  Producteur  P2
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J3 Prend Diamant  15  Producteur  P3
 Joueur  J2 Prend Diamant  15  Producteur  P3
 Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J4 Prend Diamant  15  Producteur  P3
 Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J2 Prend Diamant  15  Producteur  P3
-Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J2 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J4 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J4 Prend Diamant  15  Producteur  P3
 Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Producteur  P3 Produit Diamant  15
-Producteur  P4 Produit SteackdeSoja  20
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Diamant  15  Producteur  P3
-Joueur  J4 Prend Coton  11  Producteur  P2
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Producteur  P3 Produit Diamant  15
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J1 Vol Petrole  5  Joueur  J4
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J4 Prend Diamant  15  Producteur  P3
-Joueur  J1 Vol Petrole  2  Joueur  J4
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J1 Vol Petrole  1  Joueur  J4
-Joueur  J4 Punit Petrole  71  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Producteur  P3 Produit Diamant  15
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J4 Prend Diamant  15  Producteur  P3
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Producteur  P3 Produit Diamant  15
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Joueur  J4 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J4 Punit Petrole  36  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Producteur  P3 Produit Diamant  15
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Coton  11  Producteur  P2
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Producteur  P3 Produit Diamant  15
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Coton  11  Producteur  P2
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J4 Punit Petrole  18  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Producteur  P3 Produit Diamant  15
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Producteur  P3 Produit Diamant  15
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J4 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J4 Punit Petrole  9  Joueur  J1
-Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Producteur  P3 Produit Diamant  15
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Diamant  15  Producteur  P3
-Joueur  J4 Prend Coton  11  Producteur  P2
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Producteur  P3 Produit Diamant  15
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Coton  11  Producteur  P2
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J4 Punit Petrole  4  Joueur  J1
-Producteur  P1 Produit Petrole  10
-Producteur  P2 Produit Coton  11
-Producteur  P3 Produit Diamant  15
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  4
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
 Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  15
-Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Coton  11  Producteur  P2
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Producteur  P4 Produit SteackdeSoja  20
 Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J4 Punit Petrole  2  Joueur  J1
-Producteur  P2 Produit Coton  11
-Producteur  P3 Produit Diamant  15
 Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J4 Prend Diamant  15  Producteur  P3
 Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  5  Joueur  J3
+Joueur  J1 Vol Petrole  2  Joueur  J3
+Joueur  J1 Vol Petrole  1  Joueur  J3
+Joueur  J1 Vol Petrole  1  Joueur  J3
+Joueur  J3 Prend SteackdeSoja  4  Producteur  P4
+Joueur  J1 Vol Petrole  1  Joueur  J3
+Producteur  P2 Produit Coton  11
 Producteur  P4 Produit SteackdeSoja  20
-Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Punit Petrole  65  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
 Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  15
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Punit Petrole  32  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  15
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J4 Prend Diamant  15  Producteur  P3
 Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Punit Petrole  16  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  15
+Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Punit Petrole  8  Joueur  J1
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  15
+Producteur  P4 Produit SteackdeSoja  20
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
 Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  20
-Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J4 Punit Petrole  1  Joueur  J1
 Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  15
+Joueur  J3 Prend SteackdeSoja  20  Producteur  P4
 Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J3 Prend Petrole  10  Producteur  P1
 Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J3 Punit Petrole  4  Joueur  J1
 Producteur  P4 Produit SteackdeSoja  20
-Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
-Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
 Joueur  J3 Prend Diamant  15  Producteur  P3
-Joueur  J4 Prend Coton  11  Producteur  P2
 Joueur  J3 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P4 Produit SteackdeSoja  4
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Diamant  15  Producteur  P3
 Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
-Joueur  J4 Punit Petrole  1  Joueur  J1
+Joueur  J3 Punit Petrole  2  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
 Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  15
-Producteur  P1 Produit Petrole  10
 Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J4 Prend Petrole  10  Producteur  P1
 Joueur  J3 Prend Diamant  15  Producteur  P3
 Producteur  P4 Produit SteackdeSoja  20
-Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
 Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Diamant  15  Producteur  P3
 Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Punit Petrole  1  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  66  Joueur  J3
+Joueur  J4 Punit Petrole  34  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Diamant  15  Producteur  P3
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P1 Produit Petrole  10
 Joueur  J4 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J4 Punit Petrole  17  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
 Producteur  P3 Produit Diamant  6
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Coton  11  Producteur  P2
-Joueur  J2 Prend Diamant  15  Producteur  P3
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
-Producteur  P3 Produit Diamant  15
-Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Coton  11  Producteur  P2
-Joueur  J2 Prend Diamant  15  Producteur  P3
-Producteur  P4 Produit SteackdeSoja  20
-Joueur  J1 Vol Petrole  65  Joueur  J4
-Producteur  P3 Produit Diamant  15
-Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
 Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend Diamant  15  Producteur  P3
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P3 Produit Diamant  15
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend SteackdeSoja  20  Producteur  P4
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J4 Punit Petrole  8  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  20
+Producteur  P3 Produit Diamant  15
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
 Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  4
 Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Coton  11  Producteur  P2
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  5
+Joueur  J4 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend Diamant  15  Producteur  P3
-Joueur  J3 Punit Petrole  33  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J4 Punit Petrole  4  Joueur  J1
+Producteur  P4 Produit SteackdeSoja  5
 Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Petrole  10  Producteur  P1
 Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  6
 Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Diamant  15  Producteur  P3
-Joueur  J4 Prend Coton  11  Producteur  P2
-Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J4 Punit Petrole  2  Joueur  J1
 Producteur  P4 Produit SteackdeSoja  7
-Joueur  J3 Punit Petrole  16  Joueur  J1
 Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Diamant  15  Producteur  P3
-Joueur  J3 Prend Petrole  10  Producteur  P1
 Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  9
 Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J3 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
+Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J4 Punit Petrole  1  Joueur  J1
+Producteur  P3 Produit Diamant  15
 Producteur  P4 Produit SteackdeSoja  11
-Joueur  J3 Punit Petrole  8  Joueur  J1
-Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
+Joueur  J3 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
 Producteur  P1 Produit Petrole  10
 Joueur  J4 Prend Petrole  10  Producteur  P1
-Joueur  J4 Prend Coton  11  Producteur  P2
-Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P3 Produit Diamant  15
 Producteur  P4 Produit SteackdeSoja  13
-Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
 Joueur  J4 Prend Coton  11  Producteur  P2
+Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
 Joueur  J3 Prend Petrole  10  Producteur  P1
+Joueur  J4 Punit Petrole  1  Joueur  J1
 Producteur  P4 Produit SteackdeSoja  15
-Joueur  J2 Prend Diamant  15  Producteur  P3
-Joueur  J3 Punit Petrole  4  Joueur  J1
 Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Coton  11  Producteur  P2
-Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Coton  11  Producteur  P2
 Joueur  J2 Prend Diamant  15  Producteur  P3
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  18
 Producteur  P3 Produit Diamant  15
 Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Petrole  10  Producteur  P1
 Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  22
-Joueur  J4 Punit Petrole  2  Joueur  J1
-Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  8
+Producteur  P2 Produit Coton  11
 Joueur  J4 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  26
-Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
 Producteur  P3 Produit Diamant  11
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  32
-Joueur  J4 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  3
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P4 Produit SteackdeSoja  32
 Producteur  P3 Produit Diamant  16
-Joueur  J2 Prend Coton  11  Producteur  P2
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
 Joueur  J4 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  38
-Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Petrole  10  Producteur  P1
 Producteur  P3 Produit Diamant  22
-Joueur  J2 Prend Coton  11  Producteur  P2
+Producteur  P2 Produit Coton  11
+Joueur  J4 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  46
-Joueur  J4 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  11
-Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P3 Produit Diamant  31
+Producteur  P2 Produit Coton  11
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  55
-Producteur  P2 Produit Coton  11
-Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P3 Produit Diamant  43
+Producteur  P2 Produit Coton  3
+Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  66
+Producteur  P3 Produit Diamant  60
 Producteur  P2 Produit Coton  11
 Joueur  J2 Prend Coton  11  Producteur  P2
-Producteur  P3 Produit Diamant  60
 Producteur  P1 Produit Petrole  10
-Joueur  J4 Prend Petrole  10  Producteur  P1
+Joueur  J3 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  79
-Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  84
+Producteur  P2 Produit Coton  11
+Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
 Joueur  J4 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  95
-Joueur  J2 Prend Coton  11  Producteur  P2
-Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  118
-Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Coton  11  Producteur  P2
-Joueur  J4 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  114
 Producteur  P2 Produit Coton  11
 Joueur  J2 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J3 Prend Petrole  10  Producteur  P1
+Producteur  P4 Produit SteackdeSoja  114
 Producteur  P3 Produit Diamant  165
+Producteur  P2 Produit Coton  11
+Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P1 Produit Petrole  10
 Producteur  P4 Produit SteackdeSoja  137
 Producteur  P2 Produit Coton  11
-Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P3 Produit Diamant  231
-Producteur  P1 Produit Petrole  2
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  164
-Joueur  J1 Prend Petrole  2  Producteur  P1
-Producteur  P2 Produit Coton  11
 Joueur  J2 Prend Coton  11  Producteur  P2
-Producteur  P3 Produit Diamant  324
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P4 Produit SteackdeSoja  164
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  324
+Joueur  J2 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  197
 Producteur  P2 Produit Coton  11
-Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P3 Produit Diamant  453
-Producteur  P1 Produit Petrole  2
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  236
-Joueur  J2 Punit Petrole  1  Joueur  J1
-Producteur  P2 Produit Coton  11
 Joueur  J2 Prend Coton  11  Producteur  P2
-Producteur  P3 Produit Diamant  634
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P4 Produit SteackdeSoja  236
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  634
+Joueur  J2 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  283
 Producteur  P2 Produit Coton  11
-Joueur  J2 Prend Coton  11  Producteur  P2
 Producteur  P3 Produit Diamant  888
-Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Producteur  P4 Produit SteackdeSoja  340
-Joueur  J1 Vol Petrole  20  Joueur  J2
-Producteur  P2 Produit Coton  11
 Joueur  J2 Prend Coton  11  Producteur  P2
-Producteur  P3 Produit Diamant  1243
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P4 Produit SteackdeSoja  340
+Producteur  P2 Produit Coton  11
+Producteur  P3 Produit Diamant  1243
+Joueur  J2 Prend Coton  11  Producteur  P2
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  408
 Producteur  P2 Produit Coton  11
 Producteur  P3 Produit Diamant  1740
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  490
-Joueur  J2 Punit Petrole  11  Joueur  J1
 Producteur  P2 Produit Coton  4
 Producteur  P3 Produit Diamant  2436
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  588
 Producteur  P2 Produit Coton  5
 Producteur  P3 Produit Diamant  3411
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  705
-Joueur  J2 Punit Petrole  5  Joueur  J1
 Producteur  P2 Produit Coton  6
 Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  846
-Joueur  J2 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  8
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  1015
-Joueur  J1 Vol Petrole  43  Joueur  J2
 Producteur  P2 Produit Coton  11
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  1218
 Producteur  P2 Produit Coton  14
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  1462
-Joueur  J2 Punit Petrole  24  Joueur  J1
 Producteur  P2 Produit Coton  18
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P4 Produit SteackdeSoja  1754
 Producteur  P2 Produit Coton  24
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  12  Joueur  J1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  31
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  40
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  6  Joueur  J1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  52
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  68
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  72  Joueur  J2
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Coton  100  Joueur  J1
 Producteur  P2 Produit Coton  88
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  114
-Producteur  P1 Produit Petrole  10
+Producteur  P1 Produit Petrole  2
 Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  46  Joueur  J2
+Joueur  J1 Vol Petrole  5  Joueur  J2
+Joueur  J1 Vol Petrole  2  Joueur  J2
+Joueur  J1 Vol Petrole  1  Joueur  J2
+Joueur  J1 Vol Petrole  1  Joueur  J2
+Joueur  J1 Vol Petrole  1  Joueur  J2
+Joueur  J1 Prend Petrole  2  Producteur  P1
 Producteur  P2 Produit Coton  149
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  193
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  62  Joueur  J1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  251
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  327
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  59  Joueur  J2
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  425
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  552
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  61  Joueur  J1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  718
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  933
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J1 Vol Petrole  64  Joueur  J2
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P2 Produit Coton  1213
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Coton  101  Joueur  J1
 Producteur  P2 Produit Coton  1577
 Producteur  P1 Produit Petrole  10
-Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  62  Joueur  J1
 Producteur  P2 Produit Coton  2050
-Producteur  P1 Produit Petrole  10
+Producteur  P1 Produit Petrole  2
 Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  5  Joueur  J2
+Joueur  J1 Vol Petrole  2  Joueur  J2
+Joueur  J1 Vol Petrole  1  Joueur  J2
+Joueur  J1 Vol Petrole  1  Joueur  J2
+Joueur  J1 Vol Petrole  1  Joueur  J2
+Joueur  J1 Prend Petrole  2  Producteur  P1
 Producteur  P2 Produit Coton  2665
 Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Coton  102  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Producteur  P1 Produit Petrole  2
 Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  31  Joueur  J1
+Joueur  J2 Punit Petrole  51  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  25  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  43  Joueur  J2
+Joueur  J2 Punit Petrole  34  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  17  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  9  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  66  Joueur  J2
+Joueur  J1 Vol Petrole  33  Joueur  J2
+Joueur  J1 Vol Petrole  17  Joueur  J2
+Joueur  J1 Vol Petrole  8  Joueur  J2
+Joueur  J1 Vol Petrole  4  Joueur  J2
+Joueur  J1 Vol Petrole  2  Joueur  J2
+Joueur  J2 Punit Petrole  69  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  35  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  17  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  9  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  73  Joueur  J2
+Joueur  J1 Vol Petrole  36  Joueur  J2
+Joueur  J1 Vol Petrole  18  Joueur  J2
+Joueur  J2 Punit Petrole  68  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  34  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  55  Joueur  J2
+Joueur  J1 Vol Petrole  27  Joueur  J2
+Joueur  J1 Vol Petrole  14  Joueur  J2
+Joueur  J1 Vol Petrole  7  Joueur  J2
+Joueur  J1 Vol Petrole  3  Joueur  J2
+Joueur  J2 Punit Petrole  70  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  35  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  17  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  9  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  4  Joueur  J1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
 Joueur  J1 Vol Petrole  85  Joueur  J2
+Joueur  J1 Vol Petrole  42  Joueur  J2
+Joueur  J1 Vol Petrole  21  Joueur  J2
+Joueur  J1 Vol Petrole  11  Joueur  J2
+Joueur  J1 Vol Petrole  5  Joueur  J2
+Joueur  J2 Punit Petrole  84  Joueur  J1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  58  Joueur  J1
+Joueur  J2 Punit Petrole  42  Joueur  J1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  29  Joueur  J1
+Joueur  J2 Punit Petrole  21  Joueur  J1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
-Joueur  J2 Punit Petrole  15  Joueur  J1
+Joueur  J2 Punit Petrole  11  Joueur  J1
 Producteur  P1 Produit Petrole  10
 Joueur  J2 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  82  Joueur  J2
+Joueur  J1 Vol Petrole  41  Joueur  J2
+Joueur  J2 Punit Petrole  67  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  33  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  65  Joueur  J2
+Joueur  J1 Vol Petrole  32  Joueur  J2
+Joueur  J1 Vol Petrole  16  Joueur  J2
+Joueur  J1 Vol Petrole  8  Joueur  J2
+Joueur  J1 Vol Petrole  4  Joueur  J2
+Joueur  J1 Vol Petrole  2  Joueur  J2
+Joueur  J2 Punit Petrole  80  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  40  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  20  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  10  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  79  Joueur  J2
+Joueur  J1 Vol Petrole  39  Joueur  J2
+Joueur  J1 Vol Petrole  20  Joueur  J2
+Joueur  J1 Vol Petrole  10  Joueur  J2
+Joueur  J1 Vol Petrole  5  Joueur  J2
+Joueur  J1 Vol Petrole  2  Joueur  J2
+Joueur  J2 Punit Petrole  83  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  41  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  52  Joueur  J2
+Joueur  J1 Vol Petrole  26  Joueur  J2
+Joueur  J2 Punit Petrole  60  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Vol Petrole  38  Joueur  J2
+Joueur  J1 Vol Petrole  19  Joueur  J2
+Joueur  J1 Vol Petrole  9  Joueur  J2
+Joueur  J1 Vol Petrole  5  Joueur  J2
+Joueur  J1 Vol Petrole  2  Joueur  J2
+Joueur  J2 Punit Petrole  66  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  33  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  17  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  8  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  4  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  2  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J2 Punit Petrole  1  Joueur  J1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J2 Prend Petrole  10  Producteur  P1
+Joueur  J1 Prend Petrole  2  Producteur  P1
+Producteur  P1 Produit Petrole  10
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Producteur  P1 Produit Petrole  3
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Producteur  P1 Produit Petrole  3
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Producteur  P1 Produit Petrole  3
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Producteur  P1 Produit Petrole  3
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Producteur  P1 Produit Petrole  3
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Producteur  P1 Produit Petrole  3
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Producteur  P1 Produit Petrole  3
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Petrole  10  Producteur  P1
-Producteur  P1 Produit Petrole  3
-Producteur  P1 Produit Petrole  3
 Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
-Producteur  P1 Produit Petrole  4
-Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  5
-Producteur  P1 Produit Petrole  6
-Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  8
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
+Producteur  P1 Produit Petrole  10
+Joueur  J1 Prend Petrole  10  Producteur  P1
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  12
-Producteur  P1 Produit Petrole  15
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  19
-Producteur  P1 Produit Petrole  24
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  30
-Producteur  P1 Produit Petrole  37
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  47
-Producteur  P1 Produit Petrole  58
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  73
-Producteur  P1 Produit Petrole  91
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  114
-Producteur  P1 Produit Petrole  142
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  178
-Producteur  P1 Produit Petrole  222
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  278
-Producteur  P1 Produit Petrole  347
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  434
-Producteur  P1 Produit Petrole  543
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  678
-Producteur  P1 Produit Petrole  848
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  1060
-Producteur  P1 Produit Petrole  1325
 Joueur  J1 Prend Coton  11  Producteur  P2
-Producteur  P1 Produit Petrole  1656
-Producteur  P1 Produit Petrole  2070
+Joueur  J1 Prend Coton  11  Producteur  P2
+Joueur  J1 Prend Coton  11  Producteur  P2
 Joueur  J1 Prend Coton  11  Producteur  P2
 Joueur  J1 Prend Coton  11  Producteur  P2
 Joueur  J1 Prend Coton  11  Producteur  P2
@@ -692,4 +864,4 @@ Joueur  J1 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J1 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J1 Prend SteackdeSoja  20  Producteur  P4
 Joueur  J1 Prend SteackdeSoja  20  Producteur  P4
-206722
+176787

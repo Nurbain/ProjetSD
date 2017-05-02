@@ -23,6 +23,7 @@ public class Observateur extends Client{
 	//Fichier de log general
   private File fichier;
   private FileWriter fw;
+  private ArrayList<String> OrdreArrive = new ArrayList<String>();
 
   public Observateur(String name,String ServerName,String NumPort,String NomServise,Fin typeFin,boolean tourParTour, String Nomfichier) throws RemoteException{
     super(name,ServerName,NumPort,NomServise);
@@ -125,6 +126,7 @@ public class Observateur extends Client{
 		//Eciture dans le fichier le joueur gagnant
     generationLog(name , Type.Joueur);
     nbJoueurFini++;
+    OrdreArrive.add(name);
 
 		//Si la partie est en fin Brute alors dit au autre de s'arreter sinon attent que tous les joueurs aient fini
 		if(this.typeFin == Fin.Brute || nbJoueur == nbJoueurFini){
@@ -138,30 +140,38 @@ public class Observateur extends Client{
         }
       }catch (RemoteException re) { System.out.println(re) ; }
 
+      if(typeFin == Fin.Brute){
+        ArrayList<Integer> classement = new ArrayList<Integer>();
 
-      ArrayList<Integer> classement = new ArrayList<Integer>();
+        for(int i=0;i<ListJoueur.size();i++){
+          try{
+            classement.add(ListJoueur.get(i).SommeRessources());
+          }catch (RemoteException re) { System.out.println(re) ; }
 
-      for(int i=0;i<ListJoueur.size();i++){
-        try{
-          classement.add(ListJoueur.get(i).SommeRessources());
-        }catch (RemoteException re) { System.out.println(re) ; }
+        }
 
-      }
-
-      for(int i=0;i<ListJoueur.size();i++){
-        int indexmax=0;
-        for(int j=0;j<ListJoueur.size();j++){
-          if(classement.get(j) > classement.get(indexmax)){
-            indexmax=j;
+        for(int i=0;i<ListJoueur.size();i++){
+          int indexmax=0;
+          for(int j=0;j<ListJoueur.size();j++){
+            if(classement.get(j) > classement.get(indexmax)){
+              indexmax=j;
+            }
           }
+          try {
+    			//Ecrit le temps de la partie
+          	fw.write(""+(i+1)+" "+ListJoueur.get(indexmax).getName()+"\n");
+          }
+          catch (IOException e) {e.printStackTrace();}
+          classement.set(indexmax,0);
         }
-        try {
-  			//Ecrit le temps de la partie
-        	fw.write(""+(i+1)+" "+ListJoueur.get(indexmax).getName()+"\n");
+      }else{
+        for(int i=0;i<ListJoueur.size();i++){
+          try {
+    			//Ecrit le temps de la partie
+          	fw.write(""+(i+1)+" "+OrdreArrive.get(i)+"\n");
+          }
+          catch (IOException e) {e.printStackTrace();}
         }
-        catch (IOException e) {e.printStackTrace();}
-        classement.set(indexmax,0);
-
       }
 
 			//Cree les logs
