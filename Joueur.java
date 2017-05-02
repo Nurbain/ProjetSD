@@ -700,7 +700,7 @@ public class Joueur extends Client{
 		int action = sc.nextInt();
 		System.out.println(action);
 
-		sc.close();
+		//sc.close();
 
 		//Regarde l'action demander
 		switch(action)
@@ -731,7 +731,8 @@ public class Joueur extends Client{
 				AskAction();
 				return;
 			}
-			sc1.close();
+			
+			//sc1.close();
 
 			//Pass en mode demande
 			if(GetMode() != Mode.Demande)
@@ -764,7 +765,7 @@ public class Joueur extends Client{
 			action2 = sc2.nextInt();
 
 			//Ajout pour voir si le double input est regl�
-			sc2.close();
+			//sc2.close();
 
 			//Si le choix -1 est fait alors on revient au menu
 			if(action2 == -1)
@@ -777,7 +778,8 @@ public class Joueur extends Client{
 			System.out.println("Et quelle ressources voulez vous prendres ?");
 			Scanner sc3 = new Scanner(System.in);
 			action3 = sc3.nextInt();
-			sc3.close();
+			
+			//sc3.close();
 
 
 			SetMode(Mode.Vol);
