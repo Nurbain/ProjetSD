@@ -1,1 +1,1 @@
-cat JeuxTest5.txt |./Launcher4.sh localhost 8080 5 5 log.txt
+cat JeuxTest5.txt |./Launcher4.sh localhost 8080 4 5 log.txt
