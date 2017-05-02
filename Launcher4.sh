@@ -1,10 +1,13 @@
 #!/bin/sh
 
-if [ $# -ne 4 ]
+if [ $# -ne 5 ]
 then
-	echo "use : $0 <port num> <nb prod> <nb Joueur> <Nom fichier log>"
+	echo "use : $0 <Nom Server> <port num> <nb prod> <nb Joueur> <Nom fichier log>"
 	exit 1
 fi
+
+ServerName=$1
+shift
 
 ListProd=`seq -w 1 $2`
 echo $ListProd
@@ -21,7 +24,7 @@ done
 
 if [ "$ANSWERreel" = "y" ]
 then
-	xterm -e java JoueurServ $1 JoueurReel y y &
+	xterm -e java JoueurServ "$ServerName" $1 JoueurReel y y &
 	ANSWER="y"
 fi
 
@@ -90,7 +93,7 @@ do
 		echo "Valeur par defaut 10"
 		canGive=10
 	fi
-  xterm -e java ProducteurServ $1 $i $nomRessource $nbinit $ratioProd $canGive $ANSWER &
+  xterm -e java ProducteurServ "$ServerName" $1 $i $nomRessource $nbinit $ratioProd $canGive $ANSWER &
 done
 
 for i in $ListJoueurPropre
@@ -134,10 +137,10 @@ do
 		p=Rancunier
 	fi
 	echo "Choix = $p"
-  xterm -e java JoueurServ $1 $i $ANSWER n $p $objectif &
+  xterm -e java JoueurServ "$ServerName" $1 $i $ANSWER n $p $objectif &
 done
 
-xterm -e java ObservateurServ $1 O1 $ANSWER $4 $ANSWERFIN &
+xterm -e java ObservateurServ "$ServerName" $1 O1 $ANSWER $4 $ANSWERFIN &
 
 sleep 2;
 
@@ -148,7 +151,7 @@ then
 	ListJoueurPropre="$ListJoueurPropre JoueurReel"
 fi
 
-java Coordinateur localhost $1 $ListJoueurPropre $ListProdPropre O1 &
+java Coordinateur "$ServerName" $1 $ListJoueurPropre $ListProdPropre O1 &
 
 exit 0
 n

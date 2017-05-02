@@ -1,10 +1,13 @@
 #!/bin/sh
 
-if [ $# -ne 4 ]
+if [ $# -ne 5 ]
 then
-	echo "use : $0 <port num> <nb prod> <nb Joueur> <Nom fichier log>"
+	echo "use : $0 <Nom Serveur> <port num> <nb prod> <nb Joueur> <Nom fichier log>"
 	exit 1
 fi
+
+ServerName=$1
+shift
 
 ListProd=`seq -w 1 $2`
 echo $ListProd
@@ -23,7 +26,7 @@ done
 
 if [ "$ANSWERreel" = "y" ]
 then
-	xterm -e java JoueurServ $1 JoueurReel y y Individuel 100 &
+	cd ProjetSD;xterm -e java JoueurServ "$ServerName" $1 JoueurReel y y Individuel 100 &
 	ANSWER="y"
 fi
 
@@ -50,15 +53,15 @@ echo $ListJoueurPropre
 
 for i in $ListProdPropre
 do
-  xterm -e java ProducteurServ $1 $i R$i 100 0.25 10 $ANSWER &
+  xterm -e java ProducteurServ "$ServerName" $1 $i R$i 100 0.25 10 $ANSWER &
 done
 
 for i in $ListJoueurPropre
 do
-  xterm -e java JoueurServ $1 $i $ANSWER n Individuel 100 &
+  xterm -e java JoueurServ "$ServerName" $1 $i $ANSWER n Individuel 100 &
 done
 
-xterm -e java ObservateurServ $1 O1 $ANSWER $4 &
+xterm -e java ObservateurServ "$ServerName" $1 O1 $ANSWER $4 Brute &
 
 sleep 2;
 
@@ -69,6 +72,6 @@ then
 	ListJoueurPropre="$ListJoueurPropre JoueurReel"
 fi
 
-java Coordinateur localhost $1 $ListJoueurPropre $ListProdPropre O1 &
+java Coordinateur "$ServerName" $1 $ListJoueurPropre $ListProdPropre O1 &
 
 exit 0

@@ -10,32 +10,32 @@ public class JoueurServ
 	public static void main(String [] args)
 	{
 		//Verifie que tout les arguments ont ete rentre
-		if (args.length != 6)
+		if (args.length != 7)
 		{
-			System.out.println("Usage : java JoueurServ <port du serveur de noms> <Nom Joueur> <y si tour par tour n sinon> <y si joueur humain n sinon> <Personnalite> <Objectif>") ;
+			System.out.println("Usage : java JoueurServ <adresse server> <port du serveur de noms> <Nom Joueur> <y si tour par tour n sinon> <y si joueur humain n sinon> <Personnalite> <Objectif>") ;
 			System.exit(0) ;
 		}
 		try
 		{
 		//Set la personalite du joueur suivant la selection
 			Personnalite p=Personnalite.Individuel;
-			if(args[4].equals("Voleur")){
+			if(args[5].equals("Voleur")){
 				p=Personnalite.Voleur;
-			}else if(args[4].equals("Cooperatif")){
+			}else if(args[5].equals("Cooperatif")){
 				p=Personnalite.Cooperatif;
-			}else if (args[4].equals("Individuel")) {
+			}else if (args[5].equals("Individuel")) {
 				p=Personnalite.Individuel;
-			}else if (args[4].equals("Stratege")) {
+			}else if (args[5].equals("Stratege")) {
 				p=Personnalite.Stratege;
-			}else if (args[4].equals("Mefiant")) {
+			}else if (args[5].equals("Mefiant")) {
 				p=Personnalite.Mefiant;
-			}else if (args[4].equals("Rancunier")) {
+			}else if (args[5].equals("Rancunier")) {
 				p=Personnalite.Rancunier;
 			}
 			
 			//Cree le joueuer
-			Joueur objLocal = new Joueur(args[1],"localhost",args[0],args[1],p,(args[3].equals("y"))?true:false,Integer.parseInt(args[5]),(args[2].equals("y"))?true:false) ;
-			Naming.rebind( "rmi://localhost:" + args[0] + "/" + args[1] ,objLocal);
+			Joueur objLocal = new Joueur(args[2],args[0],args[1],args[2],p,(args[4].equals("y"))?true:false,Integer.parseInt(args[6]),(args[3].equals("y"))?true:false) ;
+			Naming.rebind( "rmi://"+args[0]+":" + args[1] + "/" + args[2] ,objLocal);
 			System.out.println("Serveur pret");
 		}
 		catch (RemoteException re)      { System.out.println(re) ; }
