@@ -476,23 +476,23 @@ public class Joueur extends Client{
 				try {
 					if(ListProducteur.get(j).GetRessources().equals(StockRessources.get(indexRneed)))
 					{
-						if(ListProducteur.get(j).GetRessources().getExemplaires()>nbrProdRentable)
+						if(ListProducteur.get(j).GetCanGive()>nbrProdRentable)
 						{
-							nbrProdRentable = ListProducteur.get(j).GetRessources().getExemplaires();
+							nbrProdRentable = ListProducteur.get(j).GetCanGive();
 							indexProdRentable = j;
 						}
 					}
 				} catch (RemoteException re) { System.out.println(re) ; }
 			}
 			
-			//Verifie le max que donne ce producteur
+			/*//Verifie le max que donne ce producteur
 			try {
 				if(nbrProdRentable > ListProducteur.get(indexProdRentable).GetCanGive())
 				{
 					nbrProdRentable = ListProducteur.get(indexProdRentable).GetCanGive();
 				}
 			}
-			catch (RemoteException re) { System.out.println(re) ; }
+			catch (RemoteException re) { System.out.println(re) ; }*/
 			
 			
 			
@@ -555,11 +555,14 @@ public class Joueur extends Client{
 				try {
 					//Verifie que quelqu'un n'a pas pris entre temps et que le producteur encore possede assez
 					if(ListProducteur.get(indexProdRentable).GetRessources().getExemplaires() != 0){
+						System.out.println("Prend ressource");
 						DemandeRessource(ListProducteur.get(indexProdRentable));
 					}
 					else
+					{
 					//Si le producteur de possede pas assez de ressource alors se remet en observateur
 						SetMode(Mode.Observation);
+					}
 				} catch (RemoteException re) {System.out.println(re);}
 			}
 			
