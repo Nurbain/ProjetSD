@@ -329,7 +329,6 @@ public class Joueur extends Client{
 				try {
 					//Verifie que quelqu'un n'a pas pris entre temps
 					if(this.ListProducteur.get(indexProdR).GetRessources().getExemplaires() != 0){
-						System.out.println("Prend : "+StockRessources.get(indexRessource2).getName());
 						DemandeRessource(this.ListProducteur.get(indexProdR));
 					}
 					//Si le producteur de possede plus de ressource alors se remet en observateur
@@ -484,10 +483,7 @@ public class Joueur extends Client{
 
 		//COMPORTEMENT : Regarde chez tout les producteurs pour voir qui possede le plus de ressource n'ayant pas atteint l'objectif en previligiant les ressources dont il a le plus besoin
 		case Stratege :
-			System.out.println("##########################################");
-			System.out.println("Debut Tour");
-
-			AfficheInventaire();			
+	
 
 			//Recupere la ressource la plus faible
 			int indexRneed = 0, nbrRessource = objectif ; 
@@ -502,9 +498,6 @@ public class Joueur extends Client{
 					}
 				}
 			}
-
-	
-			System.out.println("Ressource la plus basse :"+StockRessources.get(indexRneed).getName());
 			
 			
 			//Recupere le prod le plus rentable
@@ -522,24 +515,7 @@ public class Joueur extends Client{
 						}
 					}
 				} catch (RemoteException re) { System.out.println(re) ; }
-			}
-
-			try {
-			System.out.println("Producteur a prendre  :"+ListProducteur.get(indexProdRentable).getName());
-			}catch (RemoteException re) {System.out.println(re);}
-
-			/*//Verifie le max que donne ce producteur
-			try {
-				if(nbrProdRentable > ListProducteur.get(indexProdRentable).GetCanGive())
-				{
-					nbrProdRentable = ListProducteur.get(indexProdRentable).GetCanGive();
-				}
-			}
-			catch (RemoteException re) { System.out.println(re) ; }*/
-			
-			
-			
-			
+			}	
 			
 			
 			//Recupere le max des ressources chez les joueurs
@@ -566,9 +542,6 @@ public class Joueur extends Client{
 				}
 			}
 
-			try {
-				System.out.println("Plus haut vol :"+ListJoueur.get(indexVoleurRentable).getName());
-			}catch (RemoteException re) {System.out.println(re);}
 
 			//Recupere la ressource Max actuel
 			int nbrMaxRessource = 0;
@@ -583,8 +556,7 @@ public class Joueur extends Client{
 			//Calcul le risque de voler
 			
 			nbrVoleurRentable = (nbrVoleurRentable/2) - (int)(nbrMaxRessource/2*ChanceVol);
-			
-			System.out.println(nbrVoleurRentable+"   "+nbrProdRentable+" "+indexVoleurRentable);
+
 			//Vol ou Prend suivant la rentabilite
 			if(nbrVoleurRentable > nbrProdRentable)
 			{
@@ -608,13 +580,11 @@ public class Joueur extends Client{
 				try {
 					//Verifie que quelqu'un n'a pas pris entre temps et que le producteur encore possede assez
 					if(ListProducteur.get(indexProdRentable).GetRessources().getExemplaires() != 0){
-						System.out.println("Prend ressource");
 						DemandeRessource(ListProducteur.get(indexProdRentable));
 					}
 					else
 					{
 					//Si le producteur de possede pas assez de ressource alors se remet en observateur
-						System.out.println("Suis en Observation");
 						SetMode(Mode.Observation);
 					}
 				} catch (RemoteException re) {System.out.println(re);}
@@ -633,10 +603,6 @@ public class Joueur extends Client{
 				}
 				catch (RemoteException re) { System.out.println(re) ; }
 			}
-/*
-			Scanner sc = new Scanner(System.in);
-			int action = sc.nextInt();
-			System.out.println(action);*/
 
 			break;
 
