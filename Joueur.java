@@ -30,7 +30,7 @@ public class Joueur extends Client{
 
 	//Variable permettant de savoir si le joueur est actuellement puni
 	private int Ispunit = 0 ;
-
+	private boolean VaVoler = false;
 	private double ChanceVol = 0.3;
 
 	//Constructeur
@@ -95,6 +95,7 @@ public class Joueur extends Client{
 		if(Ispunit!=0 && tourParTour)
 		{
 			Ispunit--;
+			System.out.println("Je suis punis ='(   "+Ispunit);
 			return;
 		}
 		else if(Ispunit!=0 && !tourParTour)
@@ -240,69 +241,99 @@ public class Joueur extends Client{
 				}
 			}
 
-
-			//Cherche les joueurs ayant cette ressources en plus grand nombre
-			int max = 0;
-			for(int j = 0; j<this.ListJoueur.size() ; j++)
+			if(VaVoler == true)
 			{
-				//Recupere le stock des ressources du joueur j dans tmpJoueur
-				ArrayList<Ressources> tmpJoueur = null;
-				tmpJoueur = Observation(this.ListJoueur.get(j));
-
-
-				//Si sont stock n'est pas null alors cherche la ressource voulu
-				if(tmpJoueur != null)
+				VaVoler = false;
+				//Cherche les joueurs ayant cette ressources en plus grand nombre
+				int max = 0;
+				for(int j = 0; j<this.ListJoueur.size() ; j++)
 				{
-					for(int k =0; k<tmpJoueur.size();k++)
+					//Recupere le stock des ressources du joueur j dans tmpJoueur
+					ArrayList<Ressources> tmpJoueur = null;
+					tmpJoueur = Observation(this.ListJoueur.get(j));
+
+
+					//Si sont stock n'est pas null alors cherche la ressource voulu
+					if(tmpJoueur != null)
 					{
-						//Regarde si le joueurs possede la ressource , et en plus grosse quantite que le precedent
-						if(tmpJoueur.get(k).equals(this.StockRessources.get(indexRessource2)) && (tmpJoueur.get(k).getExemplaires() > max))
+						for(int k =0; k<tmpJoueur.size();k++)
 						{
-							max = tmpJoueur.get(k).getExemplaires();
-							//Le joueur actuel est le plus interressent a voler
-							indexJoueur = j;
+							//Regarde si le joueurs possede la ressource , et en plus grosse quantite que le precedent
+							if(tmpJoueur.get(k).equals(this.StockRessources.get(indexRessource2)) && (tmpJoueur.get(k).getExemplaires() > max))
+							{
+								max = tmpJoueur.get(k).getExemplaires();
+								//Le joueur actuel est le plus interressent a voler
+								indexJoueur = j;
+							}
 						}
 					}
 				}
-			}
+			
 
-			//Si rien a voler alors prend chez les producteurs
-			if(max == 0)
+				//Si rien a voler alors prend chez les producteurs
+				if(max == 0)
+				{
+					int MaxR = 0;
+					int indexPM = 0;
+					for(int i = 0 ; i<this.ListProducteur.size() ; i++)
+					{
+						try {
+							if( this.ListProducteur.get(i).GetRessources().equals(this.StockRessources.get(indexRessource2)) && this.ListProducteur.get(i).GetRessources().getExemplaires() > MaxR)
+							{
+								indexPM = i;
+								MaxR = this.ListProducteur.get(i).GetRessources().getExemplaires();
+							}
+						}catch (RemoteException re) {System.out.println(re);}
+					}
+
+					//Passe en mode demande
+					SetMode(Mode.Demande);
+
+					try {
+						//Verifie que quelqu'un n'a pas pris entre temps
+						if(this.ListProducteur.get(indexPM).GetRessources().getExemplaires() != 0){
+							DemandeRessource(this.ListProducteur.get(indexPM));
+						}
+						//Si le producteur de possede plus de ressource alors se remet en observateur
+						else
+							SetMode(Mode.Observation);
+					} catch (RemoteException re) {System.out.println(re);}
+
+				}
+				else
+				{
+					//Passe en mode vol pour voler le joueur
+					SetMode(Mode.Vol);
+
+				  VolRessourceAgresseur(this.ListJoueur.get(indexJoueur), StockRessources.get(indexRessource2));
+
+				}
+			}
+			else
 			{
-				int MaxR = 0;
-				int indexPM = 0;
-				for(int i = 0 ; i<this.ListProducteur.size() ; i++)
+				VaVoler = true;
+			
+				int indexProdR = 0 ;
+			
+				for(int j= 0 ; j< ListProducteur.size() ; j++)
 				{
 					try {
-						if( this.ListProducteur.get(i).GetRessources().equals(this.StockRessources.get(indexRessource2)) && this.ListProducteur.get(i).GetRessources().getExemplaires() > MaxR)
+						if(ListProducteur.get(j).GetRessources().equals(StockRessources.get(indexRessource2)))
 						{
-							indexPM = i;
-							MaxR = this.ListProducteur.get(i).GetRessources().getExemplaires();
+							indexProdR = j;
 						}
-					}catch (RemoteException re) {System.out.println(re);}
+					} catch (RemoteException re) { System.out.println(re) ; }
 				}
-
-				//Passe en mode demande
-				SetMode(Mode.Demande);
 
 				try {
 					//Verifie que quelqu'un n'a pas pris entre temps
-					if(this.ListProducteur.get(indexPM).GetRessources().getExemplaires() != 0){
-						DemandeRessource(this.ListProducteur.get(indexPM));
+					if(this.ListProducteur.get(indexProdR).GetRessources().getExemplaires() != 0){
+						DemandeRessource(this.ListProducteur.get(indexProdR));
 					}
 					//Si le producteur de possede plus de ressource alors se remet en observateur
 					else
 						SetMode(Mode.Observation);
 				} catch (RemoteException re) {System.out.println(re);}
-
-			}
-			else
-			{
-				//Passe en mode vol pour voler le joueur
-				SetMode(Mode.Vol);
-
-			  VolRessourceAgresseur(this.ListJoueur.get(indexJoueur), StockRessources.get(indexRessource2));
-
 			}
 
 			AfficheInventaire();
@@ -451,11 +482,14 @@ public class Joueur extends Client{
 
 		//COMPORTEMENT : Regarde chez tout les producteurs pour voir qui possede le plus de ressource n'ayant pas atteint l'objectif en previligiant les ressources dont il a le plus besoin
 		case Stratege :
+			System.out.println("##########################################");
+			System.out.println("Debut Tour");
 
-			
+			AfficheInventaire();			
+
 			//Recupere la ressource la plus faible
 			int indexRneed = 0, nbrRessource = objectif ; 
-			for(int i = 0 ; i< StockRessources.size(); i++)
+			for(int i = 0 ; i < StockRessources.size(); i++)
 			{
 				if(StockRessources.get(i).getExemplaires() < objectif)
 				{
@@ -467,6 +501,9 @@ public class Joueur extends Client{
 				}
 			}
 
+	
+			System.out.println("Ressource la plus basse :"+StockRessources.get(indexRneed).getName());
+			
 			
 			//Recupere le prod le plus rentable
 			int indexProdRentable = 0  , nbrProdRentable=0 ;
@@ -484,7 +521,11 @@ public class Joueur extends Client{
 					}
 				} catch (RemoteException re) { System.out.println(re) ; }
 			}
-			
+
+			try {
+			System.out.println("Producteur a prendre  :"+ListProducteur.get(indexProdRentable).getName());
+			}catch (RemoteException re) {System.out.println(re);}
+
 			/*//Verifie le max que donne ce producteur
 			try {
 				if(nbrProdRentable > ListProducteur.get(indexProdRentable).GetCanGive())
@@ -501,6 +542,8 @@ public class Joueur extends Client{
 			
 			//Recupere le max des ressources chez les joueurs
 			int indexVoleurRentable = 0 , nbrVoleurRentable=0;
+
+
 			
 			for(int i = 0 ; i<ListJoueur.size() ; i++)
 			{
@@ -511,15 +554,20 @@ public class Joueur extends Client{
 				
 					for(int j = 0 ; j<StockPlayer.size() ; j++ )
 					{
-						if(StockPlayer.get(j).equals(StockRessources.get(indexRneed)) && StockPlayer.get(j).getExemplaires() >= nbrVoleurRentable)
+						if(StockPlayer.get(j).equals(StockRessources.get(indexRneed)) && StockPlayer.get(j).getExemplaires() > nbrVoleurRentable)
 						{
+							
 							indexVoleurRentable = i;
 							nbrVoleurRentable = StockPlayer.get(j).getExemplaires();
 						}
 					}
 				}
 			}
-			
+
+			try {
+				System.out.println("Plus haut vol :"+ListJoueur.get(indexVoleurRentable).getName());
+			}catch (RemoteException re) {System.out.println(re);}
+
 			//Recupere la ressource Max actuel
 			int nbrMaxRessource = 0;
 			for(int i = 0 ; i < StockRessources.size() ; i++)
@@ -534,17 +582,20 @@ public class Joueur extends Client{
 			
 			nbrVoleurRentable = (nbrVoleurRentable/2) - (int)(nbrMaxRessource/2*ChanceVol);
 			
+			System.out.println(nbrVoleurRentable+"   "+nbrProdRentable+" "+indexVoleurRentable);
 			//Vol ou Prend suivant la rentabilite
 			if(nbrVoleurRentable > nbrProdRentable)
 			{
 				SetMode(Mode.Vol);
 				if(VolRessourceAgresseur(ListJoueur.get(indexVoleurRentable),StockRessources.get(indexRneed)))
 				{
+					System.out.println("Vol fait");
 					if(ChanceVol>0)
 						ChanceVol = ChanceVol-0.1;
 				}
 				else
 				{
+					System.out.println("Vol echoue");
 					if(ChanceVol<1)
 						ChanceVol = ChanceVol+0.1;
 				}
@@ -561,6 +612,7 @@ public class Joueur extends Client{
 					else
 					{
 					//Si le producteur de possede pas assez de ressource alors se remet en observateur
+						System.out.println("Suis en Observation");
 						SetMode(Mode.Observation);
 					}
 				} catch (RemoteException re) {System.out.println(re);}
@@ -579,7 +631,11 @@ public class Joueur extends Client{
 				}
 				catch (RemoteException re) { System.out.println(re) ; }
 			}
-			
+/*
+			Scanner sc = new Scanner(System.in);
+			int action = sc.nextInt();
+			System.out.println(action);*/
+
 			break;
 
 		default:
@@ -760,6 +816,7 @@ public class Joueur extends Client{
 		else if(StockPris == -1)
 			return false;
 		else{
+			System.out.println("Vol "+r.getName()+" de "+StockPris);
 			try{
 				//Ajoute le log detaillant le vol de ressource au joueur
 				this.LogPerso.add(new LogEntries(System.currentTimeMillis()-StartTimer,this.monType+"  "+this.name+" Vol "+r.getName()+"  "+StockPris+"  "+j.getmonType()+"  "+j.getName()));

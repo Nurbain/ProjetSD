@@ -1,6 +1,6 @@
 200
 n
-n
+y
 n
 Petrole
 0.25
@@ -22,4 +22,4 @@ SteackdeSoja
 2
 3
 5
-3
+4
