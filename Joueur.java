@@ -505,16 +505,17 @@ public class Joueur extends Client{
 			for(int i = 0 ; i<ListJoueur.size() ; i++)
 			{
 				ArrayList<Ressources> StockPlayer = null;
-				try{
-				StockPlayer = ListJoueur.get(i).GetStock();
-				}
-				catch (RemoteException re) { System.out.println(re) ; }
-				for(int j = 0 ; j<StockPlayer.size() ; j++ )
+				StockPlayer = Observation(ListJoueur.get(i));
+				if(StockPlayer != null)
 				{
-					if(StockPlayer.get(j).equals(StockRessources.get(indexRneed)) && StockPlayer.get(j).getExemplaires() >= nbrVoleurRentable)
+				
+					for(int j = 0 ; j<StockPlayer.size() ; j++ )
 					{
-						indexVoleurRentable = i;
-						nbrVoleurRentable = StockPlayer.get(j).getExemplaires();
+						if(StockPlayer.get(j).equals(StockRessources.get(indexRneed)) && StockPlayer.get(j).getExemplaires() >= nbrVoleurRentable)
+						{
+							indexVoleurRentable = i;
+							nbrVoleurRentable = StockPlayer.get(j).getExemplaires();
+						}
 					}
 				}
 			}
