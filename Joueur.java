@@ -268,7 +268,7 @@ public class Joueur extends Client{
 						}
 					}
 				}
-			
+
 
 				//Si rien a voler alors prend chez les producteurs
 				if(max == 0)
@@ -313,9 +313,9 @@ public class Joueur extends Client{
 			{
 				SetMode(Mode.Demande);
 				VaVoler = true;
-			
+
 				int indexProdR = 0 ;
-			
+
 				for(int j= 0 ; j< ListProducteur.size() ; j++)
 				{
 					try {
@@ -481,12 +481,14 @@ public class Joueur extends Client{
 
 		break;
 
-		//COMPORTEMENT : Regarde chez tout les producteurs pour voir qui possede le plus de ressource n'ayant pas atteint l'objectif en previligiant les ressources dont il a le plus besoin
+		/*COMPORTEMENT : Va chercher a avoir le meme nombre de chaque ressource,
+		et a chaque tour calcule si il est plus rentable de voler ou de prendre chez un producteur
+		*/
 		case Stratege :
-	
+
 
 			//Recupere la ressource la plus faible
-			int indexRneed = 0, nbrRessource = objectif ; 
+			int indexRneed = 0, nbrRessource = objectif ;
 			for(int i = 0 ; i < StockRessources.size(); i++)
 			{
 				if(StockRessources.get(i).getExemplaires() < objectif)
@@ -498,11 +500,11 @@ public class Joueur extends Client{
 					}
 				}
 			}
-			
-			
+
+
 			//Recupere le prod le plus rentable
 			int indexProdRentable = 0  , nbrProdRentable=0 ;
-			
+
 			for(int j= 0 ; j< ListProducteur.size() ; j++)
 			{
 				try {
@@ -515,26 +517,26 @@ public class Joueur extends Client{
 						}
 					}
 				} catch (RemoteException re) { System.out.println(re) ; }
-			}	
-			
-			
+			}
+
+
 			//Recupere le max des ressources chez les joueurs
 			int indexVoleurRentable = 0 , nbrVoleurRentable=0;
 
 
-			
+
 			for(int i = 0 ; i<ListJoueur.size() ; i++)
 			{
 				ArrayList<Ressources> StockPlayer = null;
 				StockPlayer = Observation(ListJoueur.get(i));
 				if(StockPlayer != null)
 				{
-				
+
 					for(int j = 0 ; j<StockPlayer.size() ; j++ )
 					{
 						if(StockPlayer.get(j).equals(StockRessources.get(indexRneed)) && StockPlayer.get(j).getExemplaires() > nbrVoleurRentable)
 						{
-							
+
 							indexVoleurRentable = i;
 							nbrVoleurRentable = StockPlayer.get(j).getExemplaires();
 						}
@@ -552,9 +554,9 @@ public class Joueur extends Client{
 					nbrMaxRessource = StockRessources.get(i).getExemplaires();
 				}
 			}
-			
+
 			//Calcul le risque de voler
-			
+
 			nbrVoleurRentable = (nbrVoleurRentable/2) - (int)(nbrMaxRessource/2*ChanceVol);
 
 			//Vol ou Prend suivant la rentabilite
@@ -589,9 +591,9 @@ public class Joueur extends Client{
 					}
 				} catch (RemoteException re) {System.out.println(re);}
 			}
-			
+
 			AfficheInventaire();
-			
+
 			//Verifie si le joueur a fini la partie
 			boolean fin6 = FinParti();
 			if(fin6){
@@ -844,7 +846,7 @@ public class Joueur extends Client{
 				AskAction();
 				return;
 			}
-			
+
 			//sc1.close();
 
 			//Pass en mode demande
@@ -891,7 +893,7 @@ public class Joueur extends Client{
 			System.out.println("Et quelle ressources voulez vous prendres ?");
 			Scanner sc3 = new Scanner(System.in);
 			action3 = sc3.nextInt();
-			
+
 			//sc3.close();
 
 
@@ -917,7 +919,7 @@ public class Joueur extends Client{
 			break;
 		}
 
-		
+
 	}
 
 	/** Retourne la liste de ressource du joueur
@@ -1052,6 +1054,6 @@ public class Joueur extends Client{
 		}
 		return tmp;
 	}
-	
+
 
 }
