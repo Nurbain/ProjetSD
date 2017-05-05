@@ -513,7 +513,7 @@ public class Joueur extends Client{
 					if(StockPlayer.get(j).equals(StockRessources.get(indexRneed)) && StockPlayer.get(j).getExemplaires() >= nbrVoleurRentable)
 					{
 						indexVoleurRentable = i;
-						nbrVoleurRentable = j;
+						nbrVoleurRentable = StockPlayer.get(j).getExemplaires();
 					}
 				}
 			}
