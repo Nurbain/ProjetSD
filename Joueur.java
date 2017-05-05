@@ -311,6 +311,7 @@ public class Joueur extends Client{
 			}
 			else
 			{
+				SetMode(Mode.Demande);
 				VaVoler = true;
 			
 				int indexProdR = 0 ;
@@ -328,6 +329,7 @@ public class Joueur extends Client{
 				try {
 					//Verifie que quelqu'un n'a pas pris entre temps
 					if(this.ListProducteur.get(indexProdR).GetRessources().getExemplaires() != 0){
+						System.out.println("Prend : "+StockRessources.get(indexRessource2).getName());
 						DemandeRessource(this.ListProducteur.get(indexProdR));
 					}
 					//Si le producteur de possede plus de ressource alors se remet en observateur
