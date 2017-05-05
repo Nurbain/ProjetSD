@@ -29,8 +29,9 @@ public class Joueur extends Client{
 	private boolean tourParTour;
 
 	//Variable permettant de savoir si le joueur est actuellement puni
-	private boolean Ispunit = false ;
+	private int Ispunit = 0 ;
 
+	private double ChanceVol = 0.3;
 
 	//Constructeur
 	public Joueur(String name,String ServerName,String NumPort,String NomServise, Personnalite perso, boolean isIRL , int objectif,boolean tourParTour ) throws RemoteException{
@@ -91,15 +92,15 @@ public class Joueur extends Client{
 		}
 
 		//Si le joueur est puni alors passe son tour, en tour par tour
-		if(Ispunit && tourParTour)
+		if(Ispunit!=0 && tourParTour)
 		{
-			Ispunit = false;
+			Ispunit--;
 			return;
 		}
-		else if(Ispunit && !tourParTour)
+		else if(Ispunit!=0 && !tourParTour)
 		{
 			try{
-				Ispunit = false;
+				Ispunit = 0;
 				//Fait dormir le joueur 1 seconde si le mode de jeu est en auto
 				System.out.println("Je suis punis ='(");
 			      Thread.sleep(2000);
@@ -529,13 +530,23 @@ public class Joueur extends Client{
 			}
 			
 			//Calcul le risque de voler
-			nbrVoleurRentable = (nbrVoleurRentable/2) - (int)(nbrMaxRessource/2*0.3);
+			
+			nbrVoleurRentable = (nbrVoleurRentable/2) - (int)(nbrMaxRessource/2*ChanceVol);
 			
 			//Vol ou Prend suivant la rentabilite
 			if(nbrVoleurRentable > nbrProdRentable)
 			{
 				SetMode(Mode.Vol);
-				VolRessourceAgresseur(ListJoueur.get(indexVoleurRentable),StockRessources.get(indexRneed));
+				if(VolRessourceAgresseur(ListJoueur.get(indexVoleurRentable),StockRessources.get(indexRneed)))
+				{
+					if(ChanceVol>0)
+						ChanceVol = ChanceVol-0.1;
+				}
+				else
+				{
+					if(ChanceVol<1)
+						ChanceVol = ChanceVol+0.1;
+				}
 			}
 			else
 			{
@@ -730,7 +741,7 @@ public class Joueur extends Client{
 			StockRessources.get(indexR).takeRessources(punition);
 
 			//Actuellement punits
-			Ispunit = true;
+			Ispunit = 2;
 			try{
 				if(punition > 0)
 					//Ajoute le log detaillant la punition
@@ -1012,5 +1023,6 @@ public class Joueur extends Client{
 		}
 		return tmp;
 	}
+	
 
 }
