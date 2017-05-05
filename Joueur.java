@@ -451,54 +451,120 @@ public class Joueur extends Client{
 		//COMPORTEMENT : Regarde chez tout les producteurs pour voir qui possede le plus de ressource n'ayant pas atteint l'objectif en previligiant les ressources dont il a le plus besoin
 		case Stratege :
 
-			/*
-			int MaxRessourcePro =  0 , IndexMaxProd = 0 , Differenceobj = 0;
-			for(int i=0 ; i < this.ListProducteur.size() ; i++)
+			
+			//Recupere la ressource la plus faible
+			int indexRneed = 0, nbrRessource = objectif ; 
+			for(int i = 0 ; i< StockRessources.size(); i++)
 			{
-				int indexR = 0;
-				try {
-					indexR = SearchRessource(ListProducteur.get(i).GetRessources());
-				} catch (RemoteException re) {System.out.println(re);}
-
-				if(StockRessources.get(indexR).getExemplaires() < this.objectif)
+				if(StockRessources.get(i).getExemplaires() < objectif)
 				{
-					try {
-					int tmpDifferenceobj =  this.objectif - this.StockRessources.get(indexR).getExemplaires();
-					if(tmpDifferenceobj > Differenceobj)
-					//Si la difference entre l'objectif et les exemplaires est plus importante dans cette ressource alors choisit celle ci
-						if(tmpDifference < MaxRessourcePro)
-						{
-							MaxRessourcePro = tmpDifference;
-							IndexMaxProd = i;
-						}
-					} catch (RemoteException re) {System.out.println(re);}
+					if(StockRessources.get(i).getExemplaires() < nbrRessource)
+					{
+						nbrRessource = StockRessources.get(i).getExemplaires();
+						indexRneed = i ;
+					}
 				}
-
 			}
 
-			SetMode(Mode.Demande);
-
+			
+			//Recupere le prod le plus rentable
+			int indexProdRentable = 0  , nbrProdRentable=0 ;
+			
+			for(int j= 0 ; j< ListProducteur.size() ; j++)
+			{
+				try {
+					if(ListProducteur.get(j).GetRessources().equals(StockRessources.get(indexRneed)))
+					{
+						if(ListProducteur.get(j).GetRessources().getExemplaires()>nbrProdRentable)
+						{
+							nbrProdRentable = ListProducteur.get(j).GetRessources().getExemplaires();
+							indexProdRentable = j;
+						}
+					}
+				} catch (RemoteException re) { System.out.println(re) ; }
+			}
+			
+			//Verifie le max que donne ce producteur
 			try {
-				//Verifie que quelqu'un n'a pas pris entre temps
-				if(this.ListProducteur.get(IndexMaxProd).GetRessources().getExemplaires() != 0){
-					DemandeRessource(this.ListProducteur.get(IndexMaxProd));
+				if(nbrProdRentable > ListProducteur.get(indexProdRentable).GetCanGive())
+				{
+					nbrProdRentable = ListProducteur.get(indexProdRentable).GetCanGive();
 				}
-				else
-					SetMode(Mode.Observation);
-			} catch (RemoteException re) {System.out.println(re);}
-
-			AfficheInventaire();
-
-			//Verifie si le joueur a fini la partie
-			boolean fin5 = FinParti();
-			if(fin5){
+			}
+			catch (RemoteException re) { System.out.println(re) ; }
+			
+			
+			
+			
+			
+			
+			//Recupere le max des ressources chez les joueurs
+			int indexVoleurRentable = 0 , nbrVoleurRentable=0;
+			
+			for(int i = 0 ; i<ListJoueur.size() ; i++)
+			{
+				ArrayList<Ressources> StockPlayer = null;
 				try{
+				StockPlayer = ListJoueur.get(i).GetStock();
+				}
+				catch (RemoteException re) { System.out.println(re) ; }
+				for(int j = 0 ; j<StockPlayer.size() ; j++ )
+				{
+					if(StockPlayer.get(j).equals(StockRessources.get(indexRneed)) && StockPlayer.get(j).getExemplaires() >= nbrVoleurRentable)
+					{
+						indexVoleurRentable = i;
+						nbrVoleurRentable = j;
+					}
+				}
+			}
+			
+			//Recupere la ressource Max actuel
+			int nbrMaxRessource = 0;
+			for(int i = 0 ; i < StockRessources.size() ; i++)
+			{
+				if(StockRessources.get(i).getExemplaires() >= nbrMaxRessource)
+				{
+					nbrMaxRessource = StockRessources.get(i).getExemplaires();
+				}
+			}
+			
+			//Calcul le risque de voler
+			nbrVoleurRentable = (nbrVoleurRentable/2) - (int)(nbrMaxRessource/2*0.3);
+			
+			//Vol ou Prend suivant la rentabilite
+			if(nbrVoleurRentable > nbrProdRentable)
+			{
+				SetMode(Mode.Vol);
+				VolRessourceAgresseur(ListJoueur.get(indexVoleurRentable),StockRessources.get(indexRneed));
+			}
+			else
+			{
+				SetMode(Mode.Demande);
+				try {
+					//Verifie que quelqu'un n'a pas pris entre temps et que le producteur encore possede assez
+					if(ListProducteur.get(indexProdRentable).GetRessources().getExemplaires() != 0){
+						DemandeRessource(ListProducteur.get(indexProdRentable));
+					}
+					else
+					//Si le producteur de possede pas assez de ressource alors se remet en observateur
+						SetMode(Mode.Observation);
+				} catch (RemoteException re) {System.out.println(re);}
+			}
+			
+			AfficheInventaire();
+			
+			//Verifie si le joueur a fini la partie
+			boolean fin6 = FinParti();
+			if(fin6){
+				try{
+					this.AFini = true;
+					//Si la partie est fini alors le signale a l'observateur
 					obs.PartieFini(this.name);
 					return;
 				}
 				catch (RemoteException re) { System.out.println(re) ; }
-			}*/
-
+			}
+			
 			break;
 
 		default:
